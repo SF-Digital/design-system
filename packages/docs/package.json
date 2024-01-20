@@ -12,11 +12,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@sf-ui/eslint-config": "*",
     "@sf-ui/react": "*",
     "@sf-ui/tokens": "*",
-    "@sf-ui/eslint-config": "*"
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "license": "MIT",
   "devDependencies": {
