@@ -1,7 +1,7 @@
 import { colors } from '@sf-ui/tokens'
 import { getContrast } from 'polished'
 
-export function ColorsGrid() {
+export const ColorsGrid = () => {
   return Object.entries(colors).map(([key, color]) => {
     const contrast = getContrast(color, '#fff') < 3.5 ? '#000' : '#fff'
 
