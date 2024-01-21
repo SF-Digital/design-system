@@ -21,9 +21,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
     "@stitches/react": "^1.2.8",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "phosphor-react": "^1.4.1",
     "react": "^18.2.0"
   }
 }
