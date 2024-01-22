@@ -1,5 +1,5 @@
 {
-  "name": "@sf-ui/docs",
+  "name": "@sf-digital-ui/docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,9 +13,9 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "@sf-ui/eslint-config": "*",
-    "@sf-ui/react": "*",
-    "@sf-ui/tokens": "*",
+    "@sf-digital-ui/eslint-config": "*",
+    "@sf-digital-ui/react": "*",
+    "@sf-digital-ui/tokens": "*",
     "@storybook/addon-a11y": "^7.6.10",
     "polished": "^4.2.2",
     "react": "^18.2.0",

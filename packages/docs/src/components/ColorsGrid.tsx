@@ -1,4 +1,4 @@
-import { colors } from '@sf-ui/tokens'
+import { colors } from '@sf-digital-ui/tokens'
 import { getContrast } from 'polished'
 
 export const ColorsGrid = () => {

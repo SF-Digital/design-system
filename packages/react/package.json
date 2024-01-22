@@ -1,5 +1,5 @@
 {
-  "name": "@sf-ui/react",
+  "name": "@sf-digital-ui/react",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -14,9 +14,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@sf-ui/eslint-config": "*",
-    "@sf-ui/tokens": "*",
-    "@sf-ui/ts-config": "*",
+    "@sf-digital-ui/eslint-config": "*",
+    "@sf-digital-ui/tokens": "*",
+    "@sf-digital-ui/ts-config": "*",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },

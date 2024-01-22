@@ -1,4 +1,4 @@
 {
-  "extends": "@sf-ui/ts-config/react.json",
+  "extends": "@sf-digital-ui/ts-config/react.json",
   "include": ["src"],
 }

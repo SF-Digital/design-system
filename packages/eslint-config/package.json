@@ -1,5 +1,5 @@
 {
-  "name": "@sf-ui/eslint-config",
+  "name": "@sf-digital-ui/eslint-config",
   "license": "MIT",
   "private": true,
   "main": "index.js",

@@ -5,7 +5,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@sf-ui/tokens'
+} from '@sf-digital-ui/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const { styled, css, keyframes, config, globalCss, theme, createTheme } =

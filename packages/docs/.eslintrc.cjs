@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '@sf-ui/eslint-config',
+  extends: '@sf-digital-ui/eslint-config',
 }
