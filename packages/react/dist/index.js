@@ -67,7 +67,14 @@ __export(src_exports, {
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  config: () => config,
+  createTheme: () => createTheme,
+  css: () => css,
+  globalCss: () => globalCss,
+  keyframes: () => keyframes,
+  styled: () => styled,
+  theme: () => theme
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -86,7 +93,8 @@ var colors = {
   primary300: "#00B37E",
   primary500: "#00875F",
   primary700: "#015F43",
-  primary900: "#00291D"
+  primary900: "#00291D",
+  test: "#FF0000"
 };
 var space = {
   1: "0.25rem",
@@ -525,5 +533,12 @@ MultiStep.displayName = "MultiStep";
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  config,
+  createTheme,
+  css,
+  globalCss,
+  keyframes,
+  styled,
+  theme
 });

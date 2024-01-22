@@ -45,7 +45,8 @@ var colors = {
   primary300: "#00B37E",
   primary500: "#00875F",
   primary700: "#015F43",
-  primary900: "#00291D"
+  primary900: "#00291D",
+  test: "#FF0000"
 };
 var space = {
   1: "0.25rem",
@@ -483,5 +484,12 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  config,
+  createTheme,
+  css,
+  globalCss,
+  keyframes,
+  styled,
+  theme
 };
