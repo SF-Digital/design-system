@@ -26,6 +26,7 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -229,6 +230,7 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -432,6 +434,7 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -633,6 +636,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -842,6 +846,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -1043,6 +1048,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -1250,6 +1256,7 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -1451,6 +1458,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         primary500: string;
         primary700: string;
         primary900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
