@@ -1,5 +1,5 @@
 
-> @sf-digital-ui/react@1.0.0 build
+> @sf-digital-ui/react@2.0.0 build
 > tsup src/index.tsx --format esm,cjs --dts --external react
 
 CLI Building entry: src/index.tsx
@@ -8,11 +8,11 @@ CLI tsup v8.0.1
 CLI Target: es6
 ESM Build start
 CJS Build start
-ESM dist/index.mjs 10.97 KB
-ESM ⚡️ Build success in 17ms
 CJS dist/index.js 13.06 KB
-CJS ⚡️ Build success in 17ms
+CJS ⚡️ Build success in 29ms
+ESM dist/index.mjs 10.97 KB
+ESM ⚡️ Build success in 29ms
 DTS Build start
-DTS ⚡️ Build success in 1185ms
+DTS ⚡️ Build success in 1224ms
 DTS dist/index.d.mts 43.06 KB
 DTS dist/index.d.ts  43.06 KB
