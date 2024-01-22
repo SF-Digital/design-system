@@ -1,25 +1,18 @@
 
 > @sf-digital-ui/react@2.0.0 build
-> tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react
+> tsup src/index.tsx --format esm,cjs --dts --external react
 
-
-Rebuilding...
-
-warn - No utility classes were detected in your source files. If this is unexpected, double-check the `content` option in your Tailwind CSS configuration.
-warn - https://tailwindcss.com/docs/content-configuration
-
-Done in 59ms.
 CLI Building entry: src/index.tsx
 CLI Using tsconfig: tsconfig.json
 CLI tsup v8.0.1
 CLI Target: es6
 ESM Build start
- Build start
+CJS Build start
+CJS dist/index.js 13.33 KB
+CJS ⚡️ Build success in 20ms
 ESM dist/index.mjs 11.06 KB
-ESM ⚡️ Build success in 17ms
- dist/index.js 13.33 KB
- ⚡️ Build success in 17ms
+ESM ⚡️ Build success in 20ms
 DTS Build start
-DTS ⚡️ Build success in 1230ms
+DTS ⚡️ Build success in 1390ms
 DTS dist/index.d.mts 96.48 KB
 DTS dist/index.d.ts  96.48 KB
