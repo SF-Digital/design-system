@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 3.0.1
+
+### Patch Changes
+
+- Fix tailwind build and config
+
 ## 3.0.0
 
 ### Major Changes
