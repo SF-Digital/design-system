@@ -11,4 +11,4 @@ export const BoxTest = styled('div', {
 
 export interface BoxTestProps extends ComponentProps<typeof BoxTest> {}
 
-BoxTest.displayName = 'BoxTest'
+BoxTest.displayName = 'BoxTest2'

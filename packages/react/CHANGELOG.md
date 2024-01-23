@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- Fix my deploy
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 2.0.0
+
+### Major Changes
+
+- Fix my deploy
+
 ## 1.2.0
 
 ### Minor Changes
