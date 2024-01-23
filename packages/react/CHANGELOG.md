@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 2.0.0
+
+### Major Changes
+
+- Test box with a different style guide
+
 ## 1.2.0
 
 ### Minor Changes
