@@ -6,8 +6,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react",
+    "build": "npx tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react",
+    "dev": "concurrently --kill-others \"npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch \" \"tsup src/index.tsx --format esm, cjs --dts --external react --watch\"",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
@@ -29,6 +29,7 @@
     "@stitches/react": "^1.2.8",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "concurrently": "^8.2.2",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0"
   }
