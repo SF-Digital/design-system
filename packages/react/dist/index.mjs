@@ -30,6 +30,18 @@ var __objRest = (source, exclude) => {
   return target;
 };
 
+// src/components/Box/index.tsx
+import { jsx } from "react/jsx-runtime";
+var Box = (_a) => {
+  var rest = __objRest(_a, []);
+  return /* @__PURE__ */ jsx(
+    "div",
+    __spreadProps(__spreadValues({}, rest), {
+      className: "p-4 rounded-md bg-fuchsia-700 border border-gray-600"
+    })
+  );
+};
+
 // ../tokens/dist/index.mjs
 var colors = {
   white: "#FFF",
@@ -117,15 +129,6 @@ var { styled, css, keyframes, config, globalCss, theme, createTheme } = createSt
   }
 });
 
-// src/components/Box/index.tsx
-var Box = styled("div", {
-  padding: "$4",
-  borderRadius: "$md",
-  backgroundColor: "$gray800",
-  border: "1px solid $gray600"
-});
-Box.displayName = "Box";
-
 // src/components/Text/index.tsx
 var Text = styled("p", {
   fontFamily: "$default",
@@ -210,11 +213,11 @@ var AvatarFallback = styled(Avatar.Fallback, {
 
 // src/components/Avatar/index.tsx
 import { User } from "phosphor-react";
-import { jsx, jsxs } from "react/jsx-runtime";
+import { jsx as jsx2, jsxs } from "react/jsx-runtime";
 var Avatar2 = (props) => {
   return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
-    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
-    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
+    /* @__PURE__ */ jsx2(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx2(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx2(User, {}) })
   ] });
 };
 Avatar2.displayName = "Avatar";
@@ -334,12 +337,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-import { jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
+import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
   return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx2(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx2(Input, __spreadValues({}, props))
+    !!prefix && /* @__PURE__ */ jsx3(Prefix, { children: prefix }),
+    /* @__PURE__ */ jsx3(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -426,9 +429,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-import { jsx as jsx3 } from "react/jsx-runtime";
+import { jsx as jsx4 } from "react/jsx-runtime";
 function Checkbox2(props) {
-  return /* @__PURE__ */ jsx3(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx3(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ jsx4(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx4(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx4(Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -460,7 +463,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -469,8 +472,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx4(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx4(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx5(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx5(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
