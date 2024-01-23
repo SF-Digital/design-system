@@ -223,76 +223,37 @@ var Avatar2 = (props) => {
 Avatar2.displayName = "Avatar";
 
 // src/components/Button/index.tsx
-var Button = styled("button", {
-  all: "unset",
-  borderRadius: "$sm",
-  fontSize: "$sm",
-  fontWeight: "$medium",
-  fontFamily: "$default",
-  textAlign: "center",
-  minWidth: 120,
-  boxSizing: "border-box",
-  padding: "0 $4",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "$2",
-  cursor: "pointer",
-  svg: {
-    width: "$4",
-    height: "$4"
-  },
-  "&:disabled": {
-    cursor: "not-allowed"
-  },
+import { tv } from "tailwind-variants";
+import { jsx as jsx3 } from "react/jsx-runtime";
+var button = tv({
+  base: [
+    "rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm",
+    "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500",
+    "active:opacity-80"
+  ],
   variants: {
     variant: {
-      primary: {
-        color: "$white",
-        background: "$primary500",
-        "&:not(:disabled):hover": {
-          background: "$primary300"
-        },
-        "&:disabled": {
-          backgroundColor: "$gray200"
-        }
-      },
-      secondary: {
-        color: "$primary300",
-        border: "2px solid $primary500",
-        "&:not(:disabled):hover": {
-          background: "$primary500",
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray200",
-          borderColor: "$gray200"
-        }
-      },
-      tertiary: {
-        color: "$gray100",
-        "&:not(:disabled):hover": {
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray600"
-        }
-      }
+      primary: "text-white dark:hover:primary700 hover:bg-violet-700 bg-primary500 dark:bg-primary300",
+      ghost: "rounded-md px-2 hover:bg-zinc-50 dark:hover:bg-white/5 shadow-sm text-zinc-500 dark:text-zinc-400",
+      outline: "border border-zinc-300 text-zinc-700 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-700 dark:border-zinc-700"
     },
-    size: {
-      sm: {
-        height: 38
-      },
-      md: {
-        height: 46
-      }
+    defaultVariants: {
+      variant: "primary"
     }
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "md"
   }
 });
+var Button = (_a) => {
+  var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
+  return /* @__PURE__ */ jsx3(
+    "button",
+    __spreadProps(__spreadValues({}, props), {
+      className: button({
+        variant,
+        className
+      })
+    })
+  );
+};
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -337,12 +298,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
+import { jsx as jsx4, jsxs as jsxs2 } from "react/jsx-runtime";
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
   return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx3(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx3(Input, __spreadValues({}, props))
+    !!prefix && /* @__PURE__ */ jsx4(Prefix, { children: prefix }),
+    /* @__PURE__ */ jsx4(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -429,9 +390,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-import { jsx as jsx4 } from "react/jsx-runtime";
+import { jsx as jsx5 } from "react/jsx-runtime";
 function Checkbox2(props) {
-  return /* @__PURE__ */ jsx4(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx4(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx4(Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ jsx5(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx5(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx5(Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -463,7 +424,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx6, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -472,8 +433,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx5(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx5(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx6(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx6(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }

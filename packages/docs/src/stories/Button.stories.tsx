@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@sf-digital-ui/react'
 import { ArrowRight } from 'phosphor-react'
+import '@sf-digital-ui/react/dist/output.css'
+
 
 export default {
   title: 'Form/Button',
@@ -13,13 +15,7 @@ export default {
   },
   argTypes: {
     variant: {
-      options: ['primary', 'secondary', 'tertiary'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    size: {
-      options: ['sm', 'md'],
+      options: ['primary', 'outline', 'ghost'],
       control: {
         type: 'inline-radio',
       },
@@ -35,23 +31,17 @@ export default {
 
 export const Primary: StoryObj<ButtonProps> = {}
 
-export const Secondary: StoryObj<ButtonProps> = {
+export const Outline: StoryObj<ButtonProps> = {
   args: {
-    variant: 'secondary',
+    variant: 'outline',
     children: 'Create new',
   },
 }
 
-export const Tertiary: StoryObj<ButtonProps> = {
+export const Ghost: StoryObj<ButtonProps> = {
   args: {
-    variant: 'tertiary',
+    variant: 'ghost',
     children: 'Cancel',
-  },
-}
-
-export const Small: StoryObj<ButtonProps> = {
-  args: {
-    size: 'sm',
   },
 }
 
@@ -59,8 +49,7 @@ export const WithIcon: StoryObj<ButtonProps> = {
   args: {
     children: (
       <>
-        Próximo passo
-        <ArrowRight weight="bold" />
+        <ArrowRight weight="bold" />   Next Step
       </>
     ),
   },

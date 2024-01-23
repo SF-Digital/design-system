@@ -1,91 +1,38 @@
 import { ComponentProps } from 'react'
-import { styled } from '../../styles'
+import { VariantProps, tv } from 'tailwind-variants'
 
-export const Button = styled('button', {
-  all: 'unset',
-  borderRadius: '$sm',
-  fontSize: '$sm',
-  fontWeight: '$medium',
-  fontFamily: '$default',
-  textAlign: 'center',
-  minWidth: 120,
-  boxSizing: 'border-box',
-  padding: '0 $4',
-
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$2',
-
-  cursor: 'pointer',
-
-  svg: {
-    width: '$4',
-    height: '$4',
-  },
-
-  '&:disabled': {
-    cursor: 'not-allowed',
-  },
+const button = tv({
+  base: [
+    'rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm',
+    'focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500',
+    'active:opacity-80',
+  ],
 
   variants: {
     variant: {
-      primary: {
-        color: '$white',
-        background: '$primary500',
-
-        '&:not(:disabled):hover': {
-          background: '$primary300',
-        },
-
-        '&:disabled': {
-          backgroundColor: '$gray200',
-        },
-      },
-
-      secondary: {
-        color: '$primary300',
-        border: '2px solid $primary500',
-
-        '&:not(:disabled):hover': {
-          background: '$primary500',
-          color: '$white',
-        },
-
-        '&:disabled': {
-          color: '$gray200',
-          borderColor: '$gray200',
-        },
-      },
-
-      tertiary: {
-        color: '$gray100',
-
-        '&:not(:disabled):hover': {
-          color: '$white',
-        },
-
-        '&:disabled': {
-          color: '$gray600',
-        },
-      },
+      primary:
+        'text-white dark:hover:primary700 hover:bg-violet-700 bg-primary500 dark:bg-primary300',
+      ghost:
+        'rounded-md px-2 hover:bg-zinc-50 dark:hover:bg-white/5 shadow-sm text-zinc-500 dark:text-zinc-400',
+      outline:
+        'border border-zinc-300 text-zinc-700 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-700 dark:border-zinc-700',
     },
-
-    size: {
-      sm: {
-        height: 38,
-      },
-
-      md: {
-        height: 46,
-      },
+    defaultVariants: {
+      variant: 'primary',
     },
-  },
-
-  defaultVariants: {
-    variant: 'primary',
-    size: 'md',
   },
 })
 
-export interface ButtonProps extends ComponentProps<typeof Button> {}
+export type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>
+
+export const Button = ({ variant, className, ...props }: ButtonProps) => {
+  return (
+    <button
+      {...props}
+      className={button({
+        variant,
+        className,
+      })}
+    />
+  )
+}

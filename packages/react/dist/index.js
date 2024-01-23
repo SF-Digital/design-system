@@ -271,76 +271,37 @@ var Avatar2 = (props) => {
 Avatar2.displayName = "Avatar";
 
 // src/components/Button/index.tsx
-var Button = styled("button", {
-  all: "unset",
-  borderRadius: "$sm",
-  fontSize: "$sm",
-  fontWeight: "$medium",
-  fontFamily: "$default",
-  textAlign: "center",
-  minWidth: 120,
-  boxSizing: "border-box",
-  padding: "0 $4",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "$2",
-  cursor: "pointer",
-  svg: {
-    width: "$4",
-    height: "$4"
-  },
-  "&:disabled": {
-    cursor: "not-allowed"
-  },
+var import_tailwind_variants = require("tailwind-variants");
+var import_jsx_runtime3 = require("react/jsx-runtime");
+var button = (0, import_tailwind_variants.tv)({
+  base: [
+    "rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm",
+    "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500",
+    "active:opacity-80"
+  ],
   variants: {
     variant: {
-      primary: {
-        color: "$white",
-        background: "$primary500",
-        "&:not(:disabled):hover": {
-          background: "$primary300"
-        },
-        "&:disabled": {
-          backgroundColor: "$gray200"
-        }
-      },
-      secondary: {
-        color: "$primary300",
-        border: "2px solid $primary500",
-        "&:not(:disabled):hover": {
-          background: "$primary500",
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray200",
-          borderColor: "$gray200"
-        }
-      },
-      tertiary: {
-        color: "$gray100",
-        "&:not(:disabled):hover": {
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray600"
-        }
-      }
+      primary: "text-white dark:hover:primary700 hover:bg-violet-700 bg-primary500 dark:bg-primary300",
+      ghost: "rounded-md px-2 hover:bg-zinc-50 dark:hover:bg-white/5 shadow-sm text-zinc-500 dark:text-zinc-400",
+      outline: "border border-zinc-300 text-zinc-700 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-700 dark:border-zinc-700"
     },
-    size: {
-      sm: {
-        height: 38
-      },
-      md: {
-        height: 46
-      }
+    defaultVariants: {
+      variant: "primary"
     }
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "md"
   }
 });
+var Button = (_a) => {
+  var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+    "button",
+    __spreadProps(__spreadValues({}, props), {
+      className: button({
+        variant,
+        className
+      })
+    })
+  );
+};
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -385,12 +346,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-var import_jsx_runtime3 = require("react/jsx-runtime");
+var import_jsx_runtime4 = require("react/jsx-runtime");
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Prefix, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Input, __spreadValues({}, props))
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(TextInputContainer, { children: [
+    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Prefix, { children: prefix }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -477,9 +438,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-var import_jsx_runtime4 = require("react/jsx-runtime");
+var import_jsx_runtime5 = require("react/jsx-runtime");
 function Checkbox2(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -511,17 +472,17 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-var import_jsx_runtime5 = require("react/jsx-runtime");
+var import_jsx_runtime6 = require("react/jsx-runtime");
 function MultiStep({ size, currentStep = 1 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(MultiStepContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(Label, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Label, { children: [
       "Passo ",
       currentStep,
       " de ",
       size
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
