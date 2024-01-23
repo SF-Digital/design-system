@@ -8,11 +8,11 @@ CLI tsup v8.0.1
 CLI Target: node16
 ESM Build start
 CJS Build start
-ESM dist/index.mjs 1.36 KB
-ESM ⚡️ Build success in 88ms
 CJS dist/index.js 2.51 KB
-CJS ⚡️ Build success in 87ms
+CJS ⚡️ Build success in 85ms
+ESM dist/index.mjs 1.36 KB
+ESM ⚡️ Build success in 85ms
 DTS Build start
-DTS ⚡️ Build success in 545ms
+DTS ⚡️ Build success in 516ms
 DTS dist/index.d.mts 1.31 KB
 DTS dist/index.d.ts  1.31 KB

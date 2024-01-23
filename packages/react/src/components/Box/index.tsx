@@ -1,13 +1,12 @@
 import { ComponentProps } from 'react'
-import { styled } from '../../styles'
 
-export const Box = styled('div', {
-  padding: '$4',
-  borderRadius: '$md',
-  backgroundColor: '$gray800',
-  border: '1px solid $gray600',
-})
+export interface BoxProps extends ComponentProps<'div'> {}
 
-export interface BoxProps extends ComponentProps<typeof Box> {}
-
-Box.displayName = 'Box'
+export const Box = ({ ...rest }: BoxProps) => {
+  return (
+    <div
+      {...rest}
+      className="p-4 rounded-md bg-gray800 border border-gray600"
+    />
+  )
+}
