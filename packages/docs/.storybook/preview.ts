@@ -3,7 +3,7 @@ import type { Preview } from "@storybook/react";
 
 
 //this import breaks my build 
-// import '@sf-digital-ui/react/src/index.css'
+// import '@sf-digital-ui/react/src/output.css'
 
 const preview: Preview = {
   parameters: {
