@@ -57,8 +57,7 @@ var colors = {
   primary300: "#00B37E",
   primary500: "#00875F",
   primary700: "#015F43",
-  primary900: "#00291D",
-  test: "#FF0000"
+  primary900: "#00291D"
 };
 var space = {
   1: "0.25rem",
@@ -439,9 +438,19 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/BoxTest/index.tsx
+var BoxTest = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+BoxTest.displayName = "BoxTest2";
 export {
   Avatar2 as Avatar,
   Box,
+  BoxTest,
   Button,
   Checkbox2 as Checkbox,
   Heading,

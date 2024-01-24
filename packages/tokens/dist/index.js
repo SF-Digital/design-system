@@ -46,7 +46,7 @@ var colors = {
   primary500: "#00875F",
   primary700: "#015F43",
   primary900: "#00291D",
-  test: "#FF0000"
+  testColor: "#FF0000"
 };
 
 // src/space.ts

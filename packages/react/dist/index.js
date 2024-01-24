@@ -61,6 +61,7 @@ var src_exports = {};
 __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
+  BoxTest: () => BoxTest,
   Button: () => Button,
   Checkbox: () => Checkbox2,
   Heading: () => Heading,
@@ -106,7 +107,7 @@ var colors = {
   primary500: "#00875F",
   primary700: "#015F43",
   primary900: "#00291D",
-  test: "#FF0000"
+  testColor: "#FF0000"
 };
 var space = {
   1: "0.25rem",
@@ -487,10 +488,20 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/BoxTest/index.tsx
+var BoxTest = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+BoxTest.displayName = "BoxTest2";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
+  BoxTest,
   Button,
   Checkbox,
   Heading,

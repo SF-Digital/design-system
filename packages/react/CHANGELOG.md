@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 3.0.2
+
+### Patch Changes
+
+- Build changes to support next js
+
 ## 3.0.1
 
 ### Patch Changes

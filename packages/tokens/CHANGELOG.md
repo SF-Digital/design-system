@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- Build changes to support next js
+
 ## 2.0.0
 
 ### Major Changes
