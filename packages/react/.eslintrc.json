@@ -1,3 +1,4 @@
 {
-  "extends": "@sf-digital-ui/eslint-config"
+  "extends": "@sf-digital-ui/eslint-config",
+  "plugins": ["prettier"]
 }
