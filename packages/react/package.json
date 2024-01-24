@@ -1,8 +1,9 @@
 {
   "name": "@sf-digital-ui/react",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "",
   "main": "./dist/index.js",
+  "style": "./dist/output.css",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -27,12 +28,15 @@
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@stitches/react": "^1.2.8",
+    "@types/node": "^20.11.6",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "concurrently": "^8.2.2",
+    "next": "^14.1.0",
     "phosphor-react": "^1.4.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.1.20"
   }

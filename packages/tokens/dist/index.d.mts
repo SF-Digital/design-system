@@ -13,7 +13,7 @@ declare const colors: {
     primary500: string;
     primary700: string;
     primary900: string;
-    test: string;
+    testColor: string;
 };
 
 declare const space: {
