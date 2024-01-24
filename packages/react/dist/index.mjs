@@ -37,7 +37,7 @@ var Box = (_a) => {
   return /* @__PURE__ */ jsx(
     "div",
     __spreadProps(__spreadValues({}, rest), {
-      className: "p-4 rounded-md bg-gray800 border border-gray600"
+      className: "rounded-md border border-gray600 bg-gray800 p-4"
     })
   );
 };
@@ -57,7 +57,8 @@ var colors = {
   primary300: "#00B37E",
   primary500: "#00875F",
   primary700: "#015F43",
-  primary900: "#00291D"
+  primary900: "#00291D",
+  testColor: "#FF0000"
 };
 var space = {
   1: "0.25rem",

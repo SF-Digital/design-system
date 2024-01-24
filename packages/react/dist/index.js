@@ -86,7 +86,7 @@ var Box = (_a) => {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
     "div",
     __spreadProps(__spreadValues({}, rest), {
-      className: "p-4 rounded-md bg-gray800 border border-gray600"
+      className: "rounded-md border border-gray600 bg-gray800 p-4"
     })
   );
 };
