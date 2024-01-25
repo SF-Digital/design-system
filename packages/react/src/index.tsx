@@ -9,6 +9,4 @@ export * from './components/Checkbox'
 export * from './components/MultiStep'
 export * from './components/BoxTest'
 
-
 export * from './styles'
-
