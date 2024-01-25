@@ -674,13 +674,29 @@ var lineHeights = {
 
 // src/styles/index.ts
 var import_react = require("@stitches/react");
+var colors2 = {
+  white: "#FFF",
+  black: "#000",
+  gray100: "#E1E1E6",
+  gray200: "#A9A9B2",
+  gray400: "#7C7C8A",
+  gray500: "#505059",
+  gray600: "#323238",
+  gray700: "#29292E",
+  gray800: "#202024",
+  gray900: "#121214",
+  primary300: "#00B37E",
+  primary500: "#00875F",
+  primary700: "#015F43",
+  primary900: "#00291D"
+};
 var { styled, css, keyframes, config, globalCss, theme, createTheme } = (0, import_react.createStitches)({
   themeMap: __spreadProps(__spreadValues({}, import_react.defaultThemeMap), {
     height: "space",
     width: "space"
   }),
   theme: {
-    colors,
+    colors: colors2,
     fontSizes,
     fontWeights,
     lineHeights,

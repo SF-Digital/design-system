@@ -35,7 +35,6 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -239,7 +238,6 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -441,7 +439,6 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -715,7 +712,6 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -923,7 +919,6 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -1125,7 +1120,6 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -1341,7 +1335,6 @@ declare const BoxTest: _stitches_react_types_styled_component.StyledComponent<"d
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -1545,7 +1538,6 @@ declare const styled: <Type extends react.ComponentType<any> | _stitches_react_t
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -1754,7 +1746,6 @@ declare const styled: <Type extends react.ComponentType<any> | _stitches_react_t
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -1955,7 +1946,6 @@ declare const css: <Composers extends (string | react.JSXElementConstructor<any>
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -2166,7 +2156,6 @@ declare const keyframes: (style: {
             primary500: string;
             primary700: string;
             primary900: string;
-            testColor: string;
         };
         fontSizes: {
             xxs: string;
@@ -2372,7 +2361,6 @@ declare const config: {
             primary500: string;
             primary700: string;
             primary900: string;
-            testColor: string;
         };
         fontSizes: {
             xxs: string;
@@ -2580,7 +2568,6 @@ declare const globalCss: <Styles extends {
             primary500: string;
             primary700: string;
             primary900: string;
-            testColor: string;
         };
         fontSizes: {
             xxs: string;
@@ -2779,7 +2766,6 @@ declare const globalCss: <Styles extends {
         primary500: string;
         primary700: string;
         primary900: string;
-        testColor: string;
     };
     fontSizes: {
         xxs: string;
@@ -2981,7 +2967,6 @@ declare const theme: string & {
         primary500: _stitches_react_types_theme.Token<"primary500", string, "colors", "">;
         primary700: _stitches_react_types_theme.Token<"primary700", string, "colors", "">;
         primary900: _stitches_react_types_theme.Token<"primary900", string, "colors", "">;
-        testColor: _stitches_react_types_theme.Token<"testColor", string, "colors", "">;
     };
     fontSizes: {
         xxs: _stitches_react_types_theme.Token<"xxs", string, "fontSizes", "">;
@@ -3051,7 +3036,6 @@ declare const createTheme: <Argument0 extends string | ({
         primary500?: string | number | boolean | undefined;
         primary700?: string | number | boolean | undefined;
         primary900?: string | number | boolean | undefined;
-        testColor?: string | number | boolean | undefined;
     } | undefined;
     fontSizes?: {
         xxs?: string | number | boolean | undefined;
@@ -3125,7 +3109,6 @@ declare const createTheme: <Argument0 extends string | ({
         primary500?: string | number | boolean | undefined;
         primary700?: string | number | boolean | undefined;
         primary900?: string | number | boolean | undefined;
-        testColor?: string | number | boolean | undefined;
     } | undefined;
     fontSizes?: {
         xxs?: string | number | boolean | undefined;
