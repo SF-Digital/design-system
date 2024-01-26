@@ -546,6 +546,8 @@ declare const radii: {
 declare const fonts: {
     default: string;
     code: string;
+    heading: string;
+    body: string;
 };
 
 declare const fontSizes: {
@@ -555,13 +557,23 @@ declare const fontSizes: {
     md: string;
     lg: string;
     xl: string;
-    '2xl': string;
-    '4xl': string;
-    '5xl': string;
-    '6xl': string;
-    '7xl': string;
-    '8xl': string;
-    '9xl': string;
+    "2xl": string;
+    "4xl": string;
+    "5xl": string;
+    "6xl": string;
+    "7xl": string;
+    "8xl": string;
+    "9xl": string;
+    "sf-xs": string;
+    "sf-sm": string;
+    "sf-md": string;
+    "sf-lg": string;
+    "sf-h1": string;
+    "sf-h2": string;
+    "sf-h3": string;
+    "sf-h4": string;
+    "sf-h5": string;
+    "sf-h6": string;
 };
 
 declare const fontWeights: {
