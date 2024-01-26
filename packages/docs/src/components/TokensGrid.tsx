@@ -22,6 +22,7 @@ export function TokensGrid({ tokens, hasRemValue = false }: TokensGridProps) {
             <tr key={key}>
               <td>{key}</td>
               <td>{value}</td>
+              {/** TODO: some of the values have only px but no rem, this is causing NaN in row 3 */}
               {hasRemValue && (
                 <td>{Number(value.replace('rem', '')) * 16}px</td>
               )}
