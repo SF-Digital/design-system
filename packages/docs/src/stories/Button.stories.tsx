@@ -3,7 +3,6 @@ import { Button, ButtonProps } from '@sf-digital-ui/react'
 import { ArrowRight } from 'phosphor-react'
 import '@sf-digital-ui/react/dist/output.css'
 
-
 export default {
   title: 'Form/Button',
   component: Button,
@@ -49,7 +48,7 @@ export const WithIcon: StoryObj<ButtonProps> = {
   args: {
     children: (
       <>
-        <ArrowRight weight="bold" />   Next Step
+        <ArrowRight weight="bold" /> Next Step
       </>
     ),
   },
