@@ -500,20 +500,6 @@ declare const colors: {
         800: string;
         900: string;
     };
-    white: string;
-    black: string;
-    gray100: string;
-    gray200: string;
-    gray400: string;
-    gray500: string;
-    gray600: string;
-    gray700: string;
-    gray800: string;
-    gray900: string;
-    primary300: string;
-    primary500: string;
-    primary700: string;
-    primary900: string;
 };
 
 declare const space: {
