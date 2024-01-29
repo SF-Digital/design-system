@@ -14,7 +14,7 @@ const button = tv(
       },
 
       size: {
-        sm: 'px-3.5 py-2 text-sf-sm',
+        sm: 'px-3.5 py-2 text-sf-h6',
         md: 'px-4 py-2.5 text-sf-sm',
         lg: 'px-5 py-2.5 text-sf-md',
         xl: 'px-5 py-3 text-sf-md',

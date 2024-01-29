@@ -552,16 +552,16 @@ declare const fontSizes: {
     "7xl": string;
     "8xl": string;
     "9xl": string;
-    "xs-sf": string;
-    "sm-sf": string;
-    "md-sf": string;
-    "lg-sf": string;
-    "h1-sf": string;
-    "h2-sf": string;
-    "h3-sf": string;
-    "h4-sf": string;
-    "h5-sf": string;
-    "h6-sf": string;
+    "sf-xs": string;
+    "sf-sm": string;
+    "sf-md": string;
+    "sf-lg": string;
+    "sf-h1": string;
+    "sf-h2": string;
+    "sf-h3": string;
+    "sf-h4": string;
+    "sf-h5": string;
+    "sf-h6": string;
 };
 
 declare const fontWeights: {
