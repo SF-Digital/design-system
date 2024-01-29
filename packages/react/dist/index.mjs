@@ -660,16 +660,16 @@ var fontSizes = {
   "7xl": "4rem",
   "8xl": "4.5rem",
   "9xl": "6rem",
-  "sf-xs": "0.8125rem",
-  "sf-sm": "0.875rem",
-  "sf-md": "1rem",
-  "sf-lg": "1.125rem",
-  "sf-h1": "2.25rem",
-  "sf-h2": "2rem",
-  "sf-h3": "1.8125rem",
-  "sf-h4": "1.625rem",
-  "sf-h5": "1.4375rem",
-  "sf-h6": "1.25rem"
+  "xs-sf": "0.8125rem",
+  "sm-sf": "0.875rem",
+  "md-sf": "1rem",
+  "lg-sf": "1.125rem",
+  "h1-sf": "2.25rem",
+  "h2-sf": "2rem",
+  "h3-sf": "1.8125rem",
+  "h4-sf": "1.625rem",
+  "h5-sf": "1.4375rem",
+  "h6-sf": "1.25rem"
 };
 var fontWeights = {
   regular: "400",
@@ -759,23 +759,28 @@ Avatar2.displayName = "Avatar";
 // src/components/Button/index.tsx
 import { tv as tv3 } from "tailwind-variants";
 import { jsx as jsx5 } from "react/jsx-runtime";
-var button = tv3({
-  base: "rounded-md text-white",
-  variants: {
-    variant: {
-      primary: " bg-primary-green-500",
-      secondary: "bg-primary-green-50 text-primary-green-700",
-      outline: "border-xs border border-neutral-40 text-neutral-50"
-    },
-    size: {
-      sm: "px-3.5 py-2 text-sf-sm",
-      md: "px-4 py-2.5 text-sf-sm",
-      lg: "px-5 py-2.5 text-sf-md",
-      xl: "px-5 py-3 text-sf-md",
-      "2xl": "px-6 py-4 text-sf-lg"
+var button = tv3(
+  {
+    base: "rounded-md text-white",
+    variants: {
+      variant: {
+        primary: " bg-primary-green-500",
+        secondary: "bg-primary-green-50 text-primary-green-700",
+        outline: "border-xs border border-neutral-40 text-neutral-50"
+      },
+      size: {
+        sm: "px-3.5 py-2 text-sf-sm",
+        md: "px-4 py-2.5 text-sf-sm",
+        lg: "px-5 py-2.5 text-sf-md",
+        xl: "px-5 py-3 text-sf-md",
+        "2xl": "px-6 py-4 text-sf-lg"
+      }
     }
+  },
+  {
+    twMerge: false
   }
-});
+);
 var Button = (_a) => {
   var _b = _a, { variant, className, size } = _b, props = __objRest(_b, ["variant", "className", "size"]);
   return /* @__PURE__ */ jsx5(

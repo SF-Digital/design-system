@@ -368,33 +368,9 @@ declare const button: tailwind_variants.TVReturnType<{
         xl: string;
         '2xl': string;
     };
-}, undefined, "rounded-md text-white", tailwind_variants_dist_config.TVConfig<{
-    variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
-    };
-    size: {
-        sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        '2xl': string;
-    };
+}, undefined, "rounded-md text-white", {
+    twMerge: false;
 }, {
-    variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
-    };
-    size: {
-        sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        '2xl': string;
-    };
-}>, {
     variant: {
         primary: string;
         secondary: string;
@@ -420,33 +396,9 @@ declare const button: tailwind_variants.TVReturnType<{
         xl: string;
         '2xl': string;
     };
-}, undefined, "rounded-md text-white", tailwind_variants_dist_config.TVConfig<{
-    variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
-    };
-    size: {
-        sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        '2xl': string;
-    };
-}, {
-    variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
-    };
-    size: {
-        sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        '2xl': string;
-    };
-}>, unknown, unknown, undefined>>;
+}, undefined, "rounded-md text-white", {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>;
 declare const Button: ({ variant, className, size, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
 
