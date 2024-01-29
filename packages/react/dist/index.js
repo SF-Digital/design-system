@@ -95,7 +95,7 @@ var Box = (_a) => {
 var import_tailwind_variants = require("tailwind-variants");
 var import_jsx_runtime2 = require("react/jsx-runtime");
 var text = (0, import_tailwind_variants.tv)({
-  base: ["font-sf-body"],
+  base: ["font-sf-body leading-tight"],
   variants: {
     size: {
       xs: "text-sf-xs",
@@ -117,7 +117,7 @@ var Text = (_a) => {
 var import_tailwind_variants2 = require("tailwind-variants");
 var import_jsx_runtime3 = require("react/jsx-runtime");
 var heading = (0, import_tailwind_variants2.tv)({
-  base: ["font-sf-heading"],
+  base: ["font-sf-heading leading-tight"],
   variants: {
     size: {
       h1: "text-sf-h1",
@@ -652,20 +652,39 @@ var managementOfFamilyAssetsPalette = {
 var colors = __spreadValues(__spreadValues(__spreadValues(__spreadValues(__spreadValues({}, primaryPalette), secondaryPalette), tertiaryPalette), protectionFamilyWealthPalette), managementOfFamilyAssetsPalette);
 var space = {
   1: "0.25rem",
+  // 4px
   2: "0.5rem",
+  // 8px
   3: "0.75rem",
+  // 12px
   4: "1rem",
+  // 16px
   5: "1.25rem",
+  // 20px
   6: "1.5rem",
-  7: "1.75rem",
+  // 24px
   8: "2rem",
+  // 32px
   10: "2.5rem",
+  // 40px
   12: "3rem",
+  // 48px
   16: "4rem",
+  // 64px
   20: "5rem",
+  // 80px
+  24: "6rem",
+  // 96px
+  32: "8rem",
+  // 128px
   40: "10rem",
-  64: "16rem",
-  80: "20rem"
+  // 160px
+  48: "12rem",
+  // 192px
+  56: "14rem",
+  // 224px
+  64: "16rem"
+  // 256px
 };
 var radii = {
   px: "1px",
@@ -790,16 +809,21 @@ Avatar2.displayName = "Avatar";
 var import_tailwind_variants3 = require("tailwind-variants");
 var import_jsx_runtime5 = require("react/jsx-runtime");
 var button = (0, import_tailwind_variants3.tv)({
-  base: [
-    "rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm",
-    "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500",
-    "active:opacity-80"
-  ],
+  base: ["rounded-md"],
   variants: {
     variant: {
-      primary: "text-white dark:hover:primary700 hover:bg-violet-700 bg-primary500 dark:bg-primary300",
-      ghost: "rounded-md px-2 hover:bg-zinc-50 dark:hover:bg-white/5 shadow-sm text-zinc-500 dark:text-zinc-400",
-      outline: "border border-zinc-300 text-zinc-700 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-700 dark:border-zinc-700"
+      primary: "text-white bg-primary-green-500",
+      secondary: "text-primary-greeen-700 bg-primary-green-50",
+      ghost: "text-neutral-50 border-neutral-40",
+      outline: "border border-xs text-neutral-50 border-neutral-40"
+    },
+    // TODO: text sizes wttfff
+    size: {
+      sm: "px-3.5 py-2",
+      md: "px-4 py-2.5",
+      lg: "px-5 py-2.5",
+      xl: "px-5 py-3",
+      "2xl": "px-6 py-4"
     },
     defaultVariants: {
       variant: "primary"
@@ -807,11 +831,12 @@ var button = (0, import_tailwind_variants3.tv)({
   }
 });
 var Button = (_a) => {
-  var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
+  var _b = _a, { variant, className, size } = _b, props = __objRest(_b, ["variant", "className", "size"]);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
     "button",
     __spreadProps(__spreadValues({}, props), {
       className: button({
+        size,
         variant,
         className
       })

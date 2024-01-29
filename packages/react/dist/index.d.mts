@@ -205,15 +205,17 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -356,8 +358,16 @@ declare const Avatar: {
 declare const button: tailwind_variants.TVReturnType<{
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -365,8 +375,16 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], tailwind_variants_dist_config.TVConfig<{
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -374,8 +392,16 @@ declare const button: tailwind_variants.TVReturnType<{
 }, {
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -383,8 +409,16 @@ declare const button: tailwind_variants.TVReturnType<{
 }>, {
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -392,8 +426,16 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, tailwind_variants.TVReturnType<{
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -401,8 +443,16 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], tailwind_variants_dist_config.TVConfig<{
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
@@ -410,15 +460,23 @@ declare const button: tailwind_variants.TVReturnType<{
 }, {
     variant: {
         primary: string;
+        secondary: string;
         ghost: string;
         outline: string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
     };
     defaultVariants: {
         variant: string;
     };
 }>, unknown, unknown, undefined>>;
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>;
-declare const Button: ({ variant, className, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
+declare const Button: ({ variant, className, size, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
 
 declare const Input: _stitches_react_types_styled_component.StyledComponent<"input", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -488,15 +546,17 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -705,15 +765,17 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -916,15 +978,17 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -1141,15 +1205,17 @@ declare const BoxTest: _stitches_react_types_styled_component.StyledComponent<"d
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -1354,15 +1420,17 @@ declare const styled: <Type extends react.ComponentType<any> | _stitches_react_t
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -1572,15 +1640,17 @@ declare const styled: <Type extends react.ComponentType<any> | _stitches_react_t
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -1782,15 +1852,17 @@ declare const css: <Composers extends (string | react.JSXElementConstructor<any>
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -2002,15 +2074,17 @@ declare const keyframes: (style: {
             4: string;
             5: string;
             6: string;
-            7: string;
             8: string;
             10: string;
             12: string;
             16: string;
             20: string;
+            24: string;
+            32: string;
             40: string;
+            48: string;
+            56: string;
             64: string;
-            80: string;
         };
     }, {
         height: "space";
@@ -2217,15 +2291,17 @@ declare const config: {
             4: string;
             5: string;
             6: string;
-            7: string;
             8: string;
             10: string;
             12: string;
             16: string;
             20: string;
+            24: string;
+            32: string;
             40: string;
+            48: string;
+            56: string;
             64: string;
-            80: string;
         };
     };
     themeMap: {
@@ -2434,15 +2510,17 @@ declare const globalCss: <Styles extends {
             4: string;
             5: string;
             6: string;
-            7: string;
             8: string;
             10: string;
             12: string;
             16: string;
             20: string;
+            24: string;
+            32: string;
             40: string;
+            48: string;
+            56: string;
             64: string;
-            80: string;
         };
     }, {
         height: "space";
@@ -2642,15 +2720,17 @@ declare const globalCss: <Styles extends {
         4: string;
         5: string;
         6: string;
-        7: string;
         8: string;
         10: string;
         12: string;
         16: string;
         20: string;
+        24: string;
+        32: string;
         40: string;
+        48: string;
+        56: string;
         64: string;
-        80: string;
     };
 }, {
     height: "space";
@@ -2853,15 +2933,17 @@ declare const theme: string & {
         4: _stitches_react_types_theme.Token<"4", string, "space", "">;
         5: _stitches_react_types_theme.Token<"5", string, "space", "">;
         6: _stitches_react_types_theme.Token<"6", string, "space", "">;
-        7: _stitches_react_types_theme.Token<"7", string, "space", "">;
         8: _stitches_react_types_theme.Token<"8", string, "space", "">;
         10: _stitches_react_types_theme.Token<"10", string, "space", "">;
         12: _stitches_react_types_theme.Token<"12", string, "space", "">;
         16: _stitches_react_types_theme.Token<"16", string, "space", "">;
         20: _stitches_react_types_theme.Token<"20", string, "space", "">;
+        24: _stitches_react_types_theme.Token<"24", string, "space", "">;
+        32: _stitches_react_types_theme.Token<"32", string, "space", "">;
         40: _stitches_react_types_theme.Token<"40", string, "space", "">;
+        48: _stitches_react_types_theme.Token<"48", string, "space", "">;
+        56: _stitches_react_types_theme.Token<"56", string, "space", "">;
         64: _stitches_react_types_theme.Token<"64", string, "space", "">;
-        80: _stitches_react_types_theme.Token<"80", string, "space", "">;
     };
 };
 declare const createTheme: <Argument0 extends string | ({
@@ -2932,15 +3014,17 @@ declare const createTheme: <Argument0 extends string | ({
         4?: string | number | boolean | undefined;
         5?: string | number | boolean | undefined;
         6?: string | number | boolean | undefined;
-        7?: string | number | boolean | undefined;
         8?: string | number | boolean | undefined;
         10?: string | number | boolean | undefined;
         12?: string | number | boolean | undefined;
         16?: string | number | boolean | undefined;
         20?: string | number | boolean | undefined;
+        24?: string | number | boolean | undefined;
+        32?: string | number | boolean | undefined;
         40?: string | number | boolean | undefined;
+        48?: string | number | boolean | undefined;
+        56?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
-        80?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {
@@ -3015,15 +3099,17 @@ declare const createTheme: <Argument0 extends string | ({
         4?: string | number | boolean | undefined;
         5?: string | number | boolean | undefined;
         6?: string | number | boolean | undefined;
-        7?: string | number | boolean | undefined;
         8?: string | number | boolean | undefined;
         10?: string | number | boolean | undefined;
         12?: string | number | boolean | undefined;
         16?: string | number | boolean | undefined;
         20?: string | number | boolean | undefined;
+        24?: string | number | boolean | undefined;
+        32?: string | number | boolean | undefined;
         40?: string | number | boolean | undefined;
+        48?: string | number | boolean | undefined;
+        56?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
-        80?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {

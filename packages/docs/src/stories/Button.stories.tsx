@@ -7,14 +7,20 @@ export default {
   title: 'Form/Button',
   component: Button,
   args: {
-    children: 'Send',
+    children: 'Button CTA',
     variant: 'primary',
     size: 'md',
     disabled: false,
   },
   argTypes: {
     variant: {
-      options: ['primary', 'outline', 'ghost'],
+      options: ['primary', 'secondary', 'outline', 'ghost'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    size: {
+      options: ['sm', 'md', 'lg', 'xl', '2xl'],
       control: {
         type: 'inline-radio',
       },

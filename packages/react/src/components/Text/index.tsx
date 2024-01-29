@@ -2,7 +2,7 @@ import { ComponentProps } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const text = tv({
-  base: ['font-sf-body'],
+  base: ['font-sf-body leading-tight'],
 
   variants: {
     size: {
