@@ -709,16 +709,16 @@ var fontSizes = {
   "7xl": "4rem",
   "8xl": "4.5rem",
   "9xl": "6rem",
-  "sf-xs": "13px",
-  "sf-sm": "14px",
-  "sf-md": "16px",
-  "sf-lg": "18px",
-  "sf-h1": "36px",
-  "sf-h2": "32px",
-  "sf-h3": "29px",
-  "sf-h4": "26px",
-  "sf-h5": "23px",
-  "sf-h6": "20px"
+  "sf-xs": "0.8125rem",
+  "sf-sm": "0.875rem",
+  "sf-md": "1rem",
+  "sf-lg": "1.125rem",
+  "sf-h1": "2.25rem",
+  "sf-h2": "2rem",
+  "sf-h3": "1.8125rem",
+  "sf-h4": "1.625rem",
+  "sf-h5": "1.4375rem",
+  "sf-h6": "1.25rem"
 };
 var fontWeights = {
   regular: "400",
@@ -809,24 +809,19 @@ Avatar2.displayName = "Avatar";
 var import_tailwind_variants3 = require("tailwind-variants");
 var import_jsx_runtime5 = require("react/jsx-runtime");
 var button = (0, import_tailwind_variants3.tv)({
-  base: ["rounded-md"],
+  base: "rounded-md text-white",
   variants: {
     variant: {
-      primary: "text-white bg-primary-green-500",
-      secondary: "text-primary-greeen-700 bg-primary-green-50",
-      ghost: "text-neutral-50 border-neutral-40",
-      outline: "border border-xs text-neutral-50 border-neutral-40"
+      primary: " bg-primary-green-500",
+      secondary: "bg-primary-green-50 text-primary-green-700",
+      outline: "border-xs border border-neutral-40 text-neutral-50"
     },
-    // TODO: text sizes wttfff
     size: {
-      sm: "px-3.5 py-2",
-      md: "px-4 py-2.5",
-      lg: "px-5 py-2.5",
-      xl: "px-5 py-3",
-      "2xl": "px-6 py-4"
-    },
-    defaultVariants: {
-      variant: "primary"
+      sm: "px-3.5 py-2 text-sf-sm",
+      md: "px-4 py-2.5 text-sf-sm",
+      lg: "px-5 py-2.5 text-sf-md",
+      xl: "px-5 py-3 text-sf-md",
+      "2xl": "px-6 py-4 text-sf-lg"
     }
   }
 });
@@ -836,8 +831,8 @@ var Button = (_a) => {
     "button",
     __spreadProps(__spreadValues({}, props), {
       className: button({
-        size,
         variant,
+        size,
         className
       })
     })

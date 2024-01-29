@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@sf-digital-ui/react'
 import { ArrowRight } from 'phosphor-react'
+
 import '@sf-digital-ui/react/dist/output.css'
 
 export default {
@@ -40,13 +41,6 @@ export const Outline: StoryObj<ButtonProps> = {
   args: {
     variant: 'outline',
     children: 'Create new',
-  },
-}
-
-export const Ghost: StoryObj<ButtonProps> = {
-  args: {
-    variant: 'ghost',
-    children: 'Cancel',
   },
 }
 

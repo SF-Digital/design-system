@@ -359,7 +359,6 @@ declare const button: tailwind_variants.TVReturnType<{
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -369,14 +368,10 @@ declare const button: tailwind_variants.TVReturnType<{
         xl: string;
         '2xl': string;
     };
-    defaultVariants: {
-        variant: string;
-    };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+}, undefined, "rounded-md text-white", tailwind_variants_dist_config.TVConfig<{
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -385,15 +380,11 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
         xl: string;
         '2xl': string;
-    };
-    defaultVariants: {
-        variant: string;
     };
 }, {
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -402,15 +393,11 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
         xl: string;
         '2xl': string;
-    };
-    defaultVariants: {
-        variant: string;
     };
 }>, {
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -419,15 +406,11 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
         xl: string;
         '2xl': string;
-    };
-    defaultVariants: {
-        variant: string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -437,14 +420,10 @@ declare const button: tailwind_variants.TVReturnType<{
         xl: string;
         '2xl': string;
     };
-    defaultVariants: {
-        variant: string;
-    };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+}, undefined, "rounded-md text-white", tailwind_variants_dist_config.TVConfig<{
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -453,15 +432,11 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
         xl: string;
         '2xl': string;
-    };
-    defaultVariants: {
-        variant: string;
     };
 }, {
     variant: {
         primary: string;
         secondary: string;
-        ghost: string;
         outline: string;
     };
     size: {
@@ -470,9 +445,6 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
         xl: string;
         '2xl': string;
-    };
-    defaultVariants: {
-        variant: string;
     };
 }>, unknown, unknown, undefined>>;
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>;
