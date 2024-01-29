@@ -1,30 +1,27 @@
 import { ComponentProps } from 'react'
-import { styled } from '../../styles'
 
-export const Heading = styled('h2', {
-  fontFamily: '$default',
-  lineHeight: '$shorter',
-  margin: 0,
-  color: '$gray100',
+import { VariantProps, tv } from 'tailwind-variants'
 
+const heading = tv({
+  base: ['font-sf-heading'],
   variants: {
     size: {
-      sm: { fontSize: '$xl' },
-      md: { fontSize: '$2xl' },
-      lg: { fontSize: '$4xl' },
-      xl: { fontSize: '$5xl' },
-      '2xl': { fontSize: '$6xl' },
-      '4xl': { fontSize: '$7xl' },
-      '5xl': { fontSize: '$8xl' },
-      '6xl': { fontSize: '$9xl' },
+      h1: 'text-sf-h1',
+      h2: 'text-sf-h2',
+      h3: 'text-sf-h3',
+      h4: 'text-sf-h4',
+      h5: 'text-sf-h5',
+      h6: 'text-sf-h6',
     },
   },
 
   defaultVariants: {
-    size: 'md',
+    size: 'h3',
   },
 })
 
-export interface HeadingProps extends ComponentProps<typeof Heading> {}
+export type HeadingProps = ComponentProps<'h1'> & VariantProps<typeof heading>
 
-Heading.displayName = 'Heading'
+export const Heading = ({ className, size, ...props }: HeadingProps) => {
+  return <h1 {...props} className={heading({ size, className })} />
+}

@@ -5,18 +5,18 @@
 
 Rebuilding...
 
-Done in 260ms.
+Done in 132ms.
 CLI Building entry: src/index.tsx
 CLI Using tsconfig: tsconfig.json
 CLI tsup v8.0.1
 CLI Target: es6
 ESM Build start
  Build start
-ESM dist/index.mjs 20.89 KB
-ESM ⚡️ Build success in 22ms
- dist/index.js 23.29 KB
- ⚡️ Build success in 22ms
+ESM dist/index.mjs 20.91 KB
+ESM ⚡️ Build success in 19ms
+ dist/index.js 23.46 KB
+ ⚡️ Build success in 20ms
 DTS Build start
-DTS ⚡️ Build success in 3649ms
-DTS dist/index.d.mts 98.02 KB
-DTS dist/index.d.ts  98.02 KB
+DTS ⚡️ Build success in 1488ms
+DTS dist/index.d.mts 89.55 KB
+DTS dist/index.d.ts  89.55 KB

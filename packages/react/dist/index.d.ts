@@ -1,12 +1,12 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as react from 'react';
 import { ComponentProps } from 'react';
-import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
-import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
-import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as tailwind_variants from 'tailwind-variants';
 import { VariantProps } from 'tailwind-variants';
 import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
+import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
+import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
+import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
@@ -17,431 +17,125 @@ interface BoxProps extends ComponentProps<'div'> {
 }
 declare const Box: ({ ...rest }: BoxProps) => react_jsx_runtime.JSX.Element;
 
-declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", {
-    size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | undefined;
-}, {}, _stitches_react_types_css_util.CSS<{}, {
-    colors: {
-        white: string;
-        black: string;
-        gray100: string;
-        gray200: string;
-        gray400: string;
-        gray500: string;
-        gray600: string;
-        gray700: string;
-        gray800: string;
-        gray900: string;
-        primary300: string;
-        primary500: string;
-        primary700: string;
-        primary900: string;
-    };
-    fontSizes: {
-        xxs: string;
+declare const text: tailwind_variants.TVReturnType<{
+    size: {
         xs: string;
         sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        "2xl": string;
-        "4xl": string;
-        "5xl": string;
-        "6xl": string;
-        "7xl": string;
-        "8xl": string;
-        "9xl": string;
-        "sf-xs": string;
-        "sf-sm": string;
-        "sf-md": string;
-        "sf-lg": string;
-        "sf-h1": string;
-        "sf-h2": string;
-        "sf-h3": string;
-        "sf-h4": string;
-        "sf-h5": string;
-        "sf-h6": string;
-    };
-    fontWeights: {
-        regular: string;
-        medium: string;
-        bold: string;
-    };
-    lineHeights: {
-        shorter: string;
-        short: string;
         base: string;
-        tall: string;
+        lg: string;
     };
-    radii: {
-        px: string;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
         xs: string;
         sm: string;
-        md: string;
+        base: string;
         lg: string;
-        full: string;
-    };
-    space: {
-        1: string;
-        2: string;
-        3: string;
-        4: string;
-        5: string;
-        6: string;
-        7: string;
-        8: string;
-        10: string;
-        12: string;
-        16: string;
-        20: string;
-        40: string;
-        64: string;
-        80: string;
     };
 }, {
-    height: "space";
-    width: "space";
-    gap: "space";
-    gridGap: "space";
-    columnGap: "space";
-    gridColumnGap: "space";
-    rowGap: "space";
-    gridRowGap: "space";
-    inset: "space";
-    insetBlock: "space";
-    insetBlockEnd: "space";
-    insetBlockStart: "space";
-    insetInline: "space";
-    insetInlineEnd: "space";
-    insetInlineStart: "space";
-    margin: "space";
-    marginTop: "space";
-    marginRight: "space";
-    marginBottom: "space";
-    marginLeft: "space";
-    marginBlock: "space";
-    marginBlockEnd: "space";
-    marginBlockStart: "space";
-    marginInline: "space";
-    marginInlineEnd: "space";
-    marginInlineStart: "space";
-    padding: "space";
-    paddingTop: "space";
-    paddingRight: "space";
-    paddingBottom: "space";
-    paddingLeft: "space";
-    paddingBlock: "space";
-    paddingBlockEnd: "space";
-    paddingBlockStart: "space";
-    paddingInline: "space";
-    paddingInlineEnd: "space";
-    paddingInlineStart: "space";
-    scrollMargin: "space";
-    scrollMarginTop: "space";
-    scrollMarginRight: "space";
-    scrollMarginBottom: "space";
-    scrollMarginLeft: "space";
-    scrollMarginBlock: "space";
-    scrollMarginBlockEnd: "space";
-    scrollMarginBlockStart: "space";
-    scrollMarginInline: "space";
-    scrollMarginInlineEnd: "space";
-    scrollMarginInlineStart: "space";
-    scrollPadding: "space";
-    scrollPaddingTop: "space";
-    scrollPaddingRight: "space";
-    scrollPaddingBottom: "space";
-    scrollPaddingLeft: "space";
-    scrollPaddingBlock: "space";
-    scrollPaddingBlockEnd: "space";
-    scrollPaddingBlockStart: "space";
-    scrollPaddingInline: "space";
-    scrollPaddingInlineEnd: "space";
-    scrollPaddingInlineStart: "space";
-    top: "space";
-    right: "space";
-    bottom: "space";
-    left: "space";
-    fontSize: "fontSizes";
-    background: "colors";
-    backgroundColor: "colors";
-    backgroundImage: "colors";
-    borderImage: "colors";
-    border: "colors";
-    borderBlock: "colors";
-    borderBlockEnd: "colors";
-    borderBlockStart: "colors";
-    borderBottom: "colors";
-    borderBottomColor: "colors";
-    borderColor: "colors";
-    borderInline: "colors";
-    borderInlineEnd: "colors";
-    borderInlineStart: "colors";
-    borderLeft: "colors";
-    borderLeftColor: "colors";
-    borderRight: "colors";
-    borderRightColor: "colors";
-    borderTop: "colors";
-    borderTopColor: "colors";
-    caretColor: "colors";
-    color: "colors";
-    columnRuleColor: "colors";
-    outline: "colors";
-    outlineColor: "colors";
-    fill: "colors";
-    stroke: "colors";
-    textDecorationColor: "colors";
-    fontFamily: "fonts";
-    fontWeight: "fontWeights";
-    lineHeight: "lineHeights";
-    letterSpacing: "letterSpacings";
-    blockSize: "sizes";
-    minBlockSize: "sizes";
-    maxBlockSize: "sizes";
-    inlineSize: "sizes";
-    minInlineSize: "sizes";
-    maxInlineSize: "sizes";
-    minWidth: "sizes";
-    maxWidth: "sizes";
-    minHeight: "sizes";
-    maxHeight: "sizes";
-    flexBasis: "sizes";
-    gridTemplateColumns: "sizes";
-    gridTemplateRows: "sizes";
-    borderWidth: "borderWidths";
-    borderTopWidth: "borderWidths";
-    borderLeftWidth: "borderWidths";
-    borderRightWidth: "borderWidths";
-    borderBottomWidth: "borderWidths";
-    borderStyle: "borderStyles";
-    borderTopStyle: "borderStyles";
-    borderLeftStyle: "borderStyles";
-    borderRightStyle: "borderStyles";
-    borderBottomStyle: "borderStyles";
-    borderRadius: "radii";
-    borderTopLeftRadius: "radii";
-    borderTopRightRadius: "radii";
-    borderBottomRightRadius: "radii";
-    borderBottomLeftRadius: "radii";
-    boxShadow: "shadows";
-    textShadow: "shadows";
-    transition: "transitions";
-    zIndex: "zIndices";
-}, {}>>;
-interface TextProps extends ComponentProps<typeof Text> {
-}
+    size: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+    };
+}>, {
+    size: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+    };
+}, {
+    size: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+    };
+}>, unknown, unknown, undefined>>;
+type TextProps = ComponentProps<'p'> & VariantProps<typeof text>;
+declare const Text: ({ className, size, ...props }: TextProps) => react_jsx_runtime.JSX.Element;
 
-declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h2", {
-    size?: "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | undefined;
-}, {}, _stitches_react_types_css_util.CSS<{}, {
-    colors: {
-        white: string;
-        black: string;
-        gray100: string;
-        gray200: string;
-        gray400: string;
-        gray500: string;
-        gray600: string;
-        gray700: string;
-        gray800: string;
-        gray900: string;
-        primary300: string;
-        primary500: string;
-        primary700: string;
-        primary900: string;
+declare const heading: tailwind_variants.TVReturnType<{
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
     };
-    fontSizes: {
-        xxs: string;
-        xs: string;
-        sm: string;
-        md: string;
-        lg: string;
-        xl: string;
-        "2xl": string;
-        "4xl": string;
-        "5xl": string;
-        "6xl": string;
-        "7xl": string;
-        "8xl": string;
-        "9xl": string;
-        "sf-xs": string;
-        "sf-sm": string;
-        "sf-md": string;
-        "sf-lg": string;
-        "sf-h1": string;
-        "sf-h2": string;
-        "sf-h3": string;
-        "sf-h4": string;
-        "sf-h5": string;
-        "sf-h6": string;
-    };
-    fontWeights: {
-        regular: string;
-        medium: string;
-        bold: string;
-    };
-    lineHeights: {
-        shorter: string;
-        short: string;
-        base: string;
-        tall: string;
-    };
-    radii: {
-        px: string;
-        xs: string;
-        sm: string;
-        md: string;
-        lg: string;
-        full: string;
-    };
-    space: {
-        1: string;
-        2: string;
-        3: string;
-        4: string;
-        5: string;
-        6: string;
-        7: string;
-        8: string;
-        10: string;
-        12: string;
-        16: string;
-        20: string;
-        40: string;
-        64: string;
-        80: string;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
     };
 }, {
-    height: "space";
-    width: "space";
-    gap: "space";
-    gridGap: "space";
-    columnGap: "space";
-    gridColumnGap: "space";
-    rowGap: "space";
-    gridRowGap: "space";
-    inset: "space";
-    insetBlock: "space";
-    insetBlockEnd: "space";
-    insetBlockStart: "space";
-    insetInline: "space";
-    insetInlineEnd: "space";
-    insetInlineStart: "space";
-    margin: "space";
-    marginTop: "space";
-    marginRight: "space";
-    marginBottom: "space";
-    marginLeft: "space";
-    marginBlock: "space";
-    marginBlockEnd: "space";
-    marginBlockStart: "space";
-    marginInline: "space";
-    marginInlineEnd: "space";
-    marginInlineStart: "space";
-    padding: "space";
-    paddingTop: "space";
-    paddingRight: "space";
-    paddingBottom: "space";
-    paddingLeft: "space";
-    paddingBlock: "space";
-    paddingBlockEnd: "space";
-    paddingBlockStart: "space";
-    paddingInline: "space";
-    paddingInlineEnd: "space";
-    paddingInlineStart: "space";
-    scrollMargin: "space";
-    scrollMarginTop: "space";
-    scrollMarginRight: "space";
-    scrollMarginBottom: "space";
-    scrollMarginLeft: "space";
-    scrollMarginBlock: "space";
-    scrollMarginBlockEnd: "space";
-    scrollMarginBlockStart: "space";
-    scrollMarginInline: "space";
-    scrollMarginInlineEnd: "space";
-    scrollMarginInlineStart: "space";
-    scrollPadding: "space";
-    scrollPaddingTop: "space";
-    scrollPaddingRight: "space";
-    scrollPaddingBottom: "space";
-    scrollPaddingLeft: "space";
-    scrollPaddingBlock: "space";
-    scrollPaddingBlockEnd: "space";
-    scrollPaddingBlockStart: "space";
-    scrollPaddingInline: "space";
-    scrollPaddingInlineEnd: "space";
-    scrollPaddingInlineStart: "space";
-    top: "space";
-    right: "space";
-    bottom: "space";
-    left: "space";
-    fontSize: "fontSizes";
-    background: "colors";
-    backgroundColor: "colors";
-    backgroundImage: "colors";
-    borderImage: "colors";
-    border: "colors";
-    borderBlock: "colors";
-    borderBlockEnd: "colors";
-    borderBlockStart: "colors";
-    borderBottom: "colors";
-    borderBottomColor: "colors";
-    borderColor: "colors";
-    borderInline: "colors";
-    borderInlineEnd: "colors";
-    borderInlineStart: "colors";
-    borderLeft: "colors";
-    borderLeftColor: "colors";
-    borderRight: "colors";
-    borderRightColor: "colors";
-    borderTop: "colors";
-    borderTopColor: "colors";
-    caretColor: "colors";
-    color: "colors";
-    columnRuleColor: "colors";
-    outline: "colors";
-    outlineColor: "colors";
-    fill: "colors";
-    stroke: "colors";
-    textDecorationColor: "colors";
-    fontFamily: "fonts";
-    fontWeight: "fontWeights";
-    lineHeight: "lineHeights";
-    letterSpacing: "letterSpacings";
-    blockSize: "sizes";
-    minBlockSize: "sizes";
-    maxBlockSize: "sizes";
-    inlineSize: "sizes";
-    minInlineSize: "sizes";
-    maxInlineSize: "sizes";
-    minWidth: "sizes";
-    maxWidth: "sizes";
-    minHeight: "sizes";
-    maxHeight: "sizes";
-    flexBasis: "sizes";
-    gridTemplateColumns: "sizes";
-    gridTemplateRows: "sizes";
-    borderWidth: "borderWidths";
-    borderTopWidth: "borderWidths";
-    borderLeftWidth: "borderWidths";
-    borderRightWidth: "borderWidths";
-    borderBottomWidth: "borderWidths";
-    borderStyle: "borderStyles";
-    borderTopStyle: "borderStyles";
-    borderLeftStyle: "borderStyles";
-    borderRightStyle: "borderStyles";
-    borderBottomStyle: "borderStyles";
-    borderRadius: "radii";
-    borderTopLeftRadius: "radii";
-    borderTopRightRadius: "radii";
-    borderBottomRightRadius: "radii";
-    borderBottomLeftRadius: "radii";
-    boxShadow: "shadows";
-    textShadow: "shadows";
-    transition: "transitions";
-    zIndex: "zIndices";
-}, {}>>;
-interface HeadingProps extends ComponentProps<typeof Heading> {
-}
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+    };
+}>, {
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+    };
+}, {
+    size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+    };
+}>, unknown, unknown, undefined>>;
+type HeadingProps = ComponentProps<'h1'> & VariantProps<typeof heading>;
+declare const Heading: ({ className, size, ...props }: HeadingProps) => react_jsx_runtime.JSX.Element;
 
 declare const AvatarImage: _stitches_react_types_styled_component.StyledComponent<react.ForwardRefExoticComponent<Avatar$1.AvatarImageProps & react.RefAttributes<HTMLImageElement>>, {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1810,7 +1504,7 @@ declare const styled: <Type extends react.ComponentType<any> | _stitches_react_t
         css: CSS;
     })[] | undefined;
     defaultVariants?: ("variants" extends keyof Composers[K] ? { [Name_1 in keyof Composers[K][keyof Composers[K] & "variants"]]?: _stitches_react_types_util.String | _stitches_react_types_util.Widen<keyof Composers[K][keyof Composers[K] & "variants"][Name_1]> | undefined; } : _stitches_react_types_util.WideObject) | undefined;
-} & CSS & { [K2 in keyof Composers[K]]: K2 extends "compoundVariants" | "defaultVariants" | "variants" ? unknown : K2 extends keyof CSS ? CSS[K2] : unknown; }; }) => _stitches_react_types_styled_component.StyledComponent<Type, _stitches_react_types_styled_component.StyledComponentProps<Composers>, {}, _stitches_react_types_css_util.CSS<{}, {
+} & CSS & { [K2 in keyof Composers[K]]: K2 extends "variants" | "compoundVariants" | "defaultVariants" ? unknown : K2 extends keyof CSS ? CSS[K2] : unknown; }; }) => _stitches_react_types_styled_component.StyledComponent<Type, _stitches_react_types_styled_component.StyledComponentProps<Composers>, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -2238,7 +1932,7 @@ declare const css: <Composers extends (string | react.JSXElementConstructor<any>
         css: CSS;
     })[] | undefined;
     defaultVariants?: ("variants" extends keyof Composers[K] ? { [Name_1 in keyof Composers[K][keyof Composers[K] & "variants"]]?: _stitches_react_types_util.String | _stitches_react_types_util.Widen<keyof Composers[K][keyof Composers[K] & "variants"][Name_1]> | undefined; } : _stitches_react_types_util.WideObject) | undefined;
-} & CSS & { [K2 in keyof Composers[K]]: K2 extends "compoundVariants" | "defaultVariants" | "variants" ? unknown : K2 extends keyof CSS ? CSS[K2] : unknown; }; }) => _stitches_react_types_styled_component.CssComponent<_stitches_react_types_styled_component.StyledComponentType<Composers>, _stitches_react_types_styled_component.StyledComponentProps<Composers>, {}, CSS>;
+} & CSS & { [K2 in keyof Composers[K]]: K2 extends "variants" | "compoundVariants" | "defaultVariants" ? unknown : K2 extends keyof CSS ? CSS[K2] : unknown; }; }) => _stitches_react_types_styled_component.CssComponent<_stitches_react_types_styled_component.StyledComponentType<Composers>, _stitches_react_types_styled_component.StyledComponentProps<Composers>, {}, CSS>;
 declare const keyframes: (style: {
     [offset: string]: _stitches_react_types_css_util.CSS<{}, {
         colors: {

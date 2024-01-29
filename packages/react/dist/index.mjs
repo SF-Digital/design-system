@@ -42,6 +42,52 @@ var Box = (_a) => {
   );
 };
 
+// src/components/Text/index.tsx
+import { tv } from "tailwind-variants";
+import { jsx as jsx2 } from "react/jsx-runtime";
+var text = tv({
+  base: ["font-sf-body"],
+  variants: {
+    size: {
+      xs: "text-sf-xs",
+      sm: "text-sf-sm",
+      base: "text-sf-md",
+      lg: "text-sf-lg"
+    }
+  },
+  defaultVariants: {
+    size: "base"
+  }
+});
+var Text = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx2("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
+};
+
+// src/components/Heading/index.tsx
+import { tv as tv2 } from "tailwind-variants";
+import { jsx as jsx3 } from "react/jsx-runtime";
+var heading = tv2({
+  base: ["font-sf-heading"],
+  variants: {
+    size: {
+      h1: "text-sf-h1",
+      h2: "text-sf-h2",
+      h3: "text-sf-h3",
+      h4: "text-sf-h4",
+      h5: "text-sf-h5",
+      h6: "text-sf-h6"
+    }
+  },
+  defaultVariants: {
+    size: "h3"
+  }
+});
+var Heading = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx3("h1", __spreadProps(__spreadValues({}, props), { className: heading({ size, className }) }));
+};
+
 // ../tokens/dist/index.mjs
 var primaryPalette = {
   "primary-green": {
@@ -651,59 +697,6 @@ var { styled, css, keyframes, config, globalCss, theme, createTheme } = createSt
   }
 });
 
-// src/components/Text/index.tsx
-var Text = styled("p", {
-  fontFamily: "$default",
-  lineHeight: "$base",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      xxs: { fontSize: "$xxs" },
-      xs: { fontSize: "$xs" },
-      sm: { fontSize: "$sm" },
-      md: { fontSize: "$md" },
-      lg: { fontSize: "$lg" },
-      xl: { fontSize: "$xl" },
-      "2xl": { fontSize: "$2xl" },
-      "4xl": { fontSize: "$4xl" },
-      "5xl": { fontSize: "$5xl" },
-      "6xl": { fontSize: "$6xl" },
-      "7xl": { fontSize: "$7xl" },
-      "8xl": { fontSize: "$8xl" },
-      "9xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Text.displayName = "Text";
-
-// src/components/Heading/index.tsx
-var Heading = styled("h2", {
-  fontFamily: "$default",
-  lineHeight: "$shorter",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      sm: { fontSize: "$xl" },
-      md: { fontSize: "$2xl" },
-      lg: { fontSize: "$4xl" },
-      xl: { fontSize: "$5xl" },
-      "2xl": { fontSize: "$6xl" },
-      "4xl": { fontSize: "$7xl" },
-      "5xl": { fontSize: "$8xl" },
-      "6xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Heading.displayName = "Heading";
-
 // src/components/Avatar/styles.ts
 import * as Avatar from "@radix-ui/react-avatar";
 var AvatarContainer = styled(Avatar.Root, {
@@ -735,19 +728,19 @@ var AvatarFallback = styled(Avatar.Fallback, {
 
 // src/components/Avatar/index.tsx
 import { User } from "phosphor-react";
-import { jsx as jsx2, jsxs } from "react/jsx-runtime";
+import { jsx as jsx4, jsxs } from "react/jsx-runtime";
 var Avatar2 = (props) => {
   return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
-    /* @__PURE__ */ jsx2(AvatarImage, __spreadValues({}, props)),
-    /* @__PURE__ */ jsx2(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx2(User, {}) })
+    /* @__PURE__ */ jsx4(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx4(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx4(User, {}) })
   ] });
 };
 Avatar2.displayName = "Avatar";
 
 // src/components/Button/index.tsx
-import { tv } from "tailwind-variants";
-import { jsx as jsx3 } from "react/jsx-runtime";
-var button = tv({
+import { tv as tv3 } from "tailwind-variants";
+import { jsx as jsx5 } from "react/jsx-runtime";
+var button = tv3({
   base: [
     "rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm",
     "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500",
@@ -766,7 +759,7 @@ var button = tv({
 });
 var Button = (_a) => {
   var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
-  return /* @__PURE__ */ jsx3(
+  return /* @__PURE__ */ jsx5(
     "button",
     __spreadProps(__spreadValues({}, props), {
       className: button({
@@ -820,12 +813,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-import { jsx as jsx4, jsxs as jsxs2 } from "react/jsx-runtime";
+import { jsx as jsx6, jsxs as jsxs2 } from "react/jsx-runtime";
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
   return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx4(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx4(Input, __spreadValues({}, props))
+    !!prefix && /* @__PURE__ */ jsx6(Prefix, { children: prefix }),
+    /* @__PURE__ */ jsx6(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -912,9 +905,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-import { jsx as jsx5 } from "react/jsx-runtime";
+import { jsx as jsx7 } from "react/jsx-runtime";
 function Checkbox2(props) {
-  return /* @__PURE__ */ jsx5(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx5(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx5(Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ jsx7(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx7(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx7(Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -946,7 +939,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx6, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx8, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -955,8 +948,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx6(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx6(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx8(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx8(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }

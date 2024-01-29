@@ -532,8 +532,8 @@ declare const radii: {
 declare const fonts: {
     default: string;
     code: string;
-    heading: string;
-    body: string;
+    'sf-heading': string;
+    "sf-body": string;
 };
 
 declare const fontSizes: {

@@ -1,35 +1,24 @@
 import { ComponentProps } from 'react'
-import { styled } from '../../styles'
+import { VariantProps, tv } from 'tailwind-variants'
 
-export const Text = styled('p', {
-  fontFamily: '$default',
-  lineHeight: '$base',
-  margin: 0,
-  color: '$gray100',
+const text = tv({
+  base: ['font-sf-body'],
 
   variants: {
     size: {
-      xxs: { fontSize: '$xxs' },
-      xs: { fontSize: '$xs' },
-      sm: { fontSize: '$sm' },
-      md: { fontSize: '$md' },
-      lg: { fontSize: '$lg' },
-      xl: { fontSize: '$xl' },
-      '2xl': { fontSize: '$2xl' },
-      '4xl': { fontSize: '$4xl' },
-      '5xl': { fontSize: '$5xl' },
-      '6xl': { fontSize: '$6xl' },
-      '7xl': { fontSize: '$7xl' },
-      '8xl': { fontSize: '$8xl' },
-      '9xl': { fontSize: '$9xl' },
+      xs: 'text-sf-xs',
+      sm: 'text-sf-sm',
+      base: 'text-sf-md',
+      lg: 'text-sf-lg',
     },
   },
-
   defaultVariants: {
-    size: 'md',
+    size: 'base',
   },
 })
 
-export interface TextProps extends ComponentProps<typeof Text> {}
+export type TextProps = ComponentProps<'p'> & VariantProps<typeof text>
 
-Text.displayName = 'Text'
+export const Text = ({ className, size, ...props }: TextProps) => {
+  return <p {...props} className={text({ size, className })} />
+}

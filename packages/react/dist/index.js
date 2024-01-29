@@ -91,6 +91,52 @@ var Box = (_a) => {
   );
 };
 
+// src/components/Text/index.tsx
+var import_tailwind_variants = require("tailwind-variants");
+var import_jsx_runtime2 = require("react/jsx-runtime");
+var text = (0, import_tailwind_variants.tv)({
+  base: ["font-sf-body"],
+  variants: {
+    size: {
+      xs: "text-sf-xs",
+      sm: "text-sf-sm",
+      base: "text-sf-md",
+      lg: "text-sf-lg"
+    }
+  },
+  defaultVariants: {
+    size: "base"
+  }
+});
+var Text = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
+};
+
+// src/components/Heading/index.tsx
+var import_tailwind_variants2 = require("tailwind-variants");
+var import_jsx_runtime3 = require("react/jsx-runtime");
+var heading = (0, import_tailwind_variants2.tv)({
+  base: ["font-sf-heading"],
+  variants: {
+    size: {
+      h1: "text-sf-h1",
+      h2: "text-sf-h2",
+      h3: "text-sf-h3",
+      h4: "text-sf-h4",
+      h5: "text-sf-h5",
+      h6: "text-sf-h6"
+    }
+  },
+  defaultVariants: {
+    size: "h3"
+  }
+});
+var Heading = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", __spreadProps(__spreadValues({}, props), { className: heading({ size, className }) }));
+};
+
 // ../tokens/dist/index.mjs
 var primaryPalette = {
   "primary-green": {
@@ -700,59 +746,6 @@ var { styled, css, keyframes, config, globalCss, theme, createTheme } = (0, impo
   }
 });
 
-// src/components/Text/index.tsx
-var Text = styled("p", {
-  fontFamily: "$default",
-  lineHeight: "$base",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      xxs: { fontSize: "$xxs" },
-      xs: { fontSize: "$xs" },
-      sm: { fontSize: "$sm" },
-      md: { fontSize: "$md" },
-      lg: { fontSize: "$lg" },
-      xl: { fontSize: "$xl" },
-      "2xl": { fontSize: "$2xl" },
-      "4xl": { fontSize: "$4xl" },
-      "5xl": { fontSize: "$5xl" },
-      "6xl": { fontSize: "$6xl" },
-      "7xl": { fontSize: "$7xl" },
-      "8xl": { fontSize: "$8xl" },
-      "9xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Text.displayName = "Text";
-
-// src/components/Heading/index.tsx
-var Heading = styled("h2", {
-  fontFamily: "$default",
-  lineHeight: "$shorter",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      sm: { fontSize: "$xl" },
-      md: { fontSize: "$2xl" },
-      lg: { fontSize: "$4xl" },
-      xl: { fontSize: "$5xl" },
-      "2xl": { fontSize: "$6xl" },
-      "4xl": { fontSize: "$7xl" },
-      "5xl": { fontSize: "$8xl" },
-      "6xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Heading.displayName = "Heading";
-
 // src/components/Avatar/styles.ts
 var Avatar = __toESM(require("@radix-ui/react-avatar"));
 var AvatarContainer = styled(Avatar.Root, {
@@ -784,19 +777,19 @@ var AvatarFallback = styled(Avatar.Fallback, {
 
 // src/components/Avatar/index.tsx
 var import_phosphor_react = require("phosphor-react");
-var import_jsx_runtime2 = require("react/jsx-runtime");
+var import_jsx_runtime4 = require("react/jsx-runtime");
 var Avatar2 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(AvatarContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AvatarImage, __spreadValues({}, props)),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_phosphor_react.User, {}) })
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(AvatarContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_phosphor_react.User, {}) })
   ] });
 };
 Avatar2.displayName = "Avatar";
 
 // src/components/Button/index.tsx
-var import_tailwind_variants = require("tailwind-variants");
-var import_jsx_runtime3 = require("react/jsx-runtime");
-var button = (0, import_tailwind_variants.tv)({
+var import_tailwind_variants3 = require("tailwind-variants");
+var import_jsx_runtime5 = require("react/jsx-runtime");
+var button = (0, import_tailwind_variants3.tv)({
   base: [
     "rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm",
     "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500",
@@ -815,7 +808,7 @@ var button = (0, import_tailwind_variants.tv)({
 });
 var Button = (_a) => {
   var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
     "button",
     __spreadProps(__spreadValues({}, props), {
       className: button({
@@ -869,12 +862,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-var import_jsx_runtime4 = require("react/jsx-runtime");
+var import_jsx_runtime6 = require("react/jsx-runtime");
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Prefix, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Input, __spreadValues({}, props))
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(TextInputContainer, { children: [
+    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Prefix, { children: prefix }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -961,9 +954,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-var import_jsx_runtime5 = require("react/jsx-runtime");
+var import_jsx_runtime7 = require("react/jsx-runtime");
 function Checkbox2(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -995,17 +988,17 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-var import_jsx_runtime6 = require("react/jsx-runtime");
+var import_jsx_runtime8 = require("react/jsx-runtime");
 function MultiStep({ size, currentStep = 1 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(MultiStepContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Label, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(Label, { children: [
       "Passo ",
       currentStep,
       " de ",
       size
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
