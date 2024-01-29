@@ -1,5 +1,11 @@
 # @sf-digital-ui/ts-config
 
+## 1.1.1
+
+### Patch Changes
+
+- New design system tokens
+
 ## 1.1.0
 
 ### Minor Changes

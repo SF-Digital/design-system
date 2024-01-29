@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 2.0.2
+
+### Patch Changes
+
+- New design system tokens
+
 ## 2.0.1
 
 ### Patch Changes

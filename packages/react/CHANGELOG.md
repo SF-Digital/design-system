@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 3.0.3
+
+### Patch Changes
+
+- New design system tokens
+
 ## 3.0.2
 
 ### Patch Changes
