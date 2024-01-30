@@ -399,8 +399,11 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
-type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>;
-declare const Button: ({ variant, className, size, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
+type ButtonRootProps = ComponentProps<'button'> & VariantProps<typeof button>;
+declare const Root: ({ variant, className, size, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
+
+type ButtonPrefixProps = ComponentProps<'div'>;
+declare const Prefix: (props: ButtonPrefixProps) => react_jsx_runtime.JSX.Element;
 
 declare const Input: _stitches_react_types_styled_component.StyledComponent<"input", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -3045,4 +3048,4 @@ declare const createTheme: <Argument0 extends string | ({
     selector: string;
 } & (Argument0 extends string ? _stitches_react_types_stitches.ThemeTokens<Argument1, ""> : _stitches_react_types_stitches.ThemeTokens<Argument0, "">);
 
-export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonProps, Checkbox, type CheckboxProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
+export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, type ButtonRootProps, Checkbox, type CheckboxProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Prefix, Root, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };

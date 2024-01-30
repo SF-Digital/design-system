@@ -756,13 +756,13 @@ var Avatar2 = (props) => {
 };
 Avatar2.displayName = "Avatar";
 
-// src/components/Button/index.tsx
+// src/components/Button/ButtonRoot/index.tsx
 import { tv as tv3 } from "tailwind-variants";
 import { jsx as jsx5 } from "react/jsx-runtime";
 var button = tv3(
   {
     base: [
-      "font-heading rounded-md font-semibold",
+      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {
@@ -804,8 +804,16 @@ var button = tv3(
     twMerge: false
   }
 );
-var Button = (_a) => {
-  var _b = _a, { variant, className, size } = _b, props = __objRest(_b, ["variant", "className", "size"]);
+var Root2 = (_a) => {
+  var _b = _a, {
+    variant,
+    className,
+    size
+  } = _b, props = __objRest(_b, [
+    "variant",
+    "className",
+    "size"
+  ]);
   return /* @__PURE__ */ jsx5(
     "button",
     __spreadProps(__spreadValues({}, props), {
@@ -816,6 +824,18 @@ var Button = (_a) => {
       })
     })
   );
+};
+
+// src/components/Button/ButtonPrefix/index.tsx
+import { jsx as jsx6 } from "react/jsx-runtime";
+var Prefix = (props) => {
+  return /* @__PURE__ */ jsx6("div", __spreadValues({}, props));
+};
+
+// src/components/Button/ButtonSuffix/index.tsx
+import { jsx as jsx7 } from "react/jsx-runtime";
+var Suffix = (props) => {
+  return /* @__PURE__ */ jsx7("div", __spreadValues({}, props));
 };
 
 // src/components/TextInput/styles.ts
@@ -835,7 +855,7 @@ var TextInputContainer = styled("div", {
     cursor: "not-allowed"
   }
 });
-var Prefix = styled("span", {
+var Prefix2 = styled("span", {
   fontFamily: "$default",
   fontSize: "$sm",
   color: "$gray400",
@@ -861,12 +881,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-import { jsx as jsx6, jsxs as jsxs2 } from "react/jsx-runtime";
+import { jsx as jsx8, jsxs as jsxs2 } from "react/jsx-runtime";
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
   return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx6(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx6(Input, __spreadValues({}, props))
+    !!prefix && /* @__PURE__ */ jsx8(Prefix2, { children: prefix }),
+    /* @__PURE__ */ jsx8(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -953,9 +973,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-import { jsx as jsx7 } from "react/jsx-runtime";
+import { jsx as jsx9 } from "react/jsx-runtime";
 function Checkbox2(props) {
-  return /* @__PURE__ */ jsx7(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx7(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx7(Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ jsx9(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx9(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx9(Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -987,7 +1007,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx8, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx10, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -996,8 +1016,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx8(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx8(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx10(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx10(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
@@ -1015,10 +1035,12 @@ export {
   Avatar2 as Avatar,
   Box,
   BoxTest,
-  Button,
   Checkbox2 as Checkbox,
   Heading,
   MultiStep,
+  Prefix,
+  Root2 as Root,
+  Suffix,
   Text,
   TextArea,
   TextInput,
