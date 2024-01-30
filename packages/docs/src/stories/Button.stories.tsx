@@ -8,20 +8,20 @@ export default {
   title: 'Form/Button',
   component: Button,
   args: {
-    children: 'Button CTA',
+    children: 'Button',
     variant: 'primary',
     size: 'md',
     disabled: false,
   },
   argTypes: {
     variant: {
-      options: ['primary', 'secondary', 'outline', 'ghost'],
+      options: ['primary', 'secondary', 'success', 'error', 'warning'],
       control: {
         type: 'inline-radio',
       },
     },
     size: {
-      options: ['sm', 'md', 'lg', 'xl', '2xl'],
+      options: ['sm', 'md', 'lg'],
       control: {
         type: 'inline-radio',
       },
@@ -37,9 +37,30 @@ export default {
 
 export const Primary: StoryObj<ButtonProps> = {}
 
-export const Outline: StoryObj<ButtonProps> = {
+export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    variant: 'outline',
+    variant: 'secondary',
+    children: 'Create new',
+  },
+}
+
+export const Success: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'success',
+    children: 'Create new',
+  },
+}
+
+export const Warning: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'warning',
+    children: 'Create new',
+  },
+}
+
+export const Error: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'error',
     children: 'Create new',
   },
 }

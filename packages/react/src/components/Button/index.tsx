@@ -4,21 +4,44 @@ import { VariantProps, tv } from 'tailwind-variants'
 
 const button = tv(
   {
-    base: 'rounded-md text-white',
+    base: [
+      'font-heading rounded-md font-semibold',
+      'disabled:bg-neutral-40 disabled:text-neutral-50',
+    ],
 
     variants: {
       variant: {
-        primary: ' bg-primary-green-500',
-        secondary: 'bg-primary-green-50 text-primary-green-700',
-        outline: 'border-xs border border-neutral-40 text-neutral-50',
+        primary: [
+          'bg-primary-green-500 text-white',
+          'hover:bg-primary-green-700',
+          'active:bg-primary-green-800',
+        ],
+        secondary: [
+          'border-xs border border-primary-green-500 text-primary-green-500',
+          'hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700',
+          'active:border-primary-green-800 active:text-primary-green-800',
+        ],
+        success: [
+          'bg-success-500 text-white',
+          'hover:bg-success-700',
+          'active:bg-success-800',
+        ],
+        warning: [
+          'bg-warning-500 text-white',
+          'hover:bg-warning-700',
+          'active:bg-warning-800',
+        ],
+        error: [
+          'bg-error-500 text-white',
+          'hover:bg-error-700',
+          'active:bg-error-800',
+        ],
       },
 
       size: {
-        sm: 'px-3.5 py-2 text-sf-h6',
-        md: 'px-4 py-2.5 text-sf-sm',
-        lg: 'px-5 py-2.5 text-sf-md',
-        xl: 'px-5 py-3 text-sf-md',
-        '2xl': 'px-6 py-4 text-sf-lg',
+        sm: 'px-6 py-2 text-sf-sm',
+        md: 'px-6 py-2.5 text-sf-md',
+        lg: 'px-8 py-4 text-sf-lg',
       },
     },
   },

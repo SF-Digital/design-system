@@ -357,46 +357,46 @@ declare const Avatar: {
 
 declare const button: tailwind_variants.TVReturnType<{
     variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
+        primary: string[];
+        secondary: string[];
+        success: string[];
+        warning: string[];
+        error: string[];
     };
     size: {
         sm: string;
         md: string;
         lg: string;
-        xl: string;
-        '2xl': string;
     };
-}, undefined, "rounded-md text-white", {
+}, undefined, string[], {
     twMerge: false;
 }, {
     variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
+        primary: string[];
+        secondary: string[];
+        success: string[];
+        warning: string[];
+        error: string[];
     };
     size: {
         sm: string;
         md: string;
         lg: string;
-        xl: string;
-        '2xl': string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
     variant: {
-        primary: string;
-        secondary: string;
-        outline: string;
+        primary: string[];
+        secondary: string[];
+        success: string[];
+        warning: string[];
+        error: string[];
     };
     size: {
         sm: string;
         md: string;
         lg: string;
-        xl: string;
-        '2xl': string;
     };
-}, undefined, "rounded-md text-white", {
+}, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>;
