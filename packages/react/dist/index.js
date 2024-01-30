@@ -62,10 +62,12 @@ __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
   BoxTest: () => BoxTest,
-  Button: () => Button,
   Checkbox: () => Checkbox2,
   Heading: () => Heading,
   MultiStep: () => MultiStep,
+  Prefix: () => Prefix,
+  Root: () => Root2,
+  Suffix: () => Suffix,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
@@ -805,13 +807,13 @@ var Avatar2 = (props) => {
 };
 Avatar2.displayName = "Avatar";
 
-// src/components/Button/index.tsx
+// src/components/Button/ButtonRoot/index.tsx
 var import_tailwind_variants3 = require("tailwind-variants");
 var import_jsx_runtime5 = require("react/jsx-runtime");
 var button = (0, import_tailwind_variants3.tv)(
   {
     base: [
-      "font-heading rounded-md font-semibold",
+      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {
@@ -853,8 +855,16 @@ var button = (0, import_tailwind_variants3.tv)(
     twMerge: false
   }
 );
-var Button = (_a) => {
-  var _b = _a, { variant, className, size } = _b, props = __objRest(_b, ["variant", "className", "size"]);
+var Root2 = (_a) => {
+  var _b = _a, {
+    variant,
+    className,
+    size
+  } = _b, props = __objRest(_b, [
+    "variant",
+    "className",
+    "size"
+  ]);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
     "button",
     __spreadProps(__spreadValues({}, props), {
@@ -865,6 +875,18 @@ var Button = (_a) => {
       })
     })
   );
+};
+
+// src/components/Button/ButtonPrefix/index.tsx
+var import_jsx_runtime6 = require("react/jsx-runtime");
+var Prefix = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", __spreadValues({}, props));
+};
+
+// src/components/Button/ButtonSuffix/index.tsx
+var import_jsx_runtime7 = require("react/jsx-runtime");
+var Suffix = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", __spreadValues({}, props));
 };
 
 // src/components/TextInput/styles.ts
@@ -884,7 +906,7 @@ var TextInputContainer = styled("div", {
     cursor: "not-allowed"
   }
 });
-var Prefix = styled("span", {
+var Prefix2 = styled("span", {
   fontFamily: "$default",
   fontSize: "$sm",
   color: "$gray400",
@@ -910,12 +932,12 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-var import_jsx_runtime6 = require("react/jsx-runtime");
+var import_jsx_runtime8 = require("react/jsx-runtime");
 function TextInput(_a) {
   var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Prefix, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Input, __spreadValues({}, props))
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(TextInputContainer, { children: [
+    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Prefix2, { children: prefix }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Input, __spreadValues({}, props))
   ] });
 }
 TextInput.displayName = "TextInput";
@@ -1002,9 +1024,9 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 });
 
 // src/components/Checkbox/index.tsx
-var import_jsx_runtime7 = require("react/jsx-runtime");
+var import_jsx_runtime9 = require("react/jsx-runtime");
 function Checkbox2(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
 Checkbox2.displayName = "Checkbox";
 
@@ -1036,17 +1058,17 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-var import_jsx_runtime8 = require("react/jsx-runtime");
+var import_jsx_runtime10 = require("react/jsx-runtime");
 function MultiStep({ size, currentStep = 1 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(MultiStepContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(Label, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Label, { children: [
       "Passo ",
       currentStep,
       " de ",
       size
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
@@ -1065,10 +1087,12 @@ BoxTest.displayName = "BoxTest2";
   Avatar,
   Box,
   BoxTest,
-  Button,
   Checkbox,
   Heading,
   MultiStep,
+  Prefix,
+  Root,
+  Suffix,
   Text,
   TextArea,
   TextInput,
