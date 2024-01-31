@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import * as Checkbox from '@sf-digital-ui/react/src/components/Checkbox'
+import '@sf-digital-ui/react/dist/output.css'
 
 export default {
   title: 'Form/Checkbox',
