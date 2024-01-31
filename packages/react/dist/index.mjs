@@ -762,7 +762,7 @@ import { jsx as jsx5 } from "react/jsx-runtime";
 var button = tv3(
   {
     base: [
-      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold",
+      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold transition duration-150",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {
@@ -804,27 +804,6 @@ var button = tv3(
     twMerge: false
   }
 );
-var Root2 = (_a) => {
-  var _b = _a, {
-    variant,
-    className,
-    size
-  } = _b, props = __objRest(_b, [
-    "variant",
-    "className",
-    "size"
-  ]);
-  return /* @__PURE__ */ jsx5(
-    "button",
-    __spreadProps(__spreadValues({}, props), {
-      className: button({
-        variant,
-        size,
-        className
-      })
-    })
-  );
-};
 
 // src/components/Button/ButtonPrefix/index.tsx
 import { jsx as jsx6 } from "react/jsx-runtime";
@@ -918,66 +897,88 @@ var TextArea = styled("textarea", {
 });
 TextArea.displayName = "TextArea";
 
-// src/components/Checkbox/index.tsx
-import { Check } from "phosphor-react";
+// ../../../node_modules/lucide-react/dist/esm/createLucideIcon.js
+import { forwardRef, createElement } from "react";
 
-// src/components/Checkbox/styles.ts
-import * as Checkbox from "@radix-ui/react-checkbox";
-var CheckboxContainer = styled(Checkbox.Root, {
-  all: "unset",
-  width: "$6",
-  height: "$6",
-  backgroundColor: "$gray900",
-  borderRadius: "$xs",
-  lineHeight: 0,
-  cursor: "pointer",
-  overflow: "hidden",
-  boxSizing: "border-box",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  border: "2px solid $gray900",
-  '&[data-state="checked"]': {
-    backgroundColor: "$primary300"
-  },
-  "&:focus": {
-    border: "2px solid $primary300"
-  }
-});
-var slideIn = keyframes({
-  from: {
-    transform: "translateY(-100%)"
-  },
-  to: {
-    transform: "translateY(0)"
-  }
-});
-var slideOut = keyframes({
-  from: {
-    transform: "translateY(0)"
-  },
-  to: {
-    transform: "translateY(-100%)"
-  }
-});
-var CheckboxIndicator = styled(Checkbox.Indicator, {
-  color: "$white",
-  width: "$4",
-  height: "$4",
-  '&[data-state="checked"]': {
-    animation: `${slideIn} 200ms ease-out`
-  },
-  '&[data-state="unchecked"]': {
-    animation: `${slideOut} 200ms ease-out`
-  }
-});
+// ../../../node_modules/lucide-react/dist/esm/defaultAttributes.js
+var defaultAttributes = {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round"
+};
 
-// src/components/Checkbox/index.tsx
+// ../../../node_modules/lucide-react/dist/esm/createLucideIcon.js
+var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase().trim();
+var createLucideIcon = (iconName, iconNode) => {
+  const Component = forwardRef(
+    (_a, ref) => {
+      var _b = _a, { color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children } = _b, rest = __objRest(_b, ["color", "size", "strokeWidth", "absoluteStrokeWidth", "className", "children"]);
+      return createElement(
+        "svg",
+        __spreadValues(__spreadProps(__spreadValues({
+          ref
+        }, defaultAttributes), {
+          width: size,
+          height: size,
+          stroke: color,
+          strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
+          className: ["lucide", `lucide-${toKebabCase(iconName)}`, className].join(" ")
+        }), rest),
+        [
+          ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
+          ...Array.isArray(children) ? children : [children]
+        ]
+      );
+    }
+  );
+  Component.displayName = `${iconName}`;
+  return Component;
+};
+
+// ../../../node_modules/lucide-react/dist/esm/icons/check.js
+var Check = createLucideIcon("Check", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]]);
+
+// src/components/Checkbox/Check/index.tsx
 import { jsx as jsx9 } from "react/jsx-runtime";
-function Checkbox2(props) {
-  return /* @__PURE__ */ jsx9(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx9(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx9(Check, { weight: "bold" }) }) }));
-}
-Checkbox2.displayName = "Checkbox";
+var Check2 = (_a) => {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ jsx9(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
+};
+
+// src/components/Checkbox/CheckboxRoot/index.tsx
+import * as Checkbox from "@radix-ui/react-checkbox";
+import { tv as tv4 } from "tailwind-variants";
+import { jsx as jsx10 } from "react/jsx-runtime";
+var checkbox = tv4(
+  {
+    base: [
+      "border-xs flex h-5 w-5 flex-1 items-center justify-center rounded-xs border border-neutral-50",
+      'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500'
+    ],
+    variants: {
+      size: {
+        sm: "h-5 w-5",
+        md: "h-6 w-6",
+        lg: "h-8 w-8"
+      }
+    }
+  },
+  { twMerge: false }
+);
+
+// src/components/Checkbox/CheckboxIndicator/index.tsx
+import * as Checkbox2 from "@radix-ui/react-checkbox";
+import { jsx as jsx11 } from "react/jsx-runtime";
+var Indicator = (_a) => {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ jsx11(Checkbox2.CheckboxIndicator, __spreadValues({ asChild: true }, props));
+};
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -1007,7 +1008,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx10, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx12, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -1016,8 +1017,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx10(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx10(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx12(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx12(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
@@ -1035,11 +1036,11 @@ export {
   Avatar2 as Avatar,
   Box,
   BoxTest,
-  Checkbox2 as Checkbox,
+  Check2 as Check,
   Heading,
+  Indicator,
   MultiStep,
   Prefix,
-  Root2 as Root,
   Suffix,
   Text,
   TextArea,
@@ -1052,3 +1053,37 @@ export {
   styled,
   theme
 };
+/*! Bundled license information:
+
+lucide-react/dist/esm/defaultAttributes.js:
+  (**
+   * @license lucide-react v0.319.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/createLucideIcon.js:
+  (**
+   * @license lucide-react v0.319.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/icons/check.js:
+  (**
+   * @license lucide-react v0.319.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/lucide-react.js:
+  (**
+   * @license lucide-react v0.319.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+*/
