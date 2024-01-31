@@ -1,4 +1,5 @@
 import {
+  borderWidth,
   colors,
   fontSizes,
   fontWeights,
@@ -21,6 +22,7 @@ module.exports = {
       lineHeight: lineHeights,
       borderRadius: radii,
       space,
+      borderWidth,
     },
   },
   plugins: [],

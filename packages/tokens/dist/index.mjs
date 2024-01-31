@@ -641,7 +641,14 @@ var lineHeights = {
   base: "160%",
   tall: "180%"
 };
+
+// src/border-width.ts
+var borderWidth = {
+  6: "6px",
+  10: "10px"
+};
 export {
+  borderWidth,
   colors,
   fontSizes,
   fontWeights,

@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  borderWidth: () => borderWidth,
   colors: () => colors,
   fontSizes: () => fontSizes,
   fontWeights: () => fontWeights,
@@ -673,8 +674,15 @@ var lineHeights = {
   base: "160%",
   tall: "180%"
 };
+
+// src/border-width.ts
+var borderWidth = {
+  6: "6px",
+  10: "10px"
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  borderWidth,
   colors,
   fontSizes,
   fontWeights,
