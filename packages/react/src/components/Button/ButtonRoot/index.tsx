@@ -5,7 +5,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 const button = tv(
   {
     base: [
-      'font-heading flex flex-1 items-center gap-1 rounded-md font-semibold',
+      'font-heading flex flex-1 items-center gap-1 rounded-md font-semibold transition duration-150',
       'disabled:bg-neutral-40 disabled:text-neutral-50',
     ],
 

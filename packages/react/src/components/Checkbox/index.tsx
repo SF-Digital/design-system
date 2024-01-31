@@ -1,18 +1,7 @@
-import { Check } from 'phosphor-react'
-import { ComponentProps } from 'react'
-import { CheckboxContainer, CheckboxIndicator } from './styles'
+import { Check, CheckProps } from './Check'
+import { Root, CheckboxRootProps } from './CheckboxRoot'
+import { Indicator, CheckboxIndicatorProps } from './CheckboxIndicator'
 
-export interface CheckboxProps
-  extends ComponentProps<typeof CheckboxContainer> {}
+export { Root, Indicator, Check }
 
-export function Checkbox(props: CheckboxProps) {
-  return (
-    <CheckboxContainer {...props}>
-      <CheckboxIndicator asChild>
-        <Check weight="bold" />
-      </CheckboxIndicator>
-    </CheckboxContainer>
-  )
-}
-
-Checkbox.displayName = 'Checkbox'
+export type { CheckboxRootProps, CheckboxIndicatorProps, CheckProps }
