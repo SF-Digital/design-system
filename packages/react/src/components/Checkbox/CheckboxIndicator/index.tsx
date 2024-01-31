@@ -5,6 +5,6 @@ export type CheckboxIndicatorProps = ComponentProps<
   typeof Checkbox.CheckboxIndicator
 >
 
-export const Indicator = ({ ...props }) => {
+export const Indicator = (props: CheckboxIndicatorProps) => {
   return <Checkbox.CheckboxIndicator asChild {...props} />
 }
