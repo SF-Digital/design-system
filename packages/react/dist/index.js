@@ -62,12 +62,10 @@ __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
   BoxTest: () => BoxTest,
-  Check: () => Check2,
+  Button: () => Button,
+  Checkbox: () => Checkbox3,
   Heading: () => Heading,
-  Indicator: () => Indicator,
   MultiStep: () => MultiStep,
-  Prefix: () => Prefix,
-  Suffix: () => Suffix,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
@@ -855,6 +853,27 @@ var button = (0, import_tailwind_variants3.tv)(
     twMerge: false
   }
 );
+var Root2 = (_a) => {
+  var _b = _a, {
+    variant,
+    className,
+    size
+  } = _b, props = __objRest(_b, [
+    "variant",
+    "className",
+    "size"
+  ]);
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+    "button",
+    __spreadProps(__spreadValues({}, props), {
+      className: button({
+        variant,
+        size,
+        className
+      })
+    })
+  );
+};
 
 // src/components/Button/ButtonPrefix/index.tsx
 var import_jsx_runtime6 = require("react/jsx-runtime");
@@ -867,6 +886,9 @@ var import_jsx_runtime7 = require("react/jsx-runtime");
 var Suffix = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", __spreadValues({}, props));
 };
+
+// src/components/Button/index.tsx
+var Button = { Root: Root2, Prefix, Suffix };
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -997,8 +1019,7 @@ var Check = createLucideIcon("Check", [["path", { d: "M20 6 9 17l-5-5", key: "1g
 
 // src/components/Checkbox/Check/index.tsx
 var import_jsx_runtime9 = require("react/jsx-runtime");
-var Check2 = (_a) => {
-  var props = __objRest(_a, []);
+var Check2 = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
 };
 
@@ -1022,14 +1043,20 @@ var checkbox = (0, import_tailwind_variants4.tv)(
   },
   { twMerge: false }
 );
+var Root4 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
+};
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
 var Checkbox2 = __toESM(require("@radix-ui/react-checkbox"));
 var import_jsx_runtime11 = require("react/jsx-runtime");
-var Indicator = (_a) => {
-  var props = __objRest(_a, []);
+var Indicator = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Checkbox2.CheckboxIndicator, __spreadValues({ asChild: true }, props));
 };
+
+// src/components/Checkbox/index.tsx
+var Checkbox3 = { Root: Root4, Indicator, Check: Check2 };
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -1088,12 +1115,10 @@ BoxTest.displayName = "BoxTest2";
   Avatar,
   Box,
   BoxTest,
-  Check,
+  Button,
+  Checkbox,
   Heading,
-  Indicator,
   MultiStep,
-  Prefix,
-  Suffix,
   Text,
   TextArea,
   TextInput,

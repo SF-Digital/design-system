@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ButtonRootProps } from '@sf-digital-ui/react'
-import * as Button from '@sf-digital-ui/react/src/components/Button'
+import { ButtonRootProps, Button } from '@sf-digital-ui/react'
+
 import { CaretLeft, CaretRight } from 'phosphor-react'
 
 import '@sf-digital-ui/react/dist/output.css'

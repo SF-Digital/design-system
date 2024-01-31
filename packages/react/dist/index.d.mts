@@ -7,10 +7,12 @@ import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as Avatar$1 from '@radix-ui/react-avatar';
+import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
 import * as _stitches_react_types_util from '@stitches/react/types/util';
+import { Check } from 'lucide-react';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -399,13 +401,16 @@ declare const button: tailwind_variants.TVReturnType<{
     twMerge: false;
 }, unknown, unknown, undefined>>;
 type ButtonRootProps = ComponentProps<'button'> & VariantProps<typeof button>;
-declare const Root: ({ variant, className, size, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
 
 type ButtonPrefixProps = ComponentProps<'div'>;
-declare const Prefix: (props: ButtonPrefixProps) => react_jsx_runtime.JSX.Element;
 
 type ButtonSuffixProps = ComponentProps<'div'>;
-declare const Suffix: (props: ButtonSuffixProps) => react_jsx_runtime.JSX.Element;
+
+declare const Button: {
+    Root: ({ variant, className, size, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
+    Prefix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
+    Suffix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
+};
 
 declare const Input: _stitches_react_types_styled_component.StyledComponent<"input", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -839,7 +844,40 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
 interface TextAreaProps extends ComponentProps<typeof TextArea> {
 }
 
-declare function Checkbox(): react_jsx_runtime.JSX.Element;
+type CheckProps = ComponentProps<typeof Check>;
+
+declare const checkbox: tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, {
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
+type CheckboxRootProps = ComponentProps<typeof Checkbox$1.Root> & VariantProps<typeof checkbox>;
+
+type CheckboxIndicatorProps = ComponentProps<typeof Checkbox$1.CheckboxIndicator>;
+
+declare const Checkbox: {
+    Root: ({ className, size, ...props }: CheckboxRootProps) => react_jsx_runtime.JSX.Element;
+    Indicator: (props: Checkbox$1.CheckboxIndicatorProps & react.RefAttributes<HTMLSpanElement>) => react_jsx_runtime.JSX.Element;
+    Check: (props: any) => react_jsx_runtime.JSX.Element;
+};
 
 interface MultiStepProps {
     size: number;
@@ -2834,4 +2872,4 @@ declare const createTheme: <Argument0 extends string | ({
     selector: string;
 } & (Argument0 extends string ? _stitches_react_types_stitches.ThemeTokens<Argument1, ""> : _stitches_react_types_stitches.ThemeTokens<Argument0, "">);
 
-export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, Checkbox, Heading, type HeadingProps, MultiStep, type MultiStepProps, Prefix, Root, Suffix, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
+export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };

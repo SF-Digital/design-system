@@ -804,6 +804,27 @@ var button = tv3(
     twMerge: false
   }
 );
+var Root2 = (_a) => {
+  var _b = _a, {
+    variant,
+    className,
+    size
+  } = _b, props = __objRest(_b, [
+    "variant",
+    "className",
+    "size"
+  ]);
+  return /* @__PURE__ */ jsx5(
+    "button",
+    __spreadProps(__spreadValues({}, props), {
+      className: button({
+        variant,
+        size,
+        className
+      })
+    })
+  );
+};
 
 // src/components/Button/ButtonPrefix/index.tsx
 import { jsx as jsx6 } from "react/jsx-runtime";
@@ -816,6 +837,9 @@ import { jsx as jsx7 } from "react/jsx-runtime";
 var Suffix = (props) => {
   return /* @__PURE__ */ jsx7("div", __spreadValues({}, props));
 };
+
+// src/components/Button/index.tsx
+var Button = { Root: Root2, Prefix, Suffix };
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -946,8 +970,7 @@ var Check = createLucideIcon("Check", [["path", { d: "M20 6 9 17l-5-5", key: "1g
 
 // src/components/Checkbox/Check/index.tsx
 import { jsx as jsx9 } from "react/jsx-runtime";
-var Check2 = (_a) => {
-  var props = __objRest(_a, []);
+var Check2 = (props) => {
   return /* @__PURE__ */ jsx9(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
 };
 
@@ -971,14 +994,20 @@ var checkbox = tv4(
   },
   { twMerge: false }
 );
+var Root4 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx10(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
+};
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
 import * as Checkbox2 from "@radix-ui/react-checkbox";
 import { jsx as jsx11 } from "react/jsx-runtime";
-var Indicator = (_a) => {
-  var props = __objRest(_a, []);
+var Indicator = (props) => {
   return /* @__PURE__ */ jsx11(Checkbox2.CheckboxIndicator, __spreadValues({ asChild: true }, props));
 };
+
+// src/components/Checkbox/index.tsx
+var Checkbox3 = { Root: Root4, Indicator, Check: Check2 };
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -1036,12 +1065,10 @@ export {
   Avatar2 as Avatar,
   Box,
   BoxTest,
-  Check2 as Check,
+  Button,
+  Checkbox3 as Checkbox,
   Heading,
-  Indicator,
   MultiStep,
-  Prefix,
-  Suffix,
   Text,
   TextArea,
   TextInput,
