@@ -577,4 +577,9 @@ declare const lineHeights: {
     tall: string;
 };
 
-export { colors, fontSizes, fontWeights, fonts, lineHeights, radii, space };
+declare const borderWidth: {
+    6: string;
+    10: string;
+};
+
+export { borderWidth, colors, fontSizes, fontWeights, fonts, lineHeights, radii, space };

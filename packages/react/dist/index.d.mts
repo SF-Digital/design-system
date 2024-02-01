@@ -7,12 +7,14 @@ import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as Avatar$1 from '@radix-ui/react-avatar';
+import * as lucide_react from 'lucide-react';
+import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
+import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
 import * as _stitches_react_types_util from '@stitches/react/types/util';
-import { Check } from 'lucide-react';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -876,7 +878,7 @@ type CheckboxIndicatorProps = ComponentProps<typeof Checkbox$1.CheckboxIndicator
 declare const Checkbox: {
     Root: ({ className, size, ...props }: CheckboxRootProps) => react_jsx_runtime.JSX.Element;
     Indicator: (props: Checkbox$1.CheckboxIndicatorProps & react.RefAttributes<HTMLSpanElement>) => react_jsx_runtime.JSX.Element;
-    Check: (props: any) => react_jsx_runtime.JSX.Element;
+    Check: (props: lucide_react.LucideProps) => react_jsx_runtime.JSX.Element;
 };
 
 interface MultiStepProps {
@@ -1100,6 +1102,39 @@ declare const BoxTest: _stitches_react_types_styled_component.StyledComponent<"d
 }, {}>>;
 interface BoxTestProps extends ComponentProps<typeof BoxTest> {
 }
+
+declare const radio$1: tailwind_variants.TVReturnType<{} | {} | {}, undefined, "flex flex-col gap-2.5", tailwind_variants_dist_config.TVConfig<unknown, {} | {}>, {} | {}, undefined, tailwind_variants.TVReturnType<unknown, undefined, "flex flex-col gap-2.5", tailwind_variants_dist_config.TVConfig<unknown, {} | {}>, unknown, unknown, undefined>>;
+type RadioGroupRootProps = ComponentProps<typeof RadioGroup$1.Root> & VariantProps<typeof radio$1>;
+
+declare const radio: tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, {
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
+type RadioGroupItemProps = ComponentProps<typeof RadioGroup$1.Item> & VariantProps<typeof radio>;
+
+declare const RadioGroup: {
+    Root: ({ className, ...props }: RadioGroupRootProps) => react_jsx_runtime.JSX.Element;
+    Item: ({ className, size, ...props }: RadioGroupItemProps) => react_jsx_runtime.JSX.Element;
+};
 
 declare const styled: <Type extends react.ComponentType<any> | _stitches_react_types_util.Function | keyof JSX.IntrinsicElements, Composers extends (string | react.ComponentType<any> | _stitches_react_types_util.Function | {
     [name: string]: unknown;
@@ -2872,4 +2907,4 @@ declare const createTheme: <Argument0 extends string | ({
     selector: string;
 } & (Argument0 extends string ? _stitches_react_types_stitches.ThemeTokens<Argument1, ""> : _stitches_react_types_stitches.ThemeTokens<Argument0, "">);
 
-export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
+export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
