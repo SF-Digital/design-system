@@ -5,6 +5,27 @@ import { CaretLeft, CaretRight } from 'phosphor-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
+/**
+ * This story displays the `Button` component, which is a React Element built using Pattern Composition.
+ *
+ * ## Usage:
+ * `Button.Root` - The root element of the button.
+ *
+ * `Button.Prefix` - The element that will appear on the left side.
+ *
+ * `Button.Suffix` - The element that will appear on the right side.
+ *
+ * ## API Reference:
+ * ### Root
+ *
+ * `size: 'sm' | 'md' | 'lg'` - The size of the button.
+ *
+ * `variant: 'primary' | 'secondary' | 'success' | 'error' | 'warning'` - The variant.
+ *
+ * `disabled: boolean` - Whether the button is disabled.
+ *
+ */
+
 export default {
   title: 'Form/Button',
   component: Button.Root,
