@@ -15,7 +15,7 @@ export const Control = ({ ...props }: TextInputControlProps) => {
         disabled={disabled}
         className={twJoin(
           props.className,
-          'focus: w-full border-transparent text-black outline-none disabled:bg-neutral-40',
+          'w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50',
         )}
       />
     </Form.Control>

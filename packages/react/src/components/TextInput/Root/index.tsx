@@ -15,7 +15,7 @@ const input = tv(
         lg: 'px-5 py-3.5 text-sf-lg',
       },
       disabled: {
-        true: 'border-none bg-neutral-40 text-neutral-50',
+        true: 'border-none bg-neutral-40',
         false: '',
       },
     },

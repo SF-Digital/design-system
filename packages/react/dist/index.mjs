@@ -858,7 +858,7 @@ var input = tv4(
         lg: "px-5 py-3.5 text-sf-lg"
       },
       disabled: {
-        true: "border-none bg-neutral-40 text-neutral-50",
+        true: "border-none bg-neutral-40",
         false: ""
       }
     }
@@ -904,7 +904,7 @@ var Control2 = (_a) => {
       disabled,
       className: twJoin(
         props.className,
-        "focus: w-full border-transparent text-black outline-none disabled:bg-neutral-40"
+        "w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50"
       )
     })
   ) });
