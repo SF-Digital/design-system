@@ -892,6 +892,7 @@ var Suffix = (props) => {
 var Button = { Root: Root2, Prefix, Suffix };
 
 // src/components/TextInput/Root/index.tsx
+var import_react2 = require("react");
 var import_tailwind_variants4 = require("tailwind-variants");
 var import_jsx_runtime8 = require("react/jsx-runtime");
 var input = (0, import_tailwind_variants4.tv)(
@@ -905,51 +906,71 @@ var input = (0, import_tailwind_variants4.tv)(
         sm: "px-4 py-2.5 text-sf-sm",
         md: "px-4 py-2.5 text-sf-md",
         lg: "px-5 py-3.5 text-sf-lg"
+      },
+      disabled: {
+        true: "border-none bg-neutral-40 text-neutral-50",
+        false: ""
       }
     }
   },
   { twMerge: false }
 );
+var TextInputContext = (0, import_react2.createContext)(
+  {}
+);
 var Root3 = (_a) => {
   var _b = _a, {
     size = "sm",
+    disabled = false,
     className
   } = _b, props = __objRest(_b, [
     "size",
+    "disabled",
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input({
         className,
+        disabled,
         size
       })
     })
-  );
+  ) });
 };
+var useTextInput = () => (0, import_react2.useContext)(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
+var Form = __toESM(require("@radix-ui/react-form"));
 var import_tailwind_merge = require("tailwind-merge");
 var import_jsx_runtime9 = require("react/jsx-runtime");
-var Control = (_a) => {
+var Control2 = (_a) => {
   var props = __objRest(_a, []);
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+  const { disabled } = useTextInput();
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Form.Control, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
     "input",
     __spreadProps(__spreadValues({}, props), {
+      disabled,
       className: (0, import_tailwind_merge.twJoin)(
         props.className,
-        "focus: w-full border-transparent text-black outline-none"
+        "focus: w-full border-transparent text-black outline-none disabled:bg-neutral-40"
       )
     })
-  );
+  ) });
 };
 
 // src/components/TextInput/Prefix/index.tsx
 var import_tailwind_merge2 = require("tailwind-merge");
 var import_jsx_runtime10 = require("react/jsx-runtime");
+var sizePaddings = {
+  sm: "pr-2",
+  md: "pr-2.5",
+  lg: "pr-3.5"
+};
 var Prefix2 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", __spreadProps(__spreadValues({}, props), { className: (0, import_tailwind_merge2.twJoin)(props.className, "pr-2.5") }));
+  const { size } = useTextInput();
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", __spreadProps(__spreadValues({}, props), { className: (0, import_tailwind_merge2.twJoin)(props.className, sizePaddings[size]) }));
 };
 
 // src/components/TextInput/Suffix/index.tsx
@@ -959,7 +980,7 @@ var Suffix2 = (props) => {
 };
 
 // src/components/TextInput/index.tsx
-var TextInput = { Root: Root3, Control, Prefix: Prefix2, Suffix: Suffix2 };
+var TextInput = { Root: Root3, Control: Control2, Prefix: Prefix2, Suffix: Suffix2 };
 
 // src/components/TextArea/index.tsx
 var TextArea = styled("textarea", {
@@ -989,7 +1010,7 @@ var TextArea = styled("textarea", {
 TextArea.displayName = "TextArea";
 
 // ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
-var import_react2 = require("react");
+var import_react3 = require("react");
 
 // ../../node_modules/lucide-react/dist/esm/defaultAttributes.js
 var defaultAttributes = {
@@ -1007,10 +1028,10 @@ var defaultAttributes = {
 // ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
 var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase().trim();
 var createLucideIcon = (iconName, iconNode) => {
-  const Component = (0, import_react2.forwardRef)(
+  const Component = (0, import_react3.forwardRef)(
     (_a, ref) => {
       var _b = _a, { color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children } = _b, rest = __objRest(_b, ["color", "size", "strokeWidth", "absoluteStrokeWidth", "className", "children"]);
-      return (0, import_react2.createElement)(
+      return (0, import_react3.createElement)(
         "svg",
         __spreadValues(__spreadProps(__spreadValues({
           ref
@@ -1022,7 +1043,7 @@ var createLucideIcon = (iconName, iconNode) => {
           className: ["lucide", `lucide-${toKebabCase(iconName)}`, className].join(" ")
         }), rest),
         [
-          ...iconNode.map(([tag, attrs]) => (0, import_react2.createElement)(tag, attrs)),
+          ...iconNode.map(([tag, attrs]) => (0, import_react3.createElement)(tag, attrs)),
           ...Array.isArray(children) ? children : [children]
         ]
       );

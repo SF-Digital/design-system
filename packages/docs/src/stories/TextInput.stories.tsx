@@ -11,6 +11,7 @@ export default {
   component: TextInput.Root,
   args: {
     size: 'sm',
+    disabled: false,
   },
   argTypes: {
     size: {
@@ -19,16 +20,17 @@ export default {
         type: 'inline-radio',
       },
     },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
-} as Meta
+} as Meta<typeof TextInput.Root>
 
 export const Default: StoryObj<TextInputRootProps> = {
   args: {
-    children: (
-      <>
-        <TextInput.Control placeholder="Placeholder" />
-      </>
-    ),
+    children: <TextInput.Control placeholder="Placeholder" />,
   },
   decorators: [
     (Story) => (

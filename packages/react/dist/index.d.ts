@@ -421,6 +421,10 @@ declare const input: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
+    disabled: {
+        true: string;
+        false: string;
+    };
 }, undefined, string[], {
     twMerge: false;
 }, {
@@ -429,16 +433,26 @@ declare const input: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
+    disabled: {
+        true: string;
+        false: string;
+    };
 }, undefined, tailwind_variants.TVReturnType<{
     size: {
         sm: string;
         md: string;
         lg: string;
     };
+    disabled: {
+        true: string;
+        false: string;
+    };
 }, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
-type TextInputRootProps = ComponentProps<'div'> & VariantProps<typeof input>;
+type TextInputRootProps = ComponentProps<'div'> & VariantProps<typeof input> & {
+    disabled?: boolean;
+};
 
 type TextInputControlProps = ComponentProps<typeof Form.Control>;
 
@@ -447,7 +461,7 @@ type TextInputPrefixProps = ComponentProps<'div'>;
 type TextInputSuffixProps = ComponentProps<'div'>;
 
 declare const TextInput: {
-    Root: ({ size, className, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ size, disabled, className, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
     Control: ({ ...props }: Form.FormControlProps & react.RefAttributes<HTMLInputElement>) => react_jsx_runtime.JSX.Element;
     Prefix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
     Suffix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;

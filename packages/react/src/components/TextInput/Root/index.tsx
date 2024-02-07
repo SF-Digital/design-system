@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, createContext, useContext } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const input = tv(
@@ -14,26 +14,40 @@ const input = tv(
         md: 'px-4 py-2.5 text-sf-md',
         lg: 'px-5 py-3.5 text-sf-lg',
       },
+      disabled: {
+        true: 'border-none bg-neutral-40 text-neutral-50',
+        false: '',
+      },
     },
   },
   { twMerge: false },
 )
 
+const TextInputContext = createContext(
+  {} as { size: string; disabled: boolean },
+)
+
 export type TextInputRootProps = ComponentProps<'div'> &
-  VariantProps<typeof input>
+  VariantProps<typeof input> & { disabled?: boolean }
 
 export const Root = ({
   size = 'sm',
+  disabled = false,
   className,
   ...props
 }: TextInputRootProps) => {
   return (
-    <div
-      {...props}
-      className={input({
-        className,
-        size,
-      })}
-    />
+    <TextInputContext.Provider value={{ size, disabled }}>
+      <div
+        {...props}
+        className={input({
+          className,
+          disabled,
+          size,
+        })}
+      />
+    </TextInputContext.Provider>
   )
 }
+
+export const useTextInput = () => useContext(TextInputContext)

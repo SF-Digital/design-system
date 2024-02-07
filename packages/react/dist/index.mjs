@@ -842,6 +842,7 @@ var Suffix = (props) => {
 var Button = { Root: Root2, Prefix, Suffix };
 
 // src/components/TextInput/Root/index.tsx
+import { createContext, useContext } from "react";
 import { tv as tv4 } from "tailwind-variants";
 import { jsx as jsx8 } from "react/jsx-runtime";
 var input = tv4(
@@ -855,51 +856,71 @@ var input = tv4(
         sm: "px-4 py-2.5 text-sf-sm",
         md: "px-4 py-2.5 text-sf-md",
         lg: "px-5 py-3.5 text-sf-lg"
+      },
+      disabled: {
+        true: "border-none bg-neutral-40 text-neutral-50",
+        false: ""
       }
     }
   },
   { twMerge: false }
 );
+var TextInputContext = createContext(
+  {}
+);
 var Root3 = (_a) => {
   var _b = _a, {
     size = "sm",
+    disabled = false,
     className
   } = _b, props = __objRest(_b, [
     "size",
+    "disabled",
     "className"
   ]);
-  return /* @__PURE__ */ jsx8(
+  return /* @__PURE__ */ jsx8(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx8(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input({
         className,
+        disabled,
         size
       })
     })
-  );
+  ) });
 };
+var useTextInput = () => useContext(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
+import * as Form from "@radix-ui/react-form";
 import { twJoin } from "tailwind-merge";
 import { jsx as jsx9 } from "react/jsx-runtime";
-var Control = (_a) => {
+var Control2 = (_a) => {
   var props = __objRest(_a, []);
-  return /* @__PURE__ */ jsx9(
+  const { disabled } = useTextInput();
+  return /* @__PURE__ */ jsx9(Form.Control, { asChild: true, children: /* @__PURE__ */ jsx9(
     "input",
     __spreadProps(__spreadValues({}, props), {
+      disabled,
       className: twJoin(
         props.className,
-        "focus: w-full border-transparent text-black outline-none"
+        "focus: w-full border-transparent text-black outline-none disabled:bg-neutral-40"
       )
     })
-  );
+  ) });
 };
 
 // src/components/TextInput/Prefix/index.tsx
 import { twJoin as twJoin2 } from "tailwind-merge";
 import { jsx as jsx10 } from "react/jsx-runtime";
+var sizePaddings = {
+  sm: "pr-2",
+  md: "pr-2.5",
+  lg: "pr-3.5"
+};
 var Prefix2 = (props) => {
-  return /* @__PURE__ */ jsx10("div", __spreadProps(__spreadValues({}, props), { className: twJoin2(props.className, "pr-2.5") }));
+  const { size } = useTextInput();
+  return /* @__PURE__ */ jsx10("div", __spreadProps(__spreadValues({}, props), { className: twJoin2(props.className, sizePaddings[size]) }));
 };
 
 // src/components/TextInput/Suffix/index.tsx
@@ -909,7 +930,7 @@ var Suffix2 = (props) => {
 };
 
 // src/components/TextInput/index.tsx
-var TextInput = { Root: Root3, Control, Prefix: Prefix2, Suffix: Suffix2 };
+var TextInput = { Root: Root3, Control: Control2, Prefix: Prefix2, Suffix: Suffix2 };
 
 // src/components/TextArea/index.tsx
 var TextArea = styled("textarea", {
