@@ -20,7 +20,7 @@ const input = tv(
       },
     },
   },
-  { twMerge: false },
+  { twMerge: true },
 )
 
 type TextInputContextType = {
@@ -39,6 +39,8 @@ export const Root = ({
   className,
   ...props
 }: TextInputRootProps) => {
+  console.log(disabled)
+
   return (
     <TextInputContext.Provider value={{ size, disabled }}>
       <div

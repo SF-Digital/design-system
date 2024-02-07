@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { TextInput, TextInputRootProps } from '@sf-digital-ui/react'
 import { ChevronDown, CircleUserRound } from 'lucide-react'
-// TODO: use FormGroup from design system when created
-import * as Form from '@radix-ui/react-form'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -59,13 +57,6 @@ export const Default: StoryObj<TextInputRootProps> = {
   args: {
     children: <TextInput.Control placeholder="Placeholder" />,
   },
-  decorators: [
-    (Story) => (
-      <Form.Form>
-        <Form.Field name="name">{Story()}</Form.Field>
-      </Form.Form>
-    ),
-  ],
 }
 
 export const WithPrefix: StoryObj<TextInputRootProps> = {
@@ -79,13 +70,6 @@ export const WithPrefix: StoryObj<TextInputRootProps> = {
       </>
     ),
   },
-  decorators: [
-    (Story) => (
-      <Form.Form>
-        <Form.Field name="name">{Story()}</Form.Field>
-      </Form.Form>
-    ),
-  ],
 }
 
 export const WithSuffix: StoryObj<TextInputRootProps> = {
@@ -99,13 +83,6 @@ export const WithSuffix: StoryObj<TextInputRootProps> = {
       </>
     ),
   },
-  decorators: [
-    (Story) => (
-      <Form.Form>
-        <Form.Field name="name">{Story()}</Form.Field>
-      </Form.Form>
-    ),
-  ],
 }
 
 export const WithPrefixAndSuffix: StoryObj<TextInputRootProps> = {
@@ -122,11 +99,4 @@ export const WithPrefixAndSuffix: StoryObj<TextInputRootProps> = {
       </>
     ),
   },
-  decorators: [
-    (Story) => (
-      <Form.Form>
-        <Form.Field name="name">{Story()}</Form.Field>
-      </Form.Form>
-    ),
-  ],
 }

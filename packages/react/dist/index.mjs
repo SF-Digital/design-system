@@ -863,7 +863,7 @@ var input = tv4(
       }
     }
   },
-  { twMerge: false }
+  { twMerge: true }
 );
 var TextInputContext = createContext({});
 var Root3 = (_a) => {
@@ -876,6 +876,7 @@ var Root3 = (_a) => {
     "disabled",
     "className"
   ]);
+  console.log(disabled);
   return /* @__PURE__ */ jsx8(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx8(
     "div",
     __spreadProps(__spreadValues({}, props), {
@@ -890,13 +891,12 @@ var Root3 = (_a) => {
 var useTextInput = () => useContext(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
-import * as Form from "@radix-ui/react-form";
 import { twJoin } from "tailwind-merge";
 import { jsx as jsx9 } from "react/jsx-runtime";
-var Control2 = (_a) => {
+var Control = (_a) => {
   var props = __objRest(_a, []);
   const { disabled } = useTextInput();
-  return /* @__PURE__ */ jsx9(Form.Control, { asChild: true, children: /* @__PURE__ */ jsx9(
+  return /* @__PURE__ */ jsx9(
     "input",
     __spreadProps(__spreadValues({}, props), {
       disabled,
@@ -905,7 +905,7 @@ var Control2 = (_a) => {
         "w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50"
       )
     })
-  ) });
+  );
 };
 
 // src/components/TextInput/Prefix/index.tsx
@@ -928,7 +928,7 @@ var Suffix2 = (props) => {
 };
 
 // src/components/TextInput/index.tsx
-var TextInput = { Root: Root3, Control: Control2, Prefix: Prefix2, Suffix: Suffix2 };
+var TextInput = { Root: Root3, Control, Prefix: Prefix2, Suffix: Suffix2 };
 
 // src/components/TextArea/index.tsx
 var TextArea = styled("textarea", {

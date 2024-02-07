@@ -7,7 +7,6 @@ import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as Avatar$1 from '@radix-ui/react-avatar';
-import * as Form from '@radix-ui/react-form';
 import * as lucide_react from 'lucide-react';
 import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
@@ -426,7 +425,7 @@ declare const input: tailwind_variants.TVReturnType<{
         false: string;
     };
 }, undefined, string[], {
-    twMerge: false;
+    twMerge: true;
 }, {
     size: {
         sm: string;
@@ -448,13 +447,13 @@ declare const input: tailwind_variants.TVReturnType<{
         false: string;
     };
 }, undefined, string[], {
-    twMerge: false;
+    twMerge: true;
 }, unknown, unknown, undefined>>;
 type TextInputRootProps = ComponentProps<'div'> & VariantProps<typeof input> & {
     disabled?: boolean;
 };
 
-type TextInputControlProps = ComponentProps<typeof Form.Control>;
+type TextInputControlProps = ComponentProps<'input'>;
 
 type TextInputPrefixProps = ComponentProps<'div'>;
 
@@ -462,7 +461,7 @@ type TextInputSuffixProps = ComponentProps<'div'>;
 
 declare const TextInput: {
     Root: ({ size, disabled, className, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
-    Control: ({ ...props }: Form.FormControlProps & react.RefAttributes<HTMLInputElement>) => react_jsx_runtime.JSX.Element;
+    Control: ({ ...props }: react.DetailedHTMLProps<react.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) => react_jsx_runtime.JSX.Element;
     Prefix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
     Suffix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
 };
