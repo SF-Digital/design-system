@@ -6,6 +6,33 @@ import * as Form from '@radix-ui/react-form'
 
 import '@sf-digital-ui/react/dist/output.css'
 
+/**
+ * This story displays the `TextInput` component, which is a React element built using Pattern Composition. Types generated for each component are exported as `TextInput{ComponentName}Props`.
+ *
+ * ## Usage:
+ *
+ * ```import { TextInput } from '@sf-digital-ui/react'```
+ *
+ * TextInput is a composition of the following components:
+ *
+ *
+ * `TextInput.Root` - This appears as the input itself but is rather a wrapper
+ *
+ * `TextInput.Control` - The input element
+ *
+ * `TextInput.Prefix` - The element that will appear on the left side of the root
+ *
+ * `TextInput.Suffix` - The element that will appear on the right side of the root
+ *
+ * ## API Reference:
+ * ### TextInput.Root
+ * Props
+ *
+ * `size: 'sm' | 'md' | 'lg'` - The size of the input (passed to the Root)
+ *
+ * `disabled: boolean` - Whether the input is disabled (passed to the Root)
+ */
+
 export default {
   title: 'Form/TextInput',
   component: TextInput.Root,
@@ -26,7 +53,7 @@ export default {
       },
     },
   },
-} as Meta<typeof TextInput.Root>
+} as Meta<TextInputRootProps>
 
 export const Default: StoryObj<TextInputRootProps> = {
   args: {

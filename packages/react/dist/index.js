@@ -915,9 +915,7 @@ var input = (0, import_tailwind_variants4.tv)(
   },
   { twMerge: false }
 );
-var TextInputContext = (0, import_react2.createContext)(
-  {}
-);
+var TextInputContext = (0, import_react2.createContext)({});
 var Root3 = (_a) => {
   var _b = _a, {
     size = "sm",

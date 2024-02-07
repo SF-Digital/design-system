@@ -23,9 +23,12 @@ const input = tv(
   { twMerge: false },
 )
 
-const TextInputContext = createContext(
-  {} as { size: string; disabled: boolean },
-)
+type TextInputContextType = {
+  size: string
+  disabled: boolean
+}
+
+const TextInputContext = createContext({} as TextInputContextType)
 
 export type TextInputRootProps = ComponentProps<'div'> &
   VariantProps<typeof input> & { disabled?: boolean }

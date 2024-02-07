@@ -865,9 +865,7 @@ var input = tv4(
   },
   { twMerge: false }
 );
-var TextInputContext = createContext(
-  {}
-);
+var TextInputContext = createContext({});
 var Root3 = (_a) => {
   var _b = _a, {
     size = "sm",
