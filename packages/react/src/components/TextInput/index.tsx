@@ -1,17 +1,15 @@
-import { ComponentProps } from 'react'
-import { Input, Prefix, TextInputContainer } from './styles'
+import { Root, TextInputRootProps } from './Root'
+import { Control, TextInputControlProps } from './Control'
+import { Prefix, TextInputPrefixProps } from './Prefix'
+import { Suffix, TextInputSuffixProps } from './Suffix'
 
-export interface TextInputProps extends ComponentProps<typeof Input> {
-  prefix?: string
+const TextInput = { Root, Control, Prefix, Suffix }
+
+export { TextInput }
+
+export type {
+  TextInputRootProps,
+  TextInputControlProps,
+  TextInputPrefixProps,
+  TextInputSuffixProps,
 }
-
-export function TextInput({ prefix, ...props }: TextInputProps) {
-  return (
-    <TextInputContainer>
-      {!!prefix && <Prefix>{prefix}</Prefix>}
-      <Input {...props} />
-    </TextInputContainer>
-  )
-}
-
-TextInput.displayName = 'TextInput'

@@ -891,58 +891,94 @@ var Suffix = (props) => {
 // src/components/Button/index.tsx
 var Button = { Root: Root2, Prefix, Suffix };
 
-// src/components/TextInput/styles.ts
-var TextInputContainer = styled("div", {
-  backgroundColor: "$gray900",
-  padding: "$3 $4",
-  borderRadius: "$sm",
-  boxSizing: "border-box",
-  border: "2px solid $gray900",
-  display: "flex",
-  alignItems: "baseline",
-  "&:has(input:focus)": {
-    borderColor: "$primary300"
+// src/components/TextInput/Root/index.tsx
+var import_react2 = require("react");
+var import_tailwind_variants4 = require("tailwind-variants");
+var import_jsx_runtime8 = require("react/jsx-runtime");
+var input = (0, import_tailwind_variants4.tv)(
+  {
+    base: [
+      "flex w-60 flex-1 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "focus-within:border focus-within:border-primary-green-500"
+    ],
+    variants: {
+      size: {
+        sm: "px-4 py-2.5 text-sf-sm",
+        md: "px-4 py-2.5 text-sf-md",
+        lg: "px-5 py-3.5 text-sf-lg"
+      },
+      disabled: {
+        true: "border-none bg-neutral-40",
+        false: ""
+      }
+    }
   },
-  "&:has(input:disabled)": {
-    opacity: 0.5,
-    cursor: "not-allowed"
-  }
-});
-var Prefix2 = styled("span", {
-  fontFamily: "$default",
-  fontSize: "$sm",
-  color: "$gray400",
-  fontWeight: "regular"
-});
-var Input = styled("input", {
-  fontFamily: "$default",
-  fontSize: "$sm",
-  color: "$white",
-  fontWeight: "regular",
-  background: "transparent",
-  border: 0,
-  width: "100%",
-  "&:focus": {
-    outline: 0
-  },
-  "&:disabled": {
-    cursor: "not-allowed"
-  },
-  "&:placeholder": {
-    color: "$gray400"
-  }
-});
+  { twMerge: true }
+);
+var TextInputContext = (0, import_react2.createContext)({});
+var Root3 = (_a) => {
+  var _b = _a, {
+    size = "sm",
+    disabled = false,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "disabled",
+    "className"
+  ]);
+  console.log(disabled);
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: input({
+        className,
+        disabled,
+        size
+      })
+    })
+  ) });
+};
+var useTextInput = () => (0, import_react2.useContext)(TextInputContext);
+
+// src/components/TextInput/Control/index.tsx
+var import_tailwind_merge = require("tailwind-merge");
+var import_jsx_runtime9 = require("react/jsx-runtime");
+var Control = (_a) => {
+  var props = __objRest(_a, []);
+  const { disabled } = useTextInput();
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    "input",
+    __spreadProps(__spreadValues({}, props), {
+      disabled,
+      className: (0, import_tailwind_merge.twJoin)(
+        props.className,
+        "w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50"
+      )
+    })
+  );
+};
+
+// src/components/TextInput/Prefix/index.tsx
+var import_tailwind_merge2 = require("tailwind-merge");
+var import_jsx_runtime10 = require("react/jsx-runtime");
+var sizePaddings = {
+  sm: "pr-2",
+  md: "pr-2.5",
+  lg: "pr-3.5"
+};
+var Prefix2 = (props) => {
+  const { size } = useTextInput();
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", __spreadProps(__spreadValues({}, props), { className: (0, import_tailwind_merge2.twJoin)(props.className, sizePaddings[size]) }));
+};
+
+// src/components/TextInput/Suffix/index.tsx
+var import_jsx_runtime11 = require("react/jsx-runtime");
+var Suffix2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", __spreadValues({}, props));
+};
 
 // src/components/TextInput/index.tsx
-var import_jsx_runtime8 = require("react/jsx-runtime");
-function TextInput(_a) {
-  var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Prefix2, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Input, __spreadValues({}, props))
-  ] });
-}
-TextInput.displayName = "TextInput";
+var TextInput = { Root: Root3, Control, Prefix: Prefix2, Suffix: Suffix2 };
 
 // src/components/TextArea/index.tsx
 var TextArea = styled("textarea", {
@@ -972,7 +1008,7 @@ var TextArea = styled("textarea", {
 TextArea.displayName = "TextArea";
 
 // ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
-var import_react2 = require("react");
+var import_react3 = require("react");
 
 // ../../node_modules/lucide-react/dist/esm/defaultAttributes.js
 var defaultAttributes = {
@@ -990,10 +1026,10 @@ var defaultAttributes = {
 // ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
 var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase().trim();
 var createLucideIcon = (iconName, iconNode) => {
-  const Component = (0, import_react2.forwardRef)(
+  const Component = (0, import_react3.forwardRef)(
     (_a, ref) => {
       var _b = _a, { color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children } = _b, rest = __objRest(_b, ["color", "size", "strokeWidth", "absoluteStrokeWidth", "className", "children"]);
-      return (0, import_react2.createElement)(
+      return (0, import_react3.createElement)(
         "svg",
         __spreadValues(__spreadProps(__spreadValues({
           ref
@@ -1005,7 +1041,7 @@ var createLucideIcon = (iconName, iconNode) => {
           className: ["lucide", `lucide-${toKebabCase(iconName)}`, className].join(" ")
         }), rest),
         [
-          ...iconNode.map(([tag, attrs]) => (0, import_react2.createElement)(tag, attrs)),
+          ...iconNode.map(([tag, attrs]) => (0, import_react3.createElement)(tag, attrs)),
           ...Array.isArray(children) ? children : [children]
         ]
       );
@@ -1019,16 +1055,16 @@ var createLucideIcon = (iconName, iconNode) => {
 var Check = createLucideIcon("Check", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]]);
 
 // src/components/Checkbox/Check/index.tsx
-var import_jsx_runtime9 = require("react/jsx-runtime");
+var import_jsx_runtime12 = require("react/jsx-runtime");
 var Check2 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
 };
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
 var Checkbox = __toESM(require("@radix-ui/react-checkbox"));
-var import_tailwind_variants4 = require("tailwind-variants");
-var import_jsx_runtime10 = require("react/jsx-runtime");
-var checkbox = (0, import_tailwind_variants4.tv)(
+var import_tailwind_variants5 = require("tailwind-variants");
+var import_jsx_runtime13 = require("react/jsx-runtime");
+var checkbox = (0, import_tailwind_variants5.tv)(
   {
     base: [
       "border-xs flex h-5 w-5 flex-1 items-center justify-center rounded-xs border border-neutral-50",
@@ -1044,20 +1080,20 @@ var checkbox = (0, import_tailwind_variants4.tv)(
   },
   { twMerge: false }
 );
-var Root4 = (_a) => {
+var Root5 = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
 };
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
 var Checkbox2 = __toESM(require("@radix-ui/react-checkbox"));
-var import_jsx_runtime11 = require("react/jsx-runtime");
+var import_jsx_runtime14 = require("react/jsx-runtime");
 var Indicator = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Checkbox2.CheckboxIndicator, __spreadValues({ asChild: true }, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Checkbox2.CheckboxIndicator, __spreadValues({ asChild: true }, props));
 };
 
 // src/components/Checkbox/index.tsx
-var Checkbox3 = { Root: Root4, Indicator, Check: Check2 };
+var Checkbox3 = { Root: Root5, Indicator, Check: Check2 };
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -1087,17 +1123,17 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-var import_jsx_runtime12 = require("react/jsx-runtime");
+var import_jsx_runtime15 = require("react/jsx-runtime");
 function MultiStep({ size, currentStep = 1 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(MultiStepContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Label, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(Label, { children: [
       "Passo ",
       currentStep,
       " de ",
       size
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
@@ -1114,9 +1150,9 @@ BoxTest.displayName = "BoxTest2";
 
 // src/components/RadioGroup/RadioGroupRoot/index.tsx
 var RadioGroup = __toESM(require("@radix-ui/react-radio-group"));
-var import_tailwind_variants5 = require("tailwind-variants");
-var import_jsx_runtime13 = require("react/jsx-runtime");
-var radio = (0, import_tailwind_variants5.tv)({
+var import_tailwind_variants6 = require("tailwind-variants");
+var import_jsx_runtime16 = require("react/jsx-runtime");
+var radio = (0, import_tailwind_variants6.tv)({
   base: "flex flex-col gap-2.5"
 });
 var RadioGroupRoot = (_a) => {
@@ -1125,14 +1161,14 @@ var RadioGroupRoot = (_a) => {
   } = _b, props = __objRest(_b, [
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(RadioGroup.Root, __spreadProps(__spreadValues({}, props), { className: radio({ className }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(RadioGroup.Root, __spreadProps(__spreadValues({}, props), { className: radio({ className }) }));
 };
 
 // src/components/RadioGroup/RadioGroupItem/index.tsx
 var RadioGroup2 = __toESM(require("@radix-ui/react-radio-group"));
-var import_tailwind_variants6 = require("tailwind-variants");
-var import_jsx_runtime14 = require("react/jsx-runtime");
-var radio2 = (0, import_tailwind_variants6.tv)(
+var import_tailwind_variants7 = require("tailwind-variants");
+var import_jsx_runtime17 = require("react/jsx-runtime");
+var radio2 = (0, import_tailwind_variants7.tv)(
   {
     base: [
       "rounded-full border border-neutral-50 bg-white",
@@ -1156,7 +1192,7 @@ var RadioGroupItem = (_a) => {
     "className",
     "size"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className }) }));
 };
 
 // src/components/RadioGroup/index.tsx
