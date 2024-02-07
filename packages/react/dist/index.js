@@ -897,7 +897,8 @@ var import_jsx_runtime8 = require("react/jsx-runtime");
 var input = (0, import_tailwind_variants4.tv)(
   {
     base: [
-      "border-1 flex w-60 flex-1 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80"
+      "flex w-60 flex-1 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
       size: {
