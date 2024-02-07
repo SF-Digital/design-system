@@ -1,39 +1,103 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextInput, TextInputProps } from '@sf-digital-ui/react'
+import { Meta, StoryObj } from '@storybook/react'
+import { TextInput, TextInputRootProps } from '@sf-digital-ui/react'
+import { ChevronDown, CircleUserRound } from 'lucide-react'
+// TODO: use FormGroup from design system when created
+import * as Form from '@radix-ui/react-form'
+
+import '@sf-digital-ui/react/dist/output.css'
 
 export default {
-  title: 'Form/Text Input',
-  component: TextInput,
-  args: {},
-  decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
-        >
-          <Text size="sm">Email address</Text>
-          {Story()}
-        </Box>
-      )
+  title: 'Form/TextInput',
+  component: TextInput.Root,
+  args: {
+    size: 'sm',
+  },
+  argTypes: {
+    size: {
+      options: ['sm', 'md', 'lg'],
+      control: {
+        type: 'inline-radio',
+      },
     },
+  },
+} as Meta
+
+export const Default: StoryObj<TextInputRootProps> = {
+  args: {
+    children: (
+      <>
+        <TextInput.Control placeholder="Placeholder" />
+      </>
+    ),
+  },
+  decorators: [
+    (Story) => (
+      <Form.Form>
+        <Form.Field name="name">{Story()}</Form.Field>
+      </Form.Form>
+    ),
   ],
-} as Meta<TextInputProps>
-
-export const Primary: StoryObj<TextInputProps> = {
-  args: {
-    placeholder: 'Type your name',
-  },
 }
 
-export const Disabled: StoryObj<TextInputProps> = {
+export const WithPrefix: StoryObj<TextInputRootProps> = {
   args: {
-    disabled: true,
+    children: (
+      <>
+        <TextInput.Prefix>
+          <CircleUserRound />
+        </TextInput.Prefix>
+        <TextInput.Control placeholder="Placeholder" />
+      </>
+    ),
   },
+  decorators: [
+    (Story) => (
+      <Form.Form>
+        <Form.Field name="name">{Story()}</Form.Field>
+      </Form.Form>
+    ),
+  ],
 }
 
-export const WithPrefix: StoryObj<TextInputProps> = {
+export const WithSuffix: StoryObj<TextInputRootProps> = {
   args: {
-    prefix: 'cal.com/',
+    children: (
+      <>
+        <TextInput.Control placeholder="Placeholder" />
+        <TextInput.Suffix>
+          <ChevronDown />
+        </TextInput.Suffix>
+      </>
+    ),
   },
+  decorators: [
+    (Story) => (
+      <Form.Form>
+        <Form.Field name="name">{Story()}</Form.Field>
+      </Form.Form>
+    ),
+  ],
+}
+
+export const WithPrefixAndSuffix: StoryObj<TextInputRootProps> = {
+  args: {
+    children: (
+      <>
+        <TextInput.Prefix>
+          <CircleUserRound />
+        </TextInput.Prefix>
+        <TextInput.Control placeholder="Placeholder" />
+        <TextInput.Suffix>
+          <ChevronDown />
+        </TextInput.Suffix>
+      </>
+    ),
+  },
+  decorators: [
+    (Story) => (
+      <Form.Form>
+        <Form.Field name="name">{Story()}</Form.Field>
+      </Form.Form>
+    ),
+  ],
 }
