@@ -1,6 +1,7 @@
 import {
   borderWidth,
   colors,
+  dropShadow,
   fontSizes,
   fontWeights,
   fonts,
@@ -22,6 +23,7 @@ module.exports = {
       lineHeight: lineHeights,
       borderRadius: radii,
       space,
+      dropShadow,
       borderWidth,
     },
   },
