@@ -67,6 +67,7 @@ __export(src_exports, {
   Heading: () => Heading,
   MultiStep: () => MultiStep,
   RadioGroup: () => RadioGroup3,
+  Tabs: () => Tabs5,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
@@ -926,7 +927,6 @@ var Root3 = (_a) => {
     "disabled",
     "className"
   ]);
-  console.log(disabled);
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
@@ -1197,6 +1197,75 @@ var RadioGroupItem = (_a) => {
 
 // src/components/RadioGroup/index.tsx
 var RadioGroup3 = { Root: RadioGroupRoot, Item: RadioGroupItem };
+
+// src/components/Tabs/Root/index.tsx
+var Tabs = __toESM(require("@radix-ui/react-tabs"));
+var import_jsx_runtime18 = require("react/jsx-runtime");
+var Root8 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Tabs.Root, __spreadValues({}, props));
+};
+
+// src/components/Tabs/List/index.tsx
+var Tabs2 = __toESM(require("@radix-ui/react-tabs"));
+var import_jsx_runtime19 = require("react/jsx-runtime");
+var List2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(Tabs2.List, __spreadValues({}, props));
+};
+
+// src/components/Tabs/Trigger/index.tsx
+var Tabs3 = __toESM(require("@radix-ui/react-tabs"));
+var import_tailwind_variants8 = require("tailwind-variants");
+var import_jsx_runtime20 = require("react/jsx-runtime");
+var tab = (0, import_tailwind_variants8.tv)(
+  {
+    base: [" font-sf-neutral font-bold text-neutral-80"],
+    variants: {
+      variant: {
+        solid: ' rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
+        underline: ' border-b border-b-neutral-30 text-sf-lg hover:border-b-neutral-90 hover:text-neutral-90 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+      },
+      size: {
+        base: "px-4 py-2.5",
+        lg: "px-10 py-2.5"
+      }
+    },
+    defaultVariants: { variant: "solid", size: "base" }
+  },
+  {
+    twMerge: false
+  }
+);
+var Trigger2 = (_a) => {
+  var _b = _a, {
+    size,
+    variant,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "variant",
+    "className"
+  ]);
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+    Tabs3.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: tab({
+        className,
+        variant,
+        size
+      })
+    })
+  );
+};
+
+// src/components/Tabs/Content/index.tsx
+var Tabs4 = __toESM(require("@radix-ui/react-tabs"));
+var import_jsx_runtime21 = require("react/jsx-runtime");
+var Content2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Tabs4.Content, __spreadValues({}, props));
+};
+
+// src/components/Tabs/index.tsx
+var Tabs5 = { Root: Root8, List: List2, Trigger: Trigger2, Content: Content2 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -1207,6 +1276,7 @@ var RadioGroup3 = { Root: RadioGroupRoot, Item: RadioGroupItem };
   Heading,
   MultiStep,
   RadioGroup,
+  Tabs,
   Text,
   TextArea,
   TextInput,

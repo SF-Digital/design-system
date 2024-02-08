@@ -3,4 +3,5 @@ export const fonts = {
   code: "monospace",
   'sf-heading': "Gill, sans-serif",
   "sf-body": "Perpetua, serif",
+  "sf-neutral": "Calibri, sans-serif"
 };

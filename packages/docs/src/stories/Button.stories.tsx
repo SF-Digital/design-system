@@ -27,7 +27,7 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 export default {
-  title: 'Form/Button',
+  title: 'Components/Button',
   component: Button.Root,
   args: {
     children: 'Button',

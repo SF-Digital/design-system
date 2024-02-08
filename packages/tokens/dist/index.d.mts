@@ -536,6 +536,7 @@ declare const fonts: {
     code: string;
     'sf-heading': string;
     "sf-body": string;
+    "sf-neutral": string;
 };
 
 declare const fontSizes: {

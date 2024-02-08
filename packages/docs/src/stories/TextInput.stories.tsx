@@ -26,9 +26,9 @@ import '@sf-digital-ui/react/dist/output.css'
  * ### TextInput.Root
  * Props
  *
- * `size: 'sm' | 'md' | 'lg'` - The size of the input (passed to the Root)
+ * `size: 'sm' | 'md' | 'lg'` - The size of the input
  *
- * `disabled: boolean` - Whether the input is disabled (passed to the Root)
+ * `disabled: boolean` - Whether the input is disabled
  */
 
 export default {

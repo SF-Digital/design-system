@@ -876,7 +876,6 @@ var Root3 = (_a) => {
     "disabled",
     "className"
   ]);
-  console.log(disabled);
   return /* @__PURE__ */ jsx8(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx8(
     "div",
     __spreadProps(__spreadValues({}, props), {
@@ -1147,6 +1146,75 @@ var RadioGroupItem = (_a) => {
 
 // src/components/RadioGroup/index.tsx
 var RadioGroup3 = { Root: RadioGroupRoot, Item: RadioGroupItem };
+
+// src/components/Tabs/Root/index.tsx
+import * as Tabs from "@radix-ui/react-tabs";
+import { jsx as jsx18 } from "react/jsx-runtime";
+var Root8 = (props) => {
+  return /* @__PURE__ */ jsx18(Tabs.Root, __spreadValues({}, props));
+};
+
+// src/components/Tabs/List/index.tsx
+import * as Tabs2 from "@radix-ui/react-tabs";
+import { jsx as jsx19 } from "react/jsx-runtime";
+var List2 = (props) => {
+  return /* @__PURE__ */ jsx19(Tabs2.List, __spreadValues({}, props));
+};
+
+// src/components/Tabs/Trigger/index.tsx
+import * as Tabs3 from "@radix-ui/react-tabs";
+import { tv as tv8 } from "tailwind-variants";
+import { jsx as jsx20 } from "react/jsx-runtime";
+var tab = tv8(
+  {
+    base: [" font-sf-neutral font-bold text-neutral-80"],
+    variants: {
+      variant: {
+        solid: ' rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
+        underline: ' border-b border-b-neutral-30 text-sf-lg hover:border-b-neutral-90 hover:text-neutral-90 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+      },
+      size: {
+        base: "px-4 py-2.5",
+        lg: "px-10 py-2.5"
+      }
+    },
+    defaultVariants: { variant: "solid", size: "base" }
+  },
+  {
+    twMerge: false
+  }
+);
+var Trigger2 = (_a) => {
+  var _b = _a, {
+    size,
+    variant,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "variant",
+    "className"
+  ]);
+  return /* @__PURE__ */ jsx20(
+    Tabs3.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: tab({
+        className,
+        variant,
+        size
+      })
+    })
+  );
+};
+
+// src/components/Tabs/Content/index.tsx
+import * as Tabs4 from "@radix-ui/react-tabs";
+import { jsx as jsx21 } from "react/jsx-runtime";
+var Content2 = (props) => {
+  return /* @__PURE__ */ jsx21(Tabs4.Content, __spreadValues({}, props));
+};
+
+// src/components/Tabs/index.tsx
+var Tabs5 = { Root: Root8, List: List2, Trigger: Trigger2, Content: Content2 };
 export {
   Avatar2 as Avatar,
   Box,
@@ -1156,6 +1224,7 @@ export {
   Heading,
   MultiStep,
   RadioGroup3 as RadioGroup,
+  Tabs5 as Tabs,
   Text,
   TextArea,
   TextInput,
