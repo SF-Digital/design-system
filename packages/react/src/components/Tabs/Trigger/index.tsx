@@ -1,8 +1,6 @@
 import * as Tabs from '@radix-ui/react-tabs'
 import { VariantProps, tv } from 'tailwind-variants'
 
-import '@sf-digital-ui/react/dist/output.css'
-
 const tab = tv(
   {
     base: [' font-sf-neutral font-bold text-neutral-80'],
