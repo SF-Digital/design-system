@@ -1216,23 +1216,42 @@ var List2 = (props) => {
 var Tabs3 = __toESM(require("@radix-ui/react-tabs"));
 var import_tailwind_variants8 = require("tailwind-variants");
 var import_jsx_runtime20 = require("react/jsx-runtime");
-var tab = (0, import_tailwind_variants8.tv)({
-  base: ["px-4 py-2", "text-neutral-80"],
-  variants: {
-    variant: {
-      solid: 'rounded-md bg-neutral-20 hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
-      underline: 'border-b border-b-neutral-30 hover:border-b-neutral-90 hover:text-neutral-90 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
-    }
+var tab = (0, import_tailwind_variants8.tv)(
+  {
+    base: ["font-sf-neutral px-4 py-2 text-sf-lg font-bold text-neutral-80"],
+    variants: {
+      variant: {
+        solid: 'rounded-md bg-neutral-20 hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
+        underline: 'border-b border-b-neutral-30 hover:border-b-neutral-90 hover:text-neutral-90 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+      },
+      size: {
+        base: "px-4 py-2.5",
+        lg: "px-10 py-2.5"
+      }
+    },
+    defaultVariants: { variant: "solid", size: "base" }
+  },
+  {
+    twMerge: false
   }
-});
+);
 var Trigger2 = (_a) => {
-  var _b = _a, { variant, className } = _b, props = __objRest(_b, ["variant", "className"]);
+  var _b = _a, {
+    size,
+    variant,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "variant",
+    "className"
+  ]);
   return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     Tabs3.Trigger,
     __spreadProps(__spreadValues({}, props), {
       className: tab({
         className,
-        variant
+        variant,
+        size
       })
     })
   );

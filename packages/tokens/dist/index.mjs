@@ -596,7 +596,8 @@ var fonts = {
   default: "Roboto, sans-serif",
   code: "monospace",
   "sf-heading": "Gill, sans-serif",
-  "sf-body": "Perpetua, serif"
+  "sf-body": "Perpetua, serif",
+  "sf-neutral": "Calibri, sans-serif"
 };
 
 // src/font-sizes.ts

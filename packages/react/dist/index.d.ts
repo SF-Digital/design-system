@@ -979,37 +979,33 @@ declare const tab: tailwind_variants.TVReturnType<{
         solid: string;
         underline: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    variant: {
-        solid: string;
-        underline: string;
+    size: {
+        base: string;
+        lg: string;
     };
+}, undefined, string[], {
+    twMerge: false;
 }, {
     variant: {
         solid: string;
         underline: string;
     };
-}>, {
-    variant: {
-        solid: string;
-        underline: string;
+    size: {
+        base: string;
+        lg: string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
     variant: {
         solid: string;
         underline: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    variant: {
-        solid: string;
-        underline: string;
+    size: {
+        base: string;
+        lg: string;
     };
-}, {
-    variant: {
-        solid: string;
-        underline: string;
-    };
-}>, unknown, unknown, undefined>>;
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
 type TabsTriggerProps = Tabs$1.TabsTriggerProps & VariantProps<typeof tab>;
 
 type TabsContentProps = Tabs$1.TabsContentProps;
@@ -1017,7 +1013,7 @@ type TabsContentProps = Tabs$1.TabsContentProps;
 declare const Tabs: {
     Root: (props: Tabs$1.TabsProps) => react_jsx_runtime.JSX.Element;
     List: (props: Tabs$1.TabsListProps) => react_jsx_runtime.JSX.Element;
-    Trigger: ({ variant, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
+    Trigger: ({ size, variant, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
     Content: (props: Tabs$1.TabsContentProps) => react_jsx_runtime.JSX.Element;
 };
 

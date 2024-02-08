@@ -1,5 +1,5 @@
-import { Tabs, TabsRootProps } from '@sf-digital-ui/react'
-import { Meta } from '@storybook/react'
+import { Tabs, TabsRootProps, TabsTriggerProps } from '@sf-digital-ui/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 /**
  * This story displays the `Tabs` component, which is a React element built using Pattern Composition. Types generated for each component are exported as `Tabs{ComponentName}Props`.
@@ -42,7 +42,7 @@ import { Meta } from '@storybook/react'
  *
  * `disabled: boolean` (Only for Trigger) - If `true`, the trigger will be disabled
  *
- * `variant: 'solid' | 'underline'` (Only for Trigger) - The variant of the trigger
+ * `variant: 'solid' | 'underline'` (Only for Trigger) - The variant of the trigger (default: solid)
  *
  * Data attribute
  *
@@ -55,41 +55,40 @@ import { Meta } from '@storybook/react'
 export default {
   title: 'Components/Tabs',
   component: Tabs.Root,
-  args: {},
-  argTypes: {},
-} as Meta<TabsRootProps>
+  args: {
+    size: 'base',
+    variant: 'solid',
+  },
+  argTypes: {
+    size: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['base', 'lg'],
+    },
+    variant: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['solid', 'underline'],
+    },
+  },
+} as Meta<TabsRootProps & TabsTriggerProps>
 
-export const Solid = {
+export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
   args: {},
-  render: () => (
+  render: (args) => (
     <Tabs.Root defaultValue="one" orientation="horizontal">
-      <Tabs.List className="gap-2 flex-row flex">
-        <Tabs.Trigger variant="solid" value="one">
+      <Tabs.List
+        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : ''}
+      >
+        <Tabs.Trigger size={args.size} variant={args.variant} value="one">
           One
         </Tabs.Trigger>
-        <Tabs.Trigger variant="solid" value="two">
+        <Tabs.Trigger size={args.size} variant={args.variant} value="two">
           Two
         </Tabs.Trigger>
-        <Tabs.Trigger variant="solid" value="three">
-          Three
-        </Tabs.Trigger>
-      </Tabs.List>
-    </Tabs.Root>
-  ),
-}
-
-export const Underline = {
-  args: {},
-  render: () => (
-    <Tabs.Root defaultValue="one" orientation="horizontal">
-      <Tabs.List>
-        <Tabs.Trigger variant="underline" value="one">
-          One
-        </Tabs.Trigger>
-        <Tabs.Trigger variant="underline" value="two">
-          Two
-        </Tabs.Trigger>
-        <Tabs.Trigger variant="underline" value="three">
+        <Tabs.Trigger size={args.size} variant={args.variant} value="three">
           Three
         </Tabs.Trigger>
       </Tabs.List>
