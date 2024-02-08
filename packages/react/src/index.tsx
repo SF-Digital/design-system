@@ -9,5 +9,6 @@ export * from './components/Checkbox'
 export * from './components/MultiStep'
 export * from './components/BoxTest'
 export * from './components/RadioGroup'
+export * from './components/Tabs'
 
 export * from './styles'

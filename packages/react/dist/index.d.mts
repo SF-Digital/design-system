@@ -11,6 +11,7 @@ import * as lucide_react from 'lucide-react';
 import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
+import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -967,6 +968,57 @@ type RadioGroupItemProps = ComponentProps<typeof RadioGroup$1.Item> & VariantPro
 declare const RadioGroup: {
     Root: ({ className, ...props }: RadioGroupRootProps) => react_jsx_runtime.JSX.Element;
     Item: ({ className, size, ...props }: RadioGroupItemProps) => react_jsx_runtime.JSX.Element;
+};
+
+type TabsRootProps = Tabs$1.TabsProps;
+
+type TabsListProps = Tabs$1.TabsListProps;
+
+declare const tab: tailwind_variants.TVReturnType<{
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}, {
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}>, {
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}, {
+    variant: {
+        solid: string;
+        underline: string;
+    };
+}>, unknown, unknown, undefined>>;
+type TabsTriggerProps = Tabs$1.TabsTriggerProps & VariantProps<typeof tab>;
+
+type TabsContentProps = Tabs$1.TabsContentProps;
+
+declare const Tabs: {
+    Root: (props: Tabs$1.TabsProps) => react_jsx_runtime.JSX.Element;
+    List: (props: Tabs$1.TabsListProps) => react_jsx_runtime.JSX.Element;
+    Trigger: ({ variant, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: Tabs$1.TabsContentProps) => react_jsx_runtime.JSX.Element;
 };
 
 declare const styled: <Type extends react.ComponentType<any> | _stitches_react_types_util.Function | keyof JSX.IntrinsicElements, Composers extends (string | react.ComponentType<any> | _stitches_react_types_util.Function | {
@@ -2740,4 +2792,4 @@ declare const createTheme: <Argument0 extends string | ({
     selector: string;
 } & (Argument0 extends string ? _stitches_react_types_stitches.ThemeTokens<Argument1, ""> : _stitches_react_types_stitches.ThemeTokens<Argument0, "">);
 
-export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
+export { Avatar, type AvatarProps, Box, type BoxProps, BoxTest, type BoxTestProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, config, createTheme, css, globalCss, keyframes, styled, theme };
