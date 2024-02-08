@@ -583,4 +583,21 @@ declare const borderWidth: {
     10: string;
 };
 
-export { borderWidth, colors, fontSizes, fontWeights, fonts, lineHeights, radii, space };
+declare const dropShadow: {
+    xs: string;
+    sm: string[];
+    md: string[];
+    lg: string[];
+    xl: string[];
+    '2xl': string;
+    '3xl': string;
+};
+
+declare const blur: {
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+};
+
+export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, radii, space };

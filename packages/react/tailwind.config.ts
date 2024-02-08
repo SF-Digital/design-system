@@ -1,6 +1,8 @@
 import {
+  blur,
   borderWidth,
   colors,
+  dropShadow,
   fontSizes,
   fontWeights,
   fonts,
@@ -8,6 +10,7 @@ import {
   radii,
   space,
 } from '@sf-digital-ui/tokens'
+
 import { Config } from 'tailwindcss'
 
 /** @type {import('tailwindcss').Config} */
@@ -22,6 +25,8 @@ module.exports = {
       lineHeight: lineHeights,
       borderRadius: radii,
       space,
+      dropShadow,
+      blur,
       borderWidth,
     },
   },
