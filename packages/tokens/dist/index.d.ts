@@ -593,4 +593,11 @@ declare const dropShadow: {
     '3xl': string;
 };
 
-export { borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, radii, space };
+declare const blur: {
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+};
+
+export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, radii, space };

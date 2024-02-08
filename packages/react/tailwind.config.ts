@@ -1,4 +1,5 @@
 import {
+  blur,
   borderWidth,
   colors,
   dropShadow,
@@ -9,6 +10,7 @@ import {
   radii,
   space,
 } from '@sf-digital-ui/tokens'
+
 import { Config } from 'tailwindcss'
 
 /** @type {import('tailwindcss').Config} */
@@ -24,6 +26,7 @@ module.exports = {
       borderRadius: radii,
       space,
       dropShadow,
+      blur,
       borderWidth,
     },
   },

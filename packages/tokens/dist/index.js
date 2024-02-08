@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  blur: () => blur,
   borderWidth: () => borderWidth,
   colors: () => colors,
   dropShadow: () => dropShadow,
@@ -702,8 +703,17 @@ var dropShadow = {
   "2xl": "0 24px 48px -12px rgba(16, 24, 40, 0.18)",
   "3xl": "0 32px 64px -12px rgba(16, 24, 40, 0.14)"
 };
+
+// src/blur.ts
+var blur = {
+  sm: "8px",
+  md: "16px",
+  lg: "24px",
+  xl: "40px"
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  blur,
   borderWidth,
   colors,
   dropShadow,
