@@ -6,7 +6,7 @@ export const Box = ({ ...rest }: BoxProps) => {
   return (
     <div
       {...rest}
-      className="rounded-md border border-gray600 bg-gray800 p-4"
+      className="border-gray600 bg-gray800 rounded-md border p-4"
     />
   )
 }
