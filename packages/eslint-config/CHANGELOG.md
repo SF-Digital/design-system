@@ -1,5 +1,11 @@
 # @sf-digital-ui/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- Remove stiches
+
 ## 1.1.1
 
 ### Patch Changes

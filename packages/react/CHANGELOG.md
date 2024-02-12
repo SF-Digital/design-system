@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- Remove stiches
+
 ## 3.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- Remove stiches
+
 ## 2.0.2
 
 ### Patch Changes
