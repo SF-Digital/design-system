@@ -5,7 +5,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 const button = tv(
   {
     base: [
-      'font-heading flex flex-1 items-center gap-1 rounded-md font-semibold transition duration-150',
+      'font-heading align-center flex  items-center gap-1 rounded-md font-semibold transition duration-150',
       'disabled:bg-neutral-40 disabled:text-neutral-50',
     ],
 
@@ -17,7 +17,7 @@ const button = tv(
           'active:bg-primary-green-800',
         ],
         secondary: [
-          'border-xs border border-primary-green-500 text-primary-green-500',
+          'border-xs border border-primary-green-500 bg-white text-primary-green-500',
           'hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700',
           'active:border-primary-green-800 active:text-primary-green-800',
         ],
