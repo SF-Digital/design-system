@@ -3,7 +3,6 @@ import { PackageOpen } from 'lucide-react'
 import '@sf-digital-ui/react/dist/output.css'
 
 const HomePage = () => {
-  console.log(window.location)
 
   return (
     <div
