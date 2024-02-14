@@ -9,7 +9,11 @@ const HomePage = () => {
     <div
       style={{
         height: '100vh',
-        width: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        zIndex: 1,
         alignItems: 'center',
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
