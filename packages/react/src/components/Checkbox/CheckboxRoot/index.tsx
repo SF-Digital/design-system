@@ -5,7 +5,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 const checkbox = tv(
   {
     base: [
-      'border-xs flex h-5 w-5 flex-1 items-center justify-center rounded-xs border border-neutral-50',
+      'border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50',
       'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500',
     ],
 

@@ -45,20 +45,25 @@ var Box = (_a) => {
 // src/components/Text/index.tsx
 import { tv } from "tailwind-variants";
 import { jsx as jsx2 } from "react/jsx-runtime";
-var text = tv({
-  base: ["font-sf-body leading-tight"],
-  variants: {
-    size: {
-      xs: "text-sf-xs",
-      sm: "text-sf-sm",
-      base: "text-sf-md",
-      lg: "text-sf-lg"
+var text = tv(
+  {
+    base: ["font-sf-body leading-tight"],
+    variants: {
+      size: {
+        xs: "text-sf-xs",
+        sm: "text-sf-sm",
+        base: "text-sf-md",
+        lg: "text-sf-lg"
+      }
+    },
+    defaultVariants: {
+      size: "base"
     }
   },
-  defaultVariants: {
-    size: "base"
+  {
+    twMerge: false
   }
-});
+);
 var Text = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ jsx2("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
@@ -94,7 +99,7 @@ import { jsx as jsx4 } from "react/jsx-runtime";
 var button = tv3(
   {
     base: [
-      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold transition duration-150",
+      "font-heading align-center flex  items-center gap-1 rounded-md font-semibold transition duration-150",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {
@@ -105,7 +110,7 @@ var button = tv3(
           "active:bg-primary-green-800"
         ],
         secondary: [
-          "border-xs border border-primary-green-500 text-primary-green-500",
+          "border-xs border border-primary-green-500 bg-white text-primary-green-500",
           "hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700",
           "active:border-primary-green-800 active:text-primary-green-800"
         ],
@@ -180,7 +185,7 @@ import { jsx as jsx7 } from "react/jsx-runtime";
 var input = tv4(
   {
     base: [
-      "flex w-60 flex-1 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -321,7 +326,7 @@ import { jsx as jsx12 } from "react/jsx-runtime";
 var checkbox = tv5(
   {
     base: [
-      "border-xs flex h-5 w-5 flex-1 items-center justify-center rounded-xs border border-neutral-50",
+      "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
       'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500'
     ],
     variants: {

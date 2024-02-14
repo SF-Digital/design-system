@@ -85,20 +85,25 @@ var Box = (_a) => {
 // src/components/Text/index.tsx
 var import_tailwind_variants = require("tailwind-variants");
 var import_jsx_runtime2 = require("react/jsx-runtime");
-var text = (0, import_tailwind_variants.tv)({
-  base: ["font-sf-body leading-tight"],
-  variants: {
-    size: {
-      xs: "text-sf-xs",
-      sm: "text-sf-sm",
-      base: "text-sf-md",
-      lg: "text-sf-lg"
+var text = (0, import_tailwind_variants.tv)(
+  {
+    base: ["font-sf-body leading-tight"],
+    variants: {
+      size: {
+        xs: "text-sf-xs",
+        sm: "text-sf-sm",
+        base: "text-sf-md",
+        lg: "text-sf-lg"
+      }
+    },
+    defaultVariants: {
+      size: "base"
     }
   },
-  defaultVariants: {
-    size: "base"
+  {
+    twMerge: false
   }
-});
+);
 var Text = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
@@ -134,7 +139,7 @@ var import_jsx_runtime4 = require("react/jsx-runtime");
 var button = (0, import_tailwind_variants3.tv)(
   {
     base: [
-      "font-heading flex flex-1 items-center gap-1 rounded-md font-semibold transition duration-150",
+      "font-heading align-center flex  items-center gap-1 rounded-md font-semibold transition duration-150",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {
@@ -145,7 +150,7 @@ var button = (0, import_tailwind_variants3.tv)(
           "active:bg-primary-green-800"
         ],
         secondary: [
-          "border-xs border border-primary-green-500 text-primary-green-500",
+          "border-xs border border-primary-green-500 bg-white text-primary-green-500",
           "hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700",
           "active:border-primary-green-800 active:text-primary-green-800"
         ],
@@ -220,7 +225,7 @@ var import_jsx_runtime7 = require("react/jsx-runtime");
 var input = (0, import_tailwind_variants4.tv)(
   {
     base: [
-      "flex w-60 flex-1 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -361,7 +366,7 @@ var import_jsx_runtime12 = require("react/jsx-runtime");
 var checkbox = (0, import_tailwind_variants5.tv)(
   {
     base: [
-      "border-xs flex h-5 w-5 flex-1 items-center justify-center rounded-xs border border-neutral-50",
+      "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
       'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500'
     ],
     variants: {

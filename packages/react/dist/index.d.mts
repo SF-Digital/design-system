@@ -21,21 +21,9 @@ declare const text: tailwind_variants.TVReturnType<{
         base: string;
         lg: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    size: {
-        xs: string;
-        sm: string;
-        base: string;
-        lg: string;
-    };
+}, undefined, string[], {
+    twMerge: false;
 }, {
-    size: {
-        xs: string;
-        sm: string;
-        base: string;
-        lg: string;
-    };
-}>, {
     size: {
         xs: string;
         sm: string;
@@ -49,21 +37,9 @@ declare const text: tailwind_variants.TVReturnType<{
         base: string;
         lg: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    size: {
-        xs: string;
-        sm: string;
-        base: string;
-        lg: string;
-    };
-}, {
-    size: {
-        xs: string;
-        sm: string;
-        base: string;
-        lg: string;
-    };
-}>, unknown, unknown, undefined>>;
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
 type TextProps = ComponentProps<'p'> & VariantProps<typeof text>;
 declare const Text: ({ className, size, ...props }: TextProps) => react_jsx_runtime.JSX.Element;
 
