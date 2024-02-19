@@ -27,7 +27,7 @@ const config: StorybookConfig = {
   },
   viteFinal: async (config, { configType }) => {
     if(configType === 'PRODUCTION') {
-      config.base = "/monorepo-design-system/"
+      config.base = "/design-system/"
     }
     return config;
   },
