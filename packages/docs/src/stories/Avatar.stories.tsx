@@ -43,10 +43,7 @@ export default {
 export const Default: StoryObj<AvatarRootProps> = {
   render: (args) => (
     <Avatar.Root size={args.size}>
-      <Avatar.Image
-        className="h-full w-full rounded-[inherit] object-cover"
-        src="https://avatars.githubusercontent.com/u/51454097?v=4"
-      />
+      <Avatar.Image src="https://avatars.githubusercontent.com/u/51454097?v=4" />
       <Avatar.Fallback className="flex h-full w-full items-center justify-center bg-primary-green-500" />
     </Avatar.Root>
   ),
