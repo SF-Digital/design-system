@@ -502,7 +502,7 @@ import { tv as tv10 } from "tailwind-variants";
 import { jsx as jsx21 } from "react/jsx-runtime";
 var toggle2 = tv10({
   base: [
-    "rounded-lg bg-white drop-shadow-sm transition-all duration-500 group-data-[disabled]:bg-neutral-20"
+    "rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20"
   ],
   variants: {
     size: {

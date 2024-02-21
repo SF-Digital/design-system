@@ -3,7 +3,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 
 const toggle = tv({
   base: [
-    'rounded-lg bg-white drop-shadow-sm transition-all duration-500 group-data-[disabled]:bg-neutral-20',
+    'rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20',
   ],
   variants: {
     size: {

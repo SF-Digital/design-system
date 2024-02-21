@@ -543,7 +543,7 @@ var import_tailwind_variants10 = require("tailwind-variants");
 var import_jsx_runtime21 = require("react/jsx-runtime");
 var toggle2 = (0, import_tailwind_variants10.tv)({
   base: [
-    "rounded-lg bg-white drop-shadow-sm transition-all duration-500 group-data-[disabled]:bg-neutral-20"
+    "rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20"
   ],
   variants: {
     size: {
