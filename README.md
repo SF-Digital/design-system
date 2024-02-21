@@ -11,9 +11,9 @@
 
 ## 1. Clone the Git repo
 
-`git clone git@github.com:RicardoBrito1938/monorepo-design-system.git`
+`git clone git@github.com:SF-Digital/design-system.git`
 
-- The repository is hosted publically on [Github](https://github.com/RicardoBrito1938/monorepo-design-system)
+- The repository is hosted publically on [Github](https://github.com/SF-Digital/design-system)
 ## 2. Install dependencies
 `npm install`
 - Please use npm as this is where we are hosting the package
@@ -22,9 +22,9 @@
 - **Development server**: `npm run dev` *(localhost:6006)*
 - **Clean**: `npm run cbum` (removes node_modules in all packages, removes package-lock.json and reinstalls)
 
-# Atomic Design
+# Pattern composition
 
-We use a strategy know as atomic design to build our components, in order to minimise the bloating and  improve re-usability of components.
+We use a strategy know as pattern composition to build our components, in order to minimise the bloating and  improve re-usability of components.
 
 ### Eg: Button Component
 

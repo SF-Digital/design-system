@@ -9,6 +9,7 @@ import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
+import * as Toggle$1 from '@radix-ui/react-toggle';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -333,4 +334,69 @@ declare const Tabs: {
     Content: (props: Tabs$1.TabsContentProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps };
+declare const toggle$1: tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, {
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
+type ToggleRootProps = ComponentProps<typeof Toggle$1.Root> & VariantProps<typeof toggle$1>;
+
+declare const toggle: tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, {
+    size: {
+        sm: string;
+        md: string;
+    };
+}>, {
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+    };
+}, {
+    size: {
+        sm: string;
+        md: string;
+    };
+}>, unknown, unknown, undefined>>;
+type ToggleControlProps = ComponentProps<'div'> & VariantProps<typeof toggle>;
+
+declare const Toggle: {
+    Root: ({ className, size, ...props }: ToggleRootProps) => react_jsx_runtime.JSX.Element;
+    Control: ({ className, size, ...props }: ToggleControlProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps };

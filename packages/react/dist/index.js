@@ -66,7 +66,8 @@ __export(src_exports, {
   RadioGroup: () => RadioGroup3,
   Tabs: () => Tabs5,
   Text: () => Text,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  Toggle: () => Toggle2
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -422,9 +423,9 @@ var radio2 = (0, import_tailwind_variants7.tv)(
     ],
     variants: {
       size: {
-        sm: 'data-[state="checked"]:border-6 h-5 w-5',
+        sm: 'h-5 w-5 data-[state="checked"]:border-6',
         md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'data-[state="checked"]:border-10 h-8 w-8'
+        lg: 'h-8 w-8 data-[state="checked"]:border-10'
       }
     }
   },
@@ -512,6 +513,52 @@ var Content2 = (props) => {
 
 // src/components/Tabs/index.tsx
 var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
+
+// src/components/Toggle/Root/index.tsx
+var Toggle = __toESM(require("@radix-ui/react-toggle"));
+var import_tailwind_variants9 = require("tailwind-variants");
+var import_jsx_runtime20 = require("react/jsx-runtime");
+var toggle = (0, import_tailwind_variants9.tv)(
+  {
+    base: [
+      'group flex flex-row items-center rounded-lg p-0.5 data-[state="on"]:justify-end data-[disabled]:bg-neutral-40 data-[state="off"]:bg-neutral-40 data-[state="on"]:bg-primary-green-500'
+    ],
+    variants: {
+      size: {
+        sm: "h-5 w-9",
+        md: "h-6 w-11"
+      }
+    },
+    defaultVariants: { size: "md" }
+  },
+  { twMerge: false }
+);
+var Root9 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Toggle.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+};
+
+// src/components/Toggle/Control/index.tsx
+var import_tailwind_variants10 = require("tailwind-variants");
+var import_jsx_runtime21 = require("react/jsx-runtime");
+var toggle2 = (0, import_tailwind_variants10.tv)({
+  base: [
+    "rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20"
+  ],
+  variants: {
+    size: {
+      sm: "h-4 w-4",
+      md: "h-5 w-5"
+    }
+  }
+});
+var Control2 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
+};
+
+// src/components/Toggle/index.tsx
+var Toggle2 = { Root: Root9, Control: Control2 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Box,
@@ -521,7 +568,8 @@ var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
   RadioGroup,
   Tabs,
   Text,
-  TextInput
+  TextInput,
+  Toggle
 });
 /*! Bundled license information:
 
