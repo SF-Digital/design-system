@@ -2,6 +2,28 @@ import { Avatar, AvatarRootProps } from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react'
 import '@sf-digital-ui/react/dist/output.css'
 
+/**
+ * This story displays the `Avatar` component, which is a React element built using Pattern Composition. Types generated for each component are exported as `Avatar{ComponentName}Props`.
+ *
+ * ## Usage:
+ *
+ * ```import { Avatar } from '@sf-digital-ui/react'```
+ *
+ * Avatar is a composition of the following components:
+ *
+ * `Avatar.Root` - The outer wrapper for the avatar
+ *
+ * `Avatar.Image` - The image of the avatar
+ *
+ * `Avatar.Fallback` - The fallback for the avatar
+ *
+ * ## API Reference:
+ * ### Root
+ * Props
+ *
+ *  `size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'` - The size of the avatar
+ */
+
 export default {
   title: 'Components/Avatar',
   component: Avatar.Root,
