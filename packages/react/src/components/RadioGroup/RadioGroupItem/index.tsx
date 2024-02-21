@@ -11,9 +11,9 @@ const radio = tv(
 
     variants: {
       size: {
-        sm: 'data-[state="checked"]:border-6 h-5 w-5',
+        sm: 'h-5 w-5 data-[state="checked"]:border-6',
         md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'data-[state="checked"]:border-10 h-8 w-8',
+        lg: 'h-8 w-8 data-[state="checked"]:border-10',
       },
     },
   },

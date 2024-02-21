@@ -382,9 +382,9 @@ var radio2 = tv7(
     ],
     variants: {
       size: {
-        sm: 'data-[state="checked"]:border-6 h-5 w-5',
+        sm: 'h-5 w-5 data-[state="checked"]:border-6',
         md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'data-[state="checked"]:border-10 h-8 w-8'
+        lg: 'h-8 w-8 data-[state="checked"]:border-10'
       }
     }
   },
@@ -472,6 +472,52 @@ var Content2 = (props) => {
 
 // src/components/Tabs/index.tsx
 var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
+
+// src/components/Toggle/Root/index.tsx
+import * as Toggle from "@radix-ui/react-toggle";
+import { tv as tv9 } from "tailwind-variants";
+import { jsx as jsx20 } from "react/jsx-runtime";
+var toggle = tv9(
+  {
+    base: [
+      'group flex flex-row items-center rounded-lg p-0.5 data-[state="on"]:justify-end data-[disabled]:bg-neutral-40 data-[state="off"]:bg-neutral-40 data-[state="on"]:bg-primary-green-500'
+    ],
+    variants: {
+      size: {
+        sm: "h-5 w-9",
+        md: "h-6 w-11"
+      }
+    },
+    defaultVariants: { size: "md" }
+  },
+  { twMerge: false }
+);
+var Root9 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx20(Toggle.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+};
+
+// src/components/Toggle/Control/index.tsx
+import { tv as tv10 } from "tailwind-variants";
+import { jsx as jsx21 } from "react/jsx-runtime";
+var toggle2 = tv10({
+  base: [
+    "rounded-lg bg-white drop-shadow-sm transition-all duration-500 group-data-[disabled]:bg-neutral-20"
+  ],
+  variants: {
+    size: {
+      sm: "h-4 w-4",
+      md: "h-5 w-5"
+    }
+  }
+});
+var Control2 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx21("div", __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
+};
+
+// src/components/Toggle/index.tsx
+var Toggle2 = { Root: Root9, Control: Control2 };
 export {
   Box,
   Button,
@@ -480,7 +526,8 @@ export {
   RadioGroup3 as RadioGroup,
   Tabs5 as Tabs,
   Text,
-  TextInput
+  TextInput,
+  Toggle2 as Toggle
 };
 /*! Bundled license information:
 
