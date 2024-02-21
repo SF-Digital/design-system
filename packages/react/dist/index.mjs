@@ -518,7 +518,53 @@ var Control2 = (_a) => {
 
 // src/components/Toggle/index.tsx
 var Toggle2 = { Root: Root9, Control: Control2 };
+
+// src/components/Avatar/Root/index.tsx
+import * as Avatar from "@radix-ui/react-avatar";
+import { tv as tv11 } from "tailwind-variants";
+import { jsx as jsx22 } from "react/jsx-runtime";
+var avatar = tv11(
+  {
+    base: [
+      "inline-flex select-none items-center justify-center overflow-hidden rounded-full bg-black align-middle"
+    ],
+    variants: {
+      size: {
+        xs: "h-6 w-6",
+        sm: "h-8 w-8",
+        md: "h-10 w-10",
+        lg: "h-12 w-12",
+        xl: "h-14 w-14",
+        "2xl": "h-16 w-16"
+      }
+    },
+    defaultVariants: { size: "lg" }
+  },
+  { twMerge: false }
+);
+var Root11 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ jsx22(Avatar.Root, __spreadProps(__spreadValues({}, props), { className: avatar({ size, className }) }));
+};
+
+// src/components/Avatar/Image/index.tsx
+import * as Avatar2 from "@radix-ui/react-avatar";
+import { jsx as jsx23 } from "react/jsx-runtime";
+var Image2 = (props) => {
+  return /* @__PURE__ */ jsx23(Avatar2.Image, __spreadValues({}, props));
+};
+
+// src/components/Avatar/Fallback/index.tsx
+import * as Avatar3 from "@radix-ui/react-avatar";
+import { jsx as jsx24 } from "react/jsx-runtime";
+var Fallback2 = (props) => {
+  return /* @__PURE__ */ jsx24(Avatar3.Fallback, __spreadValues({}, props));
+};
+
+// src/components/Avatar/index.tsx
+var Avatar4 = { Root: Root11, Image: Image2, Fallback: Fallback2 };
 export {
+  Avatar4 as Avatar,
   Box,
   Button,
   Checkbox3 as Checkbox,

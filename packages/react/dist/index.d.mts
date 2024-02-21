@@ -10,6 +10,7 @@ import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as Toggle$1 from '@radix-ui/react-toggle';
+import * as Avatar$1 from '@radix-ui/react-avatar';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -354,7 +355,7 @@ declare const toggle$1: tailwind_variants.TVReturnType<{
 }, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
-type ToggleRootProps = ComponentProps<typeof Toggle$1.Root> & VariantProps<typeof toggle$1>;
+type ToggleRootProps = Toggle$1.ToggleProps & VariantProps<typeof toggle$1>;
 
 declare const toggle: tailwind_variants.TVReturnType<{
     size: {
@@ -399,4 +400,48 @@ declare const Toggle: {
     Control: ({ className, size, ...props }: ToggleControlProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps };
+declare const avatar: tailwind_variants.TVReturnType<{
+    size: {
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, {
+    size: {
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
+type AvatarRootProps = Avatar$1.AvatarProps & VariantProps<typeof avatar>;
+
+type AvatarImageProps = Avatar$1.AvatarImageProps;
+
+type AvatarFallbackProps = Avatar$1.AvatarFallbackProps;
+
+declare const Avatar: {
+    Root: ({ className, size, ...props }: AvatarRootProps) => react_jsx_runtime.JSX.Element;
+    Image: (props: Avatar$1.AvatarImageProps) => react_jsx_runtime.JSX.Element;
+    Fallback: (props: Avatar$1.AvatarFallbackProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps };
