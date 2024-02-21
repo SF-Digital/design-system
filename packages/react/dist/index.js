@@ -593,7 +593,12 @@ var Root11 = (_a) => {
 var Avatar2 = __toESM(require("@radix-ui/react-avatar"));
 var import_jsx_runtime23 = require("react/jsx-runtime");
 var Image2 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Avatar2.Image, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+    Avatar2.Image,
+    __spreadProps(__spreadValues({}, props), {
+      className: '  className="h-full object-cover" w-full rounded-[inherit]'
+    })
+  );
 };
 
 // src/components/Avatar/Fallback/index.tsx

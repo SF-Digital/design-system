@@ -551,7 +551,12 @@ var Root11 = (_a) => {
 import * as Avatar2 from "@radix-ui/react-avatar";
 import { jsx as jsx23 } from "react/jsx-runtime";
 var Image2 = (props) => {
-  return /* @__PURE__ */ jsx23(Avatar2.Image, __spreadValues({}, props));
+  return /* @__PURE__ */ jsx23(
+    Avatar2.Image,
+    __spreadProps(__spreadValues({}, props), {
+      className: '  className="h-full object-cover" w-full rounded-[inherit]'
+    })
+  );
 };
 
 // src/components/Avatar/Fallback/index.tsx
