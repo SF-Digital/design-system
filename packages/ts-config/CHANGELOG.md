@@ -1,5 +1,11 @@
 # @sf-digital-ui/ts-config
 
+## 2.0.1
+
+### Patch Changes
+
+- new toggle component added
+
 ## 2.0.0
 
 ### Major Changes

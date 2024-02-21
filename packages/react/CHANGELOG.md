@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.0.1
+
+### Patch Changes
+
+- new toggle component added
+
 ## 4.0.0
 
 ### Major Changes

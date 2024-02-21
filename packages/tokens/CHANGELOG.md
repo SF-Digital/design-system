@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.0.1
+
+### Patch Changes
+
+- new toggle component added
+
 ## 3.0.0
 
 ### Major Changes
