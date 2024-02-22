@@ -3,7 +3,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 
 const tab = tv(
   {
-    base: [' font-sf-neutral font-bold text-neutral-80'],
+    base: [' font-sf-digital font-bold text-neutral-80'],
 
     variants: {
       variant: {

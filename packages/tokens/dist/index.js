@@ -615,9 +615,7 @@ var radii = {
 var fonts = {
   default: "Roboto, sans-serif",
   code: "monospace",
-  "sf-heading": "Gill, sans-serif",
-  "sf-body": "Perpetua, serif",
-  "sf-neutral": "Calibri, sans-serif"
+  "sf-digital": "Lato, sans-serif"
 };
 
 // src/font-sizes.ts

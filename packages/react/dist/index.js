@@ -68,7 +68,8 @@ __export(src_exports, {
   Tabs: () => Tabs5,
   Text: () => Text,
   TextInput: () => TextInput,
-  Toggle: () => Toggle2
+  Toggle: () => Toggle2,
+  Tooltip: () => Tooltip7
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -89,7 +90,7 @@ var import_tailwind_variants = require("tailwind-variants");
 var import_jsx_runtime2 = require("react/jsx-runtime");
 var text = (0, import_tailwind_variants.tv)(
   {
-    base: ["font-sf-body leading-tight"],
+    base: ["font-sf-digital leading-tight"],
     variants: {
       size: {
         xs: "text-sf-xs",
@@ -115,7 +116,7 @@ var Text = (_a) => {
 var import_tailwind_variants2 = require("tailwind-variants");
 var import_jsx_runtime3 = require("react/jsx-runtime");
 var heading = (0, import_tailwind_variants2.tv)({
-  base: ["font-sf-heading leading-tight"],
+  base: ["font-sf-digital leading-tight"],
   variants: {
     size: {
       h1: "text-sf-h1",
@@ -227,7 +228,7 @@ var import_jsx_runtime7 = require("react/jsx-runtime");
 var input = (0, import_tailwind_variants4.tv)(
   {
     base: [
-      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -280,7 +281,7 @@ var Control = (_a) => {
       disabled,
       className: (0, import_tailwind_merge.twJoin)(
         props.className,
-        "w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50"
+        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
       )
     })
   );
@@ -466,7 +467,7 @@ var import_tailwind_variants8 = require("tailwind-variants");
 var import_jsx_runtime18 = require("react/jsx-runtime");
 var tab = (0, import_tailwind_variants8.tv)(
   {
-    base: [" font-sf-neutral font-bold text-neutral-80"],
+    base: [" font-sf-digital font-bold text-neutral-80"],
     variants: {
       variant: {
         solid: ' rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
@@ -610,6 +611,78 @@ var Fallback2 = (props) => {
 
 // src/components/Avatar/index.tsx
 var Avatar4 = { Root: Root11, Image: Image2, Fallback: Fallback2 };
+
+// src/components/Tooltip/Provider/index.tsx
+var Tooltip = __toESM(require("@radix-ui/react-tooltip"));
+var import_jsx_runtime25 = require("react/jsx-runtime");
+var Provider2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(Tooltip.Provider, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Root/index.tsx
+var Tooltip2 = __toESM(require("@radix-ui/react-tooltip"));
+var import_jsx_runtime26 = require("react/jsx-runtime");
+var Root13 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Tooltip2.Root, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Trigger/index.tsx
+var Tooltip3 = __toESM(require("@radix-ui/react-tooltip"));
+var import_jsx_runtime27 = require("react/jsx-runtime");
+var Trigger4 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(Tooltip3.Trigger, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Portal/index.tsx
+var Tooltip4 = __toESM(require("@radix-ui/react-tooltip"));
+var import_jsx_runtime28 = require("react/jsx-runtime");
+var Portal2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(Tooltip4.Portal, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Content/index.tsx
+var Tooltip5 = __toESM(require("@radix-ui/react-tooltip"));
+var import_tailwind_variants12 = require("tailwind-variants");
+var import_jsx_runtime29 = require("react/jsx-runtime");
+var content = (0, import_tailwind_variants12.tv)(
+  {
+    base: [
+      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none  rounded-md px-3 py-2 text-sf-xs leading-none"
+    ],
+    variants: {
+      theme: {
+        // TODO: confirm colors
+        light: ["bg-white text-primary-grey-200"],
+        dark: ["bg-black text-white"]
+      }
+    },
+    defaultVariants: {
+      theme: "light"
+    }
+  },
+  { twMerge: false }
+);
+var Content4 = (_a) => {
+  var _b = _a, {
+    theme,
+    className
+  } = _b, props = __objRest(_b, [
+    "theme",
+    "className"
+  ]);
+  return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(Tooltip5.Content, __spreadProps(__spreadValues({}, props), { className: content({ theme, className }) }));
+};
+
+// src/components/Tooltip/Arrow/index.tsx
+var Tooltip6 = __toESM(require("@radix-ui/react-tooltip"));
+var import_jsx_runtime30 = require("react/jsx-runtime");
+var Arrow2 = (_a) => {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(Tooltip6.Arrow, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/index.tsx
+var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: Portal2, Content: Content4, Arrow: Arrow2 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -621,7 +694,8 @@ var Avatar4 = { Root: Root11, Image: Image2, Fallback: Fallback2 };
   Tabs,
   Text,
   TextInput,
-  Toggle
+  Toggle,
+  Tooltip
 });
 /*! Bundled license information:
 
