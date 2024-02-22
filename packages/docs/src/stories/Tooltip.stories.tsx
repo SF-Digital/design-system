@@ -9,6 +9,81 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
+/**
+ * This story displays the `Tooltip` component, which is a React element built using Pattern Composition. Types generated for each component are exported as `Tooltip{ComponentName}Props`.
+ *
+ * ## Usage:
+ *
+ * ```import { Tooltip } from '@sf-digital-ui/react'```
+ *
+ * Tooltip is a composition of the following components:
+ *
+ * `Tooltip.Provider` - Wraps your app to provide global functionality to your tooltips
+ *
+ * `Tooltip.Root` - Contains all the tooltip parts
+ *
+ * `Tooltip.Trigger` - The toggle button that activates the Content
+ *
+ * `Tooltip.Portal` - The container that holds the Content
+ *
+ * `Tooltip.Content` - The content that pops out when tooltip is open
+ *
+ * `Tooltip.Arrow` - The arrow that points to the trigger
+ *
+ * ## API Reference:
+ * ### Provider
+ * Props
+ *
+ * `delayDuration: number` - The delay duration of the content
+ *
+ * `skipDelayDuration: number` - The skip delay duration of the content
+ *
+ * `disableHoverableContent: boolean` - Prevents content from remaining open when hovering
+ *
+ * ### Root
+ * Props
+ *
+ * `defaultOpen: boolean` - initial rendered open state of the tooltip
+ *
+ * `open: boolean` - controlled open state of the tooltip
+ *
+ * `onOpenChange: (open: boolean) => void` - callback for open state change
+ *
+ * ### Trigger
+ * Props
+ *
+ * `asChild: boolean`: merging props and behaviour of the child component
+ *
+ * Data Attribute
+ *
+ * `[data-state]: 'closed' | 'delayed-open' | 'instant-open'`
+ *
+ * ### Portal
+ * Props
+ *
+ * `forceMount: boolean` - when more control is needed, useful for animation controlling
+ *
+ * ### Content
+ * Props
+ *
+ * `side: 'top' | 'bottom' | 'left' | 'right'` - The side of the tooltip
+ *
+ * `sideOffset: number` - distance in px from the trigger
+ *
+ * Data Attribute
+ *
+ * `[data-side]: 'top' | 'bottom' | 'left' | 'right'` - The side of the tooltip
+ * `[data-state]: 'closed' | 'delayed-open' | 'instant-open'`
+ * `[data-align]: 'start' | 'center' | 'end'`
+ *
+ * ### Arrow
+ * Props
+ *
+ * `width: number` - The width of the arrow
+ * `height: number` - The height of the arrow
+ *
+ */
+
 export default {
   title: 'Components/Tooltip',
   component: Tooltip.Provider,
