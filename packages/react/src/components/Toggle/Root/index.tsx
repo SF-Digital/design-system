@@ -1,5 +1,4 @@
 import * as Toggle from '@radix-ui/react-toggle'
-import { ComponentProps } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const toggle = tv(
@@ -19,8 +18,7 @@ const toggle = tv(
   { twMerge: false },
 )
 
-export type ToggleRootProps = ComponentProps<typeof Toggle.Root> &
-  VariantProps<typeof toggle>
+export type ToggleRootProps = Toggle.ToggleProps & VariantProps<typeof toggle>
 
 export const Root = ({ className, size, ...props }: ToggleRootProps) => {
   return <Toggle.Root {...props} className={toggle({ className, size })} />

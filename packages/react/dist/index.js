@@ -59,6 +59,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.tsx
 var src_exports = {};
 __export(src_exports, {
+  Avatar: () => Avatar4,
   Box: () => Box,
   Button: () => Button,
   Checkbox: () => Checkbox3,
@@ -559,8 +560,59 @@ var Control2 = (_a) => {
 
 // src/components/Toggle/index.tsx
 var Toggle2 = { Root: Root9, Control: Control2 };
+
+// src/components/Avatar/Root/index.tsx
+var Avatar = __toESM(require("@radix-ui/react-avatar"));
+var import_tailwind_variants11 = require("tailwind-variants");
+var import_jsx_runtime22 = require("react/jsx-runtime");
+var avatar = (0, import_tailwind_variants11.tv)(
+  {
+    base: [
+      "inline-flex select-none items-center justify-center overflow-hidden rounded-full bg-black align-middle"
+    ],
+    variants: {
+      size: {
+        xs: "h-6 w-6",
+        sm: "h-8 w-8",
+        md: "h-10 w-10",
+        lg: "h-12 w-12",
+        xl: "h-14 w-14",
+        "2xl": "h-16 w-16"
+      }
+    },
+    defaultVariants: { size: "lg" }
+  },
+  { twMerge: false }
+);
+var Root11 = (_a) => {
+  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Avatar.Root, __spreadProps(__spreadValues({}, props), { className: avatar({ size, className }) }));
+};
+
+// src/components/Avatar/Image/index.tsx
+var Avatar2 = __toESM(require("@radix-ui/react-avatar"));
+var import_jsx_runtime23 = require("react/jsx-runtime");
+var Image2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+    Avatar2.Image,
+    __spreadProps(__spreadValues({}, props), {
+      className: '  className="h-full object-cover" w-full rounded-[inherit]'
+    })
+  );
+};
+
+// src/components/Avatar/Fallback/index.tsx
+var Avatar3 = __toESM(require("@radix-ui/react-avatar"));
+var import_jsx_runtime24 = require("react/jsx-runtime");
+var Fallback2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Avatar3.Fallback, __spreadValues({}, props));
+};
+
+// src/components/Avatar/index.tsx
+var Avatar4 = { Root: Root11, Image: Image2, Fallback: Fallback2 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  Avatar,
   Box,
   Button,
   Checkbox,
