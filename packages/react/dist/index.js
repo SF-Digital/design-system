@@ -65,6 +65,7 @@ __export(src_exports, {
   Checkbox: () => Checkbox3,
   Heading: () => Heading,
   RadioGroup: () => RadioGroup3,
+  Select: () => Select5,
   Tabs: () => Tabs5,
   Text: () => Text,
   TextInput: () => TextInput,
@@ -683,6 +684,38 @@ var Arrow2 = (_a) => {
 
 // src/components/Tooltip/index.tsx
 var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: Portal2, Content: Content4, Arrow: Arrow2 };
+
+// src/components/Select/Root/index.tsx
+var Select = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime31 = require("react/jsx-runtime");
+var Root15 = (props) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Select.Root, __spreadValues({}, props));
+
+// src/components/Select/Trigger/index.tsx
+var Select2 = __toESM(require("@radix-ui/react-select"));
+var import_tailwind_merge3 = require("tailwind-merge");
+var import_jsx_runtime32 = require("react/jsx-runtime");
+var Trigger6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
+  Select2.Trigger,
+  __spreadProps(__spreadValues({}, props), {
+    className: (0, import_tailwind_merge3.twJoin)(
+      "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:border-primary-green-500 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500",
+      props == null ? void 0 : props.className
+    )
+  })
+);
+
+// src/components/Select/Icon/index.tsx
+var Select3 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime33 = require("react/jsx-runtime");
+var Icon2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(Select3.Icon, __spreadProps(__spreadValues({}, props), { className: "text-neutral-500" }));
+
+// src/components/Select/Value/index.tsx
+var Select4 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime34 = require("react/jsx-runtime");
+var Value2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(Select4.Value, __spreadValues({}, props));
+
+// src/components/Select/index.tsx
+var Select5 = { Root: Root15, Trigger: Trigger6, Value: Value2, Icon: Icon2 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -691,6 +724,7 @@ var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: P
   Checkbox,
   Heading,
   RadioGroup,
+  Select,
   Tabs,
   Text,
   TextInput,

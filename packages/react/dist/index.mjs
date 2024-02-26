@@ -640,6 +640,38 @@ var Arrow2 = (_a) => {
 
 // src/components/Tooltip/index.tsx
 var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: Portal2, Content: Content4, Arrow: Arrow2 };
+
+// src/components/Select/Root/index.tsx
+import * as Select from "@radix-ui/react-select";
+import { jsx as jsx31 } from "react/jsx-runtime";
+var Root15 = (props) => /* @__PURE__ */ jsx31(Select.Root, __spreadValues({}, props));
+
+// src/components/Select/Trigger/index.tsx
+import * as Select2 from "@radix-ui/react-select";
+import { twJoin as twJoin3 } from "tailwind-merge";
+import { jsx as jsx32 } from "react/jsx-runtime";
+var Trigger6 = (props) => /* @__PURE__ */ jsx32(
+  Select2.Trigger,
+  __spreadProps(__spreadValues({}, props), {
+    className: twJoin3(
+      "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:border-primary-green-500 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500",
+      props == null ? void 0 : props.className
+    )
+  })
+);
+
+// src/components/Select/Icon/index.tsx
+import * as Select3 from "@radix-ui/react-select";
+import { jsx as jsx33 } from "react/jsx-runtime";
+var Icon2 = (props) => /* @__PURE__ */ jsx33(Select3.Icon, __spreadProps(__spreadValues({}, props), { className: "text-neutral-500" }));
+
+// src/components/Select/Value/index.tsx
+import * as Select4 from "@radix-ui/react-select";
+import { jsx as jsx34 } from "react/jsx-runtime";
+var Value2 = (props) => /* @__PURE__ */ jsx34(Select4.Value, __spreadValues({}, props));
+
+// src/components/Select/index.tsx
+var Select5 = { Root: Root15, Trigger: Trigger6, Value: Value2, Icon: Icon2 };
 export {
   Avatar4 as Avatar,
   Box,
@@ -647,6 +679,7 @@ export {
   Checkbox3 as Checkbox,
   Heading,
   RadioGroup3 as RadioGroup,
+  Select5 as Select,
   Tabs5 as Tabs,
   Text,
   TextInput,

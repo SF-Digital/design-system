@@ -12,6 +12,7 @@ import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as Toggle$1 from '@radix-ui/react-toggle';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Tooltip$1 from '@radix-ui/react-tooltip';
+import * as Select$1 from '@radix-ui/react-select';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -486,4 +487,19 @@ declare const Tooltip: {
     Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
+type SelectRootProps = Select$1.SelectProps;
+
+type SelectTriggerProps = Select$1.SelectTriggerProps;
+
+type SelectIconProps = Select$1.SelectIconProps;
+
+type SelectValueProps = Select$1.SelectValueProps;
+
+declare const Select: {
+    Root: (props: Select$1.SelectProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: Select$1.SelectTriggerProps) => react_jsx_runtime.JSX.Element;
+    Value: (props: Select$1.SelectValueProps) => react_jsx_runtime.JSX.Element;
+    Icon: (props: Select$1.SelectIconProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectIconProps, type SelectRootProps, type SelectTriggerProps, type SelectValueProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
