@@ -3,7 +3,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 
 const text = tv(
   {
-    base: ['font-sf-body leading-tight'],
+    base: ['font-sf-digital leading-tight'],
 
     variants: {
       size: {

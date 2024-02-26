@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const heading = tv({
-  base: ['font-sf-heading leading-tight'],
+  base: ['font-sf-digital leading-tight'],
   variants: {
     size: {
       h1: 'text-sf-h1',

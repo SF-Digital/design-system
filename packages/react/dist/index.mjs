@@ -47,7 +47,7 @@ import { tv } from "tailwind-variants";
 import { jsx as jsx2 } from "react/jsx-runtime";
 var text = tv(
   {
-    base: ["font-sf-body leading-tight"],
+    base: ["font-sf-digital leading-tight"],
     variants: {
       size: {
         xs: "text-sf-xs",
@@ -73,7 +73,7 @@ var Text = (_a) => {
 import { tv as tv2 } from "tailwind-variants";
 import { jsx as jsx3 } from "react/jsx-runtime";
 var heading = tv2({
-  base: ["font-sf-heading leading-tight"],
+  base: ["font-sf-digital leading-tight"],
   variants: {
     size: {
       h1: "text-sf-h1",
@@ -185,7 +185,7 @@ import { jsx as jsx7 } from "react/jsx-runtime";
 var input = tv4(
   {
     base: [
-      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -238,7 +238,7 @@ var Control = (_a) => {
       disabled,
       className: twJoin(
         props.className,
-        "w-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-40 disabled:text-neutral-50"
+        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
       )
     })
   );
@@ -424,7 +424,7 @@ import { tv as tv8 } from "tailwind-variants";
 import { jsx as jsx18 } from "react/jsx-runtime";
 var tab = tv8(
   {
-    base: [" font-sf-neutral font-bold text-neutral-80"],
+    base: [" font-sf-digital font-bold text-neutral-80"],
     variants: {
       variant: {
         solid: ' rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
@@ -568,6 +568,78 @@ var Fallback2 = (props) => {
 
 // src/components/Avatar/index.tsx
 var Avatar4 = { Root: Root11, Image: Image2, Fallback: Fallback2 };
+
+// src/components/Tooltip/Provider/index.tsx
+import * as Tooltip from "@radix-ui/react-tooltip";
+import { jsx as jsx25 } from "react/jsx-runtime";
+var Provider2 = (props) => {
+  return /* @__PURE__ */ jsx25(Tooltip.Provider, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Root/index.tsx
+import * as Tooltip2 from "@radix-ui/react-tooltip";
+import { jsx as jsx26 } from "react/jsx-runtime";
+var Root13 = (props) => {
+  return /* @__PURE__ */ jsx26(Tooltip2.Root, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Trigger/index.tsx
+import * as Tooltip3 from "@radix-ui/react-tooltip";
+import { jsx as jsx27 } from "react/jsx-runtime";
+var Trigger4 = (props) => {
+  return /* @__PURE__ */ jsx27(Tooltip3.Trigger, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Portal/index.tsx
+import * as Tooltip4 from "@radix-ui/react-tooltip";
+import { jsx as jsx28 } from "react/jsx-runtime";
+var Portal2 = (props) => {
+  return /* @__PURE__ */ jsx28(Tooltip4.Portal, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/Content/index.tsx
+import * as Tooltip5 from "@radix-ui/react-tooltip";
+import { tv as tv12 } from "tailwind-variants";
+import { jsx as jsx29 } from "react/jsx-runtime";
+var content = tv12(
+  {
+    base: [
+      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none  rounded-md px-3 py-2 text-sf-xs leading-none"
+    ],
+    variants: {
+      theme: {
+        // TODO: confirm colors
+        light: ["bg-white text-primary-grey-200"],
+        dark: ["bg-black text-white"]
+      }
+    },
+    defaultVariants: {
+      theme: "light"
+    }
+  },
+  { twMerge: false }
+);
+var Content4 = (_a) => {
+  var _b = _a, {
+    theme,
+    className
+  } = _b, props = __objRest(_b, [
+    "theme",
+    "className"
+  ]);
+  return /* @__PURE__ */ jsx29(Tooltip5.Content, __spreadProps(__spreadValues({}, props), { className: content({ theme, className }) }));
+};
+
+// src/components/Tooltip/Arrow/index.tsx
+import * as Tooltip6 from "@radix-ui/react-tooltip";
+import { jsx as jsx30 } from "react/jsx-runtime";
+var Arrow2 = (_a) => {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ jsx30(Tooltip6.Arrow, __spreadValues({}, props));
+};
+
+// src/components/Tooltip/index.tsx
+var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: Portal2, Content: Content4, Arrow: Arrow2 };
 export {
   Avatar4 as Avatar,
   Box,
@@ -578,7 +650,8 @@ export {
   Tabs5 as Tabs,
   Text,
   TextInput,
-  Toggle2 as Toggle
+  Toggle2 as Toggle,
+  Tooltip7 as Tooltip
 };
 /*! Bundled license information:
 

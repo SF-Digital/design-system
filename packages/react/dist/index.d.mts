@@ -11,6 +11,7 @@ import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as Toggle$1 from '@radix-ui/react-toggle';
 import * as Avatar$1 from '@radix-ui/react-avatar';
+import * as Tooltip$1 from '@radix-ui/react-tooltip';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -444,4 +445,45 @@ declare const Avatar: {
     Fallback: (props: Avatar$1.AvatarFallbackProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps };
+type TooltipProviderProps = Tooltip$1.TooltipProviderProps;
+
+type TooltipRootProps = Tooltip$1.TooltipProps;
+
+type TooltipTriggerProps = Tooltip$1.TooltipTriggerProps;
+
+type TooltipPortalProps = Tooltip$1.TooltipPortalProps;
+
+declare const content: tailwind_variants.TVReturnType<{
+    theme: {
+        light: string[];
+        dark: string[];
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, {
+    theme: {
+        light: string[];
+        dark: string[];
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    theme: {
+        light: string[];
+        dark: string[];
+    };
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
+type TooltipContentProps = Tooltip$1.TooltipContentProps & VariantProps<typeof content>;
+
+type TooltipArrowProps = Tooltip$1.TooltipArrowProps;
+
+declare const Tooltip: {
+    Provider: (props: Tooltip$1.TooltipProviderProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: Tooltip$1.TooltipProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: Tooltip$1.TooltipTriggerProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: Tooltip$1.TooltipPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: ({ theme, className, ...props }: TooltipContentProps) => react_jsx_runtime.JSX.Element;
+    Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
