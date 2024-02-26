@@ -1,7 +1,8 @@
 import * as Select from '@radix-ui/react-select'
+import { ComponentProps } from 'react'
 import { twJoin } from 'tailwind-merge'
 
-export type SelectTriggerProps = Select.SelectTriggerProps
+export type SelectTriggerProps = ComponentProps<typeof Select.Trigger>
 
 export const Trigger = (props: SelectTriggerProps) => (
   <Select.Trigger

@@ -1,5 +1,18 @@
 import * as Select from '@radix-ui/react-select'
 
-export type SelectRootProps = Select.SelectProps
+export type SelectRootProps = {
+  children?: React.ReactNode
+  value?: string
+  defaultValue?: string
+  onValueChange?(value: string): void
+  open?: boolean
+  defaultOpen?: boolean
+  onOpenChange?(open: boolean): void
+  dir?: Select.Direction
+  name?: string
+  autoComplete?: string
+  disabled?: boolean
+  required?: boolean
+}
 
 export const Root = (props: SelectRootProps) => <Select.Root {...props} />

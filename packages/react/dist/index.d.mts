@@ -487,19 +487,56 @@ declare const Tooltip: {
     Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
-type SelectRootProps = Select$1.SelectProps;
+type SelectRootProps = {
+    children?: React.ReactNode;
+    value?: string;
+    defaultValue?: string;
+    onValueChange?(value: string): void;
+    open?: boolean;
+    defaultOpen?: boolean;
+    onOpenChange?(open: boolean): void;
+    dir?: Select$1.Direction;
+    name?: string;
+    autoComplete?: string;
+    disabled?: boolean;
+    required?: boolean;
+};
 
-type SelectTriggerProps = Select$1.SelectTriggerProps;
+type SelectTriggerProps = ComponentProps<typeof Select$1.Trigger>;
+
+type SelectPortalProps = Select$1.SelectPortalProps;
 
 type SelectIconProps = Select$1.SelectIconProps;
 
 type SelectValueProps = Select$1.SelectValueProps;
 
+type SelectContentProps = Select$1.SelectContentProps;
+
+type SelectItemProps = Select$1.SelectItemProps;
+
+type SelectViewportProps = Select$1.SelectViewportProps;
+
+type SelectItemTextProps = Select$1.SelectItemTextProps;
+
+type SelectItemIndicatorProps = Select$1.SelectItemIndicatorProps;
+
+type SelectSeparatorProps = Select$1.SelectSeparatorProps;
+
+type SelectGroupProps = Select$1.SelectGroupProps;
+
 declare const Select: {
-    Root: (props: Select$1.SelectProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: Select$1.SelectTriggerProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: SelectRootProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: Select$1.SelectTriggerProps & react.RefAttributes<HTMLButtonElement>) => react_jsx_runtime.JSX.Element;
     Value: (props: Select$1.SelectValueProps) => react_jsx_runtime.JSX.Element;
     Icon: (props: Select$1.SelectIconProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: Select$1.SelectPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: Select$1.SelectContentProps) => react_jsx_runtime.JSX.Element;
+    Item: (props: Select$1.SelectItemProps) => react_jsx_runtime.JSX.Element;
+    Viewport: (props: Select$1.SelectViewportProps) => react_jsx_runtime.JSX.Element;
+    ItemText: (props: Select$1.SelectItemTextProps) => react_jsx_runtime.JSX.Element;
+    ItemIndicator: (props: Select$1.SelectItemIndicatorProps) => react_jsx_runtime.JSX.Element;
+    Separator: (props: Select$1.SelectSeparatorProps) => react_jsx_runtime.JSX.Element;
+    Group: (props: Select$1.SelectGroupProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectIconProps, type SelectRootProps, type SelectTriggerProps, type SelectValueProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };

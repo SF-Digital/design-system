@@ -660,18 +660,90 @@ var Trigger6 = (props) => /* @__PURE__ */ jsx32(
   })
 );
 
-// src/components/Select/Icon/index.tsx
+// src/components/Select/Portal/index.tsx
 import * as Select3 from "@radix-ui/react-select";
 import { jsx as jsx33 } from "react/jsx-runtime";
-var Icon2 = (props) => /* @__PURE__ */ jsx33(Select3.Icon, __spreadProps(__spreadValues({}, props), { className: "text-neutral-500" }));
+var Portal4 = (props) => /* @__PURE__ */ jsx33(Select3.Portal, __spreadValues({}, props));
 
-// src/components/Select/Value/index.tsx
+// src/components/Select/Icon/index.tsx
 import * as Select4 from "@radix-ui/react-select";
 import { jsx as jsx34 } from "react/jsx-runtime";
-var Value2 = (props) => /* @__PURE__ */ jsx34(Select4.Value, __spreadValues({}, props));
+var Icon2 = (props) => /* @__PURE__ */ jsx34(Select4.Icon, __spreadProps(__spreadValues({}, props), { className: "text-neutral-500" }));
+
+// src/components/Select/Value/index.tsx
+import * as Select5 from "@radix-ui/react-select";
+import { jsx as jsx35 } from "react/jsx-runtime";
+var Value2 = (props) => /* @__PURE__ */ jsx35(Select5.Value, __spreadValues({}, props));
+
+// src/components/Select/Content/index.tsx
+import * as Select6 from "@radix-ui/react-select";
+import { twJoin as twJoin4 } from "tailwind-merge";
+import { jsx as jsx36 } from "react/jsx-runtime";
+var Content6 = (props) => /* @__PURE__ */ jsx36(
+  Select6.Content,
+  __spreadProps(__spreadValues({}, props), {
+    className: twJoin4(
+      "flex flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
+      props == null ? void 0 : props.className
+    ),
+    align: "center"
+  })
+);
+
+// src/components/Select/Item/index.tsx
+import * as Select7 from "@radix-ui/react-select";
+import { twJoin as twJoin5 } from "tailwind-merge";
+import { jsx as jsx37 } from "react/jsx-runtime";
+var Item3 = (props) => /* @__PURE__ */ jsx37(
+  Select7.Item,
+  __spreadProps(__spreadValues({}, props), {
+    className: twJoin5(
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      props.className
+    )
+  })
+);
+
+// src/components/Select/Viewport/index.tsx
+import * as Select8 from "@radix-ui/react-select";
+import { jsx as jsx38 } from "react/jsx-runtime";
+var Viewport2 = (props) => /* @__PURE__ */ jsx38(Select8.Viewport, __spreadValues({}, props));
+
+// src/components/Select/ItemText/index.tsx
+import * as Select9 from "@radix-ui/react-select";
+import { jsx as jsx39 } from "react/jsx-runtime";
+var ItemText2 = (props) => /* @__PURE__ */ jsx39(Select9.ItemText, __spreadValues({}, props));
+
+// src/components/Select/ItemIndicator/index.tsx
+import * as Select10 from "@radix-ui/react-select";
+import { jsx as jsx40 } from "react/jsx-runtime";
+var ItemIndicator2 = (props) => /* @__PURE__ */ jsx40(Select10.ItemIndicator, __spreadValues({}, props));
+
+// src/components/Select/Separator/index.tsx
+import * as Select11 from "@radix-ui/react-select";
+import { jsx as jsx41 } from "react/jsx-runtime";
+var Separator2 = (props) => /* @__PURE__ */ jsx41(Select11.Separator, __spreadValues({}, props));
+
+// src/components/Select/Group/index.tsx
+import * as Select12 from "@radix-ui/react-select";
+import { jsx as jsx42 } from "react/jsx-runtime";
+var Group2 = (props) => /* @__PURE__ */ jsx42(Select12.Group, __spreadValues({}, props));
 
 // src/components/Select/index.tsx
-var Select5 = { Root: Root15, Trigger: Trigger6, Value: Value2, Icon: Icon2 };
+var Select13 = {
+  Root: Root15,
+  Trigger: Trigger6,
+  Value: Value2,
+  Icon: Icon2,
+  Portal: Portal4,
+  Content: Content6,
+  Item: Item3,
+  Viewport: Viewport2,
+  ItemText: ItemText2,
+  ItemIndicator: ItemIndicator2,
+  Separator: Separator2,
+  Group: Group2
+};
 export {
   Avatar4 as Avatar,
   Box,
@@ -679,7 +751,7 @@ export {
   Checkbox3 as Checkbox,
   Heading,
   RadioGroup3 as RadioGroup,
-  Select5 as Select,
+  Select13 as Select,
   Tabs5 as Tabs,
   Text,
   TextInput,
