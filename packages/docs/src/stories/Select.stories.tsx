@@ -3,6 +3,108 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Check, ChevronDown, User } from 'lucide-react'
 import '@sf-digital-ui/react/dist/output.css'
 
+/**
+ * This story displays the `Select` component, which is a React element built using Pattern Composition. Types generated for each component are exported as `Select{ComponentName}Props`.
+ *
+ * ## Usage:
+ *
+ * ```import { Select } from '@sf-digital-ui/react'```
+ *
+ * Select is a composition of the following components:
+ *
+ * `Select.Root` - Contains all the select parts
+ *
+ * `Select.Trigger` - The button that toggles the select
+ *
+ * `Select.Value` - The value of the select
+ *
+ * `Select.Icon` - The icon of the select
+ *
+ * `Select.Portal` - The container that holds the Content
+ *
+ * `Select.Content` - The content that pops out when select is open
+ *
+ * `Select.Viewport` - The scrolling viewport that holds the items
+ *
+ * `Select.Item` - The item that can be selected
+ *
+ * `Select.ItemText` - The text of the item
+ *
+ * `Select.ItemIndicator` - The indicator of the item
+ *
+ * `Select.Separator` - The separator of the items
+ *
+ * ## API Reference:
+ * ### Root
+ * Props
+ *
+ * `value: string` - The value of the select
+ *
+ * `onValueChange: (value: string) => void` - callback for value change
+ *
+ * `open: boolean` - controlled open state of the select
+ *
+ * `onOpenChange: (open: boolean) => void` - callback for open state change
+ *
+ * `disabled: boolean` - disabled state of the select
+ *
+ * `name: string` - name of the select
+ *
+ * ### Trigger
+ * Props
+ *
+ * `asChild: boolean`: merging props and behaviour of the child component
+ *
+ * Data Attribute
+ *
+ * `[data-state]: 'open' | 'closed'`
+ *
+ * `[data-disabled]`
+ *
+ * `[data-placeholder]`
+ *
+ * ### Value
+ * Props
+ *
+ * `placeholder: ReactNode` - The placeholder of the value
+ *
+ * ### Content
+ * Props
+ *
+ * `position: 'popper' | 'item-aligned'` - The position of the content
+ *
+ * `side: 'top' | 'bottom' | 'left' | 'right'` - The side of the content
+ *
+ * `sideOffset: number` - distance in px from the trigger
+ *
+ * `align: 'start' | 'center' | 'end'` - The alignment of the content
+ *
+ * Data Attribute
+ *
+ * `[data-side]: 'top' | 'bottom' | 'left' | 'right'` - The side of the content
+ *
+ * `[data-state]: 'open' | 'closed'`
+ *
+ * `[data-align]: 'start' | 'center' | 'end'`
+ *
+ * Item
+ * Props
+ *
+ * `value: string` - The value of the item
+ *
+ * `textValue: string` - The text value of the item
+ *
+ * `disabled: boolean`
+ *
+ * Data Attribute
+ *
+ * `[data-state]: 'checked' | 'unchecked'`
+ *
+ * `[data-disabled]`
+ *
+ * `[data-highlighted]`
+ */
+
 export default {
   title: 'Form/Select',
   component: Select.Root,
