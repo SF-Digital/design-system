@@ -65,6 +65,7 @@ __export(src_exports, {
   Checkbox: () => Checkbox3,
   Heading: () => Heading,
   RadioGroup: () => RadioGroup3,
+  Select: () => Select13,
   Tabs: () => Tabs5,
   Text: () => Text,
   TextInput: () => TextInput,
@@ -683,6 +684,110 @@ var Arrow2 = (_a) => {
 
 // src/components/Tooltip/index.tsx
 var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: Portal2, Content: Content4, Arrow: Arrow2 };
+
+// src/components/Select/Root/index.tsx
+var Select = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime31 = require("react/jsx-runtime");
+var Root15 = (props) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Select.Root, __spreadValues({}, props));
+
+// src/components/Select/Trigger/index.tsx
+var Select2 = __toESM(require("@radix-ui/react-select"));
+var import_tailwind_merge3 = require("tailwind-merge");
+var import_jsx_runtime32 = require("react/jsx-runtime");
+var Trigger6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
+  Select2.Trigger,
+  __spreadProps(__spreadValues({}, props), {
+    className: (0, import_tailwind_merge3.twJoin)(
+      'flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[state="open"]:border-primary-green-500 data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500',
+      props == null ? void 0 : props.className
+    )
+  })
+);
+
+// src/components/Select/Portal/index.tsx
+var Select3 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime33 = require("react/jsx-runtime");
+var Portal4 = (props) => /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(Select3.Portal, __spreadValues({}, props));
+
+// src/components/Select/Icon/index.tsx
+var Select4 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime34 = require("react/jsx-runtime");
+var Icon2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(Select4.Icon, __spreadProps(__spreadValues({}, props), { className: "text-neutral-500" }));
+
+// src/components/Select/Value/index.tsx
+var Select5 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime35 = require("react/jsx-runtime");
+var Value2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(Select5.Value, __spreadValues({}, props));
+
+// src/components/Select/Content/index.tsx
+var Select6 = __toESM(require("@radix-ui/react-select"));
+var import_tailwind_merge4 = require("tailwind-merge");
+var import_jsx_runtime36 = require("react/jsx-runtime");
+var Content6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
+  Select6.Content,
+  __spreadProps(__spreadValues({}, props), {
+    className: (0, import_tailwind_merge4.twJoin)(
+      "flex flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
+      props == null ? void 0 : props.className
+    ),
+    align: "center"
+  })
+);
+
+// src/components/Select/Item/index.tsx
+var Select7 = __toESM(require("@radix-ui/react-select"));
+var import_tailwind_merge5 = require("tailwind-merge");
+var import_jsx_runtime37 = require("react/jsx-runtime");
+var Item3 = (props) => /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
+  Select7.Item,
+  __spreadProps(__spreadValues({}, props), {
+    className: (0, import_tailwind_merge5.twJoin)(
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      props.className
+    )
+  })
+);
+
+// src/components/Select/Viewport/index.tsx
+var Select8 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime38 = require("react/jsx-runtime");
+var Viewport2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(Select8.Viewport, __spreadValues({}, props));
+
+// src/components/Select/ItemText/index.tsx
+var Select9 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime39 = require("react/jsx-runtime");
+var ItemText2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Select9.ItemText, __spreadValues({}, props));
+
+// src/components/Select/ItemIndicator/index.tsx
+var Select10 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime40 = require("react/jsx-runtime");
+var ItemIndicator2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Select10.ItemIndicator, __spreadValues({}, props));
+
+// src/components/Select/Separator/index.tsx
+var Select11 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime41 = require("react/jsx-runtime");
+var Separator2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(Select11.Separator, __spreadValues({}, props));
+
+// src/components/Select/Group/index.tsx
+var Select12 = __toESM(require("@radix-ui/react-select"));
+var import_jsx_runtime42 = require("react/jsx-runtime");
+var Group2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Select12.Group, __spreadValues({}, props));
+
+// src/components/Select/index.tsx
+var Select13 = {
+  Root: Root15,
+  Trigger: Trigger6,
+  Value: Value2,
+  Icon: Icon2,
+  Portal: Portal4,
+  Content: Content6,
+  Item: Item3,
+  Viewport: Viewport2,
+  ItemText: ItemText2,
+  ItemIndicator: ItemIndicator2,
+  Separator: Separator2,
+  Group: Group2
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -691,6 +796,7 @@ var Tooltip7 = { Provider: Provider2, Root: Root13, Trigger: Trigger4, Portal: P
   Checkbox,
   Heading,
   RadioGroup,
+  Select,
   Tabs,
   Text,
   TextInput,
