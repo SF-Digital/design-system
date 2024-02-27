@@ -1,7 +1,7 @@
 import * as Select from '@radix-ui/react-select'
+import { PropsWithChildren } from 'react'
 
-export type SelectRootProps = {
-  children?: React.ReactNode
+export interface SelectRootProps extends PropsWithChildren {
   value?: string
   defaultValue?: string
   onValueChange?(value: string): void
