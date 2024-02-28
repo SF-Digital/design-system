@@ -1,6 +1,6 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as react from 'react';
-import { ComponentProps } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 import * as tailwind_variants from 'tailwind-variants';
 import { VariantProps } from 'tailwind-variants';
 import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
@@ -487,8 +487,7 @@ declare const Tooltip: {
     Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
-type SelectRootProps = {
-    children?: React.ReactNode;
+interface SelectRootProps extends PropsWithChildren {
     value?: string;
     defaultValue?: string;
     onValueChange?(value: string): void;
@@ -500,7 +499,7 @@ type SelectRootProps = {
     autoComplete?: string;
     disabled?: boolean;
     required?: boolean;
-};
+}
 
 type SelectTriggerProps = ComponentProps<typeof Select$1.Trigger>;
 

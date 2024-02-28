@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.1.0
+
+### Minor Changes
+
+- Tooltip and Select component has been added to the Design System
+
 ## 4.0.1
 
 ### Patch Changes
