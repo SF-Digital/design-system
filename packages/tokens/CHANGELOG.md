@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.1.1
+
+### Patch Changes
+
+- Regenerate package lock to resolve bug.
+
 ## 3.1.0
 
 ### Minor Changes

@@ -287,7 +287,21 @@ var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLo
 var createLucideIcon = (iconName, iconNode) => {
   const Component = forwardRef(
     (_a, ref) => {
-      var _b = _a, { color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children } = _b, rest = __objRest(_b, ["color", "size", "strokeWidth", "absoluteStrokeWidth", "className", "children"]);
+      var _b = _a, {
+        color = "currentColor",
+        size = 24,
+        strokeWidth = 2,
+        absoluteStrokeWidth,
+        className = "",
+        children
+      } = _b, rest = __objRest(_b, [
+        "color",
+        "size",
+        "strokeWidth",
+        "absoluteStrokeWidth",
+        "className",
+        "children"
+      ]);
       return createElement(
         "svg",
         __spreadValues(__spreadProps(__spreadValues({
@@ -762,7 +776,7 @@ export {
 
 lucide-react/dist/esm/defaultAttributes.js:
   (**
-   * @license lucide-react v0.320.0 - ISC
+   * @license lucide-react v0.341.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -770,7 +784,7 @@ lucide-react/dist/esm/defaultAttributes.js:
 
 lucide-react/dist/esm/createLucideIcon.js:
   (**
-   * @license lucide-react v0.320.0 - ISC
+   * @license lucide-react v0.341.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -778,7 +792,7 @@ lucide-react/dist/esm/createLucideIcon.js:
 
 lucide-react/dist/esm/icons/check.js:
   (**
-   * @license lucide-react v0.320.0 - ISC
+   * @license lucide-react v0.341.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -786,7 +800,7 @@ lucide-react/dist/esm/icons/check.js:
 
 lucide-react/dist/esm/lucide-react.js:
   (**
-   * @license lucide-react v0.320.0 - ISC
+   * @license lucide-react v0.341.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
