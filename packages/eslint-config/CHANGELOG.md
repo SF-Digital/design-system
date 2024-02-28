@@ -1,5 +1,11 @@
 # @sf-digital-ui/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- Tooltip and Select component has been added to the Design System
+
 ## 2.0.1
 
 ### Patch Changes

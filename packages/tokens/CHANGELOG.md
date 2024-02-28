@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- Tooltip and Select component has been added to the Design System
+
 ## 3.0.1
 
 ### Patch Changes
