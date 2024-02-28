@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.1.1
+
+### Patch Changes
+
+- Regenerate package lock to resolve bug.
+
 ## 4.1.0
 
 ### Minor Changes

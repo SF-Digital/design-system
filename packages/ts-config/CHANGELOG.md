@@ -1,5 +1,11 @@
 # @sf-digital-ui/ts-config
 
+## 2.1.1
+
+### Patch Changes
+
+- Regenerate package lock to resolve bug.
+
 ## 2.1.0
 
 ### Minor Changes
