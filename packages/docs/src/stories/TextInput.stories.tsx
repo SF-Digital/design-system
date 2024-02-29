@@ -31,7 +31,7 @@ import '@sf-digital-ui/react/dist/output.css'
  * `disabled: boolean` - Whether the input is disabled
  */
 
-export default {
+const TextInputStory: Meta<TextInputRootProps> = {
   title: 'Form/TextInput',
   component: TextInput.Root,
   args: {
@@ -51,7 +51,9 @@ export default {
       },
     },
   },
-} as Meta<TextInputRootProps>
+}
+
+export default TextInputStory
 
 export const Default: StoryObj<TextInputRootProps> = {
   args: {

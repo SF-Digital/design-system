@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box, BoxProps, Text } from '@sf-digital-ui/react'
 import '@sf-digital-ui/react/dist/output.css'
 
-export default {
+const BoxStory: Meta<BoxProps> = {
   title: 'Surfaces/Box',
   component: Box,
 
@@ -20,6 +20,8 @@ export default {
       },
     },
   },
-} as Meta<BoxProps>
+}
+
+export default BoxStory
 
 export const Primary: StoryObj<BoxProps> = {}

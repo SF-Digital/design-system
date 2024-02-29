@@ -24,7 +24,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *  `size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'` - The size of the avatar
  */
 
-export default {
+const AvatarStory: Meta<AvatarRootProps> = {
   title: 'Components/Avatar',
   component: Avatar.Root,
   args: {
@@ -38,7 +38,9 @@ export default {
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     },
   },
-} as Meta<AvatarRootProps>
+}
+
+export default AvatarStory
 
 export const Default: StoryObj<AvatarRootProps> = {
   render: (args) => (

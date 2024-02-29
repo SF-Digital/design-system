@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ButtonRootProps, Button } from '@sf-digital-ui/react'
 
-import { CaretLeft, CaretRight } from 'phosphor-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -26,7 +26,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  */
 
-export default {
+const ButtonStory: Meta<ButtonRootProps> = {
   title: 'Components/Button',
   component: Button.Root,
   args: {
@@ -53,9 +53,10 @@ export default {
         type: 'boolean',
       },
     },
-    action: 'click',
   },
-} as Meta<ButtonRootProps>
+}
+
+export default ButtonStory
 
 export const Primary: StoryObj<ButtonRootProps> = {}
 
@@ -92,7 +93,7 @@ export const WithPrefix: StoryObj<ButtonRootProps> = {
     children: (
       <>
         <Button.Prefix>
-          <CaretLeft weight="bold" />
+          <ChevronLeft />
         </Button.Prefix>
         Button
       </>
@@ -106,7 +107,7 @@ export const WithSuffix: StoryObj<ButtonRootProps> = {
       <>
         Button
         <Button.Suffix>
-          <CaretRight weight="bold" />
+          <ChevronRight />
         </Button.Suffix>
       </>
     ),

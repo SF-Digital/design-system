@@ -105,12 +105,14 @@ import '@sf-digital-ui/react/dist/output.css'
  * `[data-highlighted]`
  */
 
-export default {
+const SelectStory: Meta<SelectRootProps> = {
   title: 'Form/Select',
   component: Select.Root,
   args: {},
   argTypes: {},
-} as Meta<SelectRootProps>
+}
+
+export default SelectStory
 
 export const Default: StoryObj<SelectRootProps> = {
   render: (args) => (

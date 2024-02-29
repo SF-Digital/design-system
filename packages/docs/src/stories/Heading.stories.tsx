@@ -11,7 +11,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  */
 
-export default {
+const HeadingStory: Meta<HeadingProps> = {
   title: 'Typography/Heading',
   component: Heading,
 
@@ -27,6 +27,8 @@ export default {
       },
     },
   },
-} as Meta<HeadingProps>
+}
+
+export default HeadingStory
 
 export const Primary: StoryObj<HeadingProps> = {}

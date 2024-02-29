@@ -6,20 +6,18 @@
 
 Rebuilding...
 
-Done in 262ms.
+Done in 156ms.
 [34mCLI[39m Building entry: src/index.tsx
 [34mCLI[39m Using tsconfig: tsconfig.json
 [34mCLI[39m tsup v8.0.2
 [34mCLI[39m Target: es6
 [34mESM[39m Build start
  Build start
+[32mESM[39m [1mdist/index.mjs [22m[32m22.21 KB[39m
+[32mESM[39m ⚡️ Build success in 29ms
+ [1mdist/index.js [22m[32m26.12 KB[39m
+ ⚡️ Build success in 28ms
 [34mDTS[39m Build start
-[32mESM[39m [1mdist/index.css [22m[32m17.20 KB[39m
-[32mESM[39m [1mdist/index.mjs [22m[32m24.87 KB[39m
-[32mESM[39m ⚡️ Build success in 984ms
- [1mdist/index.css [22m[32m17.20 KB[39m
- [1mdist/index.js  [22m[32m28.81 KB[39m
- ⚡️ Build success in 984ms
-[32mDTS[39m ⚡️ Build success in 1416ms
+[32mDTS[39m ⚡️ Build success in 906ms
 [32mDTS[39m [1mdist/index.d.mts [22m[32m16.28 KB[39m
 [32mDTS[39m [1mdist/index.d.ts  [22m[32m16.28 KB[39m

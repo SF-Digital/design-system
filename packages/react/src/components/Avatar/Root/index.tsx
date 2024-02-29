@@ -1,6 +1,5 @@
 import * as Avatar from '@radix-ui/react-avatar'
 import { VariantProps, tv } from 'tailwind-variants'
-import '@sf-digital-ui/react/dist/output.css'
 
 const avatar = tv(
   {

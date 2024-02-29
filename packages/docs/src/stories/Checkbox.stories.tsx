@@ -20,7 +20,7 @@ import '@sf-digital-ui/react/dist/output.css'
  * `checked: boolean` - Whether the checkbox is checked.
  */
 
-export default {
+const CheckboxStory: Meta<typeof Checkbox.Root> = {
   title: 'Form/Checkbox',
   component: Checkbox.Root,
   args: {
@@ -35,9 +35,10 @@ export default {
       },
       checked: { control: { type: 'boolean' } },
     },
-    action: 'click',
   },
-} as Meta<typeof Checkbox.Root>
+}
+
+export default CheckboxStory
 
 export const Primary: StoryObj = {
   args: {
@@ -51,35 +52,26 @@ export const Primary: StoryObj = {
   },
 }
 
-export const WithLabel: StoryObj = {
-  args: {
-    children: (
-      <>
+export const WithLabel: StoryObj<typeof Checkbox.Root> = {
+  render: (args) => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '10px',
+      }}
+    >
+      <Checkbox.Root size={args.size} checked={args.checked}>
         <Checkbox.Indicator>
           <Checkbox.Check />
         </Checkbox.Indicator>
-      </>
-    ),
-  },
-  decorators: [
-    (Story) => {
-      return (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: '10px',
-          }}
-        >
-          <div>{Story()}</div>
-          <p
-            className={` text-primary-green-500 text-sf-${Story().props?.size ?? 'sm'} font-auto`}
-          >
-            Checkbox Label
-          </p>
-        </div>
-      )
-    },
-  ],
+      </Checkbox.Root>
+      <p
+        className={` text-primary-green-500 text-sf-${args.size ?? 'sm'} font-auto`}
+      >
+        Checkbox Label
+      </p>
+    </div>
+  ),
 }

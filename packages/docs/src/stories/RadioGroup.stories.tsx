@@ -1,4 +1,8 @@
-import { RadioGroup, RadioGroupRootProps } from '@sf-digital-ui/react'
+import {
+  RadioGroup,
+  RadioGroupItemProps,
+  RadioGroupRootProps,
+} from '@sf-digital-ui/react'
 
 import '@sf-digital-ui/react/dist/output.css'
 import { Meta, StoryObj } from '@storybook/react'
@@ -18,7 +22,7 @@ import { Meta, StoryObj } from '@storybook/react'
  * `size: 'sm' | 'md' | 'lg'` - The size of the radio item.
  */
 
-export default {
+const RadioGroupStory: Meta<RadioGroupRootProps & RadioGroupItemProps> = {
   title: 'Form/RadioGroup',
   component: RadioGroup.Root,
   args: {
@@ -31,7 +35,9 @@ export default {
       options: ['sm', 'md', 'lg'],
     },
   },
-} as Meta<RadioGroupRootProps>
+}
+
+export default RadioGroupStory
 
 export const Default: StoryObj<typeof RadioGroup> = {
   render: (args) => (

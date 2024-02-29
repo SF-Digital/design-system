@@ -84,7 +84,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  */
 
-export default {
+const TooltipStory: Meta<TooltipProviderProps & TooltipContentProps> = {
   title: 'Components/Tooltip',
   component: Tooltip.Provider,
   args: {
@@ -105,7 +105,9 @@ export default {
       options: ['top', 'bottom', 'left', 'right'],
     },
   },
-} as Meta<TooltipProviderProps>
+}
+
+export default TooltipStory
 
 // TODO: sort the colors here
 export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {

@@ -10,7 +10,7 @@ import '@sf-digital-ui/react/dist/output.css'
  * `size: 'xs' | 'sm' | 'base' | 'lg'` - The size of the text.
  */
 
-export default {
+const TextStory: Meta<TextProps> = {
   title: 'Typography/Text',
   component: Text,
 
@@ -26,6 +26,8 @@ export default {
       },
     },
   },
-} as Meta<TextProps>
+}
+
+export default TextStory
 
 export const Primary: StoryObj<TextProps> = {}

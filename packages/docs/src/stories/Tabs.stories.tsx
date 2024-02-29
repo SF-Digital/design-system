@@ -54,7 +54,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  */
 
-export default {
+const TabsStory: Meta<TabsRootProps & TabsTriggerProps> = {
   title: 'Components/Tabs',
   component: Tabs.Root,
   args: {
@@ -75,7 +75,9 @@ export default {
       options: ['solid', 'underline'],
     },
   },
-} as Meta<TabsRootProps & TabsTriggerProps>
+}
+
+export default TabsStory
 
 export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
   args: {},

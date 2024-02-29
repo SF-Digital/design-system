@@ -45,7 +45,7 @@ import '@sf-digital-ui/react/dist/output.css'
  * `size: 'sm' | 'md'` - The size of the control
  */
 
-export default {
+const ToggleStory: Meta<ToggleRootProps> = {
   title: 'Components/Toggle',
   component: Toggle.Root,
   args: {
@@ -58,7 +58,9 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as Meta<ToggleRootProps>
+}
+
+export default ToggleStory
 
 export const Default: StoryObj<ToggleRootProps & ToggleControlProps> = {
   args: {

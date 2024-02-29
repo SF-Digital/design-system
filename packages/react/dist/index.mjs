@@ -266,71 +266,11 @@ var Suffix2 = (props) => {
 // src/components/TextInput/index.tsx
 var TextInput = { Root: Root2, Control, Prefix: Prefix2, Suffix: Suffix2 };
 
-// ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
-import { forwardRef, createElement } from "react";
-
-// ../../node_modules/lucide-react/dist/esm/defaultAttributes.js
-var defaultAttributes = {
-  xmlns: "http://www.w3.org/2000/svg",
-  width: 24,
-  height: 24,
-  viewBox: "0 0 24 24",
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 2,
-  strokeLinecap: "round",
-  strokeLinejoin: "round"
-};
-
-// ../../node_modules/lucide-react/dist/esm/createLucideIcon.js
-var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase().trim();
-var createLucideIcon = (iconName, iconNode) => {
-  const Component = forwardRef(
-    (_a, ref) => {
-      var _b = _a, {
-        color = "currentColor",
-        size = 24,
-        strokeWidth = 2,
-        absoluteStrokeWidth,
-        className = "",
-        children
-      } = _b, rest = __objRest(_b, [
-        "color",
-        "size",
-        "strokeWidth",
-        "absoluteStrokeWidth",
-        "className",
-        "children"
-      ]);
-      return createElement(
-        "svg",
-        __spreadValues(__spreadProps(__spreadValues({
-          ref
-        }, defaultAttributes), {
-          width: size,
-          height: size,
-          stroke: color,
-          strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-          className: ["lucide", `lucide-${toKebabCase(iconName)}`, className].join(" ")
-        }), rest),
-        [
-          ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-          ...Array.isArray(children) ? children : [children]
-        ]
-      );
-    }
-  );
-  Component.displayName = `${iconName}`;
-  return Component;
-};
-
-// ../../node_modules/lucide-react/dist/esm/icons/check.js
-var Check = createLucideIcon("Check", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]]);
-
 // src/components/Checkbox/Check/index.tsx
+import { Check as CheckIcon } from "lucide-react";
 import { jsx as jsx11 } from "react/jsx-runtime";
-var Check2 = (props) => {
-  return /* @__PURE__ */ jsx11(Check, __spreadProps(__spreadValues({}, props), { color: "white" }));
+var Check = (props) => {
+  return /* @__PURE__ */ jsx11(CheckIcon, __spreadProps(__spreadValues({}, props), { color: "white" }));
 };
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
@@ -366,7 +306,7 @@ var Indicator = (props) => {
 };
 
 // src/components/Checkbox/index.tsx
-var Checkbox3 = { Root: Root4, Indicator, Check: Check2 };
+var Checkbox3 = { Root: Root4, Indicator, Check };
 
 // src/components/RadioGroup/RadioGroupRoot/index.tsx
 import * as RadioGroup from "@radix-ui/react-radio-group";
@@ -772,37 +712,3 @@ export {
   Toggle2 as Toggle,
   Tooltip7 as Tooltip
 };
-/*! Bundled license information:
-
-lucide-react/dist/esm/defaultAttributes.js:
-  (**
-   * @license lucide-react v0.341.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide-react/dist/esm/createLucideIcon.js:
-  (**
-   * @license lucide-react v0.341.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide-react/dist/esm/icons/check.js:
-  (**
-   * @license lucide-react v0.341.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide-react/dist/esm/lucide-react.js:
-  (**
-   * @license lucide-react v0.341.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-*/
