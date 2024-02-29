@@ -16,7 +16,7 @@
     "@sf-digital-ui/eslint-config": "*",
     "@sf-digital-ui/react": "*",
     "@sf-digital-ui/tokens": "*",
-    "@sf-digital-ui/ts-config": "workspace:*",
+    "@sf-digital-ui/ts-config": "*",
     "lucide-react": "^0.341.0",
     "polished": "^4.2.2",
     "react": "^18.2.0",
