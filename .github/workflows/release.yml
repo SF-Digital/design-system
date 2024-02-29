@@ -18,14 +18,14 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.15.1
+          version: 8
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "pnpm"
-          cache-dependency-path: "**/pnpm-lock.json"
+          cache-dependency-path: "**/pnpm-lock.yaml"
 
       - run: pnpm ci
 
