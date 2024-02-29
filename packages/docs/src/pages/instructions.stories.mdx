@@ -1,0 +1,85 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Get Started" />
+
+## Get Started
+
+How to use SF Digital in your project:
+
+### Installation
+
+**React Components**: `pnpm install @sf-digital-ui/react`
+
+**Colors, Typography and Tokens**: `pnpm install @sf-digital-ui/tokens`
+
+## Configuration
+
+### 1. Tailwind config
+
+Add this to your `tailwind.config.ts`
+
+```import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
+import {
+  blur,
+  borderWidth,
+  colors,
+  dropShadow,
+  fontSizes,
+  fontWeights,
+  fonts,
+  lineHeights,
+  radii,
+  space,
+} from '@sf-digital-ui/tokens'
+
+/** @type {import('tailwindcss').Config} */
+const config: Config = {
+  content: [
+    // Insert the relative paths you wish for this config to apply to
+  ],
+
+  theme: {
+    extend: {
+      colors,
+      fontSize: fontSizes,
+      fontWeight: fontWeights,
+      fontFamily: fonts,
+      lineHeight: lineHeights,
+      borderRadius: radii,
+      space,
+      dropShadow,
+      blur,
+      borderWidth,
+    },
+  },
+  plugins: [],
+}
+export default config
+```
+
+### 2. CSS Output
+
+Add this line of code to the root of your project
+
+`import '@sf-digital-ui/react/dist/output.css'`
+
+### 3. Import the Component you wish to use
+
+### E.g.
+
+```
+import { TextInput } from '@sf-digital-ui/react'
+import { Search } from 'lucide-react'
+
+export const YourComponent = () => {
+  return (
+    <TextInput.Root size="md" disabled={false}>
+      <TextInput.Prefix>
+        <Search />
+      </TextInput.Prefix>
+      <TextInput.Control placeholder="Search" />
+    </TextInput.Root>
+  )
+}
+```

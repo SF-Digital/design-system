@@ -3,7 +3,6 @@ import { PackageOpen } from 'lucide-react'
 import '@sf-digital-ui/react/dist/output.css'
 
 const HomePage = () => {
-
   return (
     <div
       style={{
@@ -90,7 +89,7 @@ const HomePage = () => {
               fontFamily: 'monospace',
             }}
           >
-            npm install @sf-digital-ui/react
+            pnpm install @sf-digital-ui/react
           </p>
         </div>
       </div>

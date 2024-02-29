@@ -15,12 +15,12 @@
 
 - The repository is hosted publically on [Github](https://github.com/SF-Digital/design-system)
 ## 2. Install dependencies
-`npm install`
-- Please use npm as this is where we are hosting the package
+`pnpm install`
+- Please don't use yarn as we are hosting the package on NPM
 ## 3. Start the project
-- **Build**: `npm run build`
-- **Development server**: `npm run dev` *(localhost:6006)*
-- **Clean**: `npm run cbum` (removes node_modules in all packages, removes package-lock.json and reinstalls)
+- **Build**: `pnpm run build`
+- **Development server**: `pnpm run dev` *(localhost:6006)*
+- **Clean**: `pnpm run cbum` (removes node_modules in all packages, removes package-lock.json and reinstalls)
 
 # Pattern composition
 
