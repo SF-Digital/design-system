@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "cbum": "rm -rf node_modules && rm package-lock.json && rm -rf packages/*/node_modules && npm install",
+    "cbum": "rm -rf node_modules && rm pnpm-lock.json && rm -rf packages/*/node_modules && pnpm install",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=!docs && changeset publish"
