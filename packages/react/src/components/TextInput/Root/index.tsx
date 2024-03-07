@@ -19,6 +19,10 @@ const input = tv(
         false: '',
       },
     },
+    defaultVariants: {
+      size: 'md',
+      disabled: false,
+    },
   },
   { twMerge: true },
 )

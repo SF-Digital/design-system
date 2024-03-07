@@ -179,6 +179,10 @@ var button = (0, import_tailwind_variants3.tv)(
         md: "px-6 py-2.5 text-sf-md",
         lg: "px-8 py-4 text-sf-lg"
       }
+    },
+    defaultVariants: {
+      variant: "primary",
+      size: "md"
     }
   },
   {
@@ -242,6 +246,10 @@ var input = (0, import_tailwind_variants4.tv)(
         true: "border-none bg-neutral-40",
         false: ""
       }
+    },
+    defaultVariants: {
+      size: "md",
+      disabled: false
     }
   },
   { twMerge: true }
@@ -333,7 +341,8 @@ var checkbox = (0, import_tailwind_variants5.tv)(
         md: "h-6 w-6",
         lg: "h-8 w-8"
       }
-    }
+    },
+    defaultVariants: { size: "md" }
   },
   { twMerge: false }
 );
@@ -536,7 +545,7 @@ var avatar = (0, import_tailwind_variants11.tv)(
         "2xl": "h-16 w-16"
       }
     },
-    defaultVariants: { size: "lg" }
+    defaultVariants: { size: "md" }
   },
   { twMerge: false }
 );

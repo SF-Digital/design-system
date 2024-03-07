@@ -16,7 +16,7 @@ const avatar = tv(
         '2xl': 'h-16 w-16',
       },
     },
-    defaultVariants: { size: 'lg' },
+    defaultVariants: { size: 'md' },
   },
   { twMerge: false },
 )

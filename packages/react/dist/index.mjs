@@ -135,6 +135,10 @@ var button = tv3(
         md: "px-6 py-2.5 text-sf-md",
         lg: "px-8 py-4 text-sf-lg"
       }
+    },
+    defaultVariants: {
+      variant: "primary",
+      size: "md"
     }
   },
   {
@@ -198,6 +202,10 @@ var input = tv4(
         true: "border-none bg-neutral-40",
         false: ""
       }
+    },
+    defaultVariants: {
+      size: "md",
+      disabled: false
     }
   },
   { twMerge: true }
@@ -289,7 +297,8 @@ var checkbox = tv5(
         md: "h-6 w-6",
         lg: "h-8 w-8"
       }
-    }
+    },
+    defaultVariants: { size: "md" }
   },
   { twMerge: false }
 );
@@ -492,7 +501,7 @@ var avatar = tv11(
         "2xl": "h-16 w-16"
       }
     },
-    defaultVariants: { size: "lg" }
+    defaultVariants: { size: "md" }
   },
   { twMerge: false }
 );
