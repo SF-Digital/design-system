@@ -69,7 +69,7 @@ __export(src_exports, {
   Tabs: () => Tabs5,
   Text: () => Text,
   TextInput: () => TextInput,
-  Toggle: () => Toggle2,
+  Toggle: () => Toggle,
   Tooltip: () => Tooltip7
 });
 module.exports = __toCommonJS(src_exports);
@@ -481,13 +481,13 @@ var Content2 = (props) => {
 var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
 
 // src/components/Toggle/Root/index.tsx
-var Toggle = __toESM(require("@radix-ui/react-toggle"));
+var Switch = __toESM(require("@radix-ui/react-switch"));
 var import_tailwind_variants9 = require("tailwind-variants");
 var import_jsx_runtime20 = require("react/jsx-runtime");
 var toggle = (0, import_tailwind_variants9.tv)(
   {
     base: [
-      'group flex flex-row items-center rounded-lg p-0.5 data-[state="on"]:justify-end data-[disabled]:bg-neutral-40 data-[state="off"]:bg-neutral-40 data-[state="on"]:bg-primary-green-500'
+      'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="checked"]:bg-primary-green-500 data-[state="unchecked"]:bg-neutral-40'
     ],
     variants: {
       size: {
@@ -501,16 +501,15 @@ var toggle = (0, import_tailwind_variants9.tv)(
 );
 var Root9 = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Toggle.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
 };
 
 // src/components/Toggle/Control/index.tsx
 var import_tailwind_variants10 = require("tailwind-variants");
+var Switch2 = __toESM(require("@radix-ui/react-switch"));
 var import_jsx_runtime21 = require("react/jsx-runtime");
 var toggle2 = (0, import_tailwind_variants10.tv)({
-  base: [
-    "rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20"
-  ],
+  base: ["rounded-lg bg-white drop-shadow-sm data-[disabled]:bg-neutral-20"],
   variants: {
     size: {
       sm: "h-4 w-4",
@@ -520,11 +519,11 @@ var toggle2 = (0, import_tailwind_variants10.tv)({
 });
 var Control2 = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Switch2.Thumb, __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
 };
 
 // src/components/Toggle/index.tsx
-var Toggle2 = { Root: Root9, Control: Control2 };
+var Toggle = { Root: Root9, Control: Control2 };
 
 // src/components/Avatar/Root/index.tsx
 var Avatar = __toESM(require("@radix-ui/react-avatar"));

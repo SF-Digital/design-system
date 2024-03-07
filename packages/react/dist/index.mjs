@@ -437,13 +437,13 @@ var Content2 = (props) => {
 var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
 
 // src/components/Toggle/Root/index.tsx
-import * as Toggle from "@radix-ui/react-toggle";
+import * as Switch from "@radix-ui/react-switch";
 import { tv as tv9 } from "tailwind-variants";
 import { jsx as jsx20 } from "react/jsx-runtime";
 var toggle = tv9(
   {
     base: [
-      'group flex flex-row items-center rounded-lg p-0.5 data-[state="on"]:justify-end data-[disabled]:bg-neutral-40 data-[state="off"]:bg-neutral-40 data-[state="on"]:bg-primary-green-500'
+      'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="checked"]:bg-primary-green-500 data-[state="unchecked"]:bg-neutral-40'
     ],
     variants: {
       size: {
@@ -457,16 +457,15 @@ var toggle = tv9(
 );
 var Root9 = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ jsx20(Toggle.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+  return /* @__PURE__ */ jsx20(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
 };
 
 // src/components/Toggle/Control/index.tsx
 import { tv as tv10 } from "tailwind-variants";
+import * as Switch2 from "@radix-ui/react-switch";
 import { jsx as jsx21 } from "react/jsx-runtime";
 var toggle2 = tv10({
-  base: [
-    "rounded-lg bg-white drop-shadow-sm  group-data-[disabled]:bg-neutral-20"
-  ],
+  base: ["rounded-lg bg-white drop-shadow-sm data-[disabled]:bg-neutral-20"],
   variants: {
     size: {
       sm: "h-4 w-4",
@@ -476,11 +475,11 @@ var toggle2 = tv10({
 });
 var Control2 = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ jsx21("div", __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
+  return /* @__PURE__ */ jsx21(Switch2.Thumb, __spreadProps(__spreadValues({}, props), { className: toggle2({ className, size }) }));
 };
 
 // src/components/Toggle/index.tsx
-var Toggle2 = { Root: Root9, Control: Control2 };
+var Toggle = { Root: Root9, Control: Control2 };
 
 // src/components/Avatar/Root/index.tsx
 import * as Avatar from "@radix-ui/react-avatar";
@@ -718,6 +717,6 @@ export {
   Tabs5 as Tabs,
   Text,
   TextInput,
-  Toggle2 as Toggle,
+  Toggle,
   Tooltip7 as Tooltip
 };

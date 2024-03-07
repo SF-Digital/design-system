@@ -9,7 +9,7 @@ import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
-import * as Toggle$1 from '@radix-ui/react-toggle';
+import * as Switch from '@radix-ui/react-switch';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Tooltip$1 from '@radix-ui/react-tooltip';
 import * as Select$1 from '@radix-ui/react-select';
@@ -357,7 +357,7 @@ declare const toggle$1: tailwind_variants.TVReturnType<{
 }, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
-type ToggleRootProps = Toggle$1.ToggleProps & VariantProps<typeof toggle$1>;
+type ToggleRootProps = Switch.SwitchProps & VariantProps<typeof toggle$1>;
 
 declare const toggle: tailwind_variants.TVReturnType<{
     size: {
@@ -395,7 +395,7 @@ declare const toggle: tailwind_variants.TVReturnType<{
         md: string;
     };
 }>, unknown, unknown, undefined>>;
-type ToggleControlProps = ComponentProps<'div'> & VariantProps<typeof toggle>;
+type ToggleControlProps = Switch.SwitchThumbProps & VariantProps<typeof toggle>;
 
 declare const Toggle: {
     Root: ({ className, size, ...props }: ToggleRootProps) => react_jsx_runtime.JSX.Element;
