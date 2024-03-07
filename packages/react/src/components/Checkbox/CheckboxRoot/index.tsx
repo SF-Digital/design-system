@@ -16,6 +16,7 @@ const checkbox = tv(
         lg: 'h-8 w-8',
       },
     },
+    defaultVariants: { size: 'md' },
   },
   { twMerge: false },
 )

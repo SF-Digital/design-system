@@ -44,6 +44,10 @@ const button = tv(
         lg: 'px-8 py-4 text-sf-lg',
       },
     },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
   },
   {
     twMerge: false,

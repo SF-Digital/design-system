@@ -1,10 +1,10 @@
-import * as Toggle from '@radix-ui/react-toggle'
+import * as Switch from '@radix-ui/react-switch'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const toggle = tv(
   {
     base: [
-      'group flex flex-row items-center rounded-lg p-0.5 data-[state="on"]:justify-end data-[disabled]:bg-neutral-40 data-[state="off"]:bg-neutral-40 data-[state="on"]:bg-primary-green-500',
+      'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="checked"]:bg-primary-green-500 data-[state="unchecked"]:bg-neutral-40',
     ],
 
     variants: {
@@ -18,8 +18,8 @@ const toggle = tv(
   { twMerge: false },
 )
 
-export type ToggleRootProps = Toggle.ToggleProps & VariantProps<typeof toggle>
+export type ToggleRootProps = Switch.SwitchProps & VariantProps<typeof toggle>
 
 export const Root = ({ className, size, ...props }: ToggleRootProps) => {
-  return <Toggle.Root {...props} className={toggle({ className, size })} />
+  return <Switch.Root {...props} className={toggle({ className, size })} />
 }

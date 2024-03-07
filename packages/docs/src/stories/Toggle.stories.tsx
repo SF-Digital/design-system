@@ -25,17 +25,17 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `size: 'sm' | 'md'` - The size of the toggle
  *
- * `pressed: boolean` - The state of the toggle
+ * `checked: boolean` - The state of the toggle
  *
  * `disabled: boolean` - Whether the toggle is disabled
  *
- * `onPressedChange: (pressed: boolean) => void` - Callback for when the toggle is pressed
+ * `onCheckedChange: (pressed: boolean) => void` - Callback for when the state is changed
  *
- * `defaultPressed: boolean` - The default state of the toggle
+ * `defaultChecked: boolean` - The default state of the toggle
  *
  * Data attribute
  *
- * `[data-state]: 'on' | 'off'` - The state of the toggle
+ * `[data-state]: 'checked' | 'unchecked'` - The state of the toggle
  *
  * `[data-disabled]` - The toggle will be disabled
  *
@@ -43,6 +43,12 @@ import '@sf-digital-ui/react/dist/output.css'
  * Props
  *
  * `size: 'sm' | 'md'` - The size of the control
+ *
+ * Data atrribute
+ *
+ * `[data-state]: 'checked' | 'unchecked'` - The state of the control
+ *
+ * `[data-disabled]` - The control will be disabled
  */
 
 const ToggleStory: Meta<ToggleRootProps> = {
