@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.1.2
+
+### Patch Changes
+
+- Removed fixed width on Input, addded forwardRef to Input Control and Checkbox Root, new component: Box
+
 ## 3.1.1
 
 ### Patch Changes
