@@ -31,13 +31,17 @@ var __objRest = (source, exclude) => {
 };
 
 // src/components/Box/index.tsx
+import { twMerge } from "tailwind-merge";
 import { jsx } from "react/jsx-runtime";
 var Box = (_a) => {
-  var rest = __objRest(_a, []);
+  var _b = _a, { className } = _b, rest = __objRest(_b, ["className"]);
   return /* @__PURE__ */ jsx(
     "div",
     __spreadProps(__spreadValues({}, rest), {
-      className: "border-gray600 bg-gray800 rounded-md border p-4"
+      className: twMerge(
+        className,
+        "rounded-md border bg-white p-4 drop-shadow-sm"
+      )
     })
   );
 };
@@ -189,7 +193,7 @@ import { jsx as jsx7 } from "react/jsx-runtime";
 var input = tv4(
   {
     base: [
-      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
+      "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -235,22 +239,26 @@ var Root2 = (_a) => {
 var useTextInput = () => useContext(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
+import { forwardRef } from "react";
 import { twJoin } from "tailwind-merge";
 import { jsx as jsx8 } from "react/jsx-runtime";
-var Control = (_a) => {
-  var props = __objRest(_a, []);
-  const { disabled } = useTextInput();
-  return /* @__PURE__ */ jsx8(
-    "input",
-    __spreadProps(__spreadValues({}, props), {
-      disabled,
-      className: twJoin(
-        props.className,
-        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
-      )
-    })
-  );
-};
+var Control = forwardRef(
+  (props, ref) => {
+    const { disabled } = useTextInput();
+    return /* @__PURE__ */ jsx8(
+      "input",
+      __spreadProps(__spreadValues({}, props), {
+        ref,
+        disabled,
+        className: twJoin(
+          props.className,
+          "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
+        )
+      })
+    );
+  }
+);
+Control.displayName = "TextInput.Control";
 
 // src/components/TextInput/Prefix/index.tsx
 import { twJoin as twJoin2 } from "tailwind-merge";
@@ -283,6 +291,7 @@ var Check = (props) => {
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
 import * as Checkbox from "@radix-ui/react-checkbox";
+import { forwardRef as forwardRef2 } from "react";
 import { tv as tv5 } from "tailwind-variants";
 import { jsx as jsx12 } from "react/jsx-runtime";
 var checkbox = tv5(
@@ -302,10 +311,18 @@ var checkbox = tv5(
   },
   { twMerge: false }
 );
-var Root4 = (_a) => {
-  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ jsx12(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
-};
+var Root4 = forwardRef2(
+  (props, ref) => {
+    return /* @__PURE__ */ jsx12(
+      Checkbox.Root,
+      __spreadValues({
+        className: checkbox({ className: props.className, size: props.size }),
+        ref
+      }, props)
+    );
+  }
+);
+Root4.displayName = "Checkbox.Root";
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
 import * as Checkbox2 from "@radix-ui/react-checkbox";

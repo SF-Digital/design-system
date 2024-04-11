@@ -1,12 +1,16 @@
 import { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export interface BoxProps extends ComponentProps<'div'> {}
 
-export const Box = ({ ...rest }: BoxProps) => {
+export const Box = ({ className, ...rest }: BoxProps) => {
   return (
     <div
       {...rest}
-      className="border-gray600 bg-gray800 rounded-md border p-4"
+      className={twMerge(
+        className,
+        'rounded-md border bg-white p-4 drop-shadow-sm',
+      )}
     />
   )
 }
