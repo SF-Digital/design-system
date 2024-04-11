@@ -75,13 +75,17 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/components/Box/index.tsx
+var import_tailwind_merge = require("tailwind-merge");
 var import_jsx_runtime = require("react/jsx-runtime");
 var Box = (_a) => {
-  var rest = __objRest(_a, []);
+  var _b = _a, { className } = _b, rest = __objRest(_b, ["className"]);
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
     "div",
     __spreadProps(__spreadValues({}, rest), {
-      className: "border-gray600 bg-gray800 rounded-md border p-4"
+      className: (0, import_tailwind_merge.twMerge)(
+        className,
+        "rounded-md border bg-white p-4 drop-shadow-sm"
+      )
     })
   );
 };
@@ -233,7 +237,7 @@ var import_jsx_runtime7 = require("react/jsx-runtime");
 var input = (0, import_tailwind_variants4.tv)(
   {
     base: [
-      "flex w-60 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
+      "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
       "focus-within:border focus-within:border-primary-green-500"
     ],
     variants: {
@@ -279,25 +283,29 @@ var Root2 = (_a) => {
 var useTextInput = () => (0, import_react.useContext)(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
-var import_tailwind_merge = require("tailwind-merge");
+var import_react2 = require("react");
+var import_tailwind_merge2 = require("tailwind-merge");
 var import_jsx_runtime8 = require("react/jsx-runtime");
-var Control = (_a) => {
-  var props = __objRest(_a, []);
-  const { disabled } = useTextInput();
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-    "input",
-    __spreadProps(__spreadValues({}, props), {
-      disabled,
-      className: (0, import_tailwind_merge.twJoin)(
-        props.className,
-        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
-      )
-    })
-  );
-};
+var Control = (0, import_react2.forwardRef)(
+  (props, ref) => {
+    const { disabled } = useTextInput();
+    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+      "input",
+      __spreadProps(__spreadValues({}, props), {
+        ref,
+        disabled,
+        className: (0, import_tailwind_merge2.twJoin)(
+          props.className,
+          "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
+        )
+      })
+    );
+  }
+);
+Control.displayName = "TextInput.Control";
 
 // src/components/TextInput/Prefix/index.tsx
-var import_tailwind_merge2 = require("tailwind-merge");
+var import_tailwind_merge3 = require("tailwind-merge");
 var import_jsx_runtime9 = require("react/jsx-runtime");
 var sizePaddings = {
   sm: "pr-2",
@@ -306,7 +314,7 @@ var sizePaddings = {
 };
 var Prefix2 = (props) => {
   const { size } = useTextInput();
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", __spreadProps(__spreadValues({}, props), { className: (0, import_tailwind_merge2.twJoin)(props.className, sizePaddings[size]) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", __spreadProps(__spreadValues({}, props), { className: (0, import_tailwind_merge3.twJoin)(props.className, sizePaddings[size]) }));
 };
 
 // src/components/TextInput/Suffix/index.tsx
@@ -327,6 +335,7 @@ var Check = (props) => {
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
 var Checkbox = __toESM(require("@radix-ui/react-checkbox"));
+var import_react3 = require("react");
 var import_tailwind_variants5 = require("tailwind-variants");
 var import_jsx_runtime12 = require("react/jsx-runtime");
 var checkbox = (0, import_tailwind_variants5.tv)(
@@ -346,10 +355,18 @@ var checkbox = (0, import_tailwind_variants5.tv)(
   },
   { twMerge: false }
 );
-var Root4 = (_a) => {
-  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Checkbox.Root, __spreadValues({ className: checkbox({ className, size }) }, props));
-};
+var Root4 = (0, import_react3.forwardRef)(
+  (props, ref) => {
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+      Checkbox.Root,
+      __spreadValues({
+        className: checkbox({ className: props.className, size: props.size }),
+        ref
+      }, props)
+    );
+  }
+);
+Root4.displayName = "Checkbox.Root";
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
 var Checkbox2 = __toESM(require("@radix-ui/react-checkbox"));
@@ -654,12 +671,12 @@ var Root15 = (props) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Select.Roo
 
 // src/components/Select/Trigger/index.tsx
 var Select2 = __toESM(require("@radix-ui/react-select"));
-var import_tailwind_merge3 = require("tailwind-merge");
+var import_tailwind_merge4 = require("tailwind-merge");
 var import_jsx_runtime32 = require("react/jsx-runtime");
 var Trigger6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
   Select2.Trigger,
   __spreadProps(__spreadValues({}, props), {
-    className: (0, import_tailwind_merge3.twJoin)(
+    className: (0, import_tailwind_merge4.twJoin)(
       'flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[state="open"]:border-primary-green-500 data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500',
       props == null ? void 0 : props.className
     )
@@ -683,12 +700,12 @@ var Value2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(Select5.Va
 
 // src/components/Select/Content/index.tsx
 var Select6 = __toESM(require("@radix-ui/react-select"));
-var import_tailwind_merge4 = require("tailwind-merge");
+var import_tailwind_merge5 = require("tailwind-merge");
 var import_jsx_runtime36 = require("react/jsx-runtime");
 var Content6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
   Select6.Content,
   __spreadProps(__spreadValues({}, props), {
-    className: (0, import_tailwind_merge4.twJoin)(
+    className: (0, import_tailwind_merge5.twJoin)(
       "flex flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
       props == null ? void 0 : props.className
     ),
@@ -698,12 +715,12 @@ var Content6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
 
 // src/components/Select/Item/index.tsx
 var Select7 = __toESM(require("@radix-ui/react-select"));
-var import_tailwind_merge5 = require("tailwind-merge");
+var import_tailwind_merge6 = require("tailwind-merge");
 var import_jsx_runtime37 = require("react/jsx-runtime");
 var Item3 = (props) => /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
   Select7.Item,
   __spreadProps(__spreadValues({}, props), {
-    className: (0, import_tailwind_merge5.twJoin)(
+    className: (0, import_tailwind_merge6.twJoin)(
       'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
       props.className
     )
