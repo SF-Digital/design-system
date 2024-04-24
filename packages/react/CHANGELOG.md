@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.1.3
+
+### Patch Changes
+
+- Make twMerge false on Heading component
+
 ## 4.1.2
 
 ### Patch Changes

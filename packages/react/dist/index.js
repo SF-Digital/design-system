@@ -120,22 +120,27 @@ var Text = (_a) => {
 // src/components/Heading/index.tsx
 var import_tailwind_variants2 = require("tailwind-variants");
 var import_jsx_runtime3 = require("react/jsx-runtime");
-var heading = (0, import_tailwind_variants2.tv)({
-  base: ["font-sf-digital leading-tight"],
-  variants: {
-    size: {
-      h1: "text-sf-h1",
-      h2: "text-sf-h2",
-      h3: "text-sf-h3",
-      h4: "text-sf-h4",
-      h5: "text-sf-h5",
-      h6: "text-sf-h6"
+var heading = (0, import_tailwind_variants2.tv)(
+  {
+    base: ["font-sf-digital leading-tight"],
+    variants: {
+      size: {
+        h1: "text-sf-h1",
+        h2: "text-sf-h2",
+        h3: "text-sf-h3",
+        h4: "text-sf-h4",
+        h5: "text-sf-h5",
+        h6: "text-sf-h6"
+      }
+    },
+    defaultVariants: {
+      size: "h3"
     }
   },
-  defaultVariants: {
-    size: "h3"
+  {
+    twMerge: false
   }
-});
+);
 var Heading = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", __spreadProps(__spreadValues({}, props), { className: heading({ size, className }) }));

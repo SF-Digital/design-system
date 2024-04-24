@@ -3,10 +3,10 @@ import * as react from 'react';
 import { ComponentProps, PropsWithChildren } from 'react';
 import * as tailwind_variants from 'tailwind-variants';
 import { VariantProps } from 'tailwind-variants';
-import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as lucide_react from 'lucide-react';
 import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
+import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as Switch from '@radix-ui/react-switch';
@@ -56,25 +56,9 @@ declare const heading: tailwind_variants.TVReturnType<{
         h5: string;
         h6: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    size: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-    };
+}, undefined, string[], {
+    twMerge: false;
 }, {
-    size: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-    };
-}>, {
     size: {
         h1: string;
         h2: string;
@@ -92,25 +76,9 @@ declare const heading: tailwind_variants.TVReturnType<{
         h5: string;
         h6: string;
     };
-}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
-    size: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-    };
-}, {
-    size: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-    };
-}>, unknown, unknown, undefined>>;
+}, undefined, string[], {
+    twMerge: false;
+}, unknown, unknown, undefined>>;
 type HeadingProps = ComponentProps<'h1'> & VariantProps<typeof heading>;
 declare const Heading: ({ className, size, ...props }: HeadingProps) => react_jsx_runtime.JSX.Element;
 
