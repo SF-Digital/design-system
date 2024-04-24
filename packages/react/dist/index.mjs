@@ -728,12 +728,60 @@ var Select13 = {
   Separator: Separator2,
   Group: Group2
 };
+
+// src/components/Modal/Root/index.tsx
+import * as Dialog from "@radix-ui/react-dialog";
+var Root17 = Dialog.Root;
+Root17.displayName = "Modal.Root";
+
+// src/components/Modal/Trigger/index.tsx
+import * as Dialog2 from "@radix-ui/react-dialog";
+var Trigger8 = Dialog2.Trigger;
+Trigger8.displayName = "Modal.Trigger";
+
+// src/components/Modal/Portal/index.tsx
+import * as Dialog3 from "@radix-ui/react-dialog";
+var Portal6 = Dialog3.Portal;
+
+// src/components/Modal/Overlay/index.tsx
+import * as Dialog4 from "@radix-ui/react-dialog";
+var Overlay2 = Dialog4.Overlay;
+
+// src/components/Modal/Content/index.tsx
+import * as Dialog5 from "@radix-ui/react-dialog";
+var Content8 = Dialog5.Content;
+Content8.displayName = "Modal.Content";
+
+// src/components/Modal/Title/index.tsx
+import * as Dialog6 from "@radix-ui/react-dialog";
+var Title2 = Dialog6.Title;
+
+// src/components/Modal/Description/index.tsx
+import * as Dialog7 from "@radix-ui/react-dialog";
+var Description2 = Dialog7.Description;
+
+// src/components/Modal/Close/index.tsx
+import * as Dialog8 from "@radix-ui/react-dialog";
+var Close2 = Dialog8.Close;
+
+// src/components/Modal/index.tsx
+var Modal = {
+  Root: Root17,
+  Trigger: Trigger8,
+  Portal: Portal6,
+  Overlay: Overlay2,
+  Content: Content8,
+  Title: Title2,
+  Description: Description2,
+  Close: Close2
+};
 export {
   Avatar4 as Avatar,
   Box,
   Button,
   Checkbox3 as Checkbox,
   Heading,
+  Modal,
   RadioGroup3 as RadioGroup,
   Select13 as Select,
   Tabs5 as Tabs,

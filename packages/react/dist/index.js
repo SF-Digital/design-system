@@ -64,6 +64,7 @@ __export(src_exports, {
   Button: () => Button,
   Checkbox: () => Checkbox3,
   Heading: () => Heading,
+  Modal: () => Modal,
   RadioGroup: () => RadioGroup3,
   Select: () => Select13,
   Tabs: () => Tabs5,
@@ -772,6 +773,53 @@ var Select13 = {
   Separator: Separator2,
   Group: Group2
 };
+
+// src/components/Modal/Root/index.tsx
+var Dialog = __toESM(require("@radix-ui/react-dialog"));
+var Root17 = Dialog.Root;
+Root17.displayName = "Modal.Root";
+
+// src/components/Modal/Trigger/index.tsx
+var Dialog2 = __toESM(require("@radix-ui/react-dialog"));
+var Trigger8 = Dialog2.Trigger;
+Trigger8.displayName = "Modal.Trigger";
+
+// src/components/Modal/Portal/index.tsx
+var Dialog3 = __toESM(require("@radix-ui/react-dialog"));
+var Portal6 = Dialog3.Portal;
+
+// src/components/Modal/Overlay/index.tsx
+var Dialog4 = __toESM(require("@radix-ui/react-dialog"));
+var Overlay2 = Dialog4.Overlay;
+
+// src/components/Modal/Content/index.tsx
+var Dialog5 = __toESM(require("@radix-ui/react-dialog"));
+var Content8 = Dialog5.Content;
+Content8.displayName = "Modal.Content";
+
+// src/components/Modal/Title/index.tsx
+var Dialog6 = __toESM(require("@radix-ui/react-dialog"));
+var Title2 = Dialog6.Title;
+
+// src/components/Modal/Description/index.tsx
+var Dialog7 = __toESM(require("@radix-ui/react-dialog"));
+var Description2 = Dialog7.Description;
+
+// src/components/Modal/Close/index.tsx
+var Dialog8 = __toESM(require("@radix-ui/react-dialog"));
+var Close2 = Dialog8.Close;
+
+// src/components/Modal/index.tsx
+var Modal = {
+  Root: Root17,
+  Trigger: Trigger8,
+  Portal: Portal6,
+  Overlay: Overlay2,
+  Content: Content8,
+  Title: Title2,
+  Description: Description2,
+  Close: Close2
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -779,6 +827,7 @@ var Select13 = {
   Button,
   Checkbox,
   Heading,
+  Modal,
   RadioGroup,
   Select,
   Tabs,
