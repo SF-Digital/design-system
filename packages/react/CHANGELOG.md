@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.1.4
+
+### Patch Changes
+
+- Add new component, Modal
+
 ## 4.1.3
 
 ### Patch Changes
