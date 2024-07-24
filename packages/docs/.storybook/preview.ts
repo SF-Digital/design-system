@@ -5,7 +5,6 @@ import type { Preview } from "@storybook/react";
 const preview: Preview = {
   parameters: {
     backgrounds: {default: "light"},
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -16,6 +15,8 @@ const preview: Preview = {
       theme: themes.light,
     }
   },
+
+  tags: ["autodocs"]
 };
 
 export default preview;
