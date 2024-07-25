@@ -36,6 +36,12 @@ const button = tv(
           'hover:bg-error-700',
           'active:bg-error-800',
         ],
+        gray: [
+          'border border-neutral-60 bg-white text-neutral-500',
+          'hover:bg-neutral-20 hover:text-neutral-700',
+          'active:border-neutral-80 active:bg-neutral-20 active:text-neutral-500',
+          'disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
+        ],
       },
 
       size: {

@@ -90,6 +90,7 @@ declare const button: tailwind_variants.TVReturnType<{
         success: string[];
         warning: string[];
         error: string[];
+        gray: string[];
     };
     size: {
         sm: string;
@@ -105,6 +106,7 @@ declare const button: tailwind_variants.TVReturnType<{
         success: string[];
         warning: string[];
         error: string[];
+        gray: string[];
     };
     size: {
         sm: string;
@@ -118,6 +120,7 @@ declare const button: tailwind_variants.TVReturnType<{
         success: string[];
         warning: string[];
         error: string[];
+        gray: string[];
     };
     size: {
         sm: string;

@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.2.0
+
+### Minor Changes
+
+- Add new Button Variant
+
 ## 4.1.4
 
 ### Patch Changes
