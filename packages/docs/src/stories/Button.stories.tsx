@@ -20,7 +20,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `size: 'sm' | 'md' | 'lg'` - The size of the button.
  *
- * `variant: 'primary' | 'secondary' | 'success' | 'error' | 'warning'` - The variant.
+ * `variant: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'gray'` - The variant.
  *
  * `disabled: boolean` - Whether the button is disabled.
  *
@@ -37,7 +37,7 @@ const ButtonStory: Meta<ButtonRootProps> = {
   },
   argTypes: {
     variant: {
-      options: ['primary', 'secondary', 'success', 'error', 'warning'],
+      options: ['primary', 'secondary', 'success', 'error', 'warning', 'gray'],
       control: {
         type: 'inline-radio',
       },
@@ -84,6 +84,13 @@ export const Warning: StoryObj<ButtonRootProps> = {
 export const Error: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'error',
+    children: 'Create new',
+  },
+}
+
+export const Gray: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'gray',
     children: 'Create new',
   },
 }

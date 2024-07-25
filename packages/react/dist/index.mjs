@@ -137,6 +137,12 @@ var button = tv3(
           "bg-error-500 text-white",
           "hover:bg-error-700",
           "active:bg-error-800"
+        ],
+        gray: [
+          "border border-neutral-60 bg-white text-neutral-500",
+          "hover:bg-neutral-20 hover:text-neutral-700",
+          "active:border-neutral-80 active:bg-neutral-20 active:text-neutral-500",
+          "disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80"
         ]
       },
       size: {
@@ -409,11 +415,11 @@ import { tv as tv8 } from "tailwind-variants";
 import { jsx as jsx18 } from "react/jsx-runtime";
 var tab = tv8(
   {
-    base: [" font-sf-digital font-bold text-neutral-80"],
+    base: ["font-sf-digital font-bold text-neutral-80"],
     variants: {
       variant: {
-        solid: ' rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
-        underline: ' border-b border-b-neutral-30 text-sf-lg hover:border-b-neutral-90 hover:text-neutral-90 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+        solid: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
+        underline: 'text-sf-lg hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
       },
       size: {
         base: "px-4 py-2.5",
