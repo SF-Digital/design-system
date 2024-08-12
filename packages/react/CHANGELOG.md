@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.3.0
+
+### Minor Changes
+
+- New component: Dropdown Menu
+
 ## 4.2.0
 
 ### Minor Changes

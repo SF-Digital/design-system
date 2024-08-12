@@ -63,6 +63,7 @@ __export(src_exports, {
   Box: () => Box,
   Button: () => Button,
   Checkbox: () => Checkbox3,
+  DropdownMenu: () => DropdownMenu6,
   Heading: () => Heading,
   Modal: () => Modal,
   RadioGroup: () => RadioGroup3,
@@ -826,12 +827,51 @@ var Modal = {
   Description: Description2,
   Close: Close2
 };
+
+// src/components/DropdownMenu/Root/index.tsx
+var DropdownMenu = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_jsx_runtime43 = require("react/jsx-runtime");
+var Root19 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(DropdownMenu.Root, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Trigger/index.tsx
+var DropdownMenu2 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_jsx_runtime44 = require("react/jsx-runtime");
+var Trigger10 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(DropdownMenu2.Trigger, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Portal/index.tsx
+var DropdownMenu3 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_jsx_runtime45 = require("react/jsx-runtime");
+var Portal8 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(DropdownMenu3.Portal, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Item/index.tsx
+var DropdownMenu4 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_jsx_runtime46 = require("react/jsx-runtime");
+var Item5 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(DropdownMenu4.Item, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Content/index.tsx
+var DropdownMenu5 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_jsx_runtime47 = require("react/jsx-runtime");
+var Content10 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(DropdownMenu5.Content, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/index.tsx
+var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
   Button,
   Checkbox,
+  DropdownMenu,
   Heading,
   Modal,
   RadioGroup,
