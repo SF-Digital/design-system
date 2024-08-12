@@ -14,6 +14,7 @@ import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Tooltip$1 from '@radix-ui/react-tooltip';
 import * as Select$1 from '@radix-ui/react-select';
 import * as Dialog from '@radix-ui/react-dialog';
+import * as DropdownMenu$1 from '@radix-ui/react-dropdown-menu';
 
 interface BoxProps extends ComponentProps<'div'> {
 }
@@ -537,4 +538,22 @@ declare const Modal: {
     Close: react.ForwardRefExoticComponent<Dialog.DialogCloseProps & react.RefAttributes<HTMLButtonElement>>;
 };
 
-export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
+type DropdownMenuRootProps = DropdownMenu$1.DropdownMenuProps;
+
+type DropdownMenuTriggerProps = DropdownMenu$1.DropdownMenuTriggerProps;
+
+type DropdownMenuPortalProps = DropdownMenu$1.DropdownMenuPortalProps;
+
+type DropdownMenuItemProps = DropdownMenu$1.DropdownMenuItemProps;
+
+type DropdownMenuContentProps = DropdownMenu$1.DropdownMenuContentProps;
+
+declare const DropdownMenu: {
+    Root: (props: DropdownMenu$1.DropdownMenuProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: DropdownMenu$1.DropdownMenuTriggerProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: DropdownMenu$1.DropdownMenuPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: DropdownMenu$1.DropdownMenuContentProps) => react_jsx_runtime.JSX.Element;
+    Item: (props: DropdownMenu$1.DropdownMenuItemProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, DropdownMenu, type DropdownMenuContentProps, type DropdownMenuItemProps, type DropdownMenuPortalProps, type DropdownMenuRootProps, type DropdownMenuTriggerProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };

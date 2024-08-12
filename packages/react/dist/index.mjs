@@ -781,11 +781,50 @@ var Modal = {
   Description: Description2,
   Close: Close2
 };
+
+// src/components/DropdownMenu/Root/index.tsx
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { jsx as jsx43 } from "react/jsx-runtime";
+var Root19 = (props) => {
+  return /* @__PURE__ */ jsx43(DropdownMenu.Root, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Trigger/index.tsx
+import * as DropdownMenu2 from "@radix-ui/react-dropdown-menu";
+import { jsx as jsx44 } from "react/jsx-runtime";
+var Trigger10 = (props) => {
+  return /* @__PURE__ */ jsx44(DropdownMenu2.Trigger, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Portal/index.tsx
+import * as DropdownMenu3 from "@radix-ui/react-dropdown-menu";
+import { jsx as jsx45 } from "react/jsx-runtime";
+var Portal8 = (props) => {
+  return /* @__PURE__ */ jsx45(DropdownMenu3.Portal, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Item/index.tsx
+import * as DropdownMenu4 from "@radix-ui/react-dropdown-menu";
+import { jsx as jsx46 } from "react/jsx-runtime";
+var Item5 = (props) => {
+  return /* @__PURE__ */ jsx46(DropdownMenu4.Item, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/Content/index.tsx
+import * as DropdownMenu5 from "@radix-ui/react-dropdown-menu";
+import { jsx as jsx47 } from "react/jsx-runtime";
+var Content10 = (props) => {
+  return /* @__PURE__ */ jsx47(DropdownMenu5.Content, __spreadValues({}, props));
+};
+
+// src/components/DropdownMenu/index.tsx
+var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5 };
 export {
   Avatar4 as Avatar,
   Box,
   Button,
   Checkbox3 as Checkbox,
+  DropdownMenu6 as DropdownMenu,
   Heading,
   Modal,
   RadioGroup3 as RadioGroup,
