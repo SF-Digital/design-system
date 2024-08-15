@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.3.1
+
+### Patch Changes
+
+- fix padding for text input
+
 ## 4.3.0
 
 ### Minor Changes
