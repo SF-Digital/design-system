@@ -9,7 +9,7 @@
     "cbum": "rm -rf node_modules && rm package-lock.json && rm -rf packages/*/node_modules && npm install",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=!docs && changeset publish"
+    "release": "turbo run build && changeset publish --filter=!@sf-digital-ui/docs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
