@@ -1,23 +1,23 @@
 
 
-> @sf-digital-ui/react@4.3.0 build
+> @sf-digital-ui/react@4.3.1 build
 > npx tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react
 
 
 Rebuilding...
 
-Done in 165ms.
+Done in 153ms.
 [34mCLI[39m Building entry: src/index.tsx
 [34mCLI[39m Using tsconfig: tsconfig.json
 [34mCLI[39m tsup v8.0.2
 [34mCLI[39m Target: es6
 [34mESM[39m Build start
  Build start
-[32mESM[39m [1mdist/index.mjs [22m[32m25.90 KB[39m
+[32mESM[39m [1mdist/index.mjs [22m[32m25.89 KB[39m
 [32mESM[39m ⚡️ Build success in 31ms
- [1mdist/index.js [22m[32m30.18 KB[39m
- ⚡️ Build success in 31ms
+ [1mdist/index.js [22m[32m30.17 KB[39m
+ ⚡️ Build success in 32ms
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 1216ms
+[32mDTS[39m ⚡️ Build success in 1223ms
 [32mDTS[39m [1mdist/index.d.mts [22m[32m18.29 KB[39m
 [32mDTS[39m [1mdist/index.d.ts  [22m[32m18.29 KB[39m
