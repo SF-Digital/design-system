@@ -209,9 +209,9 @@ var input = tv4(
     ],
     variants: {
       size: {
-        sm: "px-4 py-2.5 text-sf-sm",
-        md: "px-4 py-2.5 text-sf-md",
-        lg: "px-5 py-3.5 text-sf-lg"
+        sm: "px-4 py-2 text-sf-sm",
+        md: "px-4 py-2 text-sf-md",
+        lg: "px-4 py-2 text-sf-lg"
       },
       disabled: {
         true: "border-none bg-neutral-40",
