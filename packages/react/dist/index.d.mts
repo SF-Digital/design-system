@@ -565,20 +565,20 @@ type PopoverPortalProps = Popover$1.PopoverPortalProps;
 
 type PopoverContentProps = Popover$1.PopoverContentProps;
 
-type PopoverAnchorProps = Popover$1.PopoverProps;
+type PopoverAnchorProps = Popover$1.PopoverAnchorProps;
 
-type PopoverCloseProps = Popover$1.PopoverProps;
+type PopoverCloseProps = Popover$1.PopoverCloseProps;
 
-type PopoverArrowProps = Popover$1.PopoverProps;
+type PopoverArrowProps = Popover$1.PopoverArrowProps;
 
 declare const Popover: {
     Root: (props: Popover$1.PopoverProps) => react_jsx_runtime.JSX.Element;
     Trigger: (props: Popover$1.PopoverTriggerProps) => react_jsx_runtime.JSX.Element;
     Portal: (props: Popover$1.PopoverPortalProps) => react_jsx_runtime.JSX.Element;
     Content: (props: Popover$1.PopoverContentProps) => react_jsx_runtime.JSX.Element;
-    Anchor: (props: Popover$1.PopoverProps) => react_jsx_runtime.JSX.Element;
-    Close: (props: Popover$1.PopoverProps) => react_jsx_runtime.JSX.Element;
-    Arrow: (props: Popover$1.PopoverProps) => react_jsx_runtime.JSX.Element;
+    Anchor: (props: Popover$1.PopoverAnchorProps) => react_jsx_runtime.JSX.Element;
+    Close: (props: Popover$1.PopoverCloseProps) => react_jsx_runtime.JSX.Element;
+    Arrow: (props: Popover$1.PopoverArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
 export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, DropdownMenu, type DropdownMenuContentProps, type DropdownMenuItemProps, type DropdownMenuPortalProps, type DropdownMenuRootProps, type DropdownMenuTriggerProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, Popover, type PopoverAnchorProps, type PopoverArrowProps, type PopoverCloseProps, type PopoverContentProps, type PopoverPortalProps, type PopoverRootProps, type PopoverTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
