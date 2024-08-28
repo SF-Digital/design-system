@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.3.4
+
+### Patch Changes
+
+- fix popover types
+
 ## 4.3.3
 
 ### Patch Changes
