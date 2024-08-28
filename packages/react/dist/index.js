@@ -66,6 +66,7 @@ __export(src_exports, {
   DropdownMenu: () => DropdownMenu6,
   Heading: () => Heading,
   Modal: () => Modal,
+  Popover: () => Popover8,
   RadioGroup: () => RadioGroup3,
   Select: () => Select13,
   Tabs: () => Tabs5,
@@ -865,6 +866,58 @@ var Content10 = (props) => {
 
 // src/components/DropdownMenu/index.tsx
 var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5 };
+
+// src/components/Popover/Root/index.tsx
+var Popover = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime48 = require("react/jsx-runtime");
+var Root21 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Popover.Root, __spreadValues({}, props));
+};
+
+// src/components/Popover/Trigger/index.tsx
+var Popover2 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime49 = require("react/jsx-runtime");
+var Trigger12 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Popover2.Trigger, __spreadValues({}, props));
+};
+
+// src/components/Popover/Portal/index.tsx
+var Popover3 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime50 = require("react/jsx-runtime");
+var Portal10 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Popover3.Portal, __spreadValues({}, props));
+};
+
+// src/components/Popover/Content/index.tsx
+var Popover4 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime51 = require("react/jsx-runtime");
+var Content12 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Popover4.Content, __spreadValues({}, props));
+};
+
+// src/components/Popover/Anchor/index.tsx
+var Popover5 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime52 = require("react/jsx-runtime");
+var Anchor2 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Popover5.Anchor, __spreadValues({}, props));
+};
+
+// src/components/Popover/Close/index.tsx
+var Popover6 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime53 = require("react/jsx-runtime");
+var Close4 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Popover6.Close, __spreadValues({}, props));
+};
+
+// src/components/Popover/Arrow/index.tsx
+var Popover7 = __toESM(require("@radix-ui/react-popover"));
+var import_jsx_runtime54 = require("react/jsx-runtime");
+var Arrow4 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(Popover7.Arrow, __spreadValues({}, props));
+};
+
+// src/components/Popover/index.tsx
+var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -874,6 +927,7 @@ var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content
   DropdownMenu,
   Heading,
   Modal,
+  Popover,
   RadioGroup,
   Select,
   Tabs,
