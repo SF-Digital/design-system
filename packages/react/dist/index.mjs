@@ -819,6 +819,58 @@ var Content10 = (props) => {
 
 // src/components/DropdownMenu/index.tsx
 var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5 };
+
+// src/components/Popover/Root/index.tsx
+import * as Popover from "@radix-ui/react-popover";
+import { jsx as jsx48 } from "react/jsx-runtime";
+var Root21 = (props) => {
+  return /* @__PURE__ */ jsx48(Popover.Root, __spreadValues({}, props));
+};
+
+// src/components/Popover/Trigger/index.tsx
+import * as Popover2 from "@radix-ui/react-popover";
+import { jsx as jsx49 } from "react/jsx-runtime";
+var Trigger12 = (props) => {
+  return /* @__PURE__ */ jsx49(Popover2.Trigger, __spreadValues({}, props));
+};
+
+// src/components/Popover/Portal/index.tsx
+import * as Popover3 from "@radix-ui/react-popover";
+import { jsx as jsx50 } from "react/jsx-runtime";
+var Portal10 = (props) => {
+  return /* @__PURE__ */ jsx50(Popover3.Portal, __spreadValues({}, props));
+};
+
+// src/components/Popover/Content/index.tsx
+import * as Popover4 from "@radix-ui/react-popover";
+import { jsx as jsx51 } from "react/jsx-runtime";
+var Content12 = (props) => {
+  return /* @__PURE__ */ jsx51(Popover4.Content, __spreadValues({}, props));
+};
+
+// src/components/Popover/Anchor/index.tsx
+import * as Popover5 from "@radix-ui/react-popover";
+import { jsx as jsx52 } from "react/jsx-runtime";
+var Anchor2 = (props) => {
+  return /* @__PURE__ */ jsx52(Popover5.Anchor, __spreadValues({}, props));
+};
+
+// src/components/Popover/Close/index.tsx
+import * as Popover6 from "@radix-ui/react-popover";
+import { jsx as jsx53 } from "react/jsx-runtime";
+var Close4 = (props) => {
+  return /* @__PURE__ */ jsx53(Popover6.Close, __spreadValues({}, props));
+};
+
+// src/components/Popover/Arrow/index.tsx
+import * as Popover7 from "@radix-ui/react-popover";
+import { jsx as jsx54 } from "react/jsx-runtime";
+var Arrow4 = (props) => {
+  return /* @__PURE__ */ jsx54(Popover7.Arrow, __spreadValues({}, props));
+};
+
+// src/components/Popover/index.tsx
+var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
 export {
   Avatar4 as Avatar,
   Box,
@@ -827,6 +879,7 @@ export {
   DropdownMenu6 as DropdownMenu,
   Heading,
   Modal,
+  Popover8 as Popover,
   RadioGroup3 as RadioGroup,
   Select13 as Select,
   Tabs5 as Tabs,
