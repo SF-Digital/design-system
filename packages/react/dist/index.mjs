@@ -143,7 +143,8 @@ var button = tv3(
           "hover:bg-neutral-20 hover:text-neutral-700",
           "active:border-neutral-80 active:bg-neutral-20 active:text-neutral-500",
           "disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80"
-        ]
+        ],
+        linkGray: ["text-neutral-500"]
       },
       size: {
         sm: "px-6 py-2 text-sf-sm",

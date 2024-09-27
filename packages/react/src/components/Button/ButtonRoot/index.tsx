@@ -42,6 +42,7 @@ const button = tv(
           'active:border-neutral-80 active:bg-neutral-20 active:text-neutral-500',
           'disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
         ],
+        linkGray: ['text-neutral-500'],
       },
 
       size: {
