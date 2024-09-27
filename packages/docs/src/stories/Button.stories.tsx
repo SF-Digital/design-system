@@ -37,7 +37,15 @@ const ButtonStory: Meta<ButtonRootProps> = {
   },
   argTypes: {
     variant: {
-      options: ['primary', 'secondary', 'success', 'error', 'warning', 'gray'],
+      options: [
+        'primary',
+        'secondary',
+        'success',
+        'error',
+        'warning',
+        'gray',
+        'linkGray',
+      ],
       control: {
         type: 'inline-radio',
       },
@@ -91,6 +99,13 @@ export const Error: StoryObj<ButtonRootProps> = {
 export const Gray: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'gray',
+    children: 'Create new',
+  },
+}
+
+export const LinkGray: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'linkGray',
     children: 'Create new',
   },
 }

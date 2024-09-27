@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.3.5
+
+### Patch Changes
+
+- link gray variation for button
+
 ## 4.3.4
 
 ### Patch Changes
