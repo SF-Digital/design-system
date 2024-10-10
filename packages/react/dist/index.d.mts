@@ -85,14 +85,18 @@ type HeadingProps = ComponentProps<'h1'> & VariantProps<typeof heading>;
 declare const Heading: ({ className, size, ...props }: HeadingProps) => react_jsx_runtime.JSX.Element;
 
 declare const button: tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
     variant: {
-        primary: string[];
-        secondary: string[];
-        success: string[];
-        warning: string[];
-        error: string[];
-        gray: string[];
-        linkGray: string[];
+        primary: string;
+        secondary: string;
+        tertiary: never[];
+        link: never[];
     };
     size: {
         sm: string;
@@ -102,14 +106,18 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], {
     twMerge: false;
 }, {
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
     variant: {
-        primary: string[];
-        secondary: string[];
-        success: string[];
-        warning: string[];
-        error: string[];
-        gray: string[];
-        linkGray: string[];
+        primary: string;
+        secondary: string;
+        tertiary: never[];
+        link: never[];
     };
     size: {
         sm: string;
@@ -117,14 +125,18 @@ declare const button: tailwind_variants.TVReturnType<{
         lg: string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
     variant: {
-        primary: string[];
-        secondary: string[];
-        success: string[];
-        warning: string[];
-        error: string[];
-        gray: string[];
-        linkGray: string[];
+        primary: string;
+        secondary: string;
+        tertiary: never[];
+        link: never[];
     };
     size: {
         sm: string;
