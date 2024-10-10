@@ -8,7 +8,7 @@ export interface SelectRootProps extends PropsWithChildren {
   open?: boolean
   defaultOpen?: boolean
   onOpenChange?(open: boolean): void
-  dir?: Select.Direction
+  dir?: Select.SelectProps['dir']
   name?: string
   autoComplete?: string
   disabled?: boolean

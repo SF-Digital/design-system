@@ -3,7 +3,6 @@ import * as react from 'react';
 import { ComponentProps, PropsWithChildren } from 'react';
 import * as tailwind_variants from 'tailwind-variants';
 import { VariantProps } from 'tailwind-variants';
-import * as lucide_react from 'lucide-react';
 import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
@@ -143,8 +142,8 @@ type ButtonSuffixProps = ComponentProps<'div'>;
 
 declare const Button: {
     Root: ({ variant, className, size, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
-    Prefix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
-    Suffix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
+    Prefix: (props: ButtonPrefixProps) => react_jsx_runtime.JSX.Element;
+    Suffix: (props: ButtonSuffixProps) => react_jsx_runtime.JSX.Element;
 };
 
 declare const input: tailwind_variants.TVReturnType<{
@@ -195,8 +194,8 @@ type TextInputSuffixProps = ComponentProps<'div'>;
 declare const TextInput: {
     Root: ({ size, disabled, className, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
     Control: react.ForwardRefExoticComponent<Omit<react.DetailedHTMLProps<react.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & react.RefAttributes<HTMLInputElement>>;
-    Prefix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
-    Suffix: (props: react.DetailedHTMLProps<react.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => react_jsx_runtime.JSX.Element;
+    Prefix: (props: TextInputPrefixProps) => react_jsx_runtime.JSX.Element;
+    Suffix: (props: TextInputSuffixProps) => react_jsx_runtime.JSX.Element;
 };
 
 type CheckProps = ComponentProps<typeof Check>;
@@ -230,8 +229,8 @@ type CheckboxIndicatorProps = ComponentProps<typeof Checkbox$1.CheckboxIndicator
 
 declare const Checkbox: {
     Root: react.ForwardRefExoticComponent<Omit<CheckboxRootProps, "ref"> & react.RefAttributes<HTMLButtonElement>>;
-    Indicator: (props: Checkbox$1.CheckboxIndicatorProps & react.RefAttributes<HTMLSpanElement>) => react_jsx_runtime.JSX.Element;
-    Check: (props: lucide_react.LucideProps) => react_jsx_runtime.JSX.Element;
+    Indicator: (props: CheckboxIndicatorProps) => react_jsx_runtime.JSX.Element;
+    Check: (props: CheckProps) => react_jsx_runtime.JSX.Element;
 };
 
 declare const radio$1: tailwind_variants.TVReturnType<{} | {} | {}, undefined, "flex flex-col gap-2.5", tailwind_variants_dist_config.TVConfig<unknown, {} | {}>, {} | {}, undefined, tailwind_variants.TVReturnType<unknown, undefined, "flex flex-col gap-2.5", tailwind_variants_dist_config.TVConfig<unknown, {} | {}>, unknown, unknown, undefined>>;
@@ -308,10 +307,10 @@ type TabsTriggerProps = Tabs$1.TabsTriggerProps & VariantProps<typeof tab>;
 type TabsContentProps = Tabs$1.TabsContentProps;
 
 declare const Tabs: {
-    Root: (props: Tabs$1.TabsProps) => react_jsx_runtime.JSX.Element;
-    List: (props: Tabs$1.TabsListProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: TabsRootProps) => react_jsx_runtime.JSX.Element;
+    List: (props: TabsListProps) => react_jsx_runtime.JSX.Element;
     Trigger: ({ size, variant, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
-    Content: (props: Tabs$1.TabsContentProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: TabsContentProps) => react_jsx_runtime.JSX.Element;
 };
 
 declare const toggle$1: tailwind_variants.TVReturnType<{
@@ -419,8 +418,8 @@ type AvatarFallbackProps = Avatar$1.AvatarFallbackProps;
 
 declare const Avatar: {
     Root: ({ className, size, ...props }: AvatarRootProps) => react_jsx_runtime.JSX.Element;
-    Image: (props: Avatar$1.AvatarImageProps) => react_jsx_runtime.JSX.Element;
-    Fallback: (props: Avatar$1.AvatarFallbackProps) => react_jsx_runtime.JSX.Element;
+    Image: (props: AvatarImageProps) => react_jsx_runtime.JSX.Element;
+    Fallback: (props: AvatarFallbackProps) => react_jsx_runtime.JSX.Element;
 };
 
 type TooltipProviderProps = Tooltip$1.TooltipProviderProps;
@@ -456,12 +455,12 @@ type TooltipContentProps = Tooltip$1.TooltipContentProps & VariantProps<typeof c
 type TooltipArrowProps = Tooltip$1.TooltipArrowProps;
 
 declare const Tooltip: {
-    Provider: (props: Tooltip$1.TooltipProviderProps) => react_jsx_runtime.JSX.Element;
-    Root: (props: Tooltip$1.TooltipProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: Tooltip$1.TooltipTriggerProps) => react_jsx_runtime.JSX.Element;
-    Portal: (props: Tooltip$1.TooltipPortalProps) => react_jsx_runtime.JSX.Element;
+    Provider: (props: TooltipProviderProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: TooltipRootProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: TooltipTriggerProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: TooltipPortalProps) => react_jsx_runtime.JSX.Element;
     Content: ({ theme, className, ...props }: TooltipContentProps) => react_jsx_runtime.JSX.Element;
-    Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
+    Arrow: ({ ...props }: TooltipArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
 interface SelectRootProps extends PropsWithChildren {
@@ -471,7 +470,7 @@ interface SelectRootProps extends PropsWithChildren {
     open?: boolean;
     defaultOpen?: boolean;
     onOpenChange?(open: boolean): void;
-    dir?: Select$1.Direction;
+    dir?: Select$1.SelectProps['dir'];
     name?: string;
     autoComplete?: string;
     disabled?: boolean;
@@ -502,17 +501,17 @@ type SelectGroupProps = Select$1.SelectGroupProps;
 
 declare const Select: {
     Root: (props: SelectRootProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: Select$1.SelectTriggerProps & react.RefAttributes<HTMLButtonElement>) => react_jsx_runtime.JSX.Element;
-    Value: (props: Select$1.SelectValueProps) => react_jsx_runtime.JSX.Element;
-    Icon: (props: Select$1.SelectIconProps) => react_jsx_runtime.JSX.Element;
-    Portal: (props: Select$1.SelectPortalProps) => react_jsx_runtime.JSX.Element;
-    Content: (props: Select$1.SelectContentProps) => react_jsx_runtime.JSX.Element;
-    Item: (props: Select$1.SelectItemProps) => react_jsx_runtime.JSX.Element;
-    Viewport: (props: Select$1.SelectViewportProps) => react_jsx_runtime.JSX.Element;
-    ItemText: (props: Select$1.SelectItemTextProps) => react_jsx_runtime.JSX.Element;
-    ItemIndicator: (props: Select$1.SelectItemIndicatorProps) => react_jsx_runtime.JSX.Element;
-    Separator: (props: Select$1.SelectSeparatorProps) => react_jsx_runtime.JSX.Element;
-    Group: (props: Select$1.SelectGroupProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: SelectTriggerProps) => react_jsx_runtime.JSX.Element;
+    Value: (props: SelectValueProps) => react_jsx_runtime.JSX.Element;
+    Icon: (props: SelectIconProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: SelectPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: SelectContentProps) => react_jsx_runtime.JSX.Element;
+    Item: (props: SelectItemProps) => react_jsx_runtime.JSX.Element;
+    Viewport: (props: SelectViewportProps) => react_jsx_runtime.JSX.Element;
+    ItemText: (props: SelectItemTextProps) => react_jsx_runtime.JSX.Element;
+    ItemIndicator: (props: SelectItemIndicatorProps) => react_jsx_runtime.JSX.Element;
+    Separator: (props: SelectSeparatorProps) => react_jsx_runtime.JSX.Element;
+    Group: (props: SelectGroupProps) => react_jsx_runtime.JSX.Element;
 };
 
 type ModalRootProps = Dialog.DialogProps;
@@ -553,11 +552,11 @@ type DropdownMenuItemProps = DropdownMenu$1.DropdownMenuItemProps;
 type DropdownMenuContentProps = DropdownMenu$1.DropdownMenuContentProps;
 
 declare const DropdownMenu: {
-    Root: (props: DropdownMenu$1.DropdownMenuProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: DropdownMenu$1.DropdownMenuTriggerProps) => react_jsx_runtime.JSX.Element;
-    Portal: (props: DropdownMenu$1.DropdownMenuPortalProps) => react_jsx_runtime.JSX.Element;
-    Content: (props: DropdownMenu$1.DropdownMenuContentProps) => react_jsx_runtime.JSX.Element;
-    Item: (props: DropdownMenu$1.DropdownMenuItemProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: DropdownMenuRootProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: DropdownMenuTriggerProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: DropdownMenuPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: DropdownMenuContentProps) => react_jsx_runtime.JSX.Element;
+    Item: (props: DropdownMenuItemProps) => react_jsx_runtime.JSX.Element;
 };
 
 type PopoverRootProps = Popover$1.PopoverProps;
@@ -575,13 +574,13 @@ type PopoverCloseProps = Popover$1.PopoverCloseProps;
 type PopoverArrowProps = Popover$1.PopoverArrowProps;
 
 declare const Popover: {
-    Root: (props: Popover$1.PopoverProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: Popover$1.PopoverTriggerProps) => react_jsx_runtime.JSX.Element;
-    Portal: (props: Popover$1.PopoverPortalProps) => react_jsx_runtime.JSX.Element;
-    Content: (props: Popover$1.PopoverContentProps) => react_jsx_runtime.JSX.Element;
-    Anchor: (props: Popover$1.PopoverAnchorProps) => react_jsx_runtime.JSX.Element;
-    Close: (props: Popover$1.PopoverCloseProps) => react_jsx_runtime.JSX.Element;
-    Arrow: (props: Popover$1.PopoverArrowProps) => react_jsx_runtime.JSX.Element;
+    Root: (props: PopoverRootProps) => react_jsx_runtime.JSX.Element;
+    Trigger: (props: PopoverTriggerProps) => react_jsx_runtime.JSX.Element;
+    Portal: (props: PopoverPortalProps) => react_jsx_runtime.JSX.Element;
+    Content: (props: PopoverContentProps) => react_jsx_runtime.JSX.Element;
+    Anchor: (props: PopoverAnchorProps) => react_jsx_runtime.JSX.Element;
+    Close: (props: PopoverCloseProps) => react_jsx_runtime.JSX.Element;
+    Arrow: (props: PopoverArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
 export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, DropdownMenu, type DropdownMenuContentProps, type DropdownMenuItemProps, type DropdownMenuPortalProps, type DropdownMenuRootProps, type DropdownMenuTriggerProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, Popover, type PopoverAnchorProps, type PopoverArrowProps, type PopoverCloseProps, type PopoverContentProps, type PopoverPortalProps, type PopoverRootProps, type PopoverTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
