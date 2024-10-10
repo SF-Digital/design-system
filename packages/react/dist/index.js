@@ -155,7 +155,7 @@ var import_jsx_runtime4 = require("react/jsx-runtime");
 var button = (0, import_tailwind_variants3.tv)(
   {
     base: [
-      "font-heading align-center flex  items-center gap-1 rounded-md font-semibold transition duration-150",
+      "font-heading align-center flex items-center gap-1 rounded-md font-semibold transition duration-150",
       "disabled:bg-neutral-40 disabled:text-neutral-50"
     ],
     variants: {

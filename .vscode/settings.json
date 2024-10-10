@@ -6,6 +6,7 @@
   "tailwindCSS.experimental.classRegex": [
     ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
+  "eslint.debug": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },

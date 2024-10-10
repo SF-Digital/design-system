@@ -1,0 +1,4 @@
+{
+  "extends": "@sf-digital-ui/eslint-config",
+  "plugins": ["prettier", "eslint-plugin-prettier"]
+}
