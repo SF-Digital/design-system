@@ -153,7 +153,7 @@ type ButtonPrefixProps = ComponentProps<'div'>;
 type ButtonSuffixProps = ComponentProps<'div'>;
 
 declare const Button: {
-    Root: ({ variant, className, size, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ variant, className, size, color, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
     Prefix: (props: ButtonPrefixProps) => react_jsx_runtime.JSX.Element;
     Suffix: (props: ButtonSuffixProps) => react_jsx_runtime.JSX.Element;
 };

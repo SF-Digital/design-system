@@ -3,9 +3,9 @@
     "**/.git": true,
     "**/dist": true
   },
-  "tailwindCSS.experimental.classRegex": [
-    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
+  // "tailwindCSS.experimental.classRegex": [
+  //   ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  // ],
   "eslint.debug": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": null,
