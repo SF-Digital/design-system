@@ -3,17 +3,20 @@
     "**/.git": true,
     "**/dist": true
   },
-  "tailwindCSS.experimental.classRegex": [
-    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
+  "eslint.debug": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": null
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[typescript]": {
-    "editor.defaultFormatter": null
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "eslint.enable": true,
   "eslint.validate": ["javascript", "typescript"],

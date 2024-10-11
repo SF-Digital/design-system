@@ -20,7 +20,9 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `size: 'sm' | 'md' | 'lg'` - The size of the button.
  *
- * `variant: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'gray'` - The variant.
+ * `variant: 'primary' | 'secondary' | 'tertiary' | 'link'` - The variant.
+ *
+ * `color: 'sf-green' | 'neutral' | 'success' | 'error' | 'warning'` - The color.
  *
  * `disabled: boolean` - Whether the button is disabled.
  *
@@ -32,20 +34,19 @@ const ButtonStory: Meta<ButtonRootProps> = {
   args: {
     children: 'Button',
     variant: 'primary',
+    color: 'sf-green',
     size: 'md',
     disabled: false,
   },
   argTypes: {
+    color: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['sf-green', 'neutral', 'success', 'error', 'warning'],
+    },
     variant: {
-      options: [
-        'primary',
-        'secondary',
-        'success',
-        'error',
-        'warning',
-        'gray',
-        'linkGray',
-      ],
+      options: ['primary', 'secondary', 'tertiary', 'link'],
       control: {
         type: 'inline-radio',
       },
@@ -66,46 +67,154 @@ const ButtonStory: Meta<ButtonRootProps> = {
 
 export default ButtonStory
 
-export const Primary: StoryObj<ButtonRootProps> = {}
+export const PrimarySF: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'primary',
+    color: 'sf-green',
+    children: 'Create new',
+  },
+}
 
-export const Secondary: StoryObj<ButtonRootProps> = {
+export const PrimarySuccess: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'primary',
+    color: 'success',
+    children: 'Create new',
+  },
+}
+
+export const PrimaryWarning: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'primary',
+    color: 'warning',
+    children: 'Create new',
+  },
+}
+
+export const PrimaryError: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'primary',
+    color: 'error',
+    children: 'Create new',
+  },
+}
+
+export const SecondarySF: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'secondary',
+    color: 'sf-green',
     children: 'Create new',
   },
 }
 
-export const Success: StoryObj<ButtonRootProps> = {
+export const SecondaryNeutral: StoryObj<ButtonRootProps> = {
   args: {
-    variant: 'success',
+    variant: 'secondary',
+    color: 'neutral',
     children: 'Create new',
   },
 }
 
-export const Warning: StoryObj<ButtonRootProps> = {
+export const SecondarySuccess: StoryObj<ButtonRootProps> = {
   args: {
-    variant: 'warning',
+    variant: 'secondary',
+    color: 'success',
     children: 'Create new',
   },
 }
 
-export const Error: StoryObj<ButtonRootProps> = {
+export const SecondaryWarning: StoryObj<ButtonRootProps> = {
   args: {
-    variant: 'error',
+    variant: 'secondary',
+    color: 'warning',
     children: 'Create new',
   },
 }
 
-export const Gray: StoryObj<ButtonRootProps> = {
+export const SecondaryError: StoryObj<ButtonRootProps> = {
   args: {
-    variant: 'gray',
+    variant: 'secondary',
+    color: 'error',
     children: 'Create new',
   },
 }
 
-export const LinkGray: StoryObj<ButtonRootProps> = {
+export const TertiarySF: StoryObj<ButtonRootProps> = {
   args: {
-    variant: 'linkGray',
+    variant: 'tertiary',
+    color: 'sf-green',
+    children: 'Create new',
+  },
+}
+
+export const TertiaryNeutral: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'tertiary',
+    color: 'neutral',
+    children: 'Create new',
+  },
+}
+
+export const TertiarySuccess: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'tertiary',
+    color: 'success',
+    children: 'Create new',
+  },
+}
+
+export const TertiaryWarning: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'tertiary',
+    color: 'warning',
+    children: 'Create new',
+  },
+}
+
+export const TertiaryError: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'tertiary',
+    color: 'error',
+    children: 'Create new',
+  },
+}
+
+export const LinkSF: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'sf-green',
+    children: 'Create new',
+  },
+}
+
+export const LinkNeutral: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'neutral',
+    children: 'Create new',
+  },
+}
+
+export const LinkSuccess: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'success',
+    children: 'Create new',
+  },
+}
+
+export const LinkWarning: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'warning',
+    children: 'Create new',
+  },
+}
+
+export const LinkError: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'error',
     children: 'Create new',
   },
 }

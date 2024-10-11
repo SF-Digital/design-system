@@ -1,5 +1,11 @@
 # @sf-digital-ui/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- New Button variants
+
 ## 2.1.1
 
 ### Patch Changes
