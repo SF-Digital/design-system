@@ -271,3 +271,5 @@
 2024-10-11T14:10:59.815010Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
 2024-10-11T14:10:59.915590Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cache/d4a0881ffd74f7a1-meta.json"), AnchoredSystemPathBuf(".turbo/cache/d4a0881ffd74f7a1.tar.zst")}
 2024-10-11T14:10:59.915606Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-10-11T14:14:26.018038Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".vscode/settings.json")}
+2024-10-11T14:14:26.018049Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
