@@ -25,11 +25,6 @@ Before making this Pull Request "Ready for review", please make the following ch
 - [ ] 📕 Storybook
 - [ ] 🙅‍♂️ No documentation neeeded
 
-### Have you written tests to cover your code?
-- [ ] ✅ Yes 
-- [ ] 🙅‍♂️ No (because tests aren't needed)
-- [ ] 🙋‍♂️ No (because I need help)
-
 ## Desktop Screenshots (optional)
 
 
