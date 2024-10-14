@@ -6,19 +6,19 @@
 [1G[0K[1G[0K⠙[1G[0K[31m[39m
 [31mRebuilding...[39m
 [31m[39m
-[31mDone in 475ms.[39m
+[31mDone in 252ms.[39m
 [1G[0K⠙[1G[0K[34mCLI[39m Building entry: src/index.tsx
 [34mCLI[39m Using tsconfig: tsconfig.json
 [34mCLI[39m tsup v8.3.0
 [34mCLI[39m Target: es6
 [34mESM[39m Build start
 [34m[39m Build start
-[32mESM[39m [1mdist/index.mjs [22m[32m31.77 KB[39m
-[32mESM[39m ⚡️ Build success in 78ms
-[32m[39m [1mdist/index.js [22m[32m36.32 KB[39m
-[32m[39m ⚡️ Build success in 79ms
+[32m[39m [1mdist/index.js [22m[32m36.35 KB[39m
+[32m[39m ⚡️ Build success in 80ms
+[32mESM[39m [1mdist/index.mjs [22m[32m31.79 KB[39m
+[32mESM[39m ⚡️ Build success in 80ms
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 2291ms
+[32mDTS[39m ⚡️ Build success in 2184ms
 [32mDTS[39m [1mdist/index.d.mts [22m[32m19.10 KB[39m
 [32mDTS[39m [1mdist/index.d.ts  [22m[32m19.10 KB[39m
 [1G[0K⠙[1G[0K
