@@ -546,7 +546,7 @@ var tab = (0, import_tailwind_variants8.tv)(
     variants: {
       variant: {
         solid: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
-        underline: 'text-sf-lg hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+        underline: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
       },
       size: {
         base: "px-4 py-2.5",
