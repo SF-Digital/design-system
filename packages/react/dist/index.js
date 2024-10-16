@@ -71,6 +71,7 @@ __export(src_exports, {
   Select: () => Select13,
   Tabs: () => Tabs5,
   Text: () => Text,
+  TextArea: () => TextArea,
   TextInput: () => TextInput,
   Toggle: () => Toggle,
   Tooltip: () => Tooltip7
@@ -998,6 +999,88 @@ var Arrow4 = (props) => {
 
 // src/components/Popover/index.tsx
 var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
+
+// src/components/TextArea/Root/index.tsx
+var import_react4 = require("react");
+var import_tailwind_variants13 = require("tailwind-variants");
+var import_jsx_runtime55 = require("react/jsx-runtime");
+var input2 = (0, import_tailwind_variants13.tv)(
+  {
+    base: [
+      "flex w-128 h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "border "
+    ],
+    variants: {
+      size: {
+        sm: "px-4 py-2.5 text-sf-sm",
+        md: "px-4 py-2.5 text-sf-md",
+        lg: "px-4 py-2.5 text-sf-lg"
+      },
+      disabled: {
+        true: "border border-neutral-40 bg-neutral-10 text-neutral-300",
+        false: ""
+      },
+      error: {
+        true: "border border-error-200 focus-within:ring-error-100 focus-within:ring-2",
+        false: "border focus-within:border-primary-green-200 focus-within:ring-green-100 focus-within:ring-2"
+      }
+    }
+  },
+  { twMerge: true }
+);
+var TextAreaContext = (0, import_react4.createContext)({});
+var Root22 = (_a) => {
+  var _b = _a, {
+    size = "sm",
+    disabled = false,
+    error = false,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "disabled",
+    "error",
+    "className"
+  ]);
+  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: input2({
+        className,
+        disabled,
+        size,
+        error
+      })
+    })
+  ) });
+};
+var useTextArea = () => (0, import_react4.useContext)(TextAreaContext);
+
+// src/components/TextArea/Control/index.tsx
+var import_tailwind_merge7 = require("tailwind-merge");
+var import_jsx_runtime56 = require("react/jsx-runtime");
+var Control3 = (_a) => {
+  var props = __objRest(_a, []);
+  const { disabled, size } = useTextArea();
+  const sizeClasses = {
+    sm: "px-4 py-2.5 text-sf-sm",
+    md: "px-4 py-2.5 text-sf-md",
+    lg: "px-4 py-2.5 text-sf-lg"
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+    "textarea",
+    __spreadProps(__spreadValues({}, props), {
+      disabled,
+      className: (0, import_tailwind_merge7.twJoin)(
+        props.className,
+        "w-full h-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-10 disabled:text-neutral-300",
+        sizeClasses[size]
+      )
+    })
+  );
+};
+
+// src/components/TextArea/index.tsx
+var TextArea = { Root: Root22, Control: Control3 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -1012,6 +1095,7 @@ var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Co
   Select,
   Tabs,
   Text,
+  TextArea,
   TextInput,
   Toggle,
   Tooltip

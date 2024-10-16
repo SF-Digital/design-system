@@ -951,6 +951,88 @@ var Arrow4 = (props) => {
 
 // src/components/Popover/index.tsx
 var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
+
+// src/components/TextArea/Root/index.tsx
+import { createContext as createContext2, useContext as useContext2 } from "react";
+import { tv as tv13 } from "tailwind-variants";
+import { jsx as jsx55 } from "react/jsx-runtime";
+var input2 = tv13(
+  {
+    base: [
+      "flex w-128 h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
+      "border "
+    ],
+    variants: {
+      size: {
+        sm: "px-4 py-2.5 text-sf-sm",
+        md: "px-4 py-2.5 text-sf-md",
+        lg: "px-4 py-2.5 text-sf-lg"
+      },
+      disabled: {
+        true: "border border-neutral-40 bg-neutral-10 text-neutral-300",
+        false: ""
+      },
+      error: {
+        true: "border border-error-200 focus-within:ring-error-100 focus-within:ring-2",
+        false: "border focus-within:border-primary-green-200 focus-within:ring-green-100 focus-within:ring-2"
+      }
+    }
+  },
+  { twMerge: true }
+);
+var TextAreaContext = createContext2({});
+var Root22 = (_a) => {
+  var _b = _a, {
+    size = "sm",
+    disabled = false,
+    error = false,
+    className
+  } = _b, props = __objRest(_b, [
+    "size",
+    "disabled",
+    "error",
+    "className"
+  ]);
+  return /* @__PURE__ */ jsx55(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx55(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: input2({
+        className,
+        disabled,
+        size,
+        error
+      })
+    })
+  ) });
+};
+var useTextArea = () => useContext2(TextAreaContext);
+
+// src/components/TextArea/Control/index.tsx
+import { twJoin as twJoin6 } from "tailwind-merge";
+import { jsx as jsx56 } from "react/jsx-runtime";
+var Control3 = (_a) => {
+  var props = __objRest(_a, []);
+  const { disabled, size } = useTextArea();
+  const sizeClasses = {
+    sm: "px-4 py-2.5 text-sf-sm",
+    md: "px-4 py-2.5 text-sf-md",
+    lg: "px-4 py-2.5 text-sf-lg"
+  };
+  return /* @__PURE__ */ jsx56(
+    "textarea",
+    __spreadProps(__spreadValues({}, props), {
+      disabled,
+      className: twJoin6(
+        props.className,
+        "w-full h-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-10 disabled:text-neutral-300",
+        sizeClasses[size]
+      )
+    })
+  );
+};
+
+// src/components/TextArea/index.tsx
+var TextArea = { Root: Root22, Control: Control3 };
 export {
   Avatar4 as Avatar,
   Box,
@@ -964,6 +1046,7 @@ export {
   Select13 as Select,
   Tabs5 as Tabs,
   Text,
+  TextArea,
   TextInput,
   Toggle,
   Tooltip7 as Tooltip

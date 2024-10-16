@@ -158,7 +158,7 @@ declare const Button: {
     Suffix: (props: ButtonSuffixProps) => react_jsx_runtime.JSX.Element;
 };
 
-declare const input: tailwind_variants.TVReturnType<{
+declare const input$1: tailwind_variants.TVReturnType<{
     size: {
         sm: string;
         md: string;
@@ -193,7 +193,7 @@ declare const input: tailwind_variants.TVReturnType<{
 }, undefined, string[], {
     twMerge: true;
 }, unknown, unknown, undefined>>;
-type TextInputRootProps = ComponentProps<'div'> & VariantProps<typeof input> & {
+type TextInputRootProps = ComponentProps<'div'> & VariantProps<typeof input$1> & {
     disabled?: boolean;
 };
 
@@ -595,4 +595,63 @@ declare const Popover: {
     Arrow: (props: PopoverArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
-export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, DropdownMenu, type DropdownMenuContentProps, type DropdownMenuItemProps, type DropdownMenuPortalProps, type DropdownMenuRootProps, type DropdownMenuTriggerProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, Popover, type PopoverAnchorProps, type PopoverArrowProps, type PopoverCloseProps, type PopoverContentProps, type PopoverPortalProps, type PopoverRootProps, type PopoverTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
+declare const input: tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    disabled: {
+        true: string;
+        false: string;
+    };
+    error: {
+        true: string;
+        false: string;
+    };
+}, undefined, string[], {
+    twMerge: true;
+}, {
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    disabled: {
+        true: string;
+        false: string;
+    };
+    error: {
+        true: string;
+        false: string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    disabled: {
+        true: string;
+        false: string;
+    };
+    error: {
+        true: string;
+        false: string;
+    };
+}, undefined, string[], {
+    twMerge: true;
+}, unknown, unknown, undefined>>;
+type TextAreaRootProps = ComponentProps<'div'> & VariantProps<typeof input> & {
+    disabled?: boolean;
+    error?: boolean;
+};
+
+type TextAreaControlProps = ComponentProps<'textarea'>;
+
+declare const TextArea: {
+    Root: ({ size, disabled, error, className, ...props }: TextAreaRootProps) => react_jsx_runtime.JSX.Element;
+    Control: ({ ...props }: TextAreaControlProps) => react_jsx_runtime.JSX.Element;
+};
+
+export { Avatar, type AvatarFallbackProps, type AvatarImageProps, type AvatarRootProps, Box, type BoxProps, Button, type ButtonPrefixProps, type ButtonRootProps, type ButtonSuffixProps, type CheckProps, Checkbox, type CheckboxIndicatorProps, type CheckboxRootProps, DropdownMenu, type DropdownMenuContentProps, type DropdownMenuItemProps, type DropdownMenuPortalProps, type DropdownMenuRootProps, type DropdownMenuTriggerProps, Heading, type HeadingProps, Modal, type ModalCloseProps, type ModalContentProps, type ModalDescriptionProps, type ModalOverlayProps, type ModalPortalProps, type ModalRootProps, type ModalTitleProps, type ModalTriggerProps, Popover, type PopoverAnchorProps, type PopoverArrowProps, type PopoverCloseProps, type PopoverContentProps, type PopoverPortalProps, type PopoverRootProps, type PopoverTriggerProps, RadioGroup, type RadioGroupItemProps, type RadioGroupRootProps, Select, type SelectContentProps, type SelectGroupProps, type SelectIconProps, type SelectItemIndicatorProps, type SelectItemProps, type SelectItemTextProps, type SelectPortalProps, type SelectRootProps, type SelectSeparatorProps, type SelectTriggerProps, type SelectValueProps, type SelectViewportProps, Tabs, type TabsContentProps, type TabsListProps, type TabsRootProps, type TabsTriggerProps, Text, TextArea, type TextAreaControlProps, type TextAreaRootProps, TextInput, type TextInputControlProps, type TextInputPrefixProps, type TextInputRootProps, type TextInputSuffixProps, type TextProps, Toggle, type ToggleControlProps, type ToggleRootProps, Tooltip, type TooltipArrowProps, type TooltipContentProps, type TooltipPortalProps, type TooltipProviderProps, type TooltipRootProps, type TooltipTriggerProps };
