@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.5.0
+
+### Minor Changes
+
+- adding text area
+
 ## 4.4.0
 
 ### Minor Changes
