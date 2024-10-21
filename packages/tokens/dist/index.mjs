@@ -97,18 +97,6 @@ var primaryPalette = {
 
 // src/colors/secondary.ts
 var secondaryPalette = {
-  "secondary-green": {
-    50: "#e6efeb",
-    100: "#b0cec1",
-    200: "#8ab7a3",
-    300: "#549679",
-    400: "#33815f",
-    500: "#006237",
-    600: "#005932",
-    700: "#004627",
-    800: "#00361e",
-    900: "#002917"
-  },
   "secondary-brown": {
     50: "#f7f5f3",
     100: "#e5e1da",
@@ -145,7 +133,7 @@ var secondaryPalette = {
     800: "#4f3049",
     900: "#3c2538"
   },
-  "secondary-light-green": {
+  "secondary-green": {
     50: "#f4f8ef",
     100: "#deeace",
     200: "#cde0b6",
@@ -157,7 +145,7 @@ var secondaryPalette = {
     800: "#516735",
     900: "#3e4f29"
   },
-  "secondary-light-blue": {
+  "secondary-aqua": {
     50: "#f1fafb",
     100: "#d3eef1",
     200: "#bee6eb",
@@ -585,20 +573,6 @@ var fonts = {
 
 // src/font-sizes.ts
 var fontSizes = {
-  // TODO: should we keept these or remove them?
-  xxs: "0.625rem",
-  xs: "0.75rem",
-  sm: "0.875rem",
-  md: "1rem",
-  lg: "1.125rem",
-  xl: "1.25rem",
-  "2xl": "1.5rem",
-  "4xl": "2rem",
-  "5xl": "2.25rem",
-  "6xl": "3rem",
-  "7xl": "4rem",
-  "8xl": "4.5rem",
-  "9xl": "6rem",
   "sf-xs": "0.8125rem",
   "sf-sm": "0.875rem",
   "sf-md": "1rem",

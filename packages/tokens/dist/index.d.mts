@@ -335,7 +335,7 @@ declare const colors: {
         800: string;
         900: string;
     };
-    "secondary-green": {
+    'secondary-brown': {
         50: string;
         100: string;
         200: string;
@@ -347,7 +347,7 @@ declare const colors: {
         800: string;
         900: string;
     };
-    "secondary-brown": {
+    'secondary-blue': {
         50: string;
         100: string;
         200: string;
@@ -359,7 +359,7 @@ declare const colors: {
         800: string;
         900: string;
     };
-    "secondary-blue": {
+    'secondary-pink': {
         50: string;
         100: string;
         200: string;
@@ -371,7 +371,7 @@ declare const colors: {
         800: string;
         900: string;
     };
-    "secondary-pink": {
+    'secondary-green': {
         50: string;
         100: string;
         200: string;
@@ -383,19 +383,7 @@ declare const colors: {
         800: string;
         900: string;
     };
-    "secondary-light-green": {
-        50: string;
-        100: string;
-        200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    "secondary-light-blue": {
+    'secondary-aqua': {
         50: string;
         100: string;
         200: string;
@@ -538,29 +526,16 @@ declare const fonts: {
 };
 
 declare const fontSizes: {
-    xxs: string;
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-    "2xl": string;
-    "4xl": string;
-    "5xl": string;
-    "6xl": string;
-    "7xl": string;
-    "8xl": string;
-    "9xl": string;
-    "sf-xs": string;
-    "sf-sm": string;
-    "sf-md": string;
-    "sf-lg": string;
-    "sf-h1": string;
-    "sf-h2": string;
-    "sf-h3": string;
-    "sf-h4": string;
-    "sf-h5": string;
-    "sf-h6": string;
+    'sf-xs': string;
+    'sf-sm': string;
+    'sf-md': string;
+    'sf-lg': string;
+    'sf-h1': string;
+    'sf-h2': string;
+    'sf-h3': string;
+    'sf-h4': string;
+    'sf-h5': string;
+    'sf-h6': string;
 };
 
 declare const fontWeights: {

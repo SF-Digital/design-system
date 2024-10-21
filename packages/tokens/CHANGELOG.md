@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.2.0
+
+### Minor Changes
+
+- Sync with design + Select Hover
+
 ## 3.1.2
 
 ### Patch Changes

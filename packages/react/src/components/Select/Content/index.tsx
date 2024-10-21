@@ -7,7 +7,7 @@ export const Content = (props: SelectContentProps) => (
   <Select.Content
     {...props}
     className={twJoin(
-      'flex flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg',
+      'flex w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg',
       props?.className,
     )}
     align="center"
