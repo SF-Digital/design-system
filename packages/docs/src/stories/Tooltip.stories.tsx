@@ -116,7 +116,7 @@ export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {
       <Tooltip.Root>
         <Tooltip.Trigger>
           <button>
-            <HelpCircle style={{ color: '#98A2B3' }} />
+            <HelpCircle style={{ color: '#676767' }} />
           </button>
         </Tooltip.Trigger>
         <Tooltip.Portal>
@@ -124,12 +124,16 @@ export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {
             <Tooltip.Arrow
               style={{ fill: args.theme === 'dark' ? 'black' : 'white' }}
             />
-            <Text className="text-sf-xs font-semibold">This is a tooltip</Text>
-            <Text className="text-sf-xs font-regular">
-              Tooltips are used to describe or identify an element. In most
-              scenarios, tooltips help the user understand the meaning, function
-              or alt-text of an element.
-            </Text>
+            <div className="flex flex-col gap-2">
+              <Text className="text-sf-xs font-semibold text-neutral-600">
+                This is a tooltip
+              </Text>
+              <Text className="text-sf-xs font-regular text-neutral-400">
+                Tooltips are used to describe or identify an element. In most
+                scenarios, tooltips help the user understand the meaning,
+                function or alt-text of an element.
+              </Text>
+            </div>
           </Tooltip.Content>
         </Tooltip.Portal>
       </Tooltip.Root>

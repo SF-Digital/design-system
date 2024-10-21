@@ -22,6 +22,11 @@
 - **Development server**: `npm run dev` *(localhost:6006)*
 - **Clean**: `npm run cbum` (removes node_modules in all packages, removes package-lock.json and reinstalls)
 
+## 4. Build the project
+When opening a PR, you need to build the tokens:
+- First, run `npm run changeset` to specify your changes and generate a changelog.
+- Then, when you're satisfied, run `npm run version-packages` to generate a new version number.
+
 # Pattern composition
 
 We use a strategy know as pattern composition to build our components, in order to minimise the bloating and  improve re-usability of components.

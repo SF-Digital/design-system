@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.6.0
+
+### Minor Changes
+
+- Sync with design + Select Hover
+
 ## 4.5.0
 
 ### Minor Changes
