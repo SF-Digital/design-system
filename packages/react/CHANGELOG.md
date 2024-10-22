@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.7.0
+
+### Minor Changes
+
+- icon button variant
+
 ## 4.6.1
 
 ### Patch Changes
