@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.3.0
+
+### Minor Changes
+
+- icon button variant
+
 ## 3.2.0
 
 ### Minor Changes

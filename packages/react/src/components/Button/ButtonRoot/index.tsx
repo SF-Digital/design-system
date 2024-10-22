@@ -24,12 +24,46 @@ const button = tv(
       },
 
       size: {
-        sm: 'px-6 py-2 text-sf-sm',
-        md: 'px-6 py-2.5 text-sf-md',
-        lg: 'px-8 py-4 text-sf-lg',
+        sm: 'text-sf-sm',
+        md: 'text-sf-md',
+        lg: 'text-sf-lg',
+      },
+      iconButton: {
+        true: [],
+        false: [],
       },
     },
     compoundVariants: [
+      {
+        size: 'sm',
+        iconButton: false,
+        className: 'px-6 py-2',
+      },
+      {
+        size: 'md',
+        iconButton: false,
+        className: 'px-6 py-2.5',
+      },
+      {
+        size: 'lg',
+        iconButton: false,
+        className: 'px-8 py-4',
+      },
+      {
+        size: 'sm',
+        iconButton: true,
+        className: 'p-2',
+      },
+      {
+        size: 'md',
+        iconButton: true,
+        className: 'p-2.5',
+      },
+      {
+        size: 'lg',
+        iconButton: true,
+        className: 'p-3',
+      },
       {
         color: 'sf-green',
         variant: 'primary',
@@ -149,6 +183,7 @@ const button = tv(
       variant: 'primary',
       color: 'sf-green',
       size: 'md',
+      type: 'default',
     },
   },
   {
@@ -164,6 +199,7 @@ export const Root = ({
   className,
   size,
   color,
+  iconButton,
   ...props
 }: ButtonRootProps) => {
   return (
@@ -174,6 +210,7 @@ export const Root = ({
         color,
         size,
         className,
+        iconButton,
       })}
     />
   )

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ButtonRootProps, Button } from '@sf-digital-ui/react'
 
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Trash } from 'lucide-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -26,6 +26,8 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `disabled: boolean` - Whether the button is disabled.
  *
+ * `iconButton: boolean` - Whether the button is an icon button.
+ *
  */
 
 const ButtonStory: Meta<ButtonRootProps> = {
@@ -37,6 +39,7 @@ const ButtonStory: Meta<ButtonRootProps> = {
     color: 'sf-green',
     size: 'md',
     disabled: false,
+    iconButton: false,
   },
   argTypes: {
     color: {
@@ -58,6 +61,11 @@ const ButtonStory: Meta<ButtonRootProps> = {
       },
     },
     disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    iconButton: {
       control: {
         type: 'boolean',
       },
@@ -248,5 +256,18 @@ export const WithSuffix: StoryObj<ButtonRootProps> = {
 export const Disabled: StoryObj<ButtonRootProps> = {
   args: {
     disabled: true,
+  },
+}
+
+export const IconButton: StoryObj<ButtonRootProps> = {
+  args: {
+    children: (
+      <>
+        <Button.Prefix>
+          <Trash />
+        </Button.Prefix>
+      </>
+    ),
+    iconButton: true,
   },
 }

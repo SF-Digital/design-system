@@ -125,12 +125,46 @@ var button = tv3(
         link: []
       },
       size: {
-        sm: "px-6 py-2 text-sf-sm",
-        md: "px-6 py-2.5 text-sf-md",
-        lg: "px-8 py-4 text-sf-lg"
+        sm: "text-sf-sm",
+        md: "text-sf-md",
+        lg: "text-sf-lg"
+      },
+      iconButton: {
+        true: [],
+        false: []
       }
     },
     compoundVariants: [
+      {
+        size: "sm",
+        iconButton: false,
+        className: "px-6 py-2"
+      },
+      {
+        size: "md",
+        iconButton: false,
+        className: "px-6 py-2.5"
+      },
+      {
+        size: "lg",
+        iconButton: false,
+        className: "px-8 py-4"
+      },
+      {
+        size: "sm",
+        iconButton: true,
+        className: "p-2"
+      },
+      {
+        size: "md",
+        iconButton: true,
+        className: "p-2.5"
+      },
+      {
+        size: "lg",
+        iconButton: true,
+        className: "p-3"
+      },
       {
         color: "sf-green",
         variant: "primary",
@@ -230,7 +264,8 @@ var button = tv3(
     defaultVariants: {
       variant: "primary",
       color: "sf-green",
-      size: "md"
+      size: "md",
+      type: "default"
     }
   },
   {
@@ -242,12 +277,14 @@ var Root = (_a) => {
     variant,
     className,
     size,
-    color
+    color,
+    iconButton
   } = _b, props = __objRest(_b, [
     "variant",
     "className",
     "size",
-    "color"
+    "color",
+    "iconButton"
   ]);
   return /* @__PURE__ */ jsx4(
     "button",
@@ -256,7 +293,8 @@ var Root = (_a) => {
         variant,
         color,
         size,
-        className
+        className,
+        iconButton
       })
     })
   );
