@@ -68,55 +68,55 @@ const button = tv(
         color: 'sf-green',
         variant: 'primary',
         className:
-          'bg-primary-green-500 hover:bg-primary-green-700 active:bg-primary-green-500 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80',
+          'bg-primary-green-500 hover:bg-primary-green-700 active:bg-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80',
       },
       {
         color: 'success',
         variant: 'primary',
         className:
-          'bg-success-500 text-white hover:bg-success-700 active:bg-success-500 disabled:bg-neutral-30 disabled:text-neutral-70',
+          'bg-success-500 text-white hover:bg-success-700 active:bg-success-500 active:ring-4 active:ring-success-100 disabled:bg-neutral-30 disabled:text-neutral-70',
       },
       {
         color: 'warning',
         variant: 'primary',
         className:
-          'bg-warning-500 text-white hover:bg-warning-700 active:bg-warning-500 disabled:bg-neutral-30 disabled:text-neutral-70',
+          'bg-warning-500 text-white hover:bg-warning-700 active:bg-warning-500 active:ring-4 active:ring-warning-100 disabled:bg-neutral-30 disabled:text-neutral-70',
       },
       {
         color: 'error',
         variant: 'primary',
         className:
-          'bg-error-500 text-white hover:bg-error-700 active:bg-error-500 disabled:bg-neutral-30 disabled:text-neutral-70',
+          'bg-error-500 text-white hover:bg-error-700 active:bg-error-500 active:ring-4 active:ring-error-100 disabled:bg-neutral-30 disabled:text-neutral-70',
       },
       {
         color: 'neutral',
         variant: 'secondary',
         className:
-          'border-neutral-60 text-neutral-500 hover:bg-neutral-20 hover:text-neutral-700 active:border-neutral-80 active:bg-neutral-20 active:text-neutral-500 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
+          'border-neutral-60 text-neutral-500 hover:bg-neutral-20 hover:text-neutral-700 active:border-neutral-80 active:bg-neutral-20 active:bg-transparent active:text-neutral-500 active:ring-4 active:ring-neutral-30 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
       },
       {
         color: 'sf-green',
         variant: 'secondary',
         className:
-          'border-primary-green-500 text-primary-green-500 hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700 active:border-primary-green-500 active:text-primary-green-500 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
+          'border-primary-green-500 text-primary-green-500 hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700 active:border-primary-green-500 active:bg-transparent active:text-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80',
       },
       {
         color: 'success',
         variant: 'secondary',
         className:
-          'border-success-100 text-success-600 hover:border-success-100 hover:bg-success-50 hover:text-success-800 active:border-success-100 active:bg-white active:text-success-700 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
+          'border-success-100 text-success-600 hover:border-success-100 hover:bg-success-50 hover:text-success-800 active:border-success-100 active:bg-white active:text-success-700 active:ring-4 active:ring-success-50 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
       },
       {
         color: 'error',
         variant: 'secondary',
         className:
-          'border-error-100 text-error-600 hover:border-error-100 hover:bg-error-50 hover:text-error-800 active:border-error-100 active:bg-white active:text-error-700 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
+          'border-error-100 text-error-600 hover:border-error-100 hover:bg-error-50 hover:text-error-800 active:border-error-100 active:bg-white active:text-error-700 active:ring-4 active:ring-error-50 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
       },
       {
         color: 'warning',
         variant: 'secondary',
         className:
-          'border-warning-100 text-warning-600 hover:border-warning-100 hover:bg-warning-50 hover:text-warning-800 active:border-warning-100 active:bg-white active:text-warning-700 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
+          'border-warning-100 text-warning-600 hover:border-warning-100 hover:bg-warning-50 hover:text-warning-800 active:border-warning-100 active:bg-white active:text-warning-700 active:ring-4 active:ring-warning-50 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70',
       },
       {
         color: 'sf-green',

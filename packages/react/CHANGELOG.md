@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.6.1
+
+### Patch Changes
+
+- Add ring on input and button focus state
+
 ## 4.6.0
 
 ### Minor Changes
