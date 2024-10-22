@@ -103,6 +103,10 @@ declare const button: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
 }, undefined, string[], {
     twMerge: false;
 }, {
@@ -124,6 +128,10 @@ declare const button: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
 }, undefined, tailwind_variants.TVReturnType<{
     color: {
         'sf-green': never[];
@@ -143,6 +151,10 @@ declare const button: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
 }, undefined, string[], {
     twMerge: false;
 }, unknown, unknown, undefined>>;
@@ -153,7 +165,7 @@ type ButtonPrefixProps = ComponentProps<'div'>;
 type ButtonSuffixProps = ComponentProps<'div'>;
 
 declare const Button: {
-    Root: ({ variant, className, size, color, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ variant, className, size, color, iconButton, ...props }: ButtonRootProps) => react_jsx_runtime.JSX.Element;
     Prefix: (props: ButtonPrefixProps) => react_jsx_runtime.JSX.Element;
     Suffix: (props: ButtonSuffixProps) => react_jsx_runtime.JSX.Element;
 };

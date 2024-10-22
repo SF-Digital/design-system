@@ -26,7 +26,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `disabled: boolean` - Whether the button is disabled.
  *
- * `type: 'default' | 'icon'` - The type of the button.
+ * `iconButton: boolean` - Whether the button is an icon button.
  *
  */
 
