@@ -3,13 +3,12 @@ import { twMerge } from 'tailwind-merge'
 
 export type DropdownMenuItemProps = DropdownMenu.DropdownMenuItemProps
 
-export const Item = (props: DropdownMenuItemProps) => {
+export const Divider = (props: DropdownMenuItemProps) => {
   return (
-    <DropdownMenu.Item
-      {...props}
+    <div
       className={twMerge(
         props.className,
-        'flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-none hover:bg-neutral-20',
+        'flex h-[1px] flex-row bg-neutral-40',
       )}
     />
   )

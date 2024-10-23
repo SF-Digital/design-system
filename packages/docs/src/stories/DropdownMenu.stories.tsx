@@ -1,6 +1,6 @@
-import { DropdownMenuRootProps, DropdownMenu, Text } from '@sf-digital-ui/react'
+import { DropdownMenuRootProps, DropdownMenu } from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react/*'
-import { Edit, MoreVertical, Trash } from 'lucide-react'
+import { Edit, MoreVertical, Skull, Trash } from 'lucide-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -22,6 +22,8 @@ import '@sf-digital-ui/react/dist/output.css'
  * `DropdownMenu.Content` - The content that pops out when dropdown menu is open
  *
  * `DropdownMenu.Item` - The item that can be selected
+ *
+ * `DropdownMenu.Divider` - The divider that separates items
  *
  * ## API Reference:
  *
@@ -86,35 +88,24 @@ export const Default: StoryObj<DropdownMenuRootProps> = {
   render: () => (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <MoreVertical size={20} className="text-neutral-700" />
+        <MoreVertical size={20} />
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          className="bg-white rounded-md border border-neutral-10"
-          style={{ minWidth: '220px' }}
-        >
-          <DropdownMenu.Item
-            className=" hover:bg-neutral-20 hover:outline-none rounded-t-md"
-            style={{ borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}
-          >
-            <div className="flex flex-row px-4 py-3 gap-2 items-center">
-              <Edit size={16} className="text-neutral-700" />
-              <Text className="text-neutral-700">Edit</Text>
-            </div>
+        <DropdownMenu.Content>
+          <DropdownMenu.Item>
+            <Edit size={16} />
+            Edit
           </DropdownMenu.Item>
 
-          <DropdownMenu.Item
-            className=" hover:bg-neutral-20 hover:outline-none rounded-b-md"
-            style={{
-              borderBottomLeftRadius: '8px',
-              borderBottomRightRadius: '8px',
-            }}
-          >
-            <div className="flex flex-row px-4 py-3 gap-2 items-center">
-              <Trash size={16} className="text-neutral-700" />
-              <Text className="text-neutral-700">Delete</Text>
-            </div>
+          <DropdownMenu.Item>
+            <Trash size={16} />
+            Delete
+          </DropdownMenu.Item>
+          <DropdownMenu.Divider />
+          <DropdownMenu.Item>
+            <Skull size={16} />
+            Click here to die!
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
