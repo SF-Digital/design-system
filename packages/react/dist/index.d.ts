@@ -3,9 +3,9 @@ import * as react from 'react';
 import { ComponentProps, PropsWithChildren } from 'react';
 import * as tailwind_variants from 'tailwind-variants';
 import { VariantProps } from 'tailwind-variants';
+import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import { Check } from 'lucide-react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
-import * as tailwind_variants_dist_config from 'tailwind-variants/dist/config';
 import * as RadioGroup$1 from '@radix-ui/react-radio-group';
 import * as Tabs$1 from '@radix-ui/react-tabs';
 import * as Switch from '@radix-ui/react-switch';
@@ -93,7 +93,7 @@ declare const button: tailwind_variants.TVReturnType<{
         error: never[];
     };
     variant: {
-        primary: string;
+        primary: never[];
         secondary: string;
         tertiary: never[];
         link: never[];
@@ -107,8 +107,29 @@ declare const button: tailwind_variants.TVReturnType<{
         true: never[];
         false: never[];
     };
-}, undefined, string[], {
-    twMerge: false;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
+    variant: {
+        primary: never[];
+        secondary: string;
+        tertiary: never[];
+        link: never[];
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
 }, {
     color: {
         'sf-green': never[];
@@ -118,7 +139,30 @@ declare const button: tailwind_variants.TVReturnType<{
         error: never[];
     };
     variant: {
-        primary: string;
+        primary: never[];
+        secondary: string;
+        tertiary: never[];
+        link: never[];
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
+}>, {
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
+    variant: {
+        primary: never[];
         secondary: string;
         tertiary: never[];
         link: never[];
@@ -141,7 +185,7 @@ declare const button: tailwind_variants.TVReturnType<{
         error: never[];
     };
     variant: {
-        primary: string;
+        primary: never[];
         secondary: string;
         tertiary: never[];
         link: never[];
@@ -155,9 +199,53 @@ declare const button: tailwind_variants.TVReturnType<{
         true: never[];
         false: never[];
     };
-}, undefined, string[], {
-    twMerge: false;
-}, unknown, unknown, undefined>>;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
+    variant: {
+        primary: never[];
+        secondary: string;
+        tertiary: never[];
+        link: never[];
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
+}, {
+    color: {
+        'sf-green': never[];
+        neutral: never[];
+        success: never[];
+        warning: never[];
+        error: never[];
+    };
+    variant: {
+        primary: never[];
+        secondary: string;
+        tertiary: never[];
+        link: never[];
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    iconButton: {
+        true: never[];
+        false: never[];
+    };
+}>, unknown, unknown, undefined>>;
 type ButtonRootProps = ComponentProps<'button'> & VariantProps<typeof button>;
 
 type ButtonPrefixProps = ComponentProps<'div'>;
