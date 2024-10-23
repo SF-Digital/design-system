@@ -313,7 +313,7 @@ var button = (0, import_tailwind_variants3.tv)(
       variant: "primary",
       color: "sf-green",
       size: "md",
-      type: "default"
+      iconButton: false
     }
   },
   {

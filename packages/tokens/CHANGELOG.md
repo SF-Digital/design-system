@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.3.1
+
+### Patch Changes
+
+- Fix button padding default
+
 ## 3.3.0
 
 ### Minor Changes
