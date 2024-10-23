@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.8.1
+
+### Patch Changes
+
+- add cursor
+
 ## 4.8.0
 
 ### Minor Changes
