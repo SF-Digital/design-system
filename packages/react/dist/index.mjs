@@ -265,7 +265,7 @@ var button = tv3(
       variant: "primary",
       color: "sf-green",
       size: "md",
-      type: "default"
+      iconButton: false
     }
   },
   {

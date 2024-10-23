@@ -183,7 +183,7 @@ const button = tv(
       variant: 'primary',
       color: 'sf-green',
       size: 'md',
-      type: 'default',
+      iconButton: false,
     },
   },
   {
