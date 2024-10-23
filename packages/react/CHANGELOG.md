@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.7.2
+
+### Patch Changes
+
+- Default text white for button and enable tailwind merge
+
 ## 4.7.1
 
 ### Patch Changes
