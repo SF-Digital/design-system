@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.8.0
+
+### Minor Changes
+
+- Hover and also redesigned formatting
+
 ## 4.7.2
 
 ### Patch Changes
