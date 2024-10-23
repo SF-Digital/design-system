@@ -957,9 +957,18 @@ var Root19 = (props) => {
 
 // src/components/DropdownMenu/Trigger/index.tsx
 var DropdownMenu2 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_tailwind_merge7 = require("tailwind-merge");
 var import_jsx_runtime44 = require("react/jsx-runtime");
 var Trigger10 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(DropdownMenu2.Trigger, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
+    DropdownMenu2.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: (0, import_tailwind_merge7.twMerge)(
+        "text-neutral-500 hover:cursor-pointer hover:text-neutral-700",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/Portal/index.tsx
@@ -971,16 +980,34 @@ var Portal8 = (props) => {
 
 // src/components/DropdownMenu/Item/index.tsx
 var DropdownMenu4 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_tailwind_merge8 = require("tailwind-merge");
 var import_jsx_runtime46 = require("react/jsx-runtime");
 var Item5 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(DropdownMenu4.Item, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+    DropdownMenu4.Item,
+    __spreadProps(__spreadValues({}, props), {
+      className: (0, import_tailwind_merge8.twMerge)(
+        "flex min-h-[40px] min-w-[240px] flex-row items-center gap-2 bg-white px-4 py-3 hover:border-neutral-300 hover:bg-neutral-20",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/Content/index.tsx
 var DropdownMenu5 = __toESM(require("@radix-ui/react-dropdown-menu"));
+var import_tailwind_merge9 = require("tailwind-merge");
 var import_jsx_runtime47 = require("react/jsx-runtime");
 var Content10 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(DropdownMenu5.Content, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+    DropdownMenu5.Content,
+    __spreadProps(__spreadValues({}, props), {
+      className: (0, import_tailwind_merge9.twMerge)(
+        "rounded-md border border-neutral-10",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/index.tsx
@@ -1094,7 +1121,7 @@ var Root22 = (_a) => {
 var useTextArea = () => (0, import_react4.useContext)(TextAreaContext);
 
 // src/components/TextArea/Control/index.tsx
-var import_tailwind_merge7 = require("tailwind-merge");
+var import_tailwind_merge10 = require("tailwind-merge");
 var import_jsx_runtime56 = require("react/jsx-runtime");
 var Control3 = (_a) => {
   var props = __objRest(_a, []);
@@ -1108,7 +1135,7 @@ var Control3 = (_a) => {
     "textarea",
     __spreadProps(__spreadValues({}, props), {
       disabled,
-      className: (0, import_tailwind_merge7.twJoin)(
+      className: (0, import_tailwind_merge10.twJoin)(
         props.className,
         "w-full h-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-10 disabled:text-neutral-300",
         sizeClasses[size]

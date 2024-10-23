@@ -909,9 +909,18 @@ var Root19 = (props) => {
 
 // src/components/DropdownMenu/Trigger/index.tsx
 import * as DropdownMenu2 from "@radix-ui/react-dropdown-menu";
+import { twMerge as twMerge2 } from "tailwind-merge";
 import { jsx as jsx44 } from "react/jsx-runtime";
 var Trigger10 = (props) => {
-  return /* @__PURE__ */ jsx44(DropdownMenu2.Trigger, __spreadValues({}, props));
+  return /* @__PURE__ */ jsx44(
+    DropdownMenu2.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: twMerge2(
+        "text-neutral-500 hover:cursor-pointer hover:text-neutral-700",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/Portal/index.tsx
@@ -923,16 +932,34 @@ var Portal8 = (props) => {
 
 // src/components/DropdownMenu/Item/index.tsx
 import * as DropdownMenu4 from "@radix-ui/react-dropdown-menu";
+import { twMerge as twMerge3 } from "tailwind-merge";
 import { jsx as jsx46 } from "react/jsx-runtime";
 var Item5 = (props) => {
-  return /* @__PURE__ */ jsx46(DropdownMenu4.Item, __spreadValues({}, props));
+  return /* @__PURE__ */ jsx46(
+    DropdownMenu4.Item,
+    __spreadProps(__spreadValues({}, props), {
+      className: twMerge3(
+        "flex min-h-[40px] min-w-[240px] flex-row items-center gap-2 bg-white px-4 py-3 hover:border-neutral-300 hover:bg-neutral-20",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/Content/index.tsx
 import * as DropdownMenu5 from "@radix-ui/react-dropdown-menu";
+import { twMerge as twMerge4 } from "tailwind-merge";
 import { jsx as jsx47 } from "react/jsx-runtime";
 var Content10 = (props) => {
-  return /* @__PURE__ */ jsx47(DropdownMenu5.Content, __spreadValues({}, props));
+  return /* @__PURE__ */ jsx47(
+    DropdownMenu5.Content,
+    __spreadProps(__spreadValues({}, props), {
+      className: twMerge4(
+        "rounded-md border border-neutral-10",
+        props.className
+      )
+    })
+  );
 };
 
 // src/components/DropdownMenu/index.tsx

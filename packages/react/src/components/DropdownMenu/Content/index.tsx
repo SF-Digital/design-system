@@ -1,7 +1,16 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
+import { twMerge } from 'tailwind-merge'
 
 export type DropdownMenuContentProps = DropdownMenu.DropdownMenuContentProps
 
 export const Content = (props: DropdownMenuContentProps) => {
-  return <DropdownMenu.Content {...props} />
+  return (
+    <DropdownMenu.Content
+      {...props}
+      className={twMerge(
+        'rounded-md border border-neutral-10',
+        props.className,
+      )}
+    />
+  )
 }
