@@ -8,7 +8,7 @@ export const Content = (props: DropdownMenuContentProps) => {
     <DropdownMenu.Content
       {...props}
       className={twMerge(
-        'rounded-md border border-neutral-10',
+        'overflow-hidden rounded-md border border-neutral-40 bg-white',
         props.className,
       )}
     />

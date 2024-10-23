@@ -653,6 +653,8 @@ declare const Modal: {
     Close: react.ForwardRefExoticComponent<Dialog.DialogCloseProps & react.RefAttributes<HTMLButtonElement>>;
 };
 
+type DropdownMenuItemProps$1 = DropdownMenu$1.DropdownMenuItemProps;
+
 type DropdownMenuRootProps = DropdownMenu$1.DropdownMenuProps;
 
 type DropdownMenuTriggerProps = DropdownMenu$1.DropdownMenuTriggerProps;
@@ -669,6 +671,7 @@ declare const DropdownMenu: {
     Portal: (props: DropdownMenuPortalProps) => react_jsx_runtime.JSX.Element;
     Content: (props: DropdownMenuContentProps) => react_jsx_runtime.JSX.Element;
     Item: (props: DropdownMenuItemProps) => react_jsx_runtime.JSX.Element;
+    Divider: (props: DropdownMenuItemProps$1) => react_jsx_runtime.JSX.Element;
 };
 
 type PopoverRootProps = Popover$1.PopoverProps;

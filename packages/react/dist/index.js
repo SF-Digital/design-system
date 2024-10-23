@@ -982,8 +982,8 @@ var Item5 = (props) => {
     DropdownMenu4.Item,
     __spreadProps(__spreadValues({}, props), {
       className: (0, import_tailwind_merge8.twMerge)(
-        "flex min-h-[40px] min-w-[240px] flex-row items-center gap-2 bg-white px-4 py-3 hover:border-neutral-300 hover:bg-neutral-20",
-        props.className
+        props.className,
+        "flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-none hover:bg-neutral-20"
       )
     })
   );
@@ -998,63 +998,78 @@ var Content10 = (props) => {
     DropdownMenu5.Content,
     __spreadProps(__spreadValues({}, props), {
       className: (0, import_tailwind_merge9.twMerge)(
-        "rounded-md border border-neutral-10",
+        "overflow-hidden rounded-md border border-neutral-40 bg-white",
         props.className
       )
     })
   );
 };
 
+// src/components/DropdownMenu/Divider/index.tsx
+var import_tailwind_merge10 = require("tailwind-merge");
+var import_jsx_runtime48 = require("react/jsx-runtime");
+var Divider = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+    "div",
+    {
+      className: (0, import_tailwind_merge10.twMerge)(
+        props.className,
+        "flex h-[1px] flex-row bg-neutral-40"
+      )
+    }
+  );
+};
+
 // src/components/DropdownMenu/index.tsx
-var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5 };
+var DropdownMenu6 = { Root: Root19, Trigger: Trigger10, Portal: Portal8, Content: Content10, Item: Item5, Divider };
 
 // src/components/Popover/Root/index.tsx
 var Popover = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime48 = require("react/jsx-runtime");
+var import_jsx_runtime49 = require("react/jsx-runtime");
 var Root21 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Popover.Root, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Popover.Root, __spreadValues({}, props));
 };
 
 // src/components/Popover/Trigger/index.tsx
 var Popover2 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime49 = require("react/jsx-runtime");
+var import_jsx_runtime50 = require("react/jsx-runtime");
 var Trigger12 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Popover2.Trigger, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Popover2.Trigger, __spreadValues({}, props));
 };
 
 // src/components/Popover/Portal/index.tsx
 var Popover3 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime50 = require("react/jsx-runtime");
+var import_jsx_runtime51 = require("react/jsx-runtime");
 var Portal10 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Popover3.Portal, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Popover3.Portal, __spreadValues({}, props));
 };
 
 // src/components/Popover/Content/index.tsx
 var Popover4 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime51 = require("react/jsx-runtime");
+var import_jsx_runtime52 = require("react/jsx-runtime");
 var Content12 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Popover4.Content, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Popover4.Content, __spreadValues({}, props));
 };
 
 // src/components/Popover/Anchor/index.tsx
 var Popover5 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime52 = require("react/jsx-runtime");
+var import_jsx_runtime53 = require("react/jsx-runtime");
 var Anchor2 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Popover5.Anchor, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Popover5.Anchor, __spreadValues({}, props));
 };
 
 // src/components/Popover/Close/index.tsx
 var Popover6 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime53 = require("react/jsx-runtime");
+var import_jsx_runtime54 = require("react/jsx-runtime");
 var Close4 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Popover6.Close, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(Popover6.Close, __spreadValues({}, props));
 };
 
 // src/components/Popover/Arrow/index.tsx
 var Popover7 = __toESM(require("@radix-ui/react-popover"));
-var import_jsx_runtime54 = require("react/jsx-runtime");
+var import_jsx_runtime55 = require("react/jsx-runtime");
 var Arrow4 = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(Popover7.Arrow, __spreadValues({}, props));
+  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Popover7.Arrow, __spreadValues({}, props));
 };
 
 // src/components/Popover/index.tsx
@@ -1063,7 +1078,7 @@ var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Co
 // src/components/TextArea/Root/index.tsx
 var import_react4 = require("react");
 var import_tailwind_variants13 = require("tailwind-variants");
-var import_jsx_runtime55 = require("react/jsx-runtime");
+var import_jsx_runtime56 = require("react/jsx-runtime");
 var input2 = (0, import_tailwind_variants13.tv)(
   {
     base: [
@@ -1101,7 +1116,7 @@ var Root22 = (_a) => {
     "error",
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input2({
@@ -1116,8 +1131,8 @@ var Root22 = (_a) => {
 var useTextArea = () => (0, import_react4.useContext)(TextAreaContext);
 
 // src/components/TextArea/Control/index.tsx
-var import_tailwind_merge10 = require("tailwind-merge");
-var import_jsx_runtime56 = require("react/jsx-runtime");
+var import_tailwind_merge11 = require("tailwind-merge");
+var import_jsx_runtime57 = require("react/jsx-runtime");
 var Control3 = (_a) => {
   var props = __objRest(_a, []);
   const { disabled, size } = useTextArea();
@@ -1126,11 +1141,11 @@ var Control3 = (_a) => {
     md: "px-4 py-2.5 text-sf-md",
     lg: "px-4 py-2.5 text-sf-lg"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
     "textarea",
     __spreadProps(__spreadValues({}, props), {
       disabled,
-      className: (0, import_tailwind_merge10.twJoin)(
+      className: (0, import_tailwind_merge11.twJoin)(
         props.className,
         "w-full h-full border-transparent text-black outline-none placeholder:font-sf-heading disabled:bg-neutral-10 disabled:text-neutral-300",
         sizeClasses[size]

@@ -1,6 +1,6 @@
-import { DropdownMenuRootProps, DropdownMenu, Text } from '@sf-digital-ui/react'
+import { DropdownMenuRootProps, DropdownMenu } from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react/*'
-import { Edit, MoreVertical, Trash } from 'lucide-react'
+import { Edit, MoreVertical, Skull, Trash } from 'lucide-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -22,6 +22,8 @@ import '@sf-digital-ui/react/dist/output.css'
  * `DropdownMenu.Content` - The content that pops out when dropdown menu is open
  *
  * `DropdownMenu.Item` - The item that can be selected
+ *
+ * `DropdownMenu.Divider` - The divider that separates items
  *
  * ## API Reference:
  *
@@ -99,6 +101,11 @@ export const Default: StoryObj<DropdownMenuRootProps> = {
           <DropdownMenu.Item>
             <Trash size={16} />
             Delete
+          </DropdownMenu.Item>
+          <DropdownMenu.Divider />
+          <DropdownMenu.Item>
+            <Skull size={16} />
+            Click here to die!
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
