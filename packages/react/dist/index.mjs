@@ -935,7 +935,7 @@ var Item5 = (props) => {
     __spreadProps(__spreadValues({}, props), {
       className: twMerge3(
         props.className,
-        "flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-none hover:bg-neutral-20"
+        "flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-none hover:cursor-pointer hover:bg-neutral-20"
       )
     })
   );

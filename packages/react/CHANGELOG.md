@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- select-color-tweak
+- add cursor
 
 ## 4.8.0
 
