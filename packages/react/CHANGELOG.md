@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.8.2
+
+### Patch Changes
+
+- fix-color
+
 ## 4.8.1
 
 ### Patch Changes

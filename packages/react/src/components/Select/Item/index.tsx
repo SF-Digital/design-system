@@ -7,7 +7,7 @@ export const Item = (props: SelectItemProps) => (
   <Select.Item
     {...props}
     className={twJoin(
-      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-20 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-10 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
       props.className,
     )}
   />
