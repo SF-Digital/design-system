@@ -167,7 +167,7 @@ export const Small: StoryObj<TooltipProviderProps & TooltipContentProps> = {
         </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content {...args}>
-            <Tooltip.Arrow theme={args.theme} />
+            <Tooltip.Arrow />
             <Text className="text-sf-xs font-semibold">This is a tooltip</Text>
           </Tooltip.Content>
         </Tooltip.Portal>
