@@ -751,15 +751,21 @@ var Portal2 = (props) => {
 // src/components/Tooltip/Content/index.tsx
 var Tooltip5 = __toESM(require("@radix-ui/react-tooltip"));
 var import_tailwind_variants12 = require("tailwind-variants");
+
+// src/components/Tooltip/Context/index.tsx
+var import_react4 = require("react");
+var TooltipThemeContext = (0, import_react4.createContext)("light");
+var useTooltipTheme = () => (0, import_react4.useContext)(TooltipThemeContext);
+
+// src/components/Tooltip/Content/index.tsx
 var import_jsx_runtime29 = require("react/jsx-runtime");
 var content = (0, import_tailwind_variants12.tv)(
   {
     base: [
-      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none  rounded-md px-3 py-2 text-sf-xs leading-none"
+      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none rounded-md px-3 py-2 text-sf-xs leading-none"
     ],
     variants: {
       theme: {
-        // TODO: confirm colors
         light: ["bg-white text-primary-grey-200"],
         dark: ["bg-black text-white"]
       }
@@ -778,7 +784,14 @@ var Content4 = (_a) => {
     "theme",
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(Tooltip5.Content, __spreadProps(__spreadValues({}, props), { className: content({ theme, className }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(TooltipThemeContext.Provider, { value: theme || "light", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(
+    Tooltip5.Content,
+    __spreadProps(__spreadValues({
+      sideOffset: 4
+    }, props), {
+      className: content({ theme, className })
+    })
+  ) });
 };
 
 // src/components/Tooltip/Arrow/index.tsx
@@ -786,7 +799,13 @@ var Tooltip6 = __toESM(require("@radix-ui/react-tooltip"));
 var import_jsx_runtime30 = require("react/jsx-runtime");
 var Arrow2 = (_a) => {
   var props = __objRest(_a, []);
-  return /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(Tooltip6.Arrow, __spreadValues({}, props));
+  const theme = useTooltipTheme();
+  return /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+    Tooltip6.Arrow,
+    __spreadProps(__spreadValues({}, props), {
+      style: { fill: theme === "light" ? "white" : "black" }
+    })
+  );
 };
 
 // src/components/Tooltip/index.tsx
@@ -828,30 +847,42 @@ var Value2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(Select5.Va
 
 // src/components/Select/Content/index.tsx
 var Select6 = __toESM(require("@radix-ui/react-select"));
+var import_lucide_react2 = require("lucide-react");
 var import_tailwind_merge5 = require("tailwind-merge");
 var import_jsx_runtime36 = require("react/jsx-runtime");
-var Content6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
+var Content6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)(
   Select6.Content,
   __spreadProps(__spreadValues({}, props), {
     className: (0, import_tailwind_merge5.twJoin)(
-      "flex w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
+      "flex max-h-[var(--radix-select-content-available-height)] w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
       props == null ? void 0 : props.className
     ),
-    align: "center"
+    sideOffset: 8,
+    align: "center",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Select6.ScrollUpButton, { className: "flex h-[25px] cursor-default items-center justify-center border-b border-neutral-30 text-neutral-900", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_lucide_react2.ChevronUp, { size: "18" }) }),
+      props.children,
+      /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Select6.ScrollDownButton, { className: "flex h-[25px] cursor-default items-center justify-center border-t border-neutral-30 text-neutral-900", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_lucide_react2.ChevronDown, { size: "18" }) })
+    ]
   })
 );
 
 // src/components/Select/Item/index.tsx
 var Select7 = __toESM(require("@radix-ui/react-select"));
+var import_lucide_react3 = require("lucide-react");
 var import_tailwind_merge6 = require("tailwind-merge");
 var import_jsx_runtime37 = require("react/jsx-runtime");
-var Item3 = (props) => /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
+var Item3 = (props) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)(
   Select7.Item,
   __spreadProps(__spreadValues({}, props), {
     className: (0, import_tailwind_merge6.twJoin)(
-      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-20 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-10 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
       props.className
-    )
+    ),
+    children: [
+      props.children,
+      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(Select7.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_lucide_react3.Check, { size: 20 }) })
+    ]
   })
 );
 
@@ -868,7 +899,7 @@ var ItemText2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Select9
 // src/components/Select/ItemIndicator/index.tsx
 var Select10 = __toESM(require("@radix-ui/react-select"));
 var import_jsx_runtime40 = require("react/jsx-runtime");
-var ItemIndicator2 = (props) => /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Select10.ItemIndicator, __spreadValues({}, props));
+var ItemIndicator3 = (props) => /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Select10.ItemIndicator, __spreadValues({}, props));
 
 // src/components/Select/Separator/index.tsx
 var Select11 = __toESM(require("@radix-ui/react-select"));
@@ -891,7 +922,7 @@ var Select13 = {
   Item: Item3,
   Viewport: Viewport2,
   ItemText: ItemText2,
-  ItemIndicator: ItemIndicator2,
+  ItemIndicator: ItemIndicator3,
   Separator: Separator2,
   Group: Group2
 };
@@ -1076,7 +1107,7 @@ var Arrow4 = (props) => {
 var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
 
 // src/components/TextArea/Root/index.tsx
-var import_react4 = require("react");
+var import_react5 = require("react");
 var import_tailwind_variants13 = require("tailwind-variants");
 var import_jsx_runtime56 = require("react/jsx-runtime");
 var input2 = (0, import_tailwind_variants13.tv)(
@@ -1103,7 +1134,7 @@ var input2 = (0, import_tailwind_variants13.tv)(
   },
   { twMerge: true }
 );
-var TextAreaContext = (0, import_react4.createContext)({});
+var TextAreaContext = (0, import_react5.createContext)({});
 var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
@@ -1128,7 +1159,7 @@ var Root22 = (_a) => {
     })
   ) });
 };
-var useTextArea = () => (0, import_react4.useContext)(TextAreaContext);
+var useTextArea = () => (0, import_react5.useContext)(TextAreaContext);
 
 // src/components/TextArea/Control/index.tsx
 var import_tailwind_merge11 = require("tailwind-merge");

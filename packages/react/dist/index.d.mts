@@ -572,7 +572,7 @@ declare const Tooltip: {
     Trigger: (props: TooltipTriggerProps) => react_jsx_runtime.JSX.Element;
     Portal: (props: TooltipPortalProps) => react_jsx_runtime.JSX.Element;
     Content: ({ theme, className, ...props }: TooltipContentProps) => react_jsx_runtime.JSX.Element;
-    Arrow: ({ ...props }: TooltipArrowProps) => react_jsx_runtime.JSX.Element;
+    Arrow: ({ ...props }: Tooltip$1.TooltipArrowProps) => react_jsx_runtime.JSX.Element;
 };
 
 interface SelectRootProps extends PropsWithChildren {

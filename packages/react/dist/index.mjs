@@ -703,15 +703,21 @@ var Portal2 = (props) => {
 // src/components/Tooltip/Content/index.tsx
 import * as Tooltip5 from "@radix-ui/react-tooltip";
 import { tv as tv12 } from "tailwind-variants";
+
+// src/components/Tooltip/Context/index.tsx
+import { createContext as createContext2, useContext as useContext2 } from "react";
+var TooltipThemeContext = createContext2("light");
+var useTooltipTheme = () => useContext2(TooltipThemeContext);
+
+// src/components/Tooltip/Content/index.tsx
 import { jsx as jsx29 } from "react/jsx-runtime";
 var content = tv12(
   {
     base: [
-      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none  rounded-md px-3 py-2 text-sf-xs leading-none"
+      "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade max-w-80 select-none rounded-md px-3 py-2 text-sf-xs leading-none"
     ],
     variants: {
       theme: {
-        // TODO: confirm colors
         light: ["bg-white text-primary-grey-200"],
         dark: ["bg-black text-white"]
       }
@@ -730,7 +736,14 @@ var Content4 = (_a) => {
     "theme",
     "className"
   ]);
-  return /* @__PURE__ */ jsx29(Tooltip5.Content, __spreadProps(__spreadValues({}, props), { className: content({ theme, className }) }));
+  return /* @__PURE__ */ jsx29(TooltipThemeContext.Provider, { value: theme || "light", children: /* @__PURE__ */ jsx29(
+    Tooltip5.Content,
+    __spreadProps(__spreadValues({
+      sideOffset: 4
+    }, props), {
+      className: content({ theme, className })
+    })
+  ) });
 };
 
 // src/components/Tooltip/Arrow/index.tsx
@@ -738,7 +751,13 @@ import * as Tooltip6 from "@radix-ui/react-tooltip";
 import { jsx as jsx30 } from "react/jsx-runtime";
 var Arrow2 = (_a) => {
   var props = __objRest(_a, []);
-  return /* @__PURE__ */ jsx30(Tooltip6.Arrow, __spreadValues({}, props));
+  const theme = useTooltipTheme();
+  return /* @__PURE__ */ jsx30(
+    Tooltip6.Arrow,
+    __spreadProps(__spreadValues({}, props), {
+      style: { fill: theme === "light" ? "white" : "black" }
+    })
+  );
 };
 
 // src/components/Tooltip/index.tsx
@@ -780,30 +799,42 @@ var Value2 = (props) => /* @__PURE__ */ jsx35(Select5.Value, __spreadValues({}, 
 
 // src/components/Select/Content/index.tsx
 import * as Select6 from "@radix-ui/react-select";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { twJoin as twJoin4 } from "tailwind-merge";
-import { jsx as jsx36 } from "react/jsx-runtime";
-var Content6 = (props) => /* @__PURE__ */ jsx36(
+import { jsx as jsx36, jsxs } from "react/jsx-runtime";
+var Content6 = (props) => /* @__PURE__ */ jsxs(
   Select6.Content,
   __spreadProps(__spreadValues({}, props), {
     className: twJoin4(
-      "flex w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
+      "flex max-h-[var(--radix-select-content-available-height)] w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
       props == null ? void 0 : props.className
     ),
-    align: "center"
+    sideOffset: 8,
+    align: "center",
+    children: [
+      /* @__PURE__ */ jsx36(Select6.ScrollUpButton, { className: "flex h-[25px] cursor-default items-center justify-center border-b border-neutral-30 text-neutral-900", children: /* @__PURE__ */ jsx36(ChevronUp, { size: "18" }) }),
+      props.children,
+      /* @__PURE__ */ jsx36(Select6.ScrollDownButton, { className: "flex h-[25px] cursor-default items-center justify-center border-t border-neutral-30 text-neutral-900", children: /* @__PURE__ */ jsx36(ChevronDown, { size: "18" }) })
+    ]
   })
 );
 
 // src/components/Select/Item/index.tsx
 import * as Select7 from "@radix-ui/react-select";
+import { Check as Check2 } from "lucide-react";
 import { twJoin as twJoin5 } from "tailwind-merge";
-import { jsx as jsx37 } from "react/jsx-runtime";
-var Item3 = (props) => /* @__PURE__ */ jsx37(
+import { jsx as jsx37, jsxs as jsxs2 } from "react/jsx-runtime";
+var Item3 = (props) => /* @__PURE__ */ jsxs2(
   Select7.Item,
   __spreadProps(__spreadValues({}, props), {
     className: twJoin5(
-      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-20 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-10 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
       props.className
-    )
+    ),
+    children: [
+      props.children,
+      /* @__PURE__ */ jsx37(Select7.ItemIndicator, { children: /* @__PURE__ */ jsx37(Check2, { size: 20 }) })
+    ]
   })
 );
 
@@ -820,7 +851,7 @@ var ItemText2 = (props) => /* @__PURE__ */ jsx39(Select9.ItemText, __spreadValue
 // src/components/Select/ItemIndicator/index.tsx
 import * as Select10 from "@radix-ui/react-select";
 import { jsx as jsx40 } from "react/jsx-runtime";
-var ItemIndicator2 = (props) => /* @__PURE__ */ jsx40(Select10.ItemIndicator, __spreadValues({}, props));
+var ItemIndicator3 = (props) => /* @__PURE__ */ jsx40(Select10.ItemIndicator, __spreadValues({}, props));
 
 // src/components/Select/Separator/index.tsx
 import * as Select11 from "@radix-ui/react-select";
@@ -843,7 +874,7 @@ var Select13 = {
   Item: Item3,
   Viewport: Viewport2,
   ItemText: ItemText2,
-  ItemIndicator: ItemIndicator2,
+  ItemIndicator: ItemIndicator3,
   Separator: Separator2,
   Group: Group2
 };
@@ -1028,7 +1059,7 @@ var Arrow4 = (props) => {
 var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
 
 // src/components/TextArea/Root/index.tsx
-import { createContext as createContext2, useContext as useContext2 } from "react";
+import { createContext as createContext3, useContext as useContext3 } from "react";
 import { tv as tv13 } from "tailwind-variants";
 import { jsx as jsx56 } from "react/jsx-runtime";
 var input2 = tv13(
@@ -1055,7 +1086,7 @@ var input2 = tv13(
   },
   { twMerge: true }
 );
-var TextAreaContext = createContext2({});
+var TextAreaContext = createContext3({});
 var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
@@ -1080,7 +1111,7 @@ var Root22 = (_a) => {
     })
   ) });
 };
-var useTextArea = () => useContext2(TextAreaContext);
+var useTextArea = () => useContext3(TextAreaContext);
 
 // src/components/TextArea/Control/index.tsx
 import { twJoin as twJoin6 } from "tailwind-merge";

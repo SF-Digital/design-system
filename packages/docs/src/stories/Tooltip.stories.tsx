@@ -121,9 +121,7 @@ export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {
         </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content {...args}>
-            <Tooltip.Arrow
-              style={{ fill: args.theme === 'dark' ? 'black' : 'white' }}
-            />
+            <Tooltip.Arrow />
             <div className="flex flex-col gap-2">
               <Text className="text-sf-xs font-semibold text-neutral-600">
                 This is a tooltip
@@ -147,7 +145,7 @@ export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '50vh',
 
           backgroundColor: '#f5f5f5',
         }}
@@ -169,9 +167,7 @@ export const Small: StoryObj<TooltipProviderProps & TooltipContentProps> = {
         </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content {...args}>
-            <Tooltip.Arrow
-              style={{ fill: args.theme === 'dark' ? 'black' : 'white' }}
-            />
+            <Tooltip.Arrow theme={args.theme} />
             <Text className="text-sf-xs font-semibold">This is a tooltip</Text>
           </Tooltip.Content>
         </Tooltip.Portal>
@@ -185,7 +181,7 @@ export const Small: StoryObj<TooltipProviderProps & TooltipContentProps> = {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '50vh',
 
           backgroundColor: '#f5f5f5',
         }}
