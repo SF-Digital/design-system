@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.9.0
+
+### Minor Changes
+
+- select and tooltip tweaks
+
 ## 4.8.2
 
 ### Patch Changes
