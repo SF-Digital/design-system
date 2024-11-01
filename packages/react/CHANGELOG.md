@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.9.1
+
+### Patch Changes
+
+- button-hover-styles
+
 ## 4.9.0
 
 ### Minor Changes
