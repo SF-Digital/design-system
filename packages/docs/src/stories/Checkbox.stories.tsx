@@ -17,6 +17,8 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `size: 'sm' | 'md' | 'lg'` - The size of the checkbox.
  *
+ * `color: 'sf-green' | 'succession-blue'` - The color of the checkbox.
+ *
  * `checked: boolean` - Whether the checkbox is checked.
  */
 
