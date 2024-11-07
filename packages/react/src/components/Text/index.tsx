@@ -1,26 +1,21 @@
 import { ComponentProps } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
-const text = tv(
-  {
-    base: ['font-sf-digital leading-tight'],
+const text = tv({
+  base: ['font-sf-digital leading-tight'],
 
-    variants: {
-      size: {
-        xs: 'text-sf-xs',
-        sm: 'text-sf-sm',
-        base: 'text-sf-md',
-        lg: 'text-sf-lg',
-      },
-    },
-    defaultVariants: {
-      size: 'base',
+  variants: {
+    size: {
+      xs: 'text-sf-xs',
+      sm: 'text-sf-sm',
+      base: 'text-sf-md',
+      lg: 'text-sf-lg',
     },
   },
-  {
-    twMerge: false,
+  defaultVariants: {
+    size: 'base',
   },
-)
+})
 
 export type TextProps = ComponentProps<'p'> & VariantProps<typeof text>
 

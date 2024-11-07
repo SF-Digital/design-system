@@ -49,25 +49,20 @@ var Box = (_a) => {
 // src/components/Text/index.tsx
 import { tv } from "tailwind-variants";
 import { jsx as jsx2 } from "react/jsx-runtime";
-var text = tv(
-  {
-    base: ["font-sf-digital leading-tight"],
-    variants: {
-      size: {
-        xs: "text-sf-xs",
-        sm: "text-sf-sm",
-        base: "text-sf-md",
-        lg: "text-sf-lg"
-      }
-    },
-    defaultVariants: {
-      size: "base"
+var text = tv({
+  base: ["font-sf-digital leading-tight"],
+  variants: {
+    size: {
+      xs: "text-sf-xs",
+      sm: "text-sf-sm",
+      base: "text-sf-md",
+      lg: "text-sf-lg"
     }
   },
-  {
-    twMerge: false
+  defaultVariants: {
+    size: "base"
   }
-);
+});
 var Text = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ jsx2("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
