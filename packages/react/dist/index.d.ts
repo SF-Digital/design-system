@@ -275,6 +275,10 @@ declare const input$1: tailwind_variants.TVReturnType<{
         true: string;
         false: string;
     };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
 }, undefined, string[], {
     twMerge: true;
 }, {
@@ -287,6 +291,10 @@ declare const input$1: tailwind_variants.TVReturnType<{
         true: string;
         false: string;
     };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
 }, undefined, tailwind_variants.TVReturnType<{
     size: {
         sm: string;
@@ -296,6 +304,10 @@ declare const input$1: tailwind_variants.TVReturnType<{
     disabled: {
         true: string;
         false: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
     };
 }, undefined, string[], {
     twMerge: true;
@@ -311,7 +323,7 @@ type TextInputPrefixProps = ComponentProps<'div'>;
 type TextInputSuffixProps = ComponentProps<'div'>;
 
 declare const TextInput: {
-    Root: ({ size, disabled, className, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ size, disabled, className, color, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
     Control: react.ForwardRefExoticComponent<Omit<react.DetailedHTMLProps<react.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & react.RefAttributes<HTMLInputElement>>;
     Prefix: (props: TextInputPrefixProps) => react_jsx_runtime.JSX.Element;
     Suffix: (props: TextInputSuffixProps) => react_jsx_runtime.JSX.Element;
@@ -490,6 +502,10 @@ declare const tab: tailwind_variants.TVReturnType<{
         solid: string;
         underline: string;
     };
+    color: {
+        'sf-green': never[];
+        'succession-blue': never[];
+    };
     size: {
         base: string;
         lg: string;
@@ -501,6 +517,10 @@ declare const tab: tailwind_variants.TVReturnType<{
         solid: string;
         underline: string;
     };
+    color: {
+        'sf-green': never[];
+        'succession-blue': never[];
+    };
     size: {
         base: string;
         lg: string;
@@ -509,6 +529,10 @@ declare const tab: tailwind_variants.TVReturnType<{
     variant: {
         solid: string;
         underline: string;
+    };
+    color: {
+        'sf-green': never[];
+        'succession-blue': never[];
     };
     size: {
         base: string;
@@ -524,7 +548,7 @@ type TabsContentProps = Tabs$1.TabsContentProps;
 declare const Tabs: {
     Root: (props: TabsRootProps) => react_jsx_runtime.JSX.Element;
     List: (props: TabsListProps) => react_jsx_runtime.JSX.Element;
-    Trigger: ({ size, variant, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
+    Trigger: ({ size, variant, color, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
     Content: (props: TabsContentProps) => react_jsx_runtime.JSX.Element;
 };
 
@@ -533,21 +557,65 @@ declare const toggle$1: tailwind_variants.TVReturnType<{
         sm: string;
         md: string;
     };
-}, undefined, string[], {
-    twMerge: false;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
 }, {
     size: {
         sm: string;
         md: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, {
+    size: {
+        sm: string;
+        md: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
     size: {
         sm: string;
         md: string;
     };
-}, undefined, string[], {
-    twMerge: false;
-}, unknown, unknown, undefined>>;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, {
+    size: {
+        sm: string;
+        md: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, unknown, unknown, undefined>>;
 type ToggleRootProps = Switch.SwitchProps & VariantProps<typeof toggle$1>;
 
 declare const toggle: tailwind_variants.TVReturnType<{
@@ -589,7 +657,7 @@ declare const toggle: tailwind_variants.TVReturnType<{
 type ToggleControlProps = Switch.SwitchThumbProps & VariantProps<typeof toggle>;
 
 declare const Toggle: {
-    Root: ({ className, size, ...props }: ToggleRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ className, color, size, ...props }: ToggleRootProps) => react_jsx_runtime.JSX.Element;
     Control: ({ className, size, ...props }: ToggleControlProps) => react_jsx_runtime.JSX.Element;
 };
 

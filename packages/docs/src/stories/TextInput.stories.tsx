@@ -28,6 +28,8 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `size: 'sm' | 'md' | 'lg'` - The size of the input
  *
+ * `color: 'sf-green' | 'succession-blue'` - The color of the input
+ *
  * `disabled: boolean` - Whether the input is disabled
  */
 
@@ -41,6 +43,12 @@ const TextInputStory: Meta<TextInputRootProps> = {
   argTypes: {
     size: {
       options: ['sm', 'md', 'lg'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    color: {
+      options: ['sf-green', 'succession-blue'],
       control: {
         type: 'inline-radio',
       },

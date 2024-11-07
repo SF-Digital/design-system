@@ -339,7 +339,7 @@ var input = tv4(
   {
     base: [
       "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
-      "focus-within:border focus-within:border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100"
+      "focus-within:border focus-within:ring-4"
     ],
     variants: {
       size: {
@@ -350,11 +350,16 @@ var input = tv4(
       disabled: {
         true: "border-none bg-neutral-40",
         false: ""
+      },
+      color: {
+        "sf-green": "focus-within:border-primary-green-200 focus-within:ring-primary-green-100",
+        "succession-blue": "focus-within:border-succession-blue-200 focus-within:ring-succession-blue-100"
       }
     },
     defaultVariants: {
       size: "md",
-      disabled: false
+      disabled: false,
+      color: "sf-green"
     }
   },
   { twMerge: true }
@@ -364,17 +369,20 @@ var Root2 = (_a) => {
   var _b = _a, {
     size = "sm",
     disabled = false,
-    className
+    className,
+    color
   } = _b, props = __objRest(_b, [
     "size",
     "disabled",
-    "className"
+    "className",
+    "color"
   ]);
   return /* @__PURE__ */ jsx7(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx7(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input({
         className,
+        color,
         disabled,
         size
       })
@@ -564,12 +572,38 @@ var tab = tv8(
         solid: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
         underline: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
       },
+      color: {
+        "sf-green": [],
+        "succession-blue": []
+      },
       size: {
         base: "px-4 py-2.5",
         lg: "px-10 py-2.5"
       }
     },
-    defaultVariants: { variant: "solid", size: "base" }
+    compoundVariants: [
+      {
+        color: "sf-green",
+        variant: "solid",
+        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500'
+      },
+      {
+        color: "sf-green",
+        variant: "underline",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+      },
+      {
+        color: "succession-blue",
+        variant: "solid",
+        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-succession-blue-100 data-[state="active"]:text-succession-blue-500'
+      },
+      {
+        color: "succession-blue",
+        variant: "underline",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-succession-blue-500 data-[state="active"]:text-succession-blue-500'
+      }
+    ],
+    defaultVariants: { variant: "solid", size: "base", color: "sf-green" }
   },
   {
     twMerge: false
@@ -579,10 +613,12 @@ var Trigger2 = (_a) => {
   var _b = _a, {
     size,
     variant,
+    color,
     className
   } = _b, props = __objRest(_b, [
     "size",
     "variant",
+    "color",
     "className"
   ]);
   return /* @__PURE__ */ jsx18(
@@ -591,7 +627,8 @@ var Trigger2 = (_a) => {
       className: tab({
         className,
         variant,
-        size
+        size,
+        color
       })
     })
   );
@@ -611,24 +648,25 @@ var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
 import * as Switch from "@radix-ui/react-switch";
 import { tv as tv9 } from "tailwind-variants";
 import { jsx as jsx20 } from "react/jsx-runtime";
-var toggle = tv9(
-  {
-    base: [
-      'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="checked"]:bg-primary-green-500 data-[state="unchecked"]:bg-neutral-40'
-    ],
-    variants: {
-      size: {
-        sm: "h-5 w-9",
-        md: "h-6 w-11"
-      }
+var toggle = tv9({
+  base: [
+    'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40'
+  ],
+  variants: {
+    size: {
+      sm: "h-5 w-9",
+      md: "h-6 w-11"
     },
-    defaultVariants: { size: "md" }
+    color: {
+      "sf-green": 'data-[state="checked"]:bg-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:bg-succession-blue-500'
+    }
   },
-  { twMerge: false }
-);
+  defaultVariants: { size: "md", color: "sf-green" }
+});
 var Root9 = (_a) => {
-  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ jsx20(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+  var _b = _a, { className, color, size } = _b, props = __objRest(_b, ["className", "color", "size"]);
+  return /* @__PURE__ */ jsx20(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size, color }) }));
 };
 
 // src/components/Toggle/Control/index.tsx
