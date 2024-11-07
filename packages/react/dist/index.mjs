@@ -439,29 +439,34 @@ import * as Checkbox from "@radix-ui/react-checkbox";
 import { forwardRef as forwardRef2 } from "react";
 import { tv as tv5 } from "tailwind-variants";
 import { jsx as jsx12 } from "react/jsx-runtime";
-var checkbox = tv5(
-  {
-    base: [
-      "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
-      'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500'
-    ],
-    variants: {
-      size: {
-        sm: "h-5 w-5",
-        md: "h-6 w-6",
-        lg: "h-8 w-8"
-      }
+var checkbox = tv5({
+  base: [
+    "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
+    'data-[state="checked"]:border-transparent'
+  ],
+  variants: {
+    color: {
+      "sf-green": 'data-[state="checked"]:bg-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:bg-succession-blue-500'
     },
-    defaultVariants: { size: "md" }
+    size: {
+      sm: "h-5 w-5",
+      md: "h-6 w-6",
+      lg: "h-8 w-8"
+    }
   },
-  { twMerge: false }
-);
+  defaultVariants: { size: "md", color: "sf-green" }
+});
 var Root4 = forwardRef2(
   (props, ref) => {
     return /* @__PURE__ */ jsx12(
       Checkbox.Root,
       __spreadValues({
-        className: checkbox({ className: props.className, size: props.size }),
+        className: checkbox({
+          className: props.className,
+          size: props.size,
+          color: props.color
+        }),
         ref
       }, props)
     );
@@ -678,7 +683,7 @@ var Image2 = (props) => {
   return /* @__PURE__ */ jsx23(
     Avatar2.Image,
     __spreadProps(__spreadValues({}, props), {
-      className: '  className="h-full object-cover" w-full rounded-[inherit]'
+      className: 'className="h-full object-cover" w-full rounded-[inherit]'
     })
   );
 };

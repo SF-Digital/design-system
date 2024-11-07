@@ -320,28 +320,76 @@ declare const TextInput: {
 type CheckProps = ComponentProps<typeof Check>;
 
 declare const checkbox: tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
     size: {
         sm: string;
         md: string;
         lg: string;
     };
-}, undefined, string[], {
-    twMerge: false;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
 }, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}>, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
     size: {
         sm: string;
         md: string;
         lg: string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
     size: {
         sm: string;
         md: string;
         lg: string;
     };
-}, undefined, string[], {
-    twMerge: false;
-}, unknown, unknown, undefined>>;
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+}>, unknown, unknown, undefined>>;
 type CheckboxRootProps = ComponentProps<typeof Checkbox$1.Root> & VariantProps<typeof checkbox>;
 
 type CheckboxIndicatorProps = ComponentProps<typeof Checkbox$1.CheckboxIndicator>;
