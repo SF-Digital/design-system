@@ -30,6 +30,12 @@ const RadioGroupStory: Meta<RadioGroupRootProps & RadioGroupItemProps> = {
     defaultValue: '1',
   },
   argTypes: {
+    color: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['sf-green', 'succession-blue'],
+    },
     size: {
       control: 'inline-radio',
       options: ['sm', 'md', 'lg'],

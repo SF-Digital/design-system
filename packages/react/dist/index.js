@@ -552,31 +552,35 @@ var RadioGroupRoot = (_a) => {
 var RadioGroup2 = __toESM(require("@radix-ui/react-radio-group"));
 var import_tailwind_variants7 = require("tailwind-variants");
 var import_jsx_runtime15 = require("react/jsx-runtime");
-var radio2 = (0, import_tailwind_variants7.tv)(
-  {
-    base: [
-      "rounded-full border border-neutral-50 bg-white",
-      ' data-[state="checked"]:border-primary-green-500'
-    ],
-    variants: {
-      size: {
-        sm: 'h-5 w-5 data-[state="checked"]:border-6',
-        md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'h-8 w-8 data-[state="checked"]:border-10'
-      }
+var radio2 = (0, import_tailwind_variants7.tv)({
+  base: ["rounded-full border border-neutral-50 bg-white"],
+  variants: {
+    size: {
+      sm: 'h-5 w-5 data-[state="checked"]:border-6',
+      md: 'h-6 w-6 data-[state="checked"]:border-8',
+      lg: 'h-8 w-8 data-[state="checked"]:border-10'
+    },
+    color: {
+      "sf-green": 'data-[state="checked"]:border-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:border-succession-blue-500'
     }
   },
-  { twMerge: false }
-);
+  defaultVariants: {
+    size: "sm",
+    color: "sf-green"
+  }
+});
 var RadioGroupItem = (_a) => {
   var _b = _a, {
     className,
-    size = "sm"
+    size,
+    color
   } = _b, props = __objRest(_b, [
     "className",
-    "size"
+    "size",
+    "color"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className, color }) }));
 };
 
 // src/components/RadioGroup/index.tsx

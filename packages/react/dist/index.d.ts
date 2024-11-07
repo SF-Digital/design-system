@@ -409,13 +409,39 @@ declare const radio: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
-}, undefined, string[], {
-    twMerge: false;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
 }, {
     size: {
         sm: string;
         md: string;
         lg: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, {
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
     };
 }, undefined, tailwind_variants.TVReturnType<{
     size: {
@@ -423,14 +449,36 @@ declare const radio: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
-}, undefined, string[], {
-    twMerge: false;
-}, unknown, unknown, undefined>>;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, {
+    size: {
+        sm: string;
+        md: string;
+        lg: string;
+    };
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, unknown, unknown, undefined>>;
 type RadioGroupItemProps = ComponentProps<typeof RadioGroup$1.Item> & VariantProps<typeof radio>;
 
 declare const RadioGroup: {
     Root: ({ className, ...props }: RadioGroupRootProps) => react_jsx_runtime.JSX.Element;
-    Item: ({ className, size, ...props }: RadioGroupItemProps) => react_jsx_runtime.JSX.Element;
+    Item: ({ className, size, color, ...props }: RadioGroupItemProps) => react_jsx_runtime.JSX.Element;
 };
 
 type TabsRootProps = Tabs$1.TabsProps;

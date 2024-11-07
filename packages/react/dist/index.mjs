@@ -504,31 +504,35 @@ var RadioGroupRoot = (_a) => {
 import * as RadioGroup2 from "@radix-ui/react-radio-group";
 import { tv as tv7 } from "tailwind-variants";
 import { jsx as jsx15 } from "react/jsx-runtime";
-var radio2 = tv7(
-  {
-    base: [
-      "rounded-full border border-neutral-50 bg-white",
-      ' data-[state="checked"]:border-primary-green-500'
-    ],
-    variants: {
-      size: {
-        sm: 'h-5 w-5 data-[state="checked"]:border-6',
-        md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'h-8 w-8 data-[state="checked"]:border-10'
-      }
+var radio2 = tv7({
+  base: ["rounded-full border border-neutral-50 bg-white"],
+  variants: {
+    size: {
+      sm: 'h-5 w-5 data-[state="checked"]:border-6',
+      md: 'h-6 w-6 data-[state="checked"]:border-8',
+      lg: 'h-8 w-8 data-[state="checked"]:border-10'
+    },
+    color: {
+      "sf-green": 'data-[state="checked"]:border-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:border-succession-blue-500'
     }
   },
-  { twMerge: false }
-);
+  defaultVariants: {
+    size: "sm",
+    color: "sf-green"
+  }
+});
 var RadioGroupItem = (_a) => {
   var _b = _a, {
     className,
-    size = "sm"
+    size,
+    color
   } = _b, props = __objRest(_b, [
     "className",
-    "size"
+    "size",
+    "color"
   ]);
-  return /* @__PURE__ */ jsx15(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className }) }));
+  return /* @__PURE__ */ jsx15(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className, color }) }));
 };
 
 // src/components/RadioGroup/index.tsx
