@@ -46,6 +46,10 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `variant: 'solid' | 'underline'` (Only for Trigger) - The variant of the trigger (default: solid)
  *
+ * `size: 'base' | 'lg'` (Only for Trigger) - The size of the trigger (default: base)
+ *
+ * `color: 'sf-green' | 'succession-blue'` (Only for Trigger) - The color of the trigger (default: sf-green)
+ *
  * Data attribute
  *
  * `[data-state]: 'active' | 'disabled'` - The state of the trigger
@@ -74,6 +78,12 @@ const TabsStory: Meta<TabsRootProps & TabsTriggerProps> = {
       },
       options: ['solid', 'underline'],
     },
+    color: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['sf-green', 'succession-blue'],
+    },
   },
 }
 
@@ -86,13 +96,28 @@ export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
       <Tabs.List
         className={args.variant === 'solid' ? 'gap-2 flex-row flex' : ''}
       >
-        <Tabs.Trigger size={args.size} variant={args.variant} value="one">
+        <Tabs.Trigger
+          size={args.size}
+          variant={args.variant}
+          color={args.color}
+          value="one"
+        >
           One
         </Tabs.Trigger>
-        <Tabs.Trigger size={args.size} variant={args.variant} value="two">
+        <Tabs.Trigger
+          size={args.size}
+          variant={args.variant}
+          color={args.color}
+          value="two"
+        >
           Two
         </Tabs.Trigger>
-        <Tabs.Trigger size={args.size} variant={args.variant} value="three">
+        <Tabs.Trigger
+          size={args.size}
+          variant={args.variant}
+          color={args.color}
+          value="three"
+        >
           Three
         </Tabs.Trigger>
       </Tabs.List>
