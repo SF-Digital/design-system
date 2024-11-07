@@ -87,6 +87,7 @@ declare const Heading: ({ className, size, ...props }: HeadingProps) => react_js
 declare const button: tailwind_variants.TVReturnType<{
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -110,6 +111,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], tailwind_variants_dist_config.TVConfig<{
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -133,6 +135,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }, {
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -156,6 +159,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }>, {
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -179,6 +183,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, tailwind_variants.TVReturnType<{
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -202,6 +207,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }, undefined, string[], tailwind_variants_dist_config.TVConfig<{
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];
@@ -225,6 +231,7 @@ declare const button: tailwind_variants.TVReturnType<{
 }, {
     color: {
         'sf-green': never[];
+        'succession-blue': never[];
         neutral: never[];
         success: never[];
         warning: never[];

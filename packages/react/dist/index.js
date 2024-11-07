@@ -160,6 +160,7 @@ var button = (0, import_tailwind_variants3.tv)({
   variants: {
     color: {
       "sf-green": [],
+      "succession-blue": [],
       neutral: [],
       success: [],
       warning: [],
@@ -218,6 +219,11 @@ var button = (0, import_tailwind_variants3.tv)({
       className: "bg-primary-green-500 text-white hover:bg-primary-green-700 active:bg-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
+      color: "succession-blue",
+      variant: "primary",
+      className: "bg-succession-blue-500 text-white hover:bg-succession-blue-700 active:bg-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
       color: "success",
       variant: "primary",
       className: "bg-success-500 text-white hover:bg-success-700 active:bg-success-500 active:ring-4 active:ring-success-100 disabled:bg-neutral-30 disabled:text-neutral-70 disabled:hover:bg-neutral-30 disabled:hover:text-neutral-70 disabled:active:ring-0"
@@ -243,6 +249,11 @@ var button = (0, import_tailwind_variants3.tv)({
       className: "border-primary-green-500 text-primary-green-500 hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700 active:border-primary-green-500 active:bg-transparent active:text-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
+      color: "succession-blue",
+      variant: "secondary",
+      className: "border-succession-blue-500 text-succession-blue-500 hover:border-succession-blue-700 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:border-succession-blue-500 active:bg-transparent active:text-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
       color: "success",
       variant: "secondary",
       className: "border-success-100 text-success-600 hover:border-success-100 hover:bg-success-50 hover:text-success-800 active:border-success-100 active:bg-white active:text-success-700 active:ring-4 active:ring-success-50 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70 disabled:hover:border-neutral-30 disabled:hover:bg-neutral-10 disabled:hover:text-neutral-70 disabled:active:ring-0"
@@ -261,6 +272,11 @@ var button = (0, import_tailwind_variants3.tv)({
       color: "sf-green",
       variant: "tertiary",
       className: "text-primary-green-500 hover:bg-primary-green-50 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
+      color: "succession-blue",
+      variant: "tertiary",
+      className: "text-succession-blue-500 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
       color: "neutral",
@@ -291,6 +307,11 @@ var button = (0, import_tailwind_variants3.tv)({
       color: "sf-green",
       variant: "link",
       className: "text-primary-green-500 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
+      color: "succession-blue",
+      variant: "link",
+      className: "text-succession-blue-500 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
       color: "success",

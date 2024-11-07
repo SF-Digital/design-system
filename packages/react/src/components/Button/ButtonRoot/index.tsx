@@ -9,6 +9,7 @@ const button = tv({
   variants: {
     color: {
       'sf-green': [],
+      'succession-blue': [],
       neutral: [],
       success: [],
       warning: [],
@@ -69,6 +70,12 @@ const button = tv({
         'bg-primary-green-500 text-white hover:bg-primary-green-700 active:bg-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0',
     },
     {
+      color: 'succession-blue',
+      variant: 'primary',
+      className:
+        'bg-succession-blue-500 text-white hover:bg-succession-blue-700 active:bg-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0',
+    },
+    {
       color: 'success',
       variant: 'primary',
       className:
@@ -99,6 +106,12 @@ const button = tv({
         'border-primary-green-500 text-primary-green-500 hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700 active:border-primary-green-500 active:bg-transparent active:text-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0',
     },
     {
+      color: 'succession-blue',
+      variant: 'secondary',
+      className:
+        'border-succession-blue-500 text-succession-blue-500 hover:border-succession-blue-700 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:border-succession-blue-500 active:bg-transparent active:text-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0',
+    },
+    {
       color: 'success',
       variant: 'secondary',
       className:
@@ -121,6 +134,12 @@ const button = tv({
       variant: 'tertiary',
       className:
         'text-primary-green-500 hover:bg-primary-green-50 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0',
+    },
+    {
+      color: 'succession-blue',
+      variant: 'tertiary',
+      className:
+        'text-succession-blue-500 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0',
     },
     {
       color: 'neutral',
@@ -157,6 +176,12 @@ const button = tv({
       variant: 'link',
       className:
         'text-primary-green-500 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0',
+    },
+    {
+      color: 'succession-blue',
+      variant: 'link',
+      className:
+        'text-succession-blue-500 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0',
     },
     {
       color: 'success',
