@@ -5,7 +5,7 @@ const input = tv(
   {
     base: [
       'flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80',
-      'focus-within:border focus-within:border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100',
+      'focus-within:border focus-within:ring-4',
     ],
 
     variants: {
@@ -18,10 +18,17 @@ const input = tv(
         true: 'border-none bg-neutral-40',
         false: '',
       },
+      color: {
+        'sf-green':
+          'focus-within:border-primary-green-200 focus-within:ring-primary-green-100',
+        'succession-blue':
+          'focus-within:border-succession-blue-200 focus-within:ring-succession-blue-100',
+      },
     },
     defaultVariants: {
       size: 'md',
       disabled: false,
+      color: 'sf-green',
     },
   },
   { twMerge: true },
@@ -41,6 +48,7 @@ export const Root = ({
   size = 'sm',
   disabled = false,
   className,
+  color,
   ...props
 }: TextInputRootProps) => {
   return (
@@ -49,6 +57,7 @@ export const Root = ({
         {...props}
         className={input({
           className,
+          color,
           disabled,
           size,
         })}

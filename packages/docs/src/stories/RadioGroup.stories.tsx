@@ -20,6 +20,9 @@ import { Meta, StoryObj } from '@storybook/react'
  * ### Item
  *
  * `size: 'sm' | 'md' | 'lg'` - The size of the radio item.
+ *
+ * `color: 'sf-green' | 'succession-blue'` - The color of the checkbox.
+ *
  */
 
 const RadioGroupStory: Meta<RadioGroupRootProps & RadioGroupItemProps> = {
@@ -30,6 +33,12 @@ const RadioGroupStory: Meta<RadioGroupRootProps & RadioGroupItemProps> = {
     defaultValue: '1',
   },
   argTypes: {
+    color: {
+      control: {
+        type: 'inline-radio',
+      },
+      options: ['sf-green', 'succession-blue'],
+    },
     size: {
       control: 'inline-radio',
       options: ['sm', 'md', 'lg'],

@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.10.0
+
+### Minor Changes
+
+- c bump 🦅💪🎆🚀🧨
+
 ## 4.9.1
 
 ### Patch Changes

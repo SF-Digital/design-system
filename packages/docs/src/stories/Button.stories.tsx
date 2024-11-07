@@ -22,7 +22,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `variant: 'primary' | 'secondary' | 'tertiary' | 'link'` - The variant.
  *
- * `color: 'sf-green' | 'neutral' | 'success' | 'error' | 'warning'` - The color.
+ * `color: 'sf-green' | 'neutral' | 'success' | 'error' | 'warning' | 'succession-blue'` - The color.
  *
  * `disabled: boolean` - Whether the button is disabled.
  *
@@ -46,7 +46,14 @@ const ButtonStory: Meta<ButtonRootProps> = {
       control: {
         type: 'inline-radio',
       },
-      options: ['sf-green', 'neutral', 'success', 'error', 'warning'],
+      options: [
+        'sf-green',
+        'neutral',
+        'success',
+        'error',
+        'warning',
+        'succession-blue',
+      ],
     },
     variant: {
       options: ['primary', 'secondary', 'tertiary', 'link'],
@@ -83,6 +90,14 @@ export const PrimarySF: StoryObj<ButtonRootProps> = {
   },
 }
 
+export const PrimarySuccessionBlue: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'primary',
+    color: 'neutral',
+    children: 'Create new',
+  },
+}
+
 export const PrimarySuccess: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'primary',
@@ -111,6 +126,14 @@ export const SecondarySF: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'secondary',
     color: 'sf-green',
+    children: 'Create new',
+  },
+}
+
+export const SecondarySuccessionBlue: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'secondary',
+    color: 'neutral',
     children: 'Create new',
   },
 }
@@ -155,6 +178,14 @@ export const TertiarySF: StoryObj<ButtonRootProps> = {
   },
 }
 
+export const TertiarySuccessionBlue: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'tertiary',
+    color: 'neutral',
+    children: 'Create new',
+  },
+}
+
 export const TertiaryNeutral: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'tertiary',
@@ -191,6 +222,14 @@ export const LinkSF: StoryObj<ButtonRootProps> = {
   args: {
     variant: 'link',
     color: 'sf-green',
+    children: 'Create new',
+  },
+}
+
+export const LinkSuccessionBlue: StoryObj<ButtonRootProps> = {
+  args: {
+    variant: 'link',
+    color: 'neutral',
     children: 'Create new',
   },
 }

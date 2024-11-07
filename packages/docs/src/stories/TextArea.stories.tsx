@@ -25,7 +25,7 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `disabled: boolean` - Whether the input is disabled
  *
- * `error: boolean` - Whether the input has an error
+ * `color: 'sf-green' | 'succession-blue' | 'error'` - The color of the input
  */
 
 export default {
@@ -34,7 +34,6 @@ export default {
   args: {
     size: 'sm',
     disabled: false,
-    error: false,
   },
   argTypes: {
     size: {
@@ -43,12 +42,13 @@ export default {
         type: 'inline-radio',
       },
     },
-    disabled: {
+    color: {
+      options: ['sf-green', 'succession-blue', 'error'],
       control: {
-        type: 'boolean',
+        type: 'inline-radio',
       },
     },
-    error: {
+    disabled: {
       control: {
         type: 'boolean',
       },

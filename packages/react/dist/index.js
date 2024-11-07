@@ -97,25 +97,20 @@ var Box = (_a) => {
 // src/components/Text/index.tsx
 var import_tailwind_variants = require("tailwind-variants");
 var import_jsx_runtime2 = require("react/jsx-runtime");
-var text = (0, import_tailwind_variants.tv)(
-  {
-    base: ["font-sf-digital leading-tight"],
-    variants: {
-      size: {
-        xs: "text-sf-xs",
-        sm: "text-sf-sm",
-        base: "text-sf-md",
-        lg: "text-sf-lg"
-      }
-    },
-    defaultVariants: {
-      size: "base"
+var text = (0, import_tailwind_variants.tv)({
+  base: ["font-sf-digital leading-tight"],
+  variants: {
+    size: {
+      xs: "text-sf-xs",
+      sm: "text-sf-sm",
+      base: "text-sf-md",
+      lg: "text-sf-lg"
     }
   },
-  {
-    twMerge: false
+  defaultVariants: {
+    size: "base"
   }
-);
+});
 var Text = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
@@ -160,6 +155,7 @@ var button = (0, import_tailwind_variants3.tv)({
   variants: {
     color: {
       "sf-green": [],
+      "succession-blue": [],
       neutral: [],
       success: [],
       warning: [],
@@ -218,6 +214,11 @@ var button = (0, import_tailwind_variants3.tv)({
       className: "bg-primary-green-500 text-white hover:bg-primary-green-700 active:bg-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
+      color: "succession-blue",
+      variant: "primary",
+      className: "bg-succession-blue-500 text-white hover:bg-succession-blue-700 active:bg-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border disabled:border-neutral-50 disabled:bg-neutral-20 disabled:text-neutral-80 disabled:hover:bg-neutral-20 disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
       color: "success",
       variant: "primary",
       className: "bg-success-500 text-white hover:bg-success-700 active:bg-success-500 active:ring-4 active:ring-success-100 disabled:bg-neutral-30 disabled:text-neutral-70 disabled:hover:bg-neutral-30 disabled:hover:text-neutral-70 disabled:active:ring-0"
@@ -243,6 +244,11 @@ var button = (0, import_tailwind_variants3.tv)({
       className: "border-primary-green-500 text-primary-green-500 hover:border-primary-green-700 hover:bg-primary-green-50 hover:text-primary-green-700 active:border-primary-green-500 active:bg-transparent active:text-primary-green-500 active:ring-4 active:ring-primary-green-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
+      color: "succession-blue",
+      variant: "secondary",
+      className: "border-succession-blue-500 text-succession-blue-500 hover:border-succession-blue-700 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:border-succession-blue-500 active:bg-transparent active:text-succession-blue-500 active:ring-4 active:ring-succession-blue-50 disabled:border-neutral-50 disabled:bg-white disabled:text-neutral-80 disabled:hover:border-neutral-50 disabled:hover:bg-white disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
       color: "success",
       variant: "secondary",
       className: "border-success-100 text-success-600 hover:border-success-100 hover:bg-success-50 hover:text-success-800 active:border-success-100 active:bg-white active:text-success-700 active:ring-4 active:ring-success-50 disabled:border-neutral-30 disabled:bg-neutral-10 disabled:text-neutral-70 disabled:hover:border-neutral-30 disabled:hover:bg-neutral-10 disabled:hover:text-neutral-70 disabled:active:ring-0"
@@ -261,6 +267,11 @@ var button = (0, import_tailwind_variants3.tv)({
       color: "sf-green",
       variant: "tertiary",
       className: "text-primary-green-500 hover:bg-primary-green-50 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
+      color: "succession-blue",
+      variant: "tertiary",
+      className: "text-succession-blue-500 hover:bg-succession-blue-50 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-500 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:bg-transparent disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
       color: "neutral",
@@ -291,6 +302,11 @@ var button = (0, import_tailwind_variants3.tv)({
       color: "sf-green",
       variant: "link",
       className: "text-primary-green-500 hover:text-primary-green-700 active:bg-transparent active:text-primary-green-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0"
+    },
+    {
+      color: "succession-blue",
+      variant: "link",
+      className: "text-succession-blue-500 hover:text-succession-blue-700 active:bg-transparent active:text-succession-blue-600 disabled:bg-transparent disabled:text-neutral-80 disabled:hover:text-neutral-80 disabled:active:ring-0"
     },
     {
       color: "success",
@@ -366,7 +382,7 @@ var input = (0, import_tailwind_variants4.tv)(
   {
     base: [
       "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
-      "focus-within:border focus-within:border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100"
+      "focus-within:border focus-within:ring-4"
     ],
     variants: {
       size: {
@@ -377,11 +393,16 @@ var input = (0, import_tailwind_variants4.tv)(
       disabled: {
         true: "border-none bg-neutral-40",
         false: ""
+      },
+      color: {
+        "sf-green": "focus-within:border-primary-green-200 focus-within:ring-primary-green-100",
+        "succession-blue": "focus-within:border-succession-blue-200 focus-within:ring-succession-blue-100"
       }
     },
     defaultVariants: {
       size: "md",
-      disabled: false
+      disabled: false,
+      color: "sf-green"
     }
   },
   { twMerge: true }
@@ -391,17 +412,20 @@ var Root2 = (_a) => {
   var _b = _a, {
     size = "sm",
     disabled = false,
-    className
+    className,
+    color
   } = _b, props = __objRest(_b, [
     "size",
     "disabled",
-    "className"
+    "className",
+    "color"
   ]);
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(TextInputContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input({
         className,
+        color,
         disabled,
         size
       })
@@ -466,29 +490,34 @@ var Checkbox = __toESM(require("@radix-ui/react-checkbox"));
 var import_react3 = require("react");
 var import_tailwind_variants5 = require("tailwind-variants");
 var import_jsx_runtime12 = require("react/jsx-runtime");
-var checkbox = (0, import_tailwind_variants5.tv)(
-  {
-    base: [
-      "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
-      'data-[state="checked"]:border-transparent data-[state="checked"]:bg-primary-green-500'
-    ],
-    variants: {
-      size: {
-        sm: "h-5 w-5",
-        md: "h-6 w-6",
-        lg: "h-8 w-8"
-      }
+var checkbox = (0, import_tailwind_variants5.tv)({
+  base: [
+    "border-xs flex h-5 w-5 items-center justify-center rounded-xs border border-neutral-50",
+    'data-[state="checked"]:border-transparent'
+  ],
+  variants: {
+    color: {
+      "sf-green": 'data-[state="checked"]:bg-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:bg-succession-blue-500'
     },
-    defaultVariants: { size: "md" }
+    size: {
+      sm: "h-5 w-5",
+      md: "h-6 w-6",
+      lg: "h-8 w-8"
+    }
   },
-  { twMerge: false }
-);
+  defaultVariants: { size: "md", color: "sf-green" }
+});
 var Root4 = (0, import_react3.forwardRef)(
   (props, ref) => {
     return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
       Checkbox.Root,
       __spreadValues({
-        className: checkbox({ className: props.className, size: props.size }),
+        className: checkbox({
+          className: props.className,
+          size: props.size,
+          color: props.color
+        }),
         ref
       }, props)
     );
@@ -526,31 +555,35 @@ var RadioGroupRoot = (_a) => {
 var RadioGroup2 = __toESM(require("@radix-ui/react-radio-group"));
 var import_tailwind_variants7 = require("tailwind-variants");
 var import_jsx_runtime15 = require("react/jsx-runtime");
-var radio2 = (0, import_tailwind_variants7.tv)(
-  {
-    base: [
-      "rounded-full border border-neutral-50 bg-white",
-      ' data-[state="checked"]:border-primary-green-500'
-    ],
-    variants: {
-      size: {
-        sm: 'h-5 w-5 data-[state="checked"]:border-6',
-        md: 'h-6 w-6 data-[state="checked"]:border-8',
-        lg: 'h-8 w-8 data-[state="checked"]:border-10'
-      }
+var radio2 = (0, import_tailwind_variants7.tv)({
+  base: ["rounded-full border border-neutral-50 bg-white"],
+  variants: {
+    size: {
+      sm: 'h-5 w-5 data-[state="checked"]:border-6',
+      md: 'h-6 w-6 data-[state="checked"]:border-8',
+      lg: 'h-8 w-8 data-[state="checked"]:border-10'
+    },
+    color: {
+      "sf-green": 'data-[state="checked"]:border-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:border-succession-blue-500'
     }
   },
-  { twMerge: false }
-);
+  defaultVariants: {
+    size: "sm",
+    color: "sf-green"
+  }
+});
 var RadioGroupItem = (_a) => {
   var _b = _a, {
     className,
-    size = "sm"
+    size,
+    color
   } = _b, props = __objRest(_b, [
     "className",
-    "size"
+    "size",
+    "color"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className }) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(RadioGroup2.Item, __spreadProps(__spreadValues({}, props), { className: radio2({ size, className, color }) }));
 };
 
 // src/components/RadioGroup/index.tsx
@@ -582,12 +615,38 @@ var tab = (0, import_tailwind_variants8.tv)(
         solid: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
         underline: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
       },
+      color: {
+        "sf-green": [],
+        "succession-blue": []
+      },
       size: {
         base: "px-4 py-2.5",
         lg: "px-10 py-2.5"
       }
     },
-    defaultVariants: { variant: "solid", size: "base" }
+    compoundVariants: [
+      {
+        color: "sf-green",
+        variant: "solid",
+        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500'
+      },
+      {
+        color: "sf-green",
+        variant: "underline",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+      },
+      {
+        color: "succession-blue",
+        variant: "solid",
+        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-succession-blue-100 data-[state="active"]:text-succession-blue-500'
+      },
+      {
+        color: "succession-blue",
+        variant: "underline",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-succession-blue-500 data-[state="active"]:text-succession-blue-500'
+      }
+    ],
+    defaultVariants: { variant: "solid", size: "base", color: "sf-green" }
   },
   {
     twMerge: false
@@ -597,10 +656,12 @@ var Trigger2 = (_a) => {
   var _b = _a, {
     size,
     variant,
+    color,
     className
   } = _b, props = __objRest(_b, [
     "size",
     "variant",
+    "color",
     "className"
   ]);
   return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
@@ -609,7 +670,8 @@ var Trigger2 = (_a) => {
       className: tab({
         className,
         variant,
-        size
+        size,
+        color
       })
     })
   );
@@ -629,24 +691,25 @@ var Tabs5 = { Root: Root7, List: List2, Trigger: Trigger2, Content: Content2 };
 var Switch = __toESM(require("@radix-ui/react-switch"));
 var import_tailwind_variants9 = require("tailwind-variants");
 var import_jsx_runtime20 = require("react/jsx-runtime");
-var toggle = (0, import_tailwind_variants9.tv)(
-  {
-    base: [
-      'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="checked"]:bg-primary-green-500 data-[state="unchecked"]:bg-neutral-40'
-    ],
-    variants: {
-      size: {
-        sm: "h-5 w-9",
-        md: "h-6 w-11"
-      }
+var toggle = (0, import_tailwind_variants9.tv)({
+  base: [
+    'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40'
+  ],
+  variants: {
+    size: {
+      sm: "h-5 w-9",
+      md: "h-6 w-11"
     },
-    defaultVariants: { size: "md" }
+    color: {
+      "sf-green": 'data-[state="checked"]:bg-primary-green-500',
+      "succession-blue": 'data-[state="checked"]:bg-succession-blue-500'
+    }
   },
-  { twMerge: false }
-);
+  defaultVariants: { size: "md", color: "sf-green" }
+});
 var Root9 = (_a) => {
-  var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size }) }));
+  var _b = _a, { className, color, size } = _b, props = __objRest(_b, ["className", "color", "size"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Switch.Root, __spreadProps(__spreadValues({}, props), { className: toggle({ className, size, color }) }));
 };
 
 // src/components/Toggle/Control/index.tsx
@@ -705,7 +768,7 @@ var Image2 = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
     Avatar2.Image,
     __spreadProps(__spreadValues({}, props), {
-      className: '  className="h-full object-cover" w-full rounded-[inherit]'
+      className: 'className="h-full object-cover" w-full rounded-[inherit]'
     })
   );
 };
@@ -819,16 +882,31 @@ var Root15 = (props) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Select.Roo
 // src/components/Select/Trigger/index.tsx
 var Select2 = __toESM(require("@radix-ui/react-select"));
 var import_tailwind_merge4 = require("tailwind-merge");
+var import_tailwind_variants13 = require("tailwind-variants");
 var import_jsx_runtime32 = require("react/jsx-runtime");
-var Trigger6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
-  Select2.Trigger,
-  __spreadProps(__spreadValues({}, props), {
-    className: (0, import_tailwind_merge4.twJoin)(
-      'flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[state="open"]:border-primary-green-500 data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500',
-      props == null ? void 0 : props.className
-    )
-  })
-);
+var trigger = (0, import_tailwind_variants13.tv)({
+  base: [
+    "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500"
+  ],
+  variants: {
+    color: {
+      "sf-green": 'data-[state="open"]:border-primary-green-500',
+      "succession-blue": 'data-[state="open"]:border-succession-blue-500'
+    }
+  },
+  defaultVariants: {
+    color: "sf-green"
+  }
+});
+var Trigger6 = (_a) => {
+  var _b = _a, { color } = _b, props = __objRest(_b, ["color"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
+    Select2.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: (0, import_tailwind_merge4.twJoin)(trigger({ color }), props == null ? void 0 : props.className)
+    })
+  );
+};
 
 // src/components/Select/Portal/index.tsx
 var Select3 = __toESM(require("@radix-ui/react-select"));
@@ -1108,13 +1186,13 @@ var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Co
 
 // src/components/TextArea/Root/index.tsx
 var import_react5 = require("react");
-var import_tailwind_variants13 = require("tailwind-variants");
+var import_tailwind_variants14 = require("tailwind-variants");
 var import_jsx_runtime56 = require("react/jsx-runtime");
-var input2 = (0, import_tailwind_variants13.tv)(
+var input2 = (0, import_tailwind_variants14.tv)(
   {
     base: [
-      "flex w-128 h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
-      "border "
+      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white text-neutral-80",
+      "border"
     ],
     variants: {
       size: {
@@ -1122,14 +1200,20 @@ var input2 = (0, import_tailwind_variants13.tv)(
         md: "px-4 py-2.5 text-sf-md",
         lg: "px-4 py-2.5 text-sf-lg"
       },
+      color: {
+        "sf-green": "border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100",
+        "succession-blue": "border-succession-blue-200 focus-within:ring-4 focus-within:ring-succession-blue-100",
+        error: "border-error-200 focus-within:ring-4 focus-within:ring-error-100"
+      },
       disabled: {
         true: "border border-neutral-40 bg-neutral-10 text-neutral-300",
         false: ""
-      },
-      error: {
-        true: "border border-error-200 focus-within:ring-error-100 focus-within:ring-2",
-        false: "border focus-within:border-primary-green-200 focus-within:ring-green-100 focus-within:ring-2"
       }
+    },
+    defaultVariants: {
+      size: "sm",
+      disabled: false,
+      color: "sf-green"
     }
   },
   { twMerge: true }
@@ -1139,22 +1223,22 @@ var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
     disabled = false,
-    error = false,
+    color = "sf-green",
     className
   } = _b, props = __objRest(_b, [
     "size",
     "disabled",
-    "error",
+    "color",
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextAreaContext.Provider, { value: { size, color, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input2({
         className,
         disabled,
         size,
-        error
+        color
       })
     })
   ) });

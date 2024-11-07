@@ -1,4 +1,8 @@
-import { Select, SelectRootProps } from '@sf-digital-ui/react'
+import {
+  Select,
+  SelectRootProps,
+  SelectTriggerProps,
+} from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react'
 import { ChevronDown, User } from 'lucide-react'
 import '@sf-digital-ui/react/dist/output.css'
@@ -79,6 +83,8 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `align: 'start' | 'center' | 'end'` - The alignment of the content
  *
+ * 'color: 'sf-green' | 'succession-blue'` - The color of the styling
+ *
  * Data Attribute
  *
  * `[data-side]: 'top' | 'bottom' | 'left' | 'right'` - The side of the content
@@ -105,11 +111,18 @@ import '@sf-digital-ui/react/dist/output.css'
  * `[data-highlighted]`
  */
 
-const SelectStory: Meta<SelectRootProps> = {
+const SelectStory: Meta<SelectRootProps & SelectTriggerProps> = {
   title: 'Form/Select',
   component: Select.Root,
-  args: {},
-  argTypes: {},
+  args: {
+    color: 'sf-green',
+  },
+  argTypes: {
+    color: {
+      options: ['sf-green', 'succession-blue'],
+      control: { type: 'inline-radio' },
+    },
+  },
 }
 
 export default SelectStory
@@ -155,10 +168,10 @@ const longExampleSelection = [
   'Option 30',
 ]
 
-export const Default: StoryObj<SelectRootProps> = {
+export const Default: StoryObj<SelectRootProps & SelectTriggerProps> = {
   render: (args) => (
     <Select.Root {...args}>
-      <Select.Trigger className="max-w-80 w-full">
+      <Select.Trigger className="max-w-80 w-full" color={args.color}>
         <div className="flex flex-row items-center gap-2">
           <Select.Value placeholder="Select team member" />
         </div>

@@ -6,7 +6,7 @@ export const Image = (props: AvatarImageProps) => {
   return (
     <Avatar.Image
       {...props}
-      className='  className="h-full object-cover" w-full rounded-[inherit]'
+      className='className="h-full object-cover" w-full rounded-[inherit]'
     />
   )
 }
