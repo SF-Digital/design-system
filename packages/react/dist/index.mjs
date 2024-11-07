@@ -834,16 +834,31 @@ var Root15 = (props) => /* @__PURE__ */ jsx31(Select.Root, __spreadValues({}, pr
 // src/components/Select/Trigger/index.tsx
 import * as Select2 from "@radix-ui/react-select";
 import { twJoin as twJoin3 } from "tailwind-merge";
+import { tv as tv13 } from "tailwind-variants";
 import { jsx as jsx32 } from "react/jsx-runtime";
-var Trigger6 = (props) => /* @__PURE__ */ jsx32(
-  Select2.Trigger,
-  __spreadProps(__spreadValues({}, props), {
-    className: twJoin3(
-      'flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[state="open"]:border-primary-green-500 data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500',
-      props == null ? void 0 : props.className
-    )
-  })
-);
+var trigger = tv13({
+  base: [
+    "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500"
+  ],
+  variants: {
+    color: {
+      "sf-green": 'data-[state="open"]:border-primary-green-500',
+      "succession-blue": 'data-[state="open"]:border-succession-blue-500'
+    }
+  },
+  defaultVariants: {
+    color: "sf-green"
+  }
+});
+var Trigger6 = (_a) => {
+  var _b = _a, { color } = _b, props = __objRest(_b, ["color"]);
+  return /* @__PURE__ */ jsx32(
+    Select2.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: twJoin3(trigger({ color }), props == null ? void 0 : props.className)
+    })
+  );
+};
 
 // src/components/Select/Portal/index.tsx
 import * as Select3 from "@radix-ui/react-select";
@@ -1123,13 +1138,13 @@ var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Co
 
 // src/components/TextArea/Root/index.tsx
 import { createContext as createContext3, useContext as useContext3 } from "react";
-import { tv as tv13 } from "tailwind-variants";
+import { tv as tv14 } from "tailwind-variants";
 import { jsx as jsx56 } from "react/jsx-runtime";
-var input2 = tv13(
+var input2 = tv14(
   {
     base: [
-      "flex w-128 h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
-      "border "
+      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white text-neutral-80",
+      "border"
     ],
     variants: {
       size: {
@@ -1137,14 +1152,20 @@ var input2 = tv13(
         md: "px-4 py-2.5 text-sf-md",
         lg: "px-4 py-2.5 text-sf-lg"
       },
+      color: {
+        "sf-green": "border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100",
+        "succession-blue": "border-succession-blue-200 focus-within:ring-4 focus-within:ring-succession-blue-100",
+        error: "border-error-200 focus-within:ring-4 focus-within:ring-error-100"
+      },
       disabled: {
         true: "border border-neutral-40 bg-neutral-10 text-neutral-300",
         false: ""
-      },
-      error: {
-        true: "border border-error-200 focus-within:ring-error-100 focus-within:ring-2",
-        false: "border focus-within:border-primary-green-200 focus-within:ring-green-100 focus-within:ring-2"
       }
+    },
+    defaultVariants: {
+      size: "sm",
+      disabled: false,
+      color: "sf-green"
     }
   },
   { twMerge: true }
@@ -1154,22 +1175,22 @@ var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
     disabled = false,
-    error = false,
+    color = "sf-green",
     className
   } = _b, props = __objRest(_b, [
     "size",
     "disabled",
-    "error",
+    "color",
     "className"
   ]);
-  return /* @__PURE__ */ jsx56(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ jsx56(
+  return /* @__PURE__ */ jsx56(TextAreaContext.Provider, { value: { size, color, disabled }, children: /* @__PURE__ */ jsx56(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input2({
         className,
         disabled,
         size,
-        error
+        color
       })
     })
   ) });

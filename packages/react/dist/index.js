@@ -882,16 +882,31 @@ var Root15 = (props) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Select.Roo
 // src/components/Select/Trigger/index.tsx
 var Select2 = __toESM(require("@radix-ui/react-select"));
 var import_tailwind_merge4 = require("tailwind-merge");
+var import_tailwind_variants13 = require("tailwind-variants");
 var import_jsx_runtime32 = require("react/jsx-runtime");
-var Trigger6 = (props) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
-  Select2.Trigger,
-  __spreadProps(__spreadValues({}, props), {
-    className: (0, import_tailwind_merge4.twJoin)(
-      'flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[state="open"]:border-primary-green-500 data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500',
-      props == null ? void 0 : props.className
-    )
-  })
-);
+var trigger = (0, import_tailwind_variants13.tv)({
+  base: [
+    "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500"
+  ],
+  variants: {
+    color: {
+      "sf-green": 'data-[state="open"]:border-primary-green-500',
+      "succession-blue": 'data-[state="open"]:border-succession-blue-500'
+    }
+  },
+  defaultVariants: {
+    color: "sf-green"
+  }
+});
+var Trigger6 = (_a) => {
+  var _b = _a, { color } = _b, props = __objRest(_b, ["color"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
+    Select2.Trigger,
+    __spreadProps(__spreadValues({}, props), {
+      className: (0, import_tailwind_merge4.twJoin)(trigger({ color }), props == null ? void 0 : props.className)
+    })
+  );
+};
 
 // src/components/Select/Portal/index.tsx
 var Select3 = __toESM(require("@radix-ui/react-select"));
@@ -1171,13 +1186,13 @@ var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Co
 
 // src/components/TextArea/Root/index.tsx
 var import_react5 = require("react");
-var import_tailwind_variants13 = require("tailwind-variants");
+var import_tailwind_variants14 = require("tailwind-variants");
 var import_jsx_runtime56 = require("react/jsx-runtime");
-var input2 = (0, import_tailwind_variants13.tv)(
+var input2 = (0, import_tailwind_variants14.tv)(
   {
     base: [
-      "flex w-128 h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-heading text-neutral-80",
-      "border "
+      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white text-neutral-80",
+      "border"
     ],
     variants: {
       size: {
@@ -1185,14 +1200,20 @@ var input2 = (0, import_tailwind_variants13.tv)(
         md: "px-4 py-2.5 text-sf-md",
         lg: "px-4 py-2.5 text-sf-lg"
       },
+      color: {
+        "sf-green": "border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100",
+        "succession-blue": "border-succession-blue-200 focus-within:ring-4 focus-within:ring-succession-blue-100",
+        error: "border-error-200 focus-within:ring-4 focus-within:ring-error-100"
+      },
       disabled: {
         true: "border border-neutral-40 bg-neutral-10 text-neutral-300",
         false: ""
-      },
-      error: {
-        true: "border border-error-200 focus-within:ring-error-100 focus-within:ring-2",
-        false: "border focus-within:border-primary-green-200 focus-within:ring-green-100 focus-within:ring-2"
       }
+    },
+    defaultVariants: {
+      size: "sm",
+      disabled: false,
+      color: "sf-green"
     }
   },
   { twMerge: true }
@@ -1202,22 +1223,22 @@ var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
     disabled = false,
-    error = false,
+    color = "sf-green",
     className
   } = _b, props = __objRest(_b, [
     "size",
     "disabled",
-    "error",
+    "color",
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextAreaContext.Provider, { value: { size, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextAreaContext.Provider, { value: { size, color, disabled }, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: input2({
         className,
         disabled,
         size,
-        error
+        color
       })
     })
   ) });

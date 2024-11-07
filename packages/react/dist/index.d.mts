@@ -784,7 +784,43 @@ interface SelectRootProps extends PropsWithChildren {
     required?: boolean;
 }
 
-type SelectTriggerProps = ComponentProps<typeof Select$1.Trigger>;
+declare const trigger: tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, tailwind_variants.TVReturnType<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, undefined, string[], tailwind_variants_dist_config.TVConfig<{
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}, {
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+    };
+}>, unknown, unknown, undefined>>;
+type SelectTriggerProps = ComponentProps<typeof Select$1.Trigger> & VariantProps<typeof trigger>;
 
 type SelectPortalProps = Select$1.SelectPortalProps;
 
@@ -808,7 +844,7 @@ type SelectGroupProps = Select$1.SelectGroupProps;
 
 declare const Select: {
     Root: (props: SelectRootProps) => react_jsx_runtime.JSX.Element;
-    Trigger: (props: SelectTriggerProps) => react_jsx_runtime.JSX.Element;
+    Trigger: ({ color, ...props }: SelectTriggerProps) => react_jsx_runtime.JSX.Element;
     Value: (props: SelectValueProps) => react_jsx_runtime.JSX.Element;
     Icon: (props: SelectIconProps) => react_jsx_runtime.JSX.Element;
     Portal: (props: SelectPortalProps) => react_jsx_runtime.JSX.Element;
@@ -899,11 +935,12 @@ declare const input: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
-    disabled: {
-        true: string;
-        false: string;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+        error: string;
     };
-    error: {
+    disabled: {
         true: string;
         false: string;
     };
@@ -915,11 +952,12 @@ declare const input: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
-    disabled: {
-        true: string;
-        false: string;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+        error: string;
     };
-    error: {
+    disabled: {
         true: string;
         false: string;
     };
@@ -929,11 +967,12 @@ declare const input: tailwind_variants.TVReturnType<{
         md: string;
         lg: string;
     };
-    disabled: {
-        true: string;
-        false: string;
+    color: {
+        'sf-green': string;
+        'succession-blue': string;
+        error: string;
     };
-    error: {
+    disabled: {
         true: string;
         false: string;
     };
@@ -948,7 +987,7 @@ type TextAreaRootProps = ComponentProps<'div'> & VariantProps<typeof input> & {
 type TextAreaControlProps = ComponentProps<'textarea'>;
 
 declare const TextArea: {
-    Root: ({ size, disabled, error, className, ...props }: TextAreaRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ size, disabled, color, className, ...props }: TextAreaRootProps) => react_jsx_runtime.JSX.Element;
     Control: ({ ...props }: TextAreaControlProps) => react_jsx_runtime.JSX.Element;
 };
 
