@@ -16,7 +16,7 @@ const BoxStory: Meta<BoxProps> = {
   argTypes: {
     children: {
       control: {
-        type: null,
+        type: undefined,
       },
     },
   },
