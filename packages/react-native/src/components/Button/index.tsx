@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#a78728',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
