@@ -17,8 +17,9 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("@storybook/addon-mdx-gfm"), // Ensure this addon is included
+    getAbsolutePath("@storybook/addon-mdx-gfm"),
     "@chromatic-com/storybook",
+    "@storybook/addon-mdx-gfm"
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
