@@ -6,7 +6,6 @@ interface HeadingProps extends TextProps {
   variant?: 'h1' | 'h2' | 'h3'
   style?: StyleProp<TextStyle>
   color?: string
-  children: React.ReactNode
 }
 
 const headingVariants = StyleSheet.create({
