@@ -1,6 +1,8 @@
 import { View } from 'react-native'
 import { Heading } from '@design-system'
 
+// TODO: add more typography examples and styles, let's make a component similar to storybook where we dynamic change the properties of the text
+
 export default function Typography() {
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
