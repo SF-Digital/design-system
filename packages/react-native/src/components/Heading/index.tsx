@@ -2,11 +2,12 @@ import React, { useMemo } from 'react'
 import { Text, TextProps, StyleSheet, StyleProp, TextStyle } from 'react-native'
 import { colors } from '@sf-digital-ui/tokens'
 
+// TODO: not compliant with design system, needs to be completely refactored
+
 interface HeadingProps extends TextProps {
   variant?: 'h1' | 'h2' | 'h3'
   style?: StyleProp<TextStyle>
   color?: string
-  children: React.ReactNode
 }
 
 const headingVariants = StyleSheet.create({

@@ -1,6 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
+// TODO: This is just an example component. Must be completely refactored
 interface ButtonProps {
   title: string
   onPress: () => void
