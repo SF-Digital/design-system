@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.10.1
+
+### Patch Changes
+
+- Merge Text class
+
 ## 4.10.0
 
 ### Minor Changes

@@ -97,20 +97,25 @@ var Box = (_a) => {
 // src/components/Text/index.tsx
 var import_tailwind_variants = require("tailwind-variants");
 var import_jsx_runtime2 = require("react/jsx-runtime");
-var text = (0, import_tailwind_variants.tv)({
-  base: ["font-sf-digital leading-tight"],
-  variants: {
-    size: {
-      xs: "text-sf-xs",
-      sm: "text-sf-sm",
-      base: "text-sf-md",
-      lg: "text-sf-lg"
+var text = (0, import_tailwind_variants.tv)(
+  {
+    base: ["font-sf-digital leading-tight"],
+    variants: {
+      size: {
+        xs: "text-sf-xs",
+        sm: "text-sf-sm",
+        base: "text-sf-md",
+        lg: "text-sf-lg"
+      }
+    },
+    defaultVariants: {
+      size: "base"
     }
   },
-  defaultVariants: {
-    size: "base"
+  {
+    twMerge: false
   }
-});
+);
 var Text = (_a) => {
   var _b = _a, { className, size } = _b, props = __objRest(_b, ["className", "size"]);
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", __spreadProps(__spreadValues({}, props), { className: text({ size, className }) }));
