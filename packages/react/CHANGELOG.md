@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.10.3
+
+### Patch Changes
+
+- migrate eslint.json to eslint.mjs
+
 ## 4.10.2
 
 ### Patch Changes
