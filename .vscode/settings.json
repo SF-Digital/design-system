@@ -22,5 +22,5 @@
   "eslint.validate": ["javascript", "typescript"],
   "editor.formatOnSave": true,
   "eslint.useESLintClass": true,
-  "workbench.colorTheme": "Neon Vommit"
+  "workbench.colorTheme": "Night Owl"
 }

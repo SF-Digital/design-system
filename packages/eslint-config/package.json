@@ -1,6 +1,6 @@
 {
   "name": "@sf-digital-ui/eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "MIT",
   "private": true,
   "main": "index.js",

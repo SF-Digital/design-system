@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.10.2
+
+### Patch Changes
+
+- update packages
+
 ## 4.10.1
 
 ### Patch Changes
