@@ -1,6 +1,6 @@
 {
   "name": "@sf-digital-ui/tokens",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,8 +14,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@sf-digital-ui/ts-config": "*",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
     "@sf-digital-ui/eslint-config": "*",
+    "@sf-digital-ui/ts-config": "*",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   }

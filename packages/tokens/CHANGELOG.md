@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.3.3
+
+### Patch Changes
+
+- migrate eslint.json to eslint.mjs
+
 ## 3.3.2
 
 ### Patch Changes

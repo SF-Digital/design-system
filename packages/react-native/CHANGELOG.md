@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 1.1.2
+
+### Patch Changes
+
+- migrate eslint.json to eslint.mjs
+
 ## 1.1.1
 
 ### Patch Changes
