@@ -1,5 +1,11 @@
 # @sf-digital-ui/ts-config
 
+## 2.1.2
+
+### Patch Changes
+
+- package lock reset
+
 ## 2.1.1
 
 ### Patch Changes

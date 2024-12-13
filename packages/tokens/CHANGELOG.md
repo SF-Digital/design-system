@@ -1,5 +1,11 @@
 # @sf-digital-ui/tokens
 
+## 3.3.2
+
+### Patch Changes
+
+- package lock reset
+
 ## 3.3.1
 
 ### Patch Changes
