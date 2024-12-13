@@ -18,9 +18,11 @@
       "source.fixAll.eslint": "explicit"
     }
   },
+  // "eslint.workingDirectories": [
+  //   { "directory": "./packages/react", "changeProcessCWD": true }
+  // ],
   "eslint.enable": true,
   "eslint.validate": ["javascript", "typescript"],
   "editor.formatOnSave": true,
-  "eslint.useESLintClass": true,
-  "workbench.colorTheme": "Night Owl"
+  "eslint.useESLintClass": true
 }
