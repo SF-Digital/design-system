@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.10.4
+
+### Patch Changes
+
+- Update libs to react 19
+
 ## 4.10.3
 
 ### Patch Changes

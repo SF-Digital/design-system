@@ -440,25 +440,21 @@ var Root2 = (_a) => {
 var useTextInput = () => (0, import_react.useContext)(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
-var import_react2 = require("react");
 var import_tailwind_merge2 = require("tailwind-merge");
 var import_jsx_runtime8 = require("react/jsx-runtime");
-var Control = (0, import_react2.forwardRef)(
-  (props, ref) => {
-    const { disabled } = useTextInput();
-    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-      "input",
-      __spreadProps(__spreadValues({}, props), {
-        ref,
-        disabled,
-        className: (0, import_tailwind_merge2.twJoin)(
-          props.className,
-          "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
-        )
-      })
-    );
-  }
-);
+var Control = (props) => {
+  const { disabled } = useTextInput();
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+    "input",
+    __spreadProps(__spreadValues({}, props), {
+      disabled,
+      className: (0, import_tailwind_merge2.twJoin)(
+        props.className,
+        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
+      )
+    })
+  );
+};
 Control.displayName = "TextInput.Control";
 
 // src/components/TextInput/Prefix/index.tsx
@@ -492,7 +488,6 @@ var Check = (props) => {
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
 var Checkbox = __toESM(require("@radix-ui/react-checkbox"));
-var import_react3 = require("react");
 var import_tailwind_variants5 = require("tailwind-variants");
 var import_jsx_runtime12 = require("react/jsx-runtime");
 var checkbox = (0, import_tailwind_variants5.tv)({
@@ -513,21 +508,18 @@ var checkbox = (0, import_tailwind_variants5.tv)({
   },
   defaultVariants: { size: "md", color: "sf-green" }
 });
-var Root4 = (0, import_react3.forwardRef)(
-  (props, ref) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
-      Checkbox.Root,
-      __spreadValues({
-        className: checkbox({
-          className: props.className,
-          size: props.size,
-          color: props.color
-        }),
-        ref
-      }, props)
-    );
-  }
-);
+var Root4 = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+    Checkbox.Root,
+    __spreadValues({
+      className: checkbox({
+        className: props.className,
+        size: props.size,
+        color: props.color
+      })
+    }, props)
+  );
+};
 Root4.displayName = "Checkbox.Root";
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx
@@ -821,9 +813,9 @@ var Tooltip5 = __toESM(require("@radix-ui/react-tooltip"));
 var import_tailwind_variants12 = require("tailwind-variants");
 
 // src/components/Tooltip/Context/index.tsx
-var import_react4 = require("react");
-var TooltipThemeContext = (0, import_react4.createContext)("light");
-var useTooltipTheme = () => (0, import_react4.useContext)(TooltipThemeContext);
+var import_react2 = require("react");
+var TooltipThemeContext = (0, import_react2.createContext)("light");
+var useTooltipTheme = () => (0, import_react2.useContext)(TooltipThemeContext);
 
 // src/components/Tooltip/Content/index.tsx
 var import_jsx_runtime29 = require("react/jsx-runtime");
@@ -1190,7 +1182,7 @@ var Arrow4 = (props) => {
 var Popover8 = { Root: Root21, Trigger: Trigger12, Portal: Portal10, Content: Content12, Anchor: Anchor2, Close: Close4, Arrow: Arrow4 };
 
 // src/components/TextArea/Root/index.tsx
-var import_react5 = require("react");
+var import_react3 = require("react");
 var import_tailwind_variants14 = require("tailwind-variants");
 var import_jsx_runtime56 = require("react/jsx-runtime");
 var input2 = (0, import_tailwind_variants14.tv)(
@@ -1223,7 +1215,7 @@ var input2 = (0, import_tailwind_variants14.tv)(
   },
   { twMerge: true }
 );
-var TextAreaContext = (0, import_react5.createContext)({});
+var TextAreaContext = (0, import_react3.createContext)({});
 var Root22 = (_a) => {
   var _b = _a, {
     size = "sm",
@@ -1248,7 +1240,7 @@ var Root22 = (_a) => {
     })
   ) });
 };
-var useTextArea = () => (0, import_react5.useContext)(TextAreaContext);
+var useTextArea = () => (0, import_react3.useContext)(TextAreaContext);
 
 // src/components/TextArea/Control/index.tsx
 var import_tailwind_merge11 = require("tailwind-merge");
