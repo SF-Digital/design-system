@@ -1,6 +1,6 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
-import { ComponentProps, forwardRef } from 'react'
-import { VariantProps, tv } from 'tailwind-variants'
+import type { ComponentProps } from 'react'
+import { type VariantProps, tv } from 'tailwind-variants'
 
 const checkbox = tv({
   base: [
@@ -25,20 +25,17 @@ const checkbox = tv({
 export type CheckboxRootProps = ComponentProps<typeof Checkbox.Root> &
   VariantProps<typeof checkbox>
 
-export const Root = forwardRef<HTMLButtonElement, CheckboxRootProps>(
-  (props: CheckboxRootProps, ref) => {
-    return (
-      <Checkbox.Root
-        className={checkbox({
-          className: props.className,
-          size: props.size,
-          color: props.color,
-        })}
-        ref={ref}
-        {...props}
-      />
-    )
-  },
-)
+export const Root = (props: CheckboxRootProps) => {
+  return (
+    <Checkbox.Root
+      className={checkbox({
+        className: props.className,
+        size: props.size,
+        color: props.color,
+      })}
+      {...props}
+    />
+  )
+}
 
 Root.displayName = 'Checkbox.Root'

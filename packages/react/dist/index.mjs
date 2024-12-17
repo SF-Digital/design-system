@@ -392,25 +392,21 @@ var Root2 = (_a) => {
 var useTextInput = () => useContext(TextInputContext);
 
 // src/components/TextInput/Control/index.tsx
-import { forwardRef } from "react";
 import { twJoin } from "tailwind-merge";
 import { jsx as jsx8 } from "react/jsx-runtime";
-var Control = forwardRef(
-  (props, ref) => {
-    const { disabled } = useTextInput();
-    return /* @__PURE__ */ jsx8(
-      "input",
-      __spreadProps(__spreadValues({}, props), {
-        ref,
-        disabled,
-        className: twJoin(
-          props.className,
-          "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
-        )
-      })
-    );
-  }
-);
+var Control = (props) => {
+  const { disabled } = useTextInput();
+  return /* @__PURE__ */ jsx8(
+    "input",
+    __spreadProps(__spreadValues({}, props), {
+      disabled,
+      className: twJoin(
+        props.className,
+        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
+      )
+    })
+  );
+};
 Control.displayName = "TextInput.Control";
 
 // src/components/TextInput/Prefix/index.tsx
@@ -444,7 +440,6 @@ var Check = (props) => {
 
 // src/components/Checkbox/CheckboxRoot/index.tsx
 import * as Checkbox from "@radix-ui/react-checkbox";
-import { forwardRef as forwardRef2 } from "react";
 import { tv as tv5 } from "tailwind-variants";
 import { jsx as jsx12 } from "react/jsx-runtime";
 var checkbox = tv5({
@@ -465,21 +460,18 @@ var checkbox = tv5({
   },
   defaultVariants: { size: "md", color: "sf-green" }
 });
-var Root4 = forwardRef2(
-  (props, ref) => {
-    return /* @__PURE__ */ jsx12(
-      Checkbox.Root,
-      __spreadValues({
-        className: checkbox({
-          className: props.className,
-          size: props.size,
-          color: props.color
-        }),
-        ref
-      }, props)
-    );
-  }
-);
+var Root4 = (props) => {
+  return /* @__PURE__ */ jsx12(
+    Checkbox.Root,
+    __spreadValues({
+      className: checkbox({
+        className: props.className,
+        size: props.size,
+        color: props.color
+      })
+    }, props)
+  );
+};
 Root4.displayName = "Checkbox.Root";
 
 // src/components/Checkbox/CheckboxIndicator/index.tsx

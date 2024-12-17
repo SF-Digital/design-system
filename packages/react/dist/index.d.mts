@@ -324,7 +324,10 @@ type TextInputSuffixProps = ComponentProps<'div'>;
 
 declare const TextInput: {
     Root: ({ size, disabled, className, color, ...props }: TextInputRootProps) => react_jsx_runtime.JSX.Element;
-    Control: react.ForwardRefExoticComponent<Omit<react.DetailedHTMLProps<react.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & react.RefAttributes<HTMLInputElement>>;
+    Control: {
+        (props: TextInputControlProps): react_jsx_runtime.JSX.Element;
+        displayName: string;
+    };
     Prefix: (props: TextInputPrefixProps) => react_jsx_runtime.JSX.Element;
     Suffix: (props: TextInputSuffixProps) => react_jsx_runtime.JSX.Element;
 };
@@ -407,7 +410,10 @@ type CheckboxRootProps = ComponentProps<typeof Checkbox$1.Root> & VariantProps<t
 type CheckboxIndicatorProps = ComponentProps<typeof Checkbox$1.CheckboxIndicator>;
 
 declare const Checkbox: {
-    Root: react.ForwardRefExoticComponent<Omit<CheckboxRootProps, "ref"> & react.RefAttributes<HTMLButtonElement>>;
+    Root: {
+        (props: CheckboxRootProps): react_jsx_runtime.JSX.Element;
+        displayName: string;
+    };
     Indicator: (props: CheckboxIndicatorProps) => react_jsx_runtime.JSX.Element;
     Check: (props: CheckProps) => react_jsx_runtime.JSX.Element;
 };
