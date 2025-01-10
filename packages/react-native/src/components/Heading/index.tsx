@@ -14,7 +14,7 @@ const headingVariants = StyleSheet.create({
   h1: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: colors.neutral[500],
+    color: colors['primary-green'][500],
   },
   h2: {
     fontSize: 24,
