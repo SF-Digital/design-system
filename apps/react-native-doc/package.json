@@ -17,6 +17,7 @@
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/drawer": "^7.1.1",
     "@react-navigation/native": "^7.0.14",
+    "@sf-digital-ui/tokens": "^3.3.3",
     "expo": "^52.0.24",
     "expo-font": "~13.0.2",
     "expo-linking": "~7.0.3",

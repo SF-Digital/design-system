@@ -1,37 +1,48 @@
 import React from 'react'
 import { Text, TextProps, StyleSheet, StyleProp, TextStyle } from 'react-native'
-import { colors } from '@sf-digital-ui/tokens'
-
-// TODO: not compliant with design system, needs to be completely refactored
+import { fonts } from '@sf-digital-ui/tokens'
+import { fontSizesInPx } from '../../tokens/font-sizes-in-px'
+import { calculateLineHeight } from '../../utils/calculate-line-height'
 
 interface HeadingProps extends TextProps {
-  variant?: 'h1' | 'h2' | 'h3'
+  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   style?: StyleProp<TextStyle>
-  color?: string
 }
 
-const headingVariants = StyleSheet.create({
+const headingSizes = StyleSheet.create({
+  base: {
+    fontFamily: fonts['sf-digital'],
+  },
   h1: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: colors.neutral[500],
+    fontSize: fontSizesInPx['sf-h1'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h1']),
   },
   h2: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: colors.neutral[500],
+    fontSize: fontSizesInPx['sf-h2'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h2']),
   },
   h3: {
-    fontSize: 18,
-    fontWeight: '500',
-    color: colors.neutral[500],
+    fontSize: fontSizesInPx['sf-h3'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h3']),
+  },
+  h4: {
+    fontSize: fontSizesInPx['sf-h4'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h4']),
+  },
+  h5: {
+    fontSize: fontSizesInPx['sf-h5'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h5']),
+  },
+  h6: {
+    fontSize: fontSizesInPx['sf-h6'],
+    lineHeight: calculateLineHeight(fontSizesInPx['sf-h6']),
   },
 })
 
-const Heading = ({ variant = 'h1', style, color, ...props }: HeadingProps) => {
+const Heading = ({ size = 'h1', style, ...props }: HeadingProps) => {
   const variantStyle = {
-    ...headingVariants[variant],
-    ...(color && { color }),
+    ...headingSizes[size],
+    ...headingSizes.base,
   }
 
   return (
