@@ -4,7 +4,7 @@ import { fonts } from '@sf-digital-ui/tokens'
 import { fontSizesInPx } from '../../tokens/font-sizes-in-px'
 import { calculateLineHeight } from '../../utils/calculate-line-height'
 
-interface HeadingProps extends TextProps {
+export interface HeadingProps extends TextProps {
   size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   style?: StyleProp<TextStyle>
 }
@@ -39,15 +39,13 @@ const headingSizes = StyleSheet.create({
   },
 })
 
-const Heading = ({ size = 'h1', style, ...props }: HeadingProps) => {
-  const variantStyle = {
+export const Heading = ({ size = 'h1', style, ...props }: HeadingProps) => {
+  const sizeStyle = {
     ...headingSizes[size],
     ...headingSizes.base,
   }
 
   return (
-    <Text style={[variantStyle, style]} accessibilityRole="header" {...props} />
+    <Text style={[sizeStyle, style]} accessibilityRole="header" {...props} />
   )
 }
-
-export default Heading

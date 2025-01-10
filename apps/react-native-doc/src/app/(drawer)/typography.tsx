@@ -1,15 +1,33 @@
 import { View } from 'react-native'
-import { Heading } from '@design-system'
+import { Heading, HeadingProps, Text, TextProps } from '@design-system'
 
 export default function Typography() {
+  const textSizes: TextProps['size'][] = ['xs', 'sm', 'md', 'lg']
+  const headingSizes: HeadingProps['size'][] = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+  ]
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
-      <Heading size="h1">This is an H1 Heading</Heading>
-      <Heading size="h2">This is an H2 Heading</Heading>
-      <Heading size="h3">This is an H3 Heading</Heading>
-      <Heading size="h4">This is an H4 Heading</Heading>
-      <Heading size="h5">This is an H5 Heading</Heading>
-      <Heading size="h6">This is an H6 Heading</Heading>
+      {headingSizes.map((headingSize) => {
+        return (
+          <Heading size={headingSize} key={headingSize}>
+            This is a {headingSize} Heading
+          </Heading>
+        )
+      })}
+
+      {textSizes.map((textSize) => {
+        return (
+          <Text size={textSize} key={textSize}>
+            This is a {textSize} Text
+          </Text>
+        )
+      })}
     </View>
   )
 }
