@@ -11,14 +11,16 @@
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "yalc push --watch"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-native": ">=0.60.0"
   },
   "dependencies": {
+    "@sf-digital-ui/react-native": "file:.yalc/@sf-digital-ui/react-native",
     "expo": "^52.0.18"
   },
-  "yalcSig": "1567a91ee905be43fe13876db1fcd993"
+  "yalcSig": "dbd5516d470af6f87363f811151f690b"
 }
