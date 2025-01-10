@@ -1,0 +1,24 @@
+{
+  "name": "@sf-digital-ui/react-native",
+  "version": "1.1.2",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {
+    "expo": "^52.0.18"
+  },
+  "yalcSig": "1567a91ee905be43fe13876db1fcd993"
+}
