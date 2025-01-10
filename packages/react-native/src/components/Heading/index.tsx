@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Text, TextProps, StyleSheet, StyleProp, TextStyle } from 'react-native'
 import { colors } from '@sf-digital-ui/tokens'
 
@@ -29,12 +29,10 @@ const headingVariants = StyleSheet.create({
 })
 
 const Heading = ({ variant = 'h1', style, color, ...props }: HeadingProps) => {
-  const variantStyle = useMemo(() => {
-    return {
-      ...headingVariants[variant],
-      ...(color && { color }),
-    }
-  }, [variant, color])
+  const variantStyle = {
+    ...headingVariants[variant],
+    ...(color && { color }),
+  }
 
   return (
     <Text style={[variantStyle, style]} accessibilityRole="header" {...props} />
