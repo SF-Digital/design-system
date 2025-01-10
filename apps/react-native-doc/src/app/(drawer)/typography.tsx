@@ -1,5 +1,5 @@
 import { View } from 'react-native'
-import { Heading } from '@design-system'
+import { Heading } from '@sf-digital-ui/react-native'
 
 // TODO: add more typography examples and styles, let's make a component similar to storybook where we dynamic change the properties of the text
 
