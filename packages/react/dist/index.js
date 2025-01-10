@@ -57,8 +57,8 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.tsx
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   Avatar: () => Avatar4,
   Box: () => Box,
   Button: () => Button,
@@ -76,7 +76,7 @@ __export(src_exports, {
   Toggle: () => Toggle,
   Tooltip: () => Tooltip7
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 
 // src/components/Box/index.tsx
 var import_tailwind_merge = require("tailwind-merge");
