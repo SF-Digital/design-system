@@ -1,5 +1,10 @@
 import { View } from 'react-native'
-import { Heading, HeadingProps, Text, TextProps } from '@design-system'
+import {
+  Heading,
+  HeadingProps,
+  Text,
+  TextProps,
+} from '@sf-digital-ui/react-native'
 
 export default function Typography() {
   const textSizes: TextProps['size'][] = ['xs', 'sm', 'md', 'lg']

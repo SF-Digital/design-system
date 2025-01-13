@@ -7,7 +7,7 @@
 - Design documentation made with **Storybook**
 - Configuration for dev tools such as **Eslint**
 
-# How to use
+# How to use - React
 
 ## 1. Clone the Git repo
 
@@ -26,6 +26,26 @@
 When opening a PR, you need to build the tokens:
 - First, run `npm run changeset` to specify your changes and generate a changelog.
 - Then, when you're satisfied, run `npm run version-packages` to generate a new version number.
+
+# How to use - React Native
+
+## 1. Clone the Git repo
+
+`git clone git@github.com:SF-Digital/design-system.git`
+
+- The repository is hosted publically on [Github](https://github.com/SF-Digital/design-system)
+## 2. Install dependencies
+`npm install`
+- Please use npm as this is where we are hosting the package. Run this in:
+App route, `apps/react-native-doc` & `packages/react-native`
+
+## 3. Setup Yalc for local development
+Run `npm install -g yalc`
+Inside the `packages/react-native`, run `npm run publish`
+Inside the `apps/react-native-doc`, run `npm run yalc-add`
+
+## 4. Start the project
+Inside both `apps/react-native-doc` & `packages/react-native`, run and leave open `npm run dev`
 
 # Pattern composition
 
