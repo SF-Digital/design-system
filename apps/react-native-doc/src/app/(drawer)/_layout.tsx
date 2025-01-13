@@ -35,6 +35,13 @@ export default function Layout() {
             title: 'Typography',
           }}
         />
+        <Drawer.Screen
+          name="button"
+          options={{
+            drawerLabel: 'Button',
+            title: 'Button',
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   )
