@@ -1,48 +1,24 @@
 
 
-> @sf-digital-ui/react@4.10.2 build
+> @sf-digital-ui/react@4.10.4 build
 > npx tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react
 
 [1G[0K[1G[0K⠙[1G[0K[31m[39m
 [31mRebuilding...[39m
 [31m[39m
-[31mDone in 208ms.[39m
+[31mDone in 219ms.[39m
 [1G[0K⠙[1G[0K[34mCLI[39m Building entry: src/index.tsx
 [34mCLI[39m Using tsconfig: tsconfig.json
 [34mCLI[39m tsup v8.3.5
 [34mCLI[39m Target: es6
 [34mESM[39m Build start
 [34m[39m Build start
-[32mESM[39m [1mdist/index.mjs [22m[32m42.91 KB[39m
-[32mESM[39m ⚡️ Build success in 50ms
-[32m[39m [1mdist/index.js [22m[32m48.03 KB[39m
-[32m[39m ⚡️ Build success in 50ms
+[32m[39m [1mdist/index.js [22m[32m47.81 KB[39m
+[32m[39m ⚡️ Build success in 51ms
+[32mESM[39m [1mdist/index.mjs [22m[32m42.71 KB[39m
+[32mESM[39m ⚡️ Build success in 51ms
 DTS Build start
-src/components/Checkbox/CheckboxRoot/index.tsx(25,48): error TS2344: Type 'ForwardRefExoticComponent<CheckboxProps & RefAttributes<HTMLButtonElement>>' does not satisfy the constraint 'keyof IntrinsicElements | JSXElementConstructor<any>'.
-  Type 'ForwardRefExoticComponent<CheckboxProps & RefAttributes<HTMLButtonElement>>' is not assignable to type '(props: any) => ReactNode'.
-    Type 'import("/Users/mattwilson/programming/stonehage-fleming/design-system/node_modules/@types/react/index").ReactNode' is not assignable to type 'React.ReactNode'.
-      Type 'ReactElement<any, string | JSXElementConstructor<any>>' is not assignable to type 'ReactNode'.
-        Property 'children' is missing in type 'ReactElement<any, string | JSXElementConstructor<any>>' but required in type 'ReactPortal'.
-src/components/Checkbox/CheckboxRoot/index.tsx(31,8): error TS2786: 'Checkbox.Root' cannot be used as a JSX component.
-  Its type 'ForwardRefExoticComponent<CheckboxProps & RefAttributes<HTMLButtonElement>>' is not a valid JSX element type.
-    Type 'ForwardRefExoticComponent<CheckboxProps & RefAttributes<HTMLButtonElement>>' is not assignable to type '(props: any) => ReactNode'.
-      Type 'import("/Users/mattwilson/programming/stonehage-fleming/design-system/node_modules/@types/react/index").ReactNode' is not assignable to type 'React.ReactNode'.
-        Type 'ReactElement<any, string | JSXElementConstructor<any>>' is not assignable to type 'ReactNode'.
-          Property 'children' is missing in type 'ReactElement<any, string | JSXElementConstructor<any>>' but required in type 'ReactPortal'.
-src/components/Checkbox/CheckboxRoot/index.tsx(33,28): error TS2339: Property 'className' does not exist on type 'VariantProps<TVReturnType<{ color: { 'sf-green': string; 'succession-blue': string; }; size: { sm: string; md: string; lg: string; }; }, undefined, string[], TVConfig<{ color: { 'sf-green': string; 'succession-blue': string; }; size: { sm: string; md: string; lg: string; }; }, { ...; }>, { ...; }, undefined, TVRetur...'.
-
-[31m[31mError: error occurred in dts build
-    at Worker.<anonymous> (/Users/mattwilson/programming/stonehage-fleming/design-system/node_modules/tsup/dist/index.js:1541:26)
-    at Worker.emit (node:events:519:28)
-    at MessagePort.<anonymous> (node:internal/worker:263:53)
-    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:820:20)
-    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)[39m[39m
-[31mDTS Build error[39m
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m Lifecycle script `build` failed with error:
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m [94mcode[39m [33m1[39m
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m [94mpath[39m /Users/mattwilson/programming/stonehage-fleming/design-system/packages/react
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m [94mworkspace[39m @sf-digital-ui/react@4.10.2
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m [94mlocation[39m /Users/mattwilson/programming/stonehage-fleming/design-system/packages/react
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m command failed
-[1G[0K⠙[1G[0K[1mnpm[22m [31merror[39m [94mcommand[39m sh -c npx tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react
+DTS ⚡️ Build success in 1793ms
+DTS dist/index.d.mts 26.92 KB
+DTS dist/index.d.ts  26.92 KB
 [1G[0K⠙[1G[0K

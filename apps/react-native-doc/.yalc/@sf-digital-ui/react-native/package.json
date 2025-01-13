@@ -12,7 +12,6 @@
     "build": "tsup src/index.tsx --format esm,cjs --dts",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
     "testDev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
-    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "publish": "yalc push --watch"
   },
@@ -20,20 +19,5 @@
     "react": ">=16.8.0",
     "react-native": ">=0.60.0"
   },
-  "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
-    "@babel/preset-typescript": "^7.26.0",
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.16.0",
-    "@sf-digital-ui/eslint-config": "*",
-    "@sf-digital-ui/tokens": "*",
-    "@types/react": "^18.3.12",
-    "@types/react-native": "^0.72.0",
-    "nodemon": "^3.1.9",
-    "react": "^18.3.1",
-    "react-native": "^0.76.1",
-    "typescript": "^5.6.3"
-  }
+  "yalcSig": "21bf9dd66c0448038f3d764664b4a056"
 }

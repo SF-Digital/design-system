@@ -8,7 +8,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "yalc-add": "yalc add @sf-digital-ui/react-native",
+    "yalc-link": "yalc link @sf-digital-ui/react-native"
   },
   "jest": {
     "preset": "jest-expo"
@@ -18,6 +20,7 @@
     "@react-navigation/drawer": "^7.1.1",
     "@react-navigation/native": "^7.0.14",
     "@sf-digital-ui/tokens": "^3.3.3",
+    "@sf-digital-ui/react-native": "file:.yalc/@sf-digital-ui/react-native",
     "expo": "^52.0.24",
     "expo-font": "~13.0.2",
     "expo-linking": "~7.0.3",
