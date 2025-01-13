@@ -1,2 +1,3 @@
 export { default as Button } from './components/Button'
-export { default as Heading } from './components/Heading'
+export { Text, TextProps } from './components/Text'
+export { Heading, HeadingProps } from './components/Heading'

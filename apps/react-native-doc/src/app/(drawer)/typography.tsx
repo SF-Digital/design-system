@@ -1,16 +1,33 @@
 import { View } from 'react-native'
-import { Heading } from '@sf-digital-ui/react-native'
-
-// TODO: add more typography examples and styles, let's make a component similar to storybook where we dynamic change the properties of the text
+import { Heading, HeadingProps, Text, TextProps } from '@design-system'
 
 export default function Typography() {
+  const textSizes: TextProps['size'][] = ['xs', 'sm', 'md', 'lg']
+  const headingSizes: HeadingProps['size'][] = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+  ]
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
-      <Heading variant="h1">This is an H1 Heading</Heading>
-      <Heading variant="h2">This is an H2 Heading</Heading>
-      <Heading variant="h3" style={{ fontStyle: 'italic' }}>
-        This is an H3 Heading
-      </Heading>
+      {headingSizes.map((headingSize) => {
+        return (
+          <Heading size={headingSize} key={headingSize}>
+            This is a {headingSize} Heading
+          </Heading>
+        )
+      })}
+
+      {textSizes.map((textSize) => {
+        return (
+          <Text size={textSize} key={textSize}>
+            This is a {textSize} Text
+          </Text>
+        )
+      })}
     </View>
   )
 }
