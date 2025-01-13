@@ -1,6 +1,7 @@
 import { View } from 'react-native'
 import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
+import { exampleContainerStyle, pageContainerStyle } from './styles'
 
 export default function HeadingPage() {
   const headingSizes: HeadingProps['size'][] = [
@@ -18,17 +19,9 @@ export default function HeadingPage() {
   \b`
 
   return (
-    <View style={{ flex: 1, flexDirection: 'column', gap: 10, padding: 10 }}>
+    <View style={pageContainerStyle}>
       <Markdown>{headingDescription}</Markdown>
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'white',
-          borderRadius: 10,
-          paddingVertical: 20,
-        }}
-      >
+      <View style={exampleContainerStyle}>
         {headingSizes.map((headingSize) => {
           return (
             <Heading size={headingSize} key={headingSize}>
