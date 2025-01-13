@@ -3,8 +3,8 @@ import { Drawer } from 'expo-router/drawer'
 
 const routes = [
   { name: 'index', label: 'Home', title: 'Home' },
-  { name: 'headings', label: 'Headings', title: 'Headings' },
-  { name: 'texts', label: 'Texts', title: 'Texts' },
+  { name: 'headingPage', label: 'Heading', title: 'Heading' },
+  { name: 'textPage', label: 'Text', title: 'Text' },
 ]
 
 export default function Layout() {

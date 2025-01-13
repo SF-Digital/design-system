@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import { Text, TextProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 
-export default function Texts() {
+export default function TextPage() {
   const textSizes: TextProps['size'][] = ['lg', 'md', 'sm', 'xs']
   const textDescription = `This story displays the \`Text\` component, a text tag using the \`Perpetua\` font.
   ## API Reference:

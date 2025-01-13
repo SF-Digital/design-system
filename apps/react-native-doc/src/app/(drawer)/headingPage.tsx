@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 
-export default function Headings() {
+export default function HeadingPage() {
   const headingSizes: HeadingProps['size'][] = [
     'h1',
     'h2',
