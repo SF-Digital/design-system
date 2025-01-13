@@ -11,6 +11,7 @@
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
+    "testDev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
     "prepublishOnly": "npm run build",
     "publish": "yalc push --watch"
   },
@@ -18,9 +19,5 @@
     "react": ">=16.8.0",
     "react-native": ">=0.60.0"
   },
-  "dependencies": {
-    "@sf-digital-ui/react-native": "file:.yalc/@sf-digital-ui/react-native",
-    "expo": "^52.0.18"
-  },
-  "yalcSig": "dbd5516d470af6f87363f811151f690b"
+  "yalcSig": "21bf9dd66c0448038f3d764664b4a056"
 }

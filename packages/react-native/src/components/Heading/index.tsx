@@ -14,17 +14,17 @@ const headingVariants = StyleSheet.create({
   h1: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: colors['primary-green'][500],
+    color: colors.error[500],
   },
   h2: {
     fontSize: 24,
     fontWeight: '600',
-    color: colors.neutral[500],
+    color: colors.warning[500],
   },
   h3: {
     fontSize: 18,
     fontWeight: '500',
-    color: colors.neutral[500],
+    color: colors.success[500],
   },
 })
 
