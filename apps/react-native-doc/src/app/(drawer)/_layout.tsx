@@ -1,6 +1,12 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Drawer } from 'expo-router/drawer'
 
+const routes = [
+  { name: 'index', label: 'Home', title: 'Home' },
+  { name: 'headings', label: 'Headings', title: 'Headings' },
+  { name: 'texts', label: 'Texts', title: 'Texts' },
+]
+
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -21,20 +27,18 @@ export default function Layout() {
           },
         }}
       >
-        <Drawer.Screen
-          name="index"
-          options={{
-            drawerLabel: 'Home',
-            title: 'Home',
-          }}
-        />
-        <Drawer.Screen
-          name="typography"
-          options={{
-            drawerLabel: 'Typography',
-            title: 'Typography',
-          }}
-        />
+        {routes.map((route) => {
+          return (
+            <Drawer.Screen
+              key={route.name}
+              name={route.name}
+              options={{
+                drawerLabel: route.label,
+                title: route.title,
+              }}
+            />
+          )
+        })}
       </Drawer>
     </GestureHandlerRootView>
   )
