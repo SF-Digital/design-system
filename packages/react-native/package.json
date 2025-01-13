@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
-    "testDev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
+    "dev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "publish": "yalc push --watch"

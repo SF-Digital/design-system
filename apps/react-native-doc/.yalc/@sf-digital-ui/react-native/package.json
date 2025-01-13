@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
-    "testDev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
+    "dev": "nodemon --watch dist/index.js --exec 'yalc push --watch'",
     "prepublishOnly": "npm run build",
     "publish": "yalc push --watch"
   },
@@ -19,5 +18,5 @@
     "react": ">=16.8.0",
     "react-native": ">=0.60.0"
   },
-  "yalcSig": "21bf9dd66c0448038f3d764664b4a056"
+  "yalcSig": "5bd6f2ec3fb31e1d7ef6dd6ed4fd99a2"
 }
