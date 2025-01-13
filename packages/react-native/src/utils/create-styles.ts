@@ -1,24 +1,31 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
-type StyleDefinition = Record<string, any>;
-type Variant = Record<string, any>;
-type CompoundVariant = {
-  variants: Partial<Variant>;
-  style: StyleDefinition;
+// Type Definitions
+type StyleObject = ViewStyle & TextStyle;
+type VariantDefinitions = Record<string, unknown>;
+
+type CompoundVariant<V> = {
+  variants: Partial<V>;
+  style: StyleObject;
 };
 
-interface StyleConfig<V extends Variant> {
-  base?: StyleDefinition;
+interface StyleConfig<V extends VariantDefinitions> {
+  base?: StyleObject;
   variants?: {
-    [K in keyof V]?: {
-      [Value in V[K]]?: StyleDefinition;
-    };
+    [K in keyof V]?: Record<string & keyof V[K], StyleObject>;
   };
-  compoundVariants?: CompoundVariant[];
+  compoundVariants?: Array<CompoundVariant<V>>;
   defaultVariants?: Partial<V>;
 }
 
-export function createStylesheet<V extends Variant>(config: StyleConfig<V>) {
+type StyleKey<V> = string & keyof V;
+
+/**
+ * Creates a style generator function with variant support
+ * @param config Style configuration including base, variants, compound variants, and defaults
+ * @returns A function that generates styles based on provided variants
+ */
+export function createStylesheet<V extends VariantDefinitions>(config: StyleConfig<V>) {
   const { 
     base = {}, 
     variants = {}, 
@@ -26,47 +33,103 @@ export function createStylesheet<V extends Variant>(config: StyleConfig<V>) {
     defaultVariants = {} 
   } = config;
   
-  // Pre-compute the StyleSheet for better performance
+  // Create flat styles object
+  const flattenedStyles = createFlattenedStyles(variants);
+  
+  // Create stylesheet
   const styles = StyleSheet.create({
     base,
-    ...Object.entries(variants).reduce((acc, [variantKey, variantValues]) => {
-      Object.entries(variantValues || {}).forEach(([value, style]) => {
-        acc[`${variantKey}_${value}`] = style;
-      });
-      return acc;
-    }, {} as Record<string, StyleDefinition>),
+    ...flattenedStyles,
   });
-
-  // Return a style generator function
-  return (options?: Partial<V>) => {
-    const styleArray = [styles.base];
-    const currentVariants = Object.keys(variants).reduce((acc, key) => {
-      // Only use default if option is undefined
-      (acc as any)[key] = options?.[key] !== undefined ? options?.[key] : (defaultVariants as any)[key];
-      return acc;
-    }, {} as Partial<V>);
-
-    // Add variant styles
-    Object.entries(currentVariants).forEach(([key, value]) => {
-      if (value !== undefined) {
-        const variantStyle = styles[`${key}_${value}` as keyof typeof styles]; ;
-        if (variantStyle) {
-          styleArray.push(variantStyle);
-        }
-      }
-    });
-
-    // Add compound variant styles
-    compoundVariants.forEach(({ variants: conditions, style }) => {
-      const matches = Object.entries(conditions).every(
-    ([key, value]) => currentVariants[key] === value
-      );
-      
-      if (matches) {
-        styleArray.push(StyleSheet.create({ style }).style);
-      }
-    });
-
+  
+  /**
+   * Generates styles based on provided variant options
+   * @param options Variant options to apply
+   * @returns Array of styles
+   */
+  return (options: Partial<V> = {}): StyleObject[] => {
+    const styleArray: StyleObject[] = [styles.base];
+    const currentVariants = mergeWithDefaults(options, defaultVariants, variants);
+    
+    // Apply variant styles
+    applyVariantStyles(styleArray, currentVariants, styles);
+    
+    // Apply compound variants
+    applyCompoundVariants(styleArray, currentVariants, compoundVariants);
+    
     return styleArray;
   };
+}
+
+// Helper Functions
+
+/**
+ * Creates flattened styles object from variant definitions
+ */
+function createFlattenedStyles<V extends VariantDefinitions>(
+  variants: StyleConfig<V>['variants']
+): Record<string, StyleObject> {
+  return Object.entries(variants || {}).reduce((acc, [variantKey, variantValues]) => {
+    if (!variantValues) return acc;
+    
+    Object.entries(variantValues).forEach(([value, style]) => {
+      acc[`${variantKey}_${value}`] = style as StyleObject;
+    });
+    
+    return acc;
+  }, {} as Record<string, StyleObject>);
+}
+
+/**
+ * Merges provided options with default variants
+ */
+function mergeWithDefaults<V extends VariantDefinitions>(
+  options: Partial<V>,
+  defaults: Partial<V>,
+  variants: StyleConfig<V>['variants']
+): Partial<V> {
+  return Object.keys(variants || {}).reduce((acc, key) => {
+    const variantKey = key as StyleKey<V>;
+    acc[variantKey] = options[variantKey] ?? defaults[variantKey];
+    return acc;
+  }, {} as Partial<V>);
+}
+
+/**
+ * Applies variant styles to the style array
+ */
+function applyVariantStyles<V extends VariantDefinitions>(
+  styleArray: StyleObject[],
+  currentVariants: Partial<V>,
+  styles: Record<string, StyleObject>
+): void {
+  Object.entries(currentVariants).forEach(([key, value]) => {
+    if (value === undefined) return;
+    
+    const styleKey = `${key}_${value}`;
+    const variantStyle = styles[styleKey];
+    
+    if (variantStyle) {
+      styleArray.push(variantStyle);
+    }
+  });
+}
+
+/**
+ * Applies compound variant styles to the style array
+ */
+function applyCompoundVariants<V extends VariantDefinitions>(
+  styleArray: StyleObject[],
+  currentVariants: Partial<V>,
+  compoundVariants: Array<CompoundVariant<V>>
+): void {
+  compoundVariants.forEach(({ variants: conditions, style }) => {
+    const matches = Object.entries(conditions).every(
+      ([key, value]) => currentVariants[key as keyof V] === value
+    );
+    
+    if (matches) {
+      styleArray.push(StyleSheet.create({ style }).style);
+    }
+  });
 }
