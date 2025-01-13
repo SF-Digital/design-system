@@ -1,6 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
-// Type Definitions
 type StyleObject = ViewStyle & TextStyle;
 type VariantDefinitions = Record<string, unknown>;
 
@@ -33,10 +32,8 @@ export function createStylesheet<V extends VariantDefinitions>(config: StyleConf
     defaultVariants = {} 
   } = config;
   
-  // Create flat styles object
   const flattenedStyles = createFlattenedStyles(variants);
   
-  // Create stylesheet
   const styles = StyleSheet.create({
     base,
     ...flattenedStyles,
