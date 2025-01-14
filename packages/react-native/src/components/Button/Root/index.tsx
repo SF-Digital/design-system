@@ -1,43 +1,75 @@
-import { colors, fonts, fontSizes } from '@sf-digital-ui/tokens'
-import React from 'react'
+import { colors } from '@sf-digital-ui/tokens'
+import React, { createContext, useContext, useState } from 'react'
 import { Pressable, PressableProps } from 'react-native'
 import { createStylesheet } from '../../../utils/create-styles'
 
-type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'link'
-type ButtonColor =
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'link'
+export type ButtonColor =
   | 'sf-green'
   | 'succession-blue'
   | 'neutral'
   | 'success'
   | 'warning'
   | 'error'
-type ButtonSize = 'sm' | 'md' | 'lg'
+export type ButtonSize = 'sm' | 'md' | 'lg'
 
 type ButtonVariants = {
   variant?: ButtonVariant
   color?: ButtonColor
   size?: ButtonSize
   iconButton?: boolean
+  disabled?: boolean
+  pressed?: boolean
+}
+
+type ButtonContextType = {
+  color?: ButtonColor
+  variant?: ButtonVariant
+  size?: ButtonSize
+  disabled?: boolean
+  pressed?: boolean
+} | null
+
+const getRingStyle = (color = colors['primary-green']['50'], size = 4) => ({
+  // iOS properties (Android will ignore)
+  shadowColor: color,
+  shadowOffset: { width: 0, height: 0 },
+  shadowOpacity: 0.3,
+  shadowRadius: size,
+
+  // Android properties (iOS will ignore)
+  elevation: size,
+})
+
+const ButtonContext = createContext<ButtonContextType>(null)
+
+export const useButtonContext = () => {
+  const context = useContext(ButtonContext)
+  if (!context) {
+    throw new Error('Button.Text must be used within Button.Root')
+  }
+  return context
 }
 
 const buttonStyles = createStylesheet<ButtonVariants>({
   base: {
-    fontFamily: fonts['sf-digital'],
     alignItems: 'center',
     flexDirection: 'row',
     gap: 4,
     borderRadius: 6,
-    fontWeight: 600,
   },
   variants: {
     size: {
-      sm: { fontSize: fontSizes['sf-sm'] },
-      md: { fontSize: fontSizes['sf-md'] },
-      lg: { fontSize: fontSizes['sf-lg'] },
+      sm: {},
+      md: {},
+      lg: {},
     },
     variant: {
       primary: {},
-      secondary: {},
+      secondary: {
+        backgroundColor: 'white',
+        borderWidth: 1,
+      },
       tertiary: {},
       link: {},
     },
@@ -49,24 +81,258 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       warning: {},
       error: {},
     },
+    disabled: {
+      true: {},
+      false: {},
+    },
     iconButton: {
+      true: {},
+      false: {},
+    },
+    pressed: {
       true: {},
       false: {},
     },
   },
   compoundVariants: [
     {
+      variants: {
+        size: 'sm',
+        iconButton: false,
+      },
+      style: {
+        paddingHorizontal: 24,
+        paddingVertical: 8,
+      },
+    },
+    {
+      variants: {
+        size: 'md',
+        iconButton: false,
+      },
+      style: {
+        paddingHorizontal: 24,
+        paddingVertical: 10,
+      },
+    },
+    {
+      variants: {
+        size: 'lg',
+        iconButton: false,
+      },
+      style: {
+        paddingHorizontal: 32,
+        paddingVertical: 10,
+      },
+    },
+    {
+      variants: {
+        size: 'sm',
+        iconButton: true,
+      },
+      style: {
+        padding: 8,
+      },
+    },
+    {
+      variants: {
+        size: 'md',
+        iconButton: true,
+      },
+      style: {
+        padding: 10,
+      },
+    },
+    {
+      variants: {
+        size: 'lg',
+        iconButton: true,
+      },
+      style: {
+        padding: 12,
+      },
+    },
+    {
       variants: { color: 'sf-green', variant: 'primary' },
       style: {
         backgroundColor: colors['primary-green']['500'],
-        color: 'white',
+      },
+    },
+    {
+      variants: { color: 'sf-green', variant: 'primary', pressed: true },
+      style: {
+        backgroundColor: colors['primary-green']['500'],
+        ...getRingStyle(colors['primary-green']['50']),
       },
     },
     {
       variants: { color: 'succession-blue', variant: 'primary' },
       style: {
         backgroundColor: colors['succession-blue']['500'],
-        color: 'white',
+      },
+    },
+    {
+      variants: { color: 'succession-blue', variant: 'primary', pressed: true },
+      style: {
+        backgroundColor: colors['succession-blue']['500'],
+        ...getRingStyle(colors['succession-blue']['50']),
+      },
+    },
+    {
+      variants: { color: 'neutral', variant: 'primary' },
+      style: {
+        backgroundColor: colors.neutral['500'],
+      },
+    },
+    {
+      variants: { color: 'success', variant: 'primary' },
+      style: {
+        backgroundColor: colors.success['500'],
+      },
+    },
+    {
+      variants: { color: 'success', variant: 'primary', pressed: true },
+      style: {
+        backgroundColor: colors.success['500'],
+        ...getRingStyle(colors.success['100']),
+      },
+    },
+    {
+      variants: { color: 'warning', variant: 'primary' },
+      style: {
+        backgroundColor: colors.warning['500'],
+      },
+    },
+    {
+      variants: { color: 'warning', variant: 'primary', pressed: true },
+      style: {
+        backgroundColor: colors.warning['500'],
+        ...getRingStyle(colors.warning['100']),
+      },
+    },
+    {
+      variants: { color: 'error', variant: 'primary' },
+      style: {
+        backgroundColor: colors.error['500'],
+      },
+    },
+    {
+      variants: { color: 'error', variant: 'primary', pressed: true },
+      style: {
+        backgroundColor: colors.error['500'],
+        ...getRingStyle(colors.error['100']),
+      },
+    },
+    {
+      variants: { variant: 'primary', disabled: true },
+      style: {
+        backgroundColor: colors.neutral['20'],
+        borderColor: colors.neutral['50'],
+        cursor: 'auto',
+      },
+    },
+    {
+      variants: { color: 'sf-green', variant: 'secondary' },
+      style: {
+        borderColor: colors['primary-green']['500'],
+      },
+    },
+    {
+      variants: { color: 'sf-green', variant: 'secondary', pressed: true },
+      style: {
+        borderColor: colors['primary-green']['500'],
+        ...getRingStyle(colors['primary-green']['50']),
+      },
+    },
+    {
+      variants: { color: 'succession-blue', variant: 'secondary' },
+      style: {
+        borderColor: colors['succession-blue']['500'],
+      },
+    },
+    {
+      variants: {
+        color: 'succession-blue',
+        variant: 'secondary',
+        pressed: true,
+      },
+      style: {
+        borderColor: colors['succession-blue']['500'],
+        ...getRingStyle(colors['succession-blue']['50']),
+      },
+    },
+    {
+      variants: { color: 'neutral', variant: 'secondary' },
+      style: {
+        borderColor: colors.neutral['60'],
+      },
+    },
+    {
+      variants: { color: 'neutral', variant: 'secondary', pressed: true },
+      style: {
+        borderColor: colors.neutral['80'],
+        ...getRingStyle(colors.neutral['30']),
+      },
+    },
+    {
+      variants: { color: 'success', variant: 'secondary' },
+      style: {
+        borderColor: colors.success['100'],
+      },
+    },
+    {
+      variants: { color: 'success', variant: 'secondary', pressed: true },
+      style: {
+        borderColor: colors.success['100'],
+        ...getRingStyle(colors.success['50']),
+      },
+    },
+    {
+      variants: { color: 'error', variant: 'secondary' },
+      style: {
+        borderColor: colors.error['100'],
+      },
+    },
+    {
+      variants: { color: 'error', variant: 'secondary', pressed: true },
+      style: {
+        borderColor: colors.error['100'],
+        ...getRingStyle(colors.error['50']),
+      },
+    },
+    {
+      variants: { color: 'warning', variant: 'secondary' },
+      style: {
+        borderColor: colors.warning['100'],
+      },
+    },
+    {
+      variants: { color: 'warning', variant: 'secondary', pressed: true },
+      style: {
+        borderColor: colors.warning['100'],
+        ...getRingStyle(colors.warning['50']),
+      },
+    },
+    {
+      variants: { variant: 'secondary', disabled: true },
+      style: {
+        borderColor: colors.neutral['30'],
+        backgroundColor: colors.neutral['10'],
+        cursor: 'auto',
+      },
+    },
+    {
+      variants: { variant: 'tertiary', disabled: true },
+      style: {
+        backgroundColor: 'transparent',
+        cursor: 'auto',
+      },
+    },
+    {
+      variants: { variant: 'link', disabled: true },
+      style: {
+        backgroundColor: 'transparent',
+        cursor: 'auto',
       },
     },
   ],
@@ -75,6 +341,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
     variant: 'primary',
     color: 'sf-green',
     iconButton: false,
+    disabled: false,
   },
 })
 
@@ -83,6 +350,7 @@ export interface ButtonRootProps extends PressableProps {
   color?: ButtonColor
   size?: ButtonSize
   iconButton?: boolean
+  disabled?: boolean
 }
 
 export const Root = ({
@@ -90,14 +358,29 @@ export const Root = ({
   variant,
   size,
   iconButton,
+  disabled,
   ...props
 }: ButtonRootProps) => {
-  const styles = buttonStyles({ size, variant, color, iconButton })
+  const [pressed, setPressed] = useState(false)
+  const styles = buttonStyles({
+    size,
+    variant,
+    color,
+    iconButton,
+    disabled,
+    pressed,
+  })
+
+  const contextValue = { color, variant, size, disabled, pressed }
 
   return (
-    <Pressable
-      style={[...styles, typeof props.style === 'object' ? props.style : {}]}
-      {...props}
-    />
+    <ButtonContext.Provider value={contextValue}>
+      <Pressable
+        onPressIn={() => setPressed(true)}
+        onPressOut={() => setPressed(false)}
+        style={[...styles, typeof props.style === 'object' ? props.style : {}]}
+        {...props}
+      />
+    </ButtonContext.Provider>
   )
 }

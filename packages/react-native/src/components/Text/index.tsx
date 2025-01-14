@@ -47,5 +47,3 @@ export const Text = ({ size = 'md', style, ...props }: TextProps) => {
     <RNText style={[sizeStyle, style]} accessibilityRole="text" {...props} />
   )
 }
-
-// export default Text
