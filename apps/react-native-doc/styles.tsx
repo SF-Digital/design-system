@@ -11,10 +11,11 @@ export const pageContainerStyle = StyleSheet.create({
 
 export const exampleContainerStyle = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     backgroundColor: 'white',
     borderRadius: 10,
-    paddingVertical: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
   },
 })
