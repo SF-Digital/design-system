@@ -30,11 +30,11 @@ type ButtonContextType = {
   pressed?: boolean
 } | null
 
-const getRingStyle = (color = colors['primary-green']['50'], size = 4) => ({
+const getRingStyle = (color = colors['primary-green']['500'], size = 4) => ({
   // iOS properties (Android will ignore)
   shadowColor: color,
   shadowOffset: { width: 0, height: 0 },
-  shadowOpacity: 0.3,
+  shadowOpacity: 0.7,
   shadowRadius: size,
 
   // Android properties (iOS will ignore)
@@ -162,7 +162,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'sf-green', variant: 'primary', pressed: true },
       style: {
         backgroundColor: colors['primary-green']['500'],
-        ...getRingStyle(colors['primary-green']['50']),
+        ...getRingStyle(colors['primary-green']['500']),
       },
     },
     {
@@ -175,7 +175,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'succession-blue', variant: 'primary', pressed: true },
       style: {
         backgroundColor: colors['succession-blue']['500'],
-        ...getRingStyle(colors['succession-blue']['50']),
+        ...getRingStyle(colors['succession-blue']['500']),
       },
     },
     {
@@ -194,7 +194,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'success', variant: 'primary', pressed: true },
       style: {
         backgroundColor: colors.success['500'],
-        ...getRingStyle(colors.success['100']),
+        ...getRingStyle(colors.success['500']),
       },
     },
     {
@@ -207,7 +207,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'warning', variant: 'primary', pressed: true },
       style: {
         backgroundColor: colors.warning['500'],
-        ...getRingStyle(colors.warning['100']),
+        ...getRingStyle(colors.warning['500']),
       },
     },
     {
@@ -220,14 +220,14 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'error', variant: 'primary', pressed: true },
       style: {
         backgroundColor: colors.error['500'],
-        ...getRingStyle(colors.error['100']),
+        ...getRingStyle(colors.error['500']),
       },
     },
     {
       variants: { variant: 'primary', disabled: true },
       style: {
         backgroundColor: colors.neutral['20'],
-        borderColor: colors.neutral['50'],
+        borderColor: colors.neutral['500'],
         cursor: 'auto',
       },
     },
@@ -241,7 +241,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       variants: { color: 'sf-green', variant: 'secondary', pressed: true },
       style: {
         borderColor: colors['primary-green']['500'],
-        ...getRingStyle(colors['primary-green']['50']),
+        ...getRingStyle(colors['primary-green']['500']),
       },
     },
     {
@@ -258,7 +258,7 @@ const buttonStyles = createStylesheet<ButtonVariants>({
       },
       style: {
         borderColor: colors['succession-blue']['500'],
-        ...getRingStyle(colors['succession-blue']['50']),
+        ...getRingStyle(colors['succession-blue']['500']),
       },
     },
     {
@@ -277,40 +277,40 @@ const buttonStyles = createStylesheet<ButtonVariants>({
     {
       variants: { color: 'success', variant: 'secondary' },
       style: {
-        borderColor: colors.success['100'],
+        borderColor: colors.success['500'],
       },
     },
     {
       variants: { color: 'success', variant: 'secondary', pressed: true },
       style: {
-        borderColor: colors.success['100'],
-        ...getRingStyle(colors.success['50']),
+        borderColor: colors.success['500'],
+        ...getRingStyle(colors.success['500']),
       },
     },
     {
       variants: { color: 'error', variant: 'secondary' },
       style: {
-        borderColor: colors.error['100'],
+        borderColor: colors.error['500'],
       },
     },
     {
       variants: { color: 'error', variant: 'secondary', pressed: true },
       style: {
-        borderColor: colors.error['100'],
-        ...getRingStyle(colors.error['50']),
+        borderColor: colors.error['500'],
+        ...getRingStyle(colors.error['500']),
       },
     },
     {
       variants: { color: 'warning', variant: 'secondary' },
       style: {
-        borderColor: colors.warning['100'],
+        borderColor: colors.warning['500'],
       },
     },
     {
       variants: { color: 'warning', variant: 'secondary', pressed: true },
       style: {
-        borderColor: colors.warning['100'],
-        ...getRingStyle(colors.warning['50']),
+        borderColor: colors.warning['500'],
+        ...getRingStyle(colors.warning['500']),
       },
     },
     {
