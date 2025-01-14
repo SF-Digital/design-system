@@ -6,6 +6,11 @@ const routes = [
   { name: 'headingPage', label: 'Heading', title: 'Heading' },
   { name: 'textPage', label: 'Text', title: 'Text' },
   { name: 'avatarPage', label: 'Avatar', title: 'Avatar' },
+  {
+    name: 'buttonPage',
+    label: 'Button',
+    title: 'Button',
+  },
 ]
 
 export default function Layout() {

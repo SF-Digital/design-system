@@ -24,11 +24,6 @@ const input = tv(
         'succession-blue':
           'focus-within:border-succession-blue-200 focus-within:ring-succession-blue-100',
       },
-
-
-
-
-	  
     },
     defaultVariants: {
       size: 'md',
