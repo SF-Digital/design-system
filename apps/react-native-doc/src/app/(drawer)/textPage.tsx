@@ -11,9 +11,9 @@ export default function TextPage() {
   \`size: 'lg' | 'md' | 'sm' | 'xs'\` - The size of the text.`
 
   return (
-    <View style={pageContainerStyle}>
+    <View style={pageContainerStyle.container}>
       <Markdown>{textDescription}</Markdown>
-      <View style={exampleContainerStyle}>
+      <View style={exampleContainerStyle.container}>
         {textSizes.map((textSize) => {
           return (
             <Text size={textSize} key={textSize}>

@@ -1,5 +1,4 @@
 import { Text, View } from 'react-native'
-// import { Headings } from './headings'
 
 // TODO: presentation page for our design system on react-native
 const Home = () => {

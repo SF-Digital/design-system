@@ -19,9 +19,9 @@ export default function HeadingPage() {
   \b`
 
   return (
-    <View style={pageContainerStyle}>
+    <View style={pageContainerStyle.container}>
       <Markdown>{headingDescription}</Markdown>
-      <View style={exampleContainerStyle}>
+      <View style={exampleContainerStyle.container}>
         {headingSizes.map((headingSize) => {
           return (
             <Heading size={headingSize} key={headingSize}>
