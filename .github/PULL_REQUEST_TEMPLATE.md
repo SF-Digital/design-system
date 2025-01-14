@@ -23,6 +23,7 @@ Before making this Pull Request "Ready for review", please make the following ch
 
 - [ ] 📜 README.md
 - [ ] 📕 Storybook
+- [ ] 📲 React Native Documentation
 - [ ] 🙅‍♂️ No documentation neeeded
 
 ## Desktop Screenshots (optional)
