@@ -4,6 +4,7 @@ import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useState } from 'react'
+import { exampleContainerStyle, pageContainerStyle } from './styles'
 
 export default function Button() {
   const docs = `This story displays the \`Button\` component, which is a React Element built using Pattern Composition.
@@ -48,16 +49,24 @@ export default function Button() {
   const [iconButton, setIconButton] = useState(false)
 
   return (
-    <ScrollView style={{ flex: 1 }}>
+    <ScrollView style={pageContainerStyle.container}>
       <View
         style={{
           alignItems: 'center',
           padding: 12,
           paddingBottom: 24,
+          gap: 12,
         }}
       >
         <Markdown>{docs}</Markdown>
-        <View style={{ flex: 1, flexWrap: 'wrap', flexDirection: 'row' }}>
+        <View
+          style={{
+            flex: 1,
+            flexWrap: 'wrap',
+            flexDirection: 'row',
+            ...exampleContainerStyle.container,
+          }}
+        >
           <RadioGroup
             options={[
               { label: 'Primary', value: 'primary' },
