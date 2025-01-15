@@ -1,0 +1,108 @@
+import { View } from 'react-native'
+import { pageContainerStyle } from './styles'
+import { RadioGroup, Text } from '@sf-digital-ui/react-native'
+import { colors } from '@sf-digital-ui/tokens'
+import { useState } from 'react'
+import Markdown from '@ronradtke/react-native-markdown-display'
+import Radio from '@/components/RadioGroup'
+
+type Size = 'sm' | 'md' | 'lg'
+type Color = 'sf-green' | 'succession-blue'
+
+export default function RadioGroupPage() {
+  const [size, setSize] = useState<Size>('md')
+  const [color, setColor] = useState<Color>('sf-green')
+
+  const docs = `
+ This story displays the \`RadioGroup\` component, which is a React Element built using Pattern Composition.
+ 
+ ## Usage:
+ \b
+ \`RadioGroup.Root\` - The root element wrapping the group of radio items.
+ \b
+ \`RadioGroup.Item\` - The individual radio item.
+ \b
+ ## API Reference:
+ ### Root
+ \b
+ \`orientation: 'vertical' | 'horizontal'\` - The orientation of the radio group.
+ \b
+ \`disabled: boolean\` - Whether the radio group is disabled.
+ \b
+ \`defaultValue: string\` - The default value of the radio group.
+ \b
+ \`onValueChange: (value: string) => void\` - The callback function when the radio group value changes.
+ \b
+ \`value: string\` - The value of the radio item.  
+ \b
+ ### Item
+ \b
+ \`size: 'sm' | 'md' | 'lg'\` - The size of the radio item.
+ \b
+ \`color: 'sf-green' | 'succession-blue'\` - The color of the radio item. 
+ \b
+`
+
+  return (
+    <View style={pageContainerStyle.container}>
+      <Markdown>{docs}</Markdown>
+      <View
+        style={{
+          flexDirection: 'row',
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          backgroundColor: 'white',
+          borderRadius: 10,
+          width: '100%',
+        }}
+      >
+        <View
+          style={{
+            flexDirection: 'column',
+            flex: 1,
+          }}
+        >
+          <Radio
+            options={[
+              { label: 'sm', value: 'sm' },
+              { label: 'md', value: 'md' },
+              { label: 'lg', value: 'lg' },
+            ]}
+            selectedValue={size}
+            onValueChange={(value) => setSize(value as Size)}
+          />
+          <Radio
+            options={[
+              { label: 'sf-green', value: 'sf-green' },
+              { label: 'succession-blue', value: 'succession-blue' },
+            ]}
+            selectedValue={color}
+            onValueChange={(value) => setColor(value as Color)}
+          />
+        </View>
+
+        <RadioGroup.Root style={{ flex: 1 }} defaultValue="1">
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <RadioGroup.Item size={size} color={color} value="1" />
+            <Text size={size} style={{ color: colors.neutral['100'] }}>
+              1
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <RadioGroup.Item size={size} color={color} value="2" />
+            <Text size={size} style={{ color: colors.neutral['100'] }}>
+              2
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <RadioGroup.Item size={size} color={color} value="3" />
+            <Text size={size} style={{ color: colors.neutral['100'] }}>
+              3
+            </Text>
+          </View>
+        </RadioGroup.Root>
+      </View>
+    </View>
+  )
+}
