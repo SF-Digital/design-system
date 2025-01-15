@@ -13,6 +13,8 @@ export default function RadioGroupPage() {
   const [size, setSize] = useState<Size>('md')
   const [color, setColor] = useState<Color>('sf-green')
 
+  const exampleRadioGroupItems = [1, 2, 3]
+
   const docs = `
  This story displays the \`RadioGroup\` component, which is a React Element built using Pattern Composition.
  
@@ -83,24 +85,21 @@ export default function RadioGroupPage() {
         </View>
 
         <RadioGroup.Root style={{ flex: 1 }} defaultValue="1">
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-            <RadioGroup.Item size={size} color={color} value="1" />
-            <Text size={size} style={{ color: colors.neutral['100'] }}>
-              1
-            </Text>
-          </View>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-            <RadioGroup.Item size={size} color={color} value="2" />
-            <Text size={size} style={{ color: colors.neutral['100'] }}>
-              2
-            </Text>
-          </View>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-            <RadioGroup.Item size={size} color={color} value="3" />
-            <Text size={size} style={{ color: colors.neutral['100'] }}>
-              3
-            </Text>
-          </View>
+          {exampleRadioGroupItems.map((item) => (
+            <View
+              key={item}
+              style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+            >
+              <RadioGroup.Item
+                size={size}
+                color={color}
+                value={item.toString()}
+              />
+              <Text size={size} style={{ color: colors.neutral['100'] }}>
+                {item}
+              </Text>
+            </View>
+          ))}
         </RadioGroup.Root>
       </View>
     </View>
