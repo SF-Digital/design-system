@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
-import { exampleContainerStyle, pageContainerStyle } from './styles'
+import { exampleContainerStyle, pageContainerStyle } from '../../../styles'
 
 export default function HeadingPage() {
   const headingSizes: HeadingProps['size'][] = [
@@ -25,7 +25,8 @@ export default function HeadingPage() {
         {headingSizes.map((headingSize) => {
           return (
             <Heading size={headingSize} key={headingSize}>
-              This is a {`'${headingSize}'`} Heading
+              {`${headingSize}: `}
+              The quick brown fox jumps over the lazy dog
             </Heading>
           )
         })}

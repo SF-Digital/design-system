@@ -11,3 +11,4 @@ export {
   RadioGroupRootProps,
   RadioGroupItemProps,
 } from './components/RadioGroup'
+export { Avatar, AvatarProps } from './components/Avatar'

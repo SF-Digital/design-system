@@ -5,6 +5,7 @@ const routes = [
   { name: 'index', label: 'Home', title: 'Home' },
   { name: 'headingPage', label: 'Heading', title: 'Heading' },
   { name: 'textPage', label: 'Text', title: 'Text' },
+  { name: 'avatarPage', label: 'Avatar', title: 'Avatar' },
   {
     name: 'buttonPage',
     label: 'Button',
