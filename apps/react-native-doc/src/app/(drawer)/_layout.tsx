@@ -1,15 +1,26 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Drawer } from 'expo-router/drawer'
+import { colors } from '@sf-digital-ui/tokens'
 
 const routes = [
   { name: 'index', label: 'Home', title: 'Home' },
-  { name: 'headingPage', label: 'Heading', title: 'Heading' },
-  { name: 'textPage', label: 'Text', title: 'Text' },
-  { name: 'avatarPage', label: 'Avatar', title: 'Avatar' },
+  { name: 'heading', label: 'Heading', title: 'Heading' },
+  { name: 'text', label: 'Text', title: 'Text' },
+  { name: 'avatar', label: 'Avatar', title: 'Avatar' },
   {
-    name: 'buttonPage',
+    name: 'button',
     label: 'Button',
     title: 'Button',
+  },
+  {
+    name: 'radiogroup',
+    label: 'RadioGroup',
+    title: 'RadioGroup',
+  },
+  {
+    name: 'textinput',
+    label: 'TextInput',
+    title: 'TextInput',
   },
 ]
 
@@ -18,14 +29,14 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         screenOptions={{
-          drawerActiveBackgroundColor: '#029cfd',
+          drawerActiveBackgroundColor: colors['primary-green']['400'],
           drawerActiveTintColor: 'white',
           drawerInactiveTintColor: 'white',
           drawerContentStyle: {
             backgroundColor: 'rgb(34, 36, 37)',
           },
           headerStyle: {
-            backgroundColor: '#ff4785',
+            backgroundColor: colors['primary-green']['500'],
           },
           headerTintColor: 'white',
           headerTitleStyle: {

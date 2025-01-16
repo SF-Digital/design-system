@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { Text, TextProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
-import { exampleContainerStyle, pageContainerStyle } from '../../../styles'
+import { styles } from '../../../styles'
 
 export default function TextPage() {
   const textSizes: TextProps['size'][] = ['lg', 'md', 'sm', 'xs']
@@ -11,9 +11,9 @@ export default function TextPage() {
   \`size: 'lg' | 'md' | 'sm' | 'xs'\` - The size of the text.`
 
   return (
-    <View style={pageContainerStyle.container}>
+    <View style={styles.pageContainer}>
       <Markdown>{textDescription}</Markdown>
-      <View style={exampleContainerStyle.container}>
+      <View style={styles.componentExampleContainer}>
         {textSizes.map((textSize) => {
           return (
             <Text size={textSize} key={textSize}>
