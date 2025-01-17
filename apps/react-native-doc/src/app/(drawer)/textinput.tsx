@@ -20,16 +20,6 @@ This story displays the \`TextInput\` component, which is a React element built 
 
 \`import { TextInput } from '@sf-digital-ui/react'\`
 
-TextInput is a composition of the following components:
-
-\`TextInput.Root\` - This appears as the input itself but is rather a wrapper
-\b
-\`TextInput.Control\` - The input element
-\b
-\`TextInput.Prefix\` - The element that will appear on the left side of the root
-\b
-\`TextInput.Suffix\` - The element that will appear on the right side of the root
-\b
 ## API Reference:
 ### TextInput.Root
 \b
