@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { Avatar, AvatarProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
-import { exampleContainerStyle, pageContainerStyle } from '../../../styles'
+import { styles } from '../../../styles'
 
 export default function AvatarPage() {
   const avatarSizes: AvatarProps['size'][] = [
@@ -22,9 +22,9 @@ export default function AvatarPage() {
   \`size: 'xxl' | 'xl' | 'lg' | 'md'| 'sm'| 'xs'\` - The size of the avatar.`
 
   return (
-    <View style={pageContainerStyle.container}>
+    <View style={styles.pageContainer}>
       <Markdown>{textDescription}</Markdown>
-      <View style={exampleContainerStyle.container}>
+      <View style={styles.componentExampleContainer}>
         {avatarSizes.map((avatarSize) => {
           return (
             <Avatar

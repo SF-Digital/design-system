@@ -1,16 +1,13 @@
 import { StyleSheet } from 'react-native'
 
-export const pageContainerStyle = StyleSheet.create({
-  container: {
+export const styles = StyleSheet.create({
+  pageContainer: {
     flex: 1,
     flexDirection: 'column',
     gap: 10,
     padding: 10,
   },
-})
-
-export const exampleContainerStyle = StyleSheet.create({
-  container: {
+  componentExampleContainer: {
     alignItems: 'flex-start',
     justifyContent: 'center',
     backgroundColor: 'white',

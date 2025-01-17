@@ -1,10 +1,11 @@
 import { View } from 'react-native'
+import { styles } from '../../../styles'
 import { RadioGroup, Text } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
 import { useState } from 'react'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import Radio from '@/components/RadioGroup'
-import { pageContainerStyle } from '../../../styles'
+import { ScrollView } from 'react-native-gesture-handler'
 
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
@@ -46,7 +47,7 @@ export default function RadioGroupPage() {
 `
 
   return (
-    <View style={pageContainerStyle.container}>
+    <ScrollView style={styles.pageContainer}>
       <Markdown>{docs}</Markdown>
       <View
         style={{
@@ -102,6 +103,6 @@ export default function RadioGroupPage() {
           ))}
         </RadioGroup.Root>
       </View>
-    </View>
+    </ScrollView>
   )
 }
