@@ -21,7 +21,7 @@ This story displays the \`TextInput\` component, which is a React element built 
 \`import { TextInput } from '@sf-digital-ui/react'\`
 
 ## API Reference:
-### TextInput.Root
+
 \b
 \`size: 'sm' | 'md' | 'lg'\` - The size of the input
 \b
