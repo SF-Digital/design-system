@@ -45,7 +45,10 @@ Inside the `packages/react-native`, run `npm run publish`
 Inside the `apps/react-native-doc`, run `npm run yalc-add`
 
 ## 4. Start the project
-Inside both `apps/react-native-doc` & `packages/react-native`, run and leave open `npm run dev`
+Inside both `apps/react-native-doc` & the root, run and leave open `npm run dev`
+
+## Debugging
+If there are issues on the react native docs, where you've changed the components but the package is not updating live, try repeating the steps from 3, especially the `packages/react-native`, run `npm run publish`
 
 # Pattern composition
 

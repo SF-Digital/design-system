@@ -4,3 +4,5 @@ dist
 apps/react-native-doc/yalc.lock
 apps/react-native-doc/.yalc/@sf-digital-ui/react-native/yalc.sig
 apps/react-native-doc/.yalc/@sf-digital-ui/react-native/package.json
+.turbo/cookies
+.turbo/daemon
