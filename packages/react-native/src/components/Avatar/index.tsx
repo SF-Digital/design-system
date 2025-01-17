@@ -1,4 +1,3 @@
-import '@sf-digital-ui/react/dist/output.css'
 import React from 'react'
 import {
   ImageProps as RNImageProps,

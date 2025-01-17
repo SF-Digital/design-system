@@ -4,7 +4,7 @@ import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useState } from 'react'
-import { exampleContainerStyle, pageContainerStyle } from './styles'
+import { exampleContainerStyle, pageContainerStyle } from '../../../styles'
 
 export default function Button() {
   const docs = `This story displays the \`Button\` component, which is a React Element built using Pattern Composition.
