@@ -3,11 +3,11 @@ import { Drawer } from 'expo-router/drawer'
 
 const routes = [
   { name: 'index', label: 'Home', title: 'Home' },
-  { name: 'headingPage', label: 'Heading', title: 'Heading' },
-  { name: 'textPage', label: 'Text', title: 'Text' },
-  { name: 'avatarPage', label: 'Avatar', title: 'Avatar' },
+  { name: 'heading', label: 'Heading', title: 'Heading' },
+  { name: 'text', label: 'Text', title: 'Text' },
+  { name: 'avatar', label: 'Avatar', title: 'Avatar' },
   {
-    name: 'buttonPage',
+    name: 'button',
     label: 'Button',
     title: 'Button',
   },

@@ -1,10 +1,10 @@
 import { View } from 'react-native'
-import { pageContainerStyle } from './styles'
 import { RadioGroup, Text } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
 import { useState } from 'react'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import Radio from '@/components/RadioGroup'
+import { pageContainerStyle } from '../../../styles'
 
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
