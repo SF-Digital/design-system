@@ -47,45 +47,35 @@ export default function RadioGroupPage() {
 `
 
   return (
-    <ScrollView style={styles.pageContainer}>
+    <ScrollView
+      style={{
+        ...styles.pageContainer,
+      }}
+    >
       <Markdown>{docs}</Markdown>
       <View
         style={{
-          flexDirection: 'row',
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: 'white',
-          borderRadius: 10,
-          width: '100%',
+          ...styles.componentExampleContainer,
         }}
       >
-        <View
-          style={{
-            flexDirection: 'column',
-            flex: 1,
-          }}
-        >
-          <Radio
-            options={[
-              { label: 'sm', value: 'sm' },
-              { label: 'md', value: 'md' },
-              { label: 'lg', value: 'lg' },
-            ]}
-            selectedValue={size}
-            onValueChange={(value) => setSize(value as Size)}
-          />
-          <Radio
-            options={[
-              { label: 'sf-green', value: 'sf-green' },
-              { label: 'succession-blue', value: 'succession-blue' },
-            ]}
-            selectedValue={color}
-            onValueChange={(value) => setColor(value as Color)}
-          />
-        </View>
-
-        <RadioGroup.Root style={{ flex: 1 }} defaultValue="1">
+        <Radio
+          options={[
+            { label: 'sm', value: 'sm' },
+            { label: 'md', value: 'md' },
+            { label: 'lg', value: 'lg' },
+          ]}
+          selectedValue={size}
+          onValueChange={(value) => setSize(value as Size)}
+        />
+        <Radio
+          options={[
+            { label: 'sf-green', value: 'sf-green' },
+            { label: 'succession-blue', value: 'succession-blue' },
+          ]}
+          selectedValue={color}
+          onValueChange={(value) => setColor(value as Color)}
+        />
+        <RadioGroup.Root defaultValue="1">
           {exampleRadioGroupItems.map((item) => (
             <View
               key={item}

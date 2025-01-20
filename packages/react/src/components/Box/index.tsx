@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-export interface BoxProps extends ComponentProps<'div'> {}
+export type BoxProps = ComponentProps<'div'>
 
 export const Box = ({ className, ...rest }: BoxProps) => {
   return (
