@@ -22,6 +22,8 @@ import '@sf-digital-ui/react/dist/output.css'
  * ### Root
  * Props
  *
+ * `hasBackground: boolean` - If `true`, the root will have a background
+ * 
  * `orientation: 'horizontal' | 'vertical'` - The orientation of the tabs
  *
  * `activationMode: 'automatic' | 'manual'` - The activation mode of the tabs
@@ -44,11 +46,11 @@ import '@sf-digital-ui/react/dist/output.css'
  *
  * `disabled: boolean` (Only for Trigger) - If `true`, the trigger will be disabled
  *
- * `variant: 'solid' | 'underline'` (Only for Trigger) - The variant of the trigger (default: solid)
+ * `variant: 'solid' | 'underline' | 'underline-filled' | 'panel'` (Only for Trigger) - The variant of the trigger (default: solid)
  *
  * `size: 'base' | 'lg'` (Only for Trigger) - The size of the trigger (default: base)
  *
- * `color: 'sf-green' | 'succession-blue'` (Only for Trigger) - The color of the trigger (default: sf-green)
+ * `color: 'sf-green' | 'succession-blue' | 'neutral'` (Only for Trigger) - The color of the trigger (default: sf-green)
  *
  * Data attribute
  *
@@ -76,13 +78,13 @@ const TabsStory: Meta<TabsRootProps & TabsTriggerProps> = {
       control: {
         type: 'inline-radio',
       },
-      options: ['solid', 'underline'],
+      options: ['solid', 'underline', 'panel', 'underline-filled'],
     },
     color: {
       control: {
         type: 'inline-radio',
       },
-      options: ['sf-green', 'succession-blue'],
+      options: ['sf-green', 'succession-blue', 'neutral'],
     },
   },
 }
@@ -92,9 +94,9 @@ export default TabsStory
 export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
   args: {},
   render: (args) => (
-    <Tabs.Root defaultValue="one" orientation="horizontal">
+    <Tabs.Root hasBackground={args.variant==='panel'} defaultValue="one" orientation="horizontal">
       <Tabs.List
-        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : ''}
+        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : args.variant==='panel' ? ' flex flex-row gap-1' : ''}
       >
         <Tabs.Trigger
           size={args.size}

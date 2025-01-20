@@ -499,7 +499,9 @@ declare const RadioGroup: {
     Item: ({ className, size, color, ...props }: RadioGroupItemProps) => react_jsx_runtime.JSX.Element;
 };
 
-type TabsRootProps = Tabs$1.TabsProps;
+type TabsRootProps = Tabs$1.TabsProps & {
+    hasBackground?: boolean;
+};
 
 type TabsListProps = Tabs$1.TabsListProps;
 
@@ -507,10 +509,13 @@ declare const tab: tailwind_variants.TVReturnType<{
     variant: {
         solid: string;
         underline: string;
+        'underline-filled': string;
+        panel: string;
     };
     color: {
         'sf-green': never[];
         'succession-blue': never[];
+        neutral: never[];
     };
     size: {
         base: string;
@@ -522,10 +527,13 @@ declare const tab: tailwind_variants.TVReturnType<{
     variant: {
         solid: string;
         underline: string;
+        'underline-filled': string;
+        panel: string;
     };
     color: {
         'sf-green': never[];
         'succession-blue': never[];
+        neutral: never[];
     };
     size: {
         base: string;
@@ -535,10 +543,13 @@ declare const tab: tailwind_variants.TVReturnType<{
     variant: {
         solid: string;
         underline: string;
+        'underline-filled': string;
+        panel: string;
     };
     color: {
         'sf-green': never[];
         'succession-blue': never[];
+        neutral: never[];
     };
     size: {
         base: string;
@@ -552,7 +563,7 @@ type TabsTriggerProps = Tabs$1.TabsTriggerProps & VariantProps<typeof tab>;
 type TabsContentProps = Tabs$1.TabsContentProps;
 
 declare const Tabs: {
-    Root: (props: TabsRootProps) => react_jsx_runtime.JSX.Element;
+    Root: ({ hasBackground, ...props }: TabsRootProps) => react_jsx_runtime.JSX.Element;
     List: (props: TabsListProps) => react_jsx_runtime.JSX.Element;
     Trigger: ({ size, variant, color, className, ...props }: TabsTriggerProps) => react_jsx_runtime.JSX.Element;
     Content: (props: TabsContentProps) => react_jsx_runtime.JSX.Element;
