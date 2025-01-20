@@ -62,7 +62,6 @@ export default function Button() {
         <Markdown>{docs}</Markdown>
         <View
           style={{
-            flexDirection: 'row',
             ...styles.componentExampleContainer,
           }}
         >

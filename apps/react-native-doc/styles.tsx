@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     padding: 10,
   },
   componentExampleContainer: {
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
     backgroundColor: 'white',
     borderRadius: 10,
     paddingVertical: 10,

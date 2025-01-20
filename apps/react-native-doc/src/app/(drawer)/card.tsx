@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import { Card } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { styles } from '../../../styles'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export default function TextPage() {
   const cardDescription = `This story displays the \`Card\` component.
@@ -21,17 +22,19 @@ export default function TextPage() {
   ]
 
   return (
-    <View style={styles.pageContainer}>
-      <Markdown>{cardDescription}</Markdown>
-      <View style={{ ...styles.componentExampleContainer }}>
-        {words.map((word) => {
-          return (
-            <Card key={word}>
-              <Text>{word}</Text>
-            </Card>
-          )
-        })}
+    <ScrollView>
+      <View style={styles.pageContainer}>
+        <Markdown>{cardDescription}</Markdown>
+        <View style={{ ...styles.componentExampleContainer }}>
+          {words.map((word) => {
+            return (
+              <Card key={word}>
+                <Text>{word}</Text>
+              </Card>
+            )
+          })}
+        </View>
       </View>
-    </View>
+    </ScrollView>
   )
 }
