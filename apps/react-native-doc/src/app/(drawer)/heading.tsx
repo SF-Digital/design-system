@@ -20,19 +20,17 @@ export default function HeadingPage() {
   \b`
 
   return (
-    <ScrollView>
-      <View style={styles.pageContainer}>
-        <Markdown>{headingDescription}</Markdown>
-        <View style={styles.componentExampleContainer}>
-          {headingSizes.map((headingSize) => {
-            return (
-              <Heading size={headingSize} key={headingSize}>
-                {`${headingSize}: `}
-                The quick brown fox jumps over the lazy dog
-              </Heading>
-            )
-          })}
-        </View>
+    <ScrollView style={styles.pageContainer}>
+      <Markdown>{headingDescription}</Markdown>
+      <View style={styles.componentExampleContainer}>
+        {headingSizes.map((headingSize) => {
+          return (
+            <Heading size={headingSize} key={headingSize}>
+              {`${headingSize}: `}
+              The quick brown fox jumps over the lazy dog
+            </Heading>
+          )
+        })}
       </View>
     </ScrollView>
   )

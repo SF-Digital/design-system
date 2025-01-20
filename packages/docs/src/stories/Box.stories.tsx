@@ -13,13 +13,7 @@ const BoxStory: Meta<BoxProps> = {
       </>
     ),
   },
-  argTypes: {
-    children: {
-      control: {
-        type: null as any,
-      },
-    },
-  },
+  argTypes: {},
 }
 
 export default BoxStory

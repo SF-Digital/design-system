@@ -25,7 +25,13 @@ export default function TextPage() {
     <ScrollView>
       <View style={styles.pageContainer}>
         <Markdown>{cardDescription}</Markdown>
-        <View style={{ ...styles.componentExampleContainer }}>
+        <View
+          style={{
+            alignItems: 'flex-start',
+            gap: 2,
+            ...styles.componentExampleContainer,
+          }}
+        >
           {words.map((word) => {
             return (
               <Card key={word}>

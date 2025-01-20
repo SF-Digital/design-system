@@ -30,7 +30,7 @@ export const Card = ({ style, ...props }: CardProps) => {
   return (
     <RNView
       style={[cardSizes.base, cardSizes.shadow, style]}
-      accessibilityRole="text"
+      accessibilityRole="none"
       {...props}
     />
   )

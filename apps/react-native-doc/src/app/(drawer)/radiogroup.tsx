@@ -47,53 +47,51 @@ export default function RadioGroupPage() {
 `
 
   return (
-    <ScrollView>
+    <ScrollView
+      style={{
+        ...styles.pageContainer,
+      }}
+    >
       <Markdown>{docs}</Markdown>
       <View
         style={{
-          ...styles.pageContainer,
+          ...styles.componentExampleContainer,
         }}
       >
-        <View
-          style={{
-            ...styles.componentExampleContainer,
-          }}
-        >
-          <Radio
-            options={[
-              { label: 'sm', value: 'sm' },
-              { label: 'md', value: 'md' },
-              { label: 'lg', value: 'lg' },
-            ]}
-            selectedValue={size}
-            onValueChange={(value) => setSize(value as Size)}
-          />
-          <Radio
-            options={[
-              { label: 'sf-green', value: 'sf-green' },
-              { label: 'succession-blue', value: 'succession-blue' },
-            ]}
-            selectedValue={color}
-            onValueChange={(value) => setColor(value as Color)}
-          />
-          <RadioGroup.Root defaultValue="1">
-            {exampleRadioGroupItems.map((item) => (
-              <View
-                key={item}
-                style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
-              >
-                <RadioGroup.Item
-                  size={size}
-                  color={color}
-                  value={item.toString()}
-                />
-                <Text size={size} style={{ color: colors.neutral['100'] }}>
-                  {item}
-                </Text>
-              </View>
-            ))}
-          </RadioGroup.Root>
-        </View>
+        <Radio
+          options={[
+            { label: 'sm', value: 'sm' },
+            { label: 'md', value: 'md' },
+            { label: 'lg', value: 'lg' },
+          ]}
+          selectedValue={size}
+          onValueChange={(value) => setSize(value as Size)}
+        />
+        <Radio
+          options={[
+            { label: 'sf-green', value: 'sf-green' },
+            { label: 'succession-blue', value: 'succession-blue' },
+          ]}
+          selectedValue={color}
+          onValueChange={(value) => setColor(value as Color)}
+        />
+        <RadioGroup.Root defaultValue="1">
+          {exampleRadioGroupItems.map((item) => (
+            <View
+              key={item}
+              style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+            >
+              <RadioGroup.Item
+                size={size}
+                color={color}
+                value={item.toString()}
+              />
+              <Text size={size} style={{ color: colors.neutral['100'] }}>
+                {item}
+              </Text>
+            </View>
+          ))}
+        </RadioGroup.Root>
       </View>
     </ScrollView>
   )
