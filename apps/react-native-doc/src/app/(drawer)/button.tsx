@@ -48,21 +48,20 @@ export default function Button() {
   const [disabled, setDisabled] = useState(false)
   const [iconButton, setIconButton] = useState(false)
 
+  function handleReset() {
+    setVariant('primary')
+    setSize('md')
+    setColor('sf-green')
+    setDisabled(false)
+    setIconButton(false)
+  }
+
   return (
-    <ScrollView style={styles.pageContainer}>
-      <View
-        style={{
-          alignItems: 'center',
-          padding: 12,
-          paddingBottom: 24,
-          gap: 12,
-        }}
-      >
+    <ScrollView>
+      <View style={styles.pageContainer}>
         <Markdown>{docs}</Markdown>
         <View
           style={{
-            flex: 1,
-            flexWrap: 'wrap',
             flexDirection: 'row',
             ...styles.componentExampleContainer,
           }}
@@ -114,16 +113,23 @@ export default function Button() {
             selectedValue={iconButton ? 'iconButton' : 'button'}
             onValueChange={(value) => setIconButton(value === 'iconButton')}
           />
+          <View style={{ padding: 10 }}>
+            <DesignSystemButton.Root onPressIn={handleReset}>
+              <DesignSystemButton.Text>Reset Button 2</DesignSystemButton.Text>
+            </DesignSystemButton.Root>
+          </View>
+          <View style={{ padding: 10 }}>
+            <DesignSystemButton.Root
+              variant={variant}
+              color={color}
+              size={size}
+              disabled={disabled}
+              iconButton={iconButton}
+            >
+              <DesignSystemButton.Text>Button 2</DesignSystemButton.Text>
+            </DesignSystemButton.Root>
+          </View>
         </View>
-        <DesignSystemButton.Root
-          variant={variant}
-          color={color}
-          size={size}
-          disabled={disabled}
-          iconButton={iconButton}
-        >
-          <DesignSystemButton.Text>Button 2</DesignSystemButton.Text>
-        </DesignSystemButton.Root>
       </View>
     </ScrollView>
   )

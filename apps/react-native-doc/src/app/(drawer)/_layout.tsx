@@ -22,6 +22,7 @@ const routes = [
     label: 'TextInput',
     title: 'TextInput',
   },
+  { name: 'card', label: 'Card', title: 'Card' },
 ]
 
 export default function Layout() {
