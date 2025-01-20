@@ -541,8 +541,14 @@ var RadioGroup3 = { Root: RadioGroupRoot, Item: RadioGroupItem };
 // src/components/Tabs/Root/index.tsx
 import * as Tabs from "@radix-ui/react-tabs";
 import { jsx as jsx16 } from "react/jsx-runtime";
-var Root7 = (props) => {
-  return /* @__PURE__ */ jsx16(Tabs.Root, __spreadValues({}, props));
+var Root7 = (_a) => {
+  var _b = _a, { hasBackground } = _b, props = __objRest(_b, ["hasBackground"]);
+  return /* @__PURE__ */ jsx16(
+    Tabs.Root,
+    __spreadValues({
+      className: hasBackground ? "rounded-md bg-neutral-20 p-1" : ""
+    }, props)
+  );
 };
 
 // src/components/Tabs/List/index.tsx
@@ -561,15 +567,18 @@ var tab = tv8(
     base: ["font-sf-digital font-bold text-neutral-80"],
     variants: {
       variant: {
-        solid: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500',
-        underline: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
+        solid: "",
+        underline: "",
+        "underline-filled": "",
+        panel: ""
       },
       color: {
         "sf-green": [],
-        "succession-blue": []
+        "succession-blue": [],
+        neutral: []
       },
       size: {
-        base: "px-4 py-2.5",
+        base: "px-4 py-2",
         lg: "px-10 py-2.5"
       }
     },
@@ -580,19 +589,39 @@ var tab = tv8(
         className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500'
       },
       {
+        color: "succession-blue",
+        variant: "solid",
+        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-succession-blue-100 data-[state="active"]:text-succession-blue-500'
+      },
+      {
         color: "sf-green",
         variant: "underline",
         className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:text-primary-green-500'
       },
       {
         color: "succession-blue",
-        variant: "solid",
-        className: 'rounded-md bg-neutral-20 text-sf-lg hover:bg-neutral-40 hover:text-neutral-90 data-[state="active"]:bg-succession-blue-100 data-[state="active"]:text-succession-blue-500'
+        variant: "underline",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-succession-blue-500 data-[state="active"]:text-succession-blue-500'
+      },
+      {
+        color: "sf-green",
+        variant: "underline-filled",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-primary-green-500 data-[state="active"]:bg-primary-green-50 data-[state="active"]:text-primary-green-500'
       },
       {
         color: "succession-blue",
-        variant: "underline",
-        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-succession-blue-500 data-[state="active"]:text-succession-blue-500'
+        variant: "underline-filled",
+        className: 'text-sf-lg transition-all duration-200 hover:text-neutral-90 data-[state="active"]:border-b-2 data-[state="active"]:border-b-succession-blue-500 data-[state="active"]:bg-succession-blue-50 data-[state="active"]:text-succession-blue-500'
+      },
+      {
+        color: "neutral",
+        variant: "solid",
+        className: 'rounded-md bg-transparent text-sf-lg text-neutral-100 hover:bg-neutral-10 hover:text-neutral-200 data-[state="active"]:bg-neutral-20 data-[state="active"]:text-neutral-200'
+      },
+      {
+        color: "neutral",
+        variant: "panel",
+        className: 'rounded-md text-sf-lg text-neutral-100 hover:bg-neutral-10 hover:text-neutral-200 data-[state="active"]:bg-white data-[state="active"]:text-neutral-500 data-[state="active"]:drop-shadow-sm'
       }
     ],
     defaultVariants: { variant: "solid", size: "base", color: "sf-green" }

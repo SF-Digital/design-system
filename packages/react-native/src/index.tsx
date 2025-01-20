@@ -13,4 +13,5 @@ export {
 } from './components/RadioGroup'
 export { Avatar, AvatarProps } from './components/Avatar'
 export { TextInput, TextInputProps } from './components/TextInput'
+export { Checkbox, CheckboxRootProps } from './components/Checkbox'
 export { Card, CardProps } from './components/Card'

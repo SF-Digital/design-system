@@ -23,6 +23,11 @@ const routes = [
     title: 'TextInput',
   },
   { name: 'card', label: 'Card', title: 'Card' },
+  {
+    name: 'checkbox',
+    label: 'Checkbox',
+    title: 'Checkbox',
+  },
 ]
 
 export default function Layout() {
