@@ -1,10 +1,13 @@
 import { View } from 'react-native'
-import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
+import {
+  Heading as DesignSystemHeading,
+  HeadingProps,
+} from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { styles } from '../../../styles'
 import { ScrollView } from 'react-native-gesture-handler'
 
-export default function HeadingPage() {
+export default function Heading() {
   const headingSizes: HeadingProps['size'][] = [
     'h1',
     'h2',
@@ -25,10 +28,10 @@ export default function HeadingPage() {
       <View style={styles.componentExampleContainer}>
         {headingSizes.map((headingSize) => {
           return (
-            <Heading size={headingSize} key={headingSize}>
+            <DesignSystemHeading size={headingSize} key={headingSize}>
               {`${headingSize}: `}
               The quick brown fox jumps over the lazy dog
-            </Heading>
+            </DesignSystemHeading>
           )
         })}
       </View>
