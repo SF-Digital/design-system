@@ -1,0 +1,41 @@
+import React, { createContext, useState } from 'react'
+import { ViewProps } from 'react-native'
+
+type DropdownMenuContextType = {
+  isOpen: boolean
+  setIsOpen: (value: boolean) => void
+}
+
+export const DropdownMenuContext = createContext<DropdownMenuContextType>({
+  isOpen: false,
+  setIsOpen: () => {},
+})
+
+export interface DropdownMenuRootProps extends ViewProps {
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}
+
+export const Root: React.FC<DropdownMenuRootProps> = ({
+  children,
+  open,
+  onOpenChange,
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleOpenChange = (value: boolean) => {
+    setIsOpen(value)
+    onOpenChange?.(value)
+  }
+
+  return (
+    <DropdownMenuContext.Provider
+      value={{
+        isOpen: open ?? isOpen,
+        setIsOpen: handleOpenChange,
+      }}
+    >
+      {children}
+    </DropdownMenuContext.Provider>
+  )
+}
