@@ -1,5 +1,8 @@
 import { View } from 'react-native'
-import { Button as DesignSystemButton } from '@sf-digital-ui/react-native'
+import {
+  Button as DesignSystemButton,
+  ButtonRootProps,
+} from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -10,6 +13,9 @@ export default function Button() {
   const docs = `This story displays the \`Button\` component, which is a React Element built using Pattern Composition.
   ## Usage:
   \b
+  \b
+  \`\`\`import { Button } from '@sf-digital-ui/react-native'\`\`\`
+  \b
   \`Button.Root\` - The root element of the button.
   \b
   \`Button.Text\` - The text element of the button.
@@ -19,7 +25,7 @@ export default function Button() {
   \`Button.Suffix\` - The element that will appear on the right side.
   \b
   ## API Reference:
-### Root
+  ### Root
   \b
   \`size: 'sm' | 'md' | 'lg'\` - The size of the button.
   \b
@@ -32,28 +38,19 @@ export default function Button() {
   \`iconButton: boolean\` - Whether the button is an icon button.
   \b`
 
-  type Variant = 'primary' | 'secondary' | 'tertiary' | 'link'
-  type Size = 'sm' | 'md' | 'lg'
-  type Color =
-    | 'sf-green'
-    | 'succession-blue'
-    | 'success'
-    | 'error'
-    | 'warning'
-    | 'neutral'
-
-  const [variant, setVariant] = useState<Variant>('primary')
-  const [size, setSize] = useState<Size>('md')
-  const [color, setColor] = useState<Color>('sf-green')
+  const [variant, setVariant] = useState<ButtonRootProps['variant']>('primary')
+  const [size, setSize] = useState<ButtonRootProps['size']>('md')
+  const [color, setColor] = useState<ButtonRootProps['color']>('sf-green')
   const [disabled, setDisabled] = useState(false)
   const [iconButton, setIconButton] = useState(false)
 
   return (
     <ScrollView
-      style={styles.pageContainer}
+      style={{ flex: 1 }}
       contentContainerStyle={{
         alignItems: 'center',
         paddingBottom: 24,
+        padding: 10,
         gap: 12,
       }}
     >
@@ -73,8 +70,10 @@ export default function Button() {
             { label: 'Tertiary', value: 'tertiary' },
             { label: 'Link', value: 'link' },
           ]}
-          selectedValue={variant}
-          onValueChange={(value) => setVariant(value as Variant)}
+          selectedValue={variant as string}
+          onValueChange={(value) =>
+            setVariant(value as ButtonRootProps['variant'])
+          }
         />
         <RadioGroup
           options={[
@@ -82,8 +81,8 @@ export default function Button() {
             { label: 'Medium', value: 'md' },
             { label: 'Large', value: 'lg' },
           ]}
-          selectedValue={size}
-          onValueChange={(value) => setSize(value as Size)}
+          selectedValue={size as string}
+          onValueChange={(value) => setSize(value as ButtonRootProps['size'])}
         />
         <RadioGroup
           options={[
@@ -94,8 +93,8 @@ export default function Button() {
             { label: 'SF Green', value: 'sf-green' },
             { label: 'Succession Blue', value: 'succession-blue' },
           ]}
-          selectedValue={color}
-          onValueChange={(value) => setColor(value as Color)}
+          selectedValue={color as string}
+          onValueChange={(value) => setColor(value as ButtonRootProps['color'])}
         />
         <RadioGroup
           options={[
@@ -121,7 +120,7 @@ export default function Button() {
         disabled={disabled}
         iconButton={iconButton}
       >
-        <DesignSystemButton.Text>Button 2</DesignSystemButton.Text>
+        <DesignSystemButton.Text>Button</DesignSystemButton.Text>
       </DesignSystemButton.Root>
     </ScrollView>
   )

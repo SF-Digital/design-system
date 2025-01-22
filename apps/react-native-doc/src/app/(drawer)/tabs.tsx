@@ -11,7 +11,7 @@ import RadioGroup from '@/components/RadioGroup'
 import { useState } from 'react'
 
 export default function Tabs() {
-  const exampleTabs = ['Home', 'Profile', 'Settings']
+  const exampleTabs = ['Home', 'Profile', 'Settings', 'Help', 'About']
 
   const docs = `This story displays the \`Tabs\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`Tabs{ComponentName}Props\`.
 \b
@@ -58,8 +58,8 @@ Props
 
   return (
     <ScrollView
-      style={[styles.pageContainer]}
-      contentContainerStyle={{ paddingBottom: 24, gap: 12 }}
+      style={{ flex: 1 }}
+      contentContainerStyle={{ paddingBottom: 24, padding: 10, gap: 12 }}
     >
       <Markdown>{docs}</Markdown>
       <View
