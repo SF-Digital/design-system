@@ -24,5 +24,5 @@ export const routes = [
     title: 'Checkbox',
   },
   { name: 'card', label: 'Card', title: 'Card' },
-  { name: 'textArea', label: 'TextArea', title: 'TextArea' },
+  { name: 'textarea', label: 'TextArea', title: 'TextArea' },
 ]

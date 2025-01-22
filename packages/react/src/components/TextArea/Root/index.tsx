@@ -4,15 +4,15 @@ import { VariantProps, tv } from 'tailwind-variants'
 const input = tv(
   {
     base: [
-      'w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white text-neutral-80',
+      'w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80',
       'border',
     ],
 
     variants: {
       size: {
-        sm: 'px-4 py-2.5 text-sf-sm',
-        md: 'px-4 py-2.5 text-sf-md',
-        lg: 'px-4 py-2.5 text-sf-lg',
+        sm: 'text-sf-sm',
+        md: 'text-sf-md',
+        lg: 'text-sf-lg',
       },
       color: {
         'sf-green':

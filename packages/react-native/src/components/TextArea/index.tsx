@@ -5,29 +5,29 @@ import {
   TextInputProps as RNTextAreaProps,
   TextInputFocusEventData,
 } from 'react-native'
-import { createStylesheet } from '../../utils/create-styles'
 import { colors, fonts } from '@sf-digital-ui/tokens'
+import { createStylesheet } from '../../utils/create-styles'
 
 type TextAreaVariants = {
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
   color?: 'sf-green' | 'succession-blue'
   focused?: boolean
-  multiline?: true
+  numberOfLines?: number
 }
 
 export interface TextAreaProps extends RNTextAreaProps {
   size?: 'sm' | 'md' | 'lg'
-  color?: 'sf-green' | 'succession-blue'
   disabled?: boolean
-  multiline?: true
+  color?: 'sf-green' | 'succession-blue'
+  focused?: boolean
+  numberOfLines?: number
 }
 
 const styles = createStylesheet<TextAreaVariants>({
   base: {
     paddingHorizontal: 16,
-    paddingVertical: 8,
-    fontFamily: fonts['sf-digital'],
+    paddingVertical: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -36,33 +36,27 @@ const styles = createStylesheet<TextAreaVariants>({
     borderColor: colors.neutral['50'],
     backgroundColor: 'white',
     color: colors.neutral['80'],
+    fontFamily: fonts['sf-digital'],
   },
   variants: {
-    multiline: {
-      true: {
-        minHeight: 128,
-      },
-    },
     size: {
-      sm: {
-        paddingHorizontal: 14,
-        paddingVertical: 8,
-        fontSize: 14,
+      sm: { fontSize: 14 },
+      md: { fontSize: 16 },
+      lg: { fontSize: 18 },
+    },
+    color: {
+      'sf-green': {
+        borderColor: colors['primary-green']['200'], // Ring color (e.g., blue-500)
       },
-      md: {
-        paddingHorizontal: 16,
-        paddingVertical: 10,
-        fontSize: 16,
+      'succession-blue': {
+        borderColor: colors['succession-blue']['200'],
       },
-      lg: {
-        paddingHorizontal: 18,
-        paddingVertical: 12,
-        fontSize: 18,
+      error: {
+        borderColor: colors.error['200'],
       },
     },
     disabled: {
       true: {
-        borderWidth: 0,
         borderColor: colors.neutral['40'],
         backgroundColor: colors.neutral['10'],
         color: colors.neutral['300'],
@@ -72,10 +66,6 @@ const styles = createStylesheet<TextAreaVariants>({
     focused: {
       true: {},
       false: {},
-    },
-    color: {
-      'sf-green': {},
-      'succession-blue': {},
     },
   },
   compoundVariants: [
@@ -103,16 +93,15 @@ const styles = createStylesheet<TextAreaVariants>({
     },
   ],
   defaultVariants: {
-    size: 'sm',
+    size: 'md',
     disabled: false,
     color: 'sf-green',
     focused: false,
-    multiline: true,
+    numberOfLines: 4,
   },
 })
 
 export const TextArea = ({
-  multiline,
   disabled,
   size,
   color,
@@ -138,7 +127,6 @@ export const TextArea = ({
         ...styles({
           color,
           focused: isFocused,
-          multiline,
           disabled,
           size,
         }),
@@ -147,6 +135,9 @@ export const TextArea = ({
       onBlur={handleBlur}
       onFocus={handleFocus}
       editable={!disabled}
+      multiline={true}
+      numberOfLines={4}
+      scrollEnabled={true}
       {...props}
     />
   )
