@@ -54,6 +54,7 @@ export default function Button() {
       contentContainerStyle={{
         alignItems: 'center',
         paddingBottom: 24,
+        gap: 12,
       }}
     >
       <Markdown>{docs}</Markdown>

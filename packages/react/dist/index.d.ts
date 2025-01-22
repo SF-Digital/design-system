@@ -16,8 +16,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import * as DropdownMenu$1 from '@radix-ui/react-dropdown-menu';
 import * as Popover$1 from '@radix-ui/react-popover';
 
-interface BoxProps extends ComponentProps<'div'> {
-}
+type BoxProps = ComponentProps<'div'>;
 declare const Box: ({ className, ...rest }: BoxProps) => react_jsx_runtime.JSX.Element;
 
 declare const text: tailwind_variants.TVReturnType<{

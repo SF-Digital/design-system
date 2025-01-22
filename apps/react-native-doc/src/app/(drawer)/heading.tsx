@@ -2,6 +2,7 @@ import { View } from 'react-native'
 import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { styles } from '../../../styles'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export default function HeadingPage() {
   const headingSizes: HeadingProps['size'][] = [
@@ -19,7 +20,7 @@ export default function HeadingPage() {
   \b`
 
   return (
-    <View style={styles.pageContainer}>
+    <ScrollView style={styles.pageContainer}>
       <Markdown>{headingDescription}</Markdown>
       <View style={styles.componentExampleContainer}>
         {headingSizes.map((headingSize) => {
@@ -31,6 +32,6 @@ export default function HeadingPage() {
           )
         })}
       </View>
-    </View>
+    </ScrollView>
   )
 }

@@ -27,6 +27,12 @@ const routes = [
     label: 'Checkbox',
     title: 'Checkbox',
   },
+  { name: 'card', label: 'Card', title: 'Card' },
+  {
+    name: 'tabs',
+    label: 'Tabs',
+    title: 'Tabs',
+  },
 ]
 
 export default function Layout() {

@@ -22,3 +22,4 @@ export {
   TabsTriggerTextProps,
   TabsContentProps,
 } from './components/Tabs'
+export { Card, CardProps } from './components/Card'

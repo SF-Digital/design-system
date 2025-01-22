@@ -17,9 +17,9 @@ export default function TextInputPage() {
 This story displays the \`TextInput\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`TextInput{ComponentName}Props\`.
 
 ## Usage:
-
+\b
 \`import { TextInput } from '@sf-digital-ui/react'\`
-
+\b
 ## API Reference:
 
 \b
