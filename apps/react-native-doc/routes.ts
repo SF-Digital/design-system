@@ -30,4 +30,9 @@ export const routes = [
     label: 'Tabs',
     title: 'Tabs',
   },
+  {
+    name: 'switch',
+    label: 'Switch',
+    title: 'Switch',
+  },
 ]
