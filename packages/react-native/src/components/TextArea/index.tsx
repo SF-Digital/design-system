@@ -36,6 +36,8 @@ const styles = createStylesheet<TextAreaVariants>({
     backgroundColor: 'white',
     color: colors.neutral['80'],
     fontFamily: fonts['sf-digital'],
+    minHeight: 100,
+    textAlignVertical: 'top',
   },
   variants: {
     size: {

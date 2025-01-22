@@ -37,6 +37,7 @@ This story displays the \`TextArea\` component, which is a React element built u
         behavior={Platform.OS === 'ios' ? 'position' : 'height'}
         style={[styles.pageContainer]}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
+        contentContainerStyle={{ flex: 1 }}
       >
         <ScrollView
           style={{ flex: 1 }}
