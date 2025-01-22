@@ -1,6 +1,9 @@
 import { View } from 'react-native'
 import { styles } from '../../../styles'
-import { RadioGroup, Text } from '@sf-digital-ui/react-native'
+import {
+  RadioGroup as DesignSystemRadioGroup,
+  Text,
+} from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
 import { useState } from 'react'
 import Markdown from '@ronradtke/react-native-markdown-display'
@@ -10,7 +13,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
 
-export default function RadioGroupPage() {
+export default function RadioGroup() {
   const [size, setSize] = useState<Size>('md')
   const [color, setColor] = useState<Color>('sf-green')
 
@@ -48,15 +51,23 @@ export default function RadioGroupPage() {
 
   return (
     <ScrollView
-      style={{
-        ...styles.pageContainer,
+      style={{ flex: 1 }}
+      contentContainerStyle={{
+        paddingBottom: 24,
+        padding: 10,
+        gap: 12,
       }}
     >
       <Markdown>{docs}</Markdown>
       <View
-        style={{
-          ...styles.componentExampleContainer,
-        }}
+        style={[
+          {
+            flex: 1,
+            flexWrap: 'wrap',
+            flexDirection: 'row',
+          },
+          styles.componentExampleContainer,
+        ]}
       >
         <Radio
           options={[
@@ -75,24 +86,27 @@ export default function RadioGroupPage() {
           selectedValue={color}
           onValueChange={(value) => setColor(value as Color)}
         />
-        <RadioGroup.Root defaultValue="1">
-          {exampleRadioGroupItems.map((item) => (
-            <View
-              key={item}
-              style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
-            >
-              <RadioGroup.Item
-                size={size}
-                color={color}
-                value={item.toString()}
-              />
-              <Text size={size} style={{ color: colors.neutral['100'] }}>
-                {item}
-              </Text>
-            </View>
-          ))}
-        </RadioGroup.Root>
       </View>
+      <DesignSystemRadioGroup.Root
+        style={{ alignItems: 'center' }}
+        defaultValue="1"
+      >
+        {exampleRadioGroupItems.map((item) => (
+          <View
+            key={item}
+            style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+          >
+            <DesignSystemRadioGroup.Item
+              size={size}
+              color={color}
+              value={item.toString()}
+            />
+            <Text size={size} style={{ color: colors.neutral['100'] }}>
+              {item}
+            </Text>
+          </View>
+        ))}
+      </DesignSystemRadioGroup.Root>
     </ScrollView>
   )
 }

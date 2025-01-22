@@ -1,5 +1,8 @@
 import { View } from 'react-native'
-import { Text, TextProps } from '@sf-digital-ui/react-native'
+import {
+  Text as DesignSystemText,
+  TextProps,
+} from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { styles } from '../../../styles'
 
@@ -16,10 +19,10 @@ export default function TextPage() {
       <View style={styles.componentExampleContainer}>
         {textSizes.map((textSize) => {
           return (
-            <Text size={textSize} key={textSize}>
+            <DesignSystemText size={textSize} key={textSize}>
               {`${textSize}: `}
               The quick brown fox jumps over the lazy dog
-            </Text>
+            </DesignSystemText>
           )
         })}
       </View>

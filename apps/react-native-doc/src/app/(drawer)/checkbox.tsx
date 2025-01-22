@@ -1,6 +1,6 @@
 import { View } from 'react-native'
 import { styles } from '../../../styles'
-import { Checkbox } from '@sf-digital-ui/react-native'
+import { Checkbox as DesignSystemCheckbox } from '@sf-digital-ui/react-native'
 import { useState } from 'react'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
@@ -74,7 +74,7 @@ This story displays the \`Checkbox\` component, which is a React element built u
             onValueChange={(value) => setColor(value as Color)}
           />
         </View>
-        <Checkbox
+        <DesignSystemCheckbox
           color={color}
           size={size}
           value={isChecked}

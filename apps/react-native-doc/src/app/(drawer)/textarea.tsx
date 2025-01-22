@@ -1,6 +1,6 @@
 import { KeyboardAvoidingView, Platform, View } from 'react-native'
 import { styles } from '../../../styles'
-import { TextInput as DesignSystemTextInput } from '@sf-digital-ui/react-native'
+import { TextArea as DesignSystemTextArea } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { useState } from 'react'
@@ -9,16 +9,16 @@ import { ScrollView } from 'react-native-gesture-handler'
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
 
-export default function TextInput() {
+export default function TextArea() {
   const [size, setSize] = useState<Size>('md')
   const [color, setColor] = useState<Color>('sf-green')
   const [disabled, setDisabled] = useState<boolean>(false)
   const docs = `
-This story displays the \`TextInput\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`TextInput{ComponentName}Props\`.
+This story displays the \`TextArea\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`TextArea{ComponentName}Props\`.
 
 ## Usage:
 \b
-\`import { TextInput } from '@sf-digital-ui/react'\`
+\`import { TextArea } from '@sf-digital-ui/react'\`
 \b
 ## API Reference:
 
@@ -65,7 +65,7 @@ This story displays the \`TextInput\` component, which is a React element built 
                 marginRight: 16,
               }}
             >
-              <DesignSystemTextInput
+              <DesignSystemTextArea
                 size={size}
                 color={color}
                 disabled={disabled}
