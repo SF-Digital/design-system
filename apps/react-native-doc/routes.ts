@@ -35,4 +35,9 @@ export const routes = [
     label: 'Switch',
     title: 'Switch',
   },
+  {
+    name: 'dropdownmenu',
+    label: 'DropdownMenu',
+    title: 'DropdownMenu',
+  },
 ]

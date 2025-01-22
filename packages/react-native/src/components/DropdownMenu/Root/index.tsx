@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import { ViewProps } from 'react-native'
 
 type DropdownMenuContextType = {
@@ -10,6 +10,16 @@ export const DropdownMenuContext = createContext<DropdownMenuContextType>({
   isOpen: false,
   setIsOpen: () => {},
 })
+
+export const useDropdownMenuContext = () => {
+  const context = useContext(DropdownMenuContext)
+  if (!context) {
+    throw new Error(
+      'Dropdown components must be used within a Dropdown provider',
+    )
+  }
+  return context
+}
 
 export interface DropdownMenuRootProps extends ViewProps {
   open?: boolean

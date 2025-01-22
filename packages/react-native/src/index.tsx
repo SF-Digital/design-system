@@ -25,3 +25,4 @@ export {
 export { Card, CardProps } from './components/Card'
 export { TextArea, TextAreaProps } from './components/TextArea'
 export { Switch, SwitchProps } from './components/Switch'
+export { DropdownMenu, DropdownMenuRootProps } from './components/DropdownMenu'

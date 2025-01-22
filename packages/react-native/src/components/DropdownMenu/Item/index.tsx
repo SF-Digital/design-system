@@ -1,21 +1,40 @@
 import React from 'react'
 import {
-  TouchableOpacity,
-  TouchableOpacityProps,
   StyleSheet,
+  Pressable,
+  PressableProps,
+  GestureResponderEvent,
 } from 'react-native'
+import { useDropdownMenuContext } from '../Root'
+import { colors } from '@sf-digital-ui/tokens'
 
-export type DropdownMenuItemProps = TouchableOpacityProps
+export type DropdownMenuItemProps = PressableProps
 
 export const Item: React.FC<DropdownMenuItemProps> = ({
   style,
   children,
+  onPress,
   ...props
 }) => {
+  const { setIsOpen } = useDropdownMenuContext()
+
+  const handlePress = (e: GestureResponderEvent) => {
+    onPress?.(e)
+    setIsOpen(false)
+  }
+
   return (
-    <TouchableOpacity {...props} style={[styles.item, style]}>
+    <Pressable
+      {...props}
+      onPress={handlePress}
+      style={({ pressed }) => [
+        styles.item,
+        typeof style === 'object' ? style : {},
+        pressed && { backgroundColor: colors.neutral[20] },
+      ]}
+    >
       {children}
-    </TouchableOpacity>
+    </Pressable>
   )
 }
 
