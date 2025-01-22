@@ -338,14 +338,14 @@ import { jsx as jsx7 } from "react/jsx-runtime";
 var input = tv4(
   {
     base: [
-      "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white font-sf-digital text-neutral-80",
+      "flex flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2 font-sf-digital text-neutral-80",
       "focus-within:border focus-within:ring-4"
     ],
     variants: {
       size: {
-        sm: "px-4 py-2 text-sf-sm",
-        md: "px-4 py-2 text-sf-md",
-        lg: "px-4 py-2 text-sf-lg"
+        sm: "text-sf-sm",
+        md: "text-sf-md",
+        lg: "text-sf-lg"
       },
       disabled: {
         true: "border-none bg-neutral-40",
@@ -1169,14 +1169,14 @@ import { jsx as jsx56 } from "react/jsx-runtime";
 var input2 = tv14(
   {
     base: [
-      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white text-neutral-80",
+      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80",
       "border"
     ],
     variants: {
       size: {
-        sm: "px-4 py-2.5 text-sf-sm",
-        md: "px-4 py-2.5 text-sf-md",
-        lg: "px-4 py-2.5 text-sf-lg"
+        sm: "text-sf-sm",
+        md: "text-sf-md",
+        lg: "text-sf-lg"
       },
       color: {
         "sf-green": "border-primary-green-200 focus-within:ring-4 focus-within:ring-primary-green-100",

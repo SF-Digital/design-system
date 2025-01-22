@@ -1,6 +1,9 @@
 import { View } from 'react-native'
 import { styles } from '../../../styles'
-import { RadioGroup, Text } from '@sf-digital-ui/react-native'
+import {
+  RadioGroup as DesignSystemRadioGroup,
+  Text,
+} from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
 import { useState } from 'react'
 import Markdown from '@ronradtke/react-native-markdown-display'
@@ -10,7 +13,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
 
-export default function RadioGroupPage() {
+export default function RadioGroup() {
   const [size, setSize] = useState<Size>('md')
   const [color, setColor] = useState<Color>('sf-green')
 
@@ -84,13 +87,16 @@ export default function RadioGroupPage() {
           onValueChange={(value) => setColor(value as Color)}
         />
       </View>
-      <RadioGroup.Root style={{ alignItems: 'center' }} defaultValue="1">
+      <DesignSystemRadioGroup.Root
+        style={{ alignItems: 'center' }}
+        defaultValue="1"
+      >
         {exampleRadioGroupItems.map((item) => (
           <View
             key={item}
             style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
           >
-            <RadioGroup.Item
+            <DesignSystemRadioGroup.Item
               size={size}
               color={color}
               value={item.toString()}
@@ -100,7 +106,7 @@ export default function RadioGroupPage() {
             </Text>
           </View>
         ))}
-      </RadioGroup.Root>
+      </DesignSystemRadioGroup.Root>
     </ScrollView>
   )
 }

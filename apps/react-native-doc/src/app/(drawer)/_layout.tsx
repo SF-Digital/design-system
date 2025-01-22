@@ -1,39 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Drawer } from 'expo-router/drawer'
 import { colors } from '@sf-digital-ui/tokens'
-
-const routes = [
-  { name: 'index', label: 'Home', title: 'Home' },
-  { name: 'heading', label: 'Heading', title: 'Heading' },
-  { name: 'text', label: 'Text', title: 'Text' },
-  { name: 'avatar', label: 'Avatar', title: 'Avatar' },
-  {
-    name: 'button',
-    label: 'Button',
-    title: 'Button',
-  },
-  {
-    name: 'radiogroup',
-    label: 'RadioGroup',
-    title: 'RadioGroup',
-  },
-  {
-    name: 'textinput',
-    label: 'TextInput',
-    title: 'TextInput',
-  },
-  {
-    name: 'checkbox',
-    label: 'Checkbox',
-    title: 'Checkbox',
-  },
-  { name: 'card', label: 'Card', title: 'Card' },
-  {
-    name: 'tabs',
-    label: 'Tabs',
-    title: 'Tabs',
-  },
-]
+import { routes } from '../../../routes'
 
 export default function Layout() {
   return (
