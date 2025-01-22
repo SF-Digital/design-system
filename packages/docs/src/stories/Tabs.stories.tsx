@@ -22,9 +22,7 @@ import '@sf-digital-ui/react/dist/output.css'
  * ### Root
  * Props
  *
- * `hasBackground: boolean` - If `true`, the root will have a background
- * 
- * `orientation: 'horizontal' | 'vertical'` - The orientation of the tabs
+ * `hasBackground: boolean` - If `true`, the root will have a backgrounda
  *
  * `activationMode: 'automatic' | 'manual'` - The activation mode of the tabs
  *
@@ -94,9 +92,9 @@ export default TabsStory
 export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
   args: {},
   render: (args) => (
-    <Tabs.Root hasBackground={args.variant==='panel'} defaultValue="one" orientation="horizontal">
+    <Tabs.Root hasBackground={args.variant==='panel'} className='flex flex-row items-start' defaultValue="one" orientation="horizontal">
       <Tabs.List
-        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : args.variant==='panel' ? ' flex flex-row gap-1' : ''}
+        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : args.variant=== 'panel' ? 'flex flex-row gap-1' : ''}
       >
         <Tabs.Trigger
           size={args.size}

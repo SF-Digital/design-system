@@ -51,15 +51,23 @@ export default function RadioGroup() {
 
   return (
     <ScrollView
-      style={{
-        ...styles.pageContainer,
+      style={{ flex: 1 }}
+      contentContainerStyle={{
+        paddingBottom: 24,
+        padding: 10,
+        gap: 12,
       }}
     >
       <Markdown>{docs}</Markdown>
       <View
-        style={{
-          ...styles.componentExampleContainer,
-        }}
+        style={[
+          {
+            flex: 1,
+            flexWrap: 'wrap',
+            flexDirection: 'row',
+          },
+          styles.componentExampleContainer,
+        ]}
       >
         <Radio
           options={[
@@ -78,24 +86,27 @@ export default function RadioGroup() {
           selectedValue={color}
           onValueChange={(value) => setColor(value as Color)}
         />
-        <DesignSystemRadioGroup.Root defaultValue="1">
-          {exampleRadioGroupItems.map((item) => (
-            <View
-              key={item}
-              style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
-            >
-              <DesignSystemRadioGroup.Item
-                size={size}
-                color={color}
-                value={item.toString()}
-              />
-              <Text size={size} style={{ color: colors.neutral['100'] }}>
-                {item}
-              </Text>
-            </View>
-          ))}
-        </DesignSystemRadioGroup.Root>
       </View>
+      <DesignSystemRadioGroup.Root
+        style={{ alignItems: 'center' }}
+        defaultValue="1"
+      >
+        {exampleRadioGroupItems.map((item) => (
+          <View
+            key={item}
+            style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+          >
+            <DesignSystemRadioGroup.Item
+              size={size}
+              color={color}
+              value={item.toString()}
+            />
+            <Text size={size} style={{ color: colors.neutral['100'] }}>
+              {item}
+            </Text>
+          </View>
+        ))}
+      </DesignSystemRadioGroup.Root>
     </ScrollView>
   )
 }
