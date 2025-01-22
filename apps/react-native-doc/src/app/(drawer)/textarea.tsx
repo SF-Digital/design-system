@@ -91,7 +91,6 @@ This story displays the \`TextArea\` component, which is a React element built u
                 options={[
                   { label: 'sf-green', value: 'sf-green' },
                   { label: 'succession-blue', value: 'succession-blue' },
-                  { label: 'error', value: 'error' },
                 ]}
                 selectedValue={color}
                 onValueChange={(value) => setColor(value as Color)}

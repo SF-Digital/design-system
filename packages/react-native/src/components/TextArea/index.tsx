@@ -13,7 +13,6 @@ type TextAreaVariants = {
   disabled?: boolean
   color?: 'sf-green' | 'succession-blue'
   focused?: boolean
-  numberOfLines?: number
 }
 
 export interface TextAreaProps extends RNTextAreaProps {
@@ -45,15 +44,8 @@ const styles = createStylesheet<TextAreaVariants>({
       lg: { fontSize: 18 },
     },
     color: {
-      'sf-green': {
-        borderColor: colors['primary-green']['200'], // Ring color (e.g., blue-500)
-      },
-      'succession-blue': {
-        borderColor: colors['succession-blue']['200'],
-      },
-      error: {
-        borderColor: colors.error['200'],
-      },
+      'sf-green': {},
+      'succession-blue': {},
     },
     disabled: {
       true: {
@@ -97,12 +89,12 @@ const styles = createStylesheet<TextAreaVariants>({
     disabled: false,
     color: 'sf-green',
     focused: false,
-    numberOfLines: 4,
   },
 })
 
 export const TextArea = ({
   disabled,
+  numberOfLines = 4,
   size,
   color,
   onBlur,
@@ -136,7 +128,7 @@ export const TextArea = ({
       onFocus={handleFocus}
       editable={!disabled}
       multiline={true}
-      numberOfLines={4}
+      numberOfLines={numberOfLines}
       scrollEnabled={true}
       {...props}
     />
