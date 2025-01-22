@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
-import { Card } from '@sf-digital-ui/react-native'
+import { Card as DesignSystemCard } from '@sf-digital-ui/react-native'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { styles } from '../../../styles'
 import { ScrollView } from 'react-native-gesture-handler'
 
-export default function TextPage() {
+export default function Card() {
   const cardDescription = `This story displays the \`Card\` component.
   ## The content inside the card will determine the size of the card.`
   const words = [
@@ -34,9 +34,9 @@ export default function TextPage() {
         >
           {words.map((word) => {
             return (
-              <Card key={word}>
+              <DesignSystemCard key={word}>
                 <Text>{word}</Text>
-              </Card>
+              </DesignSystemCard>
             )
           })}
         </View>
