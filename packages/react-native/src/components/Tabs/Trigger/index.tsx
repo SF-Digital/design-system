@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import { Pressable, PressableProps } from 'react-native'
 import { useTabsContext } from '../Root'
 import { createStylesheet } from '../../../utils/create-styles'
@@ -13,6 +13,24 @@ type TabsTriggerVariants = {
   color?: 'sf-green' | 'succession-blue' | 'neutral'
   size?: 'base' | 'lg'
   isActive?: boolean
+}
+
+type TabsTriggerContextType = {
+  value: string
+}
+
+export const TabsTriggerContext = createContext<TabsTriggerContextType | null>(
+  null,
+)
+
+export const useTabsTriggerContext = () => {
+  const context = React.useContext(TabsTriggerContext)
+  if (!context) {
+    throw new Error(
+      'TabsTrigger components must be used within a TabsTrigger provider',
+    )
+  }
+  return context
 }
 
 const styles = createStylesheet<TabsTriggerVariants>({
@@ -147,10 +165,12 @@ export const Trigger = ({ value, style, ...props }: TabsTriggerProps) => {
   })
 
   return (
-    <Pressable
-      onPress={() => handleTabChange(value)}
-      style={[tabStyle, typeof style === 'object' ? style : {}]}
-      {...props}
-    />
+    <TabsTriggerContext.Provider value={{ value }}>
+      <Pressable
+        onPress={() => handleTabChange(value)}
+        style={[tabStyle, typeof style === 'object' ? style : {}]}
+        {...props}
+      />
+    </TabsTriggerContext.Provider>
   )
 }

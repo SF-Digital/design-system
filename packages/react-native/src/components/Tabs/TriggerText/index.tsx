@@ -3,6 +3,7 @@ import { Text, TextProps } from 'react-native'
 import { useTabsContext } from '../Root'
 import { createStylesheet } from '../../../utils/create-styles'
 import { colors } from '@sf-digital-ui/tokens'
+import { useTabsTriggerContext } from '../Trigger'
 
 export type TabsTriggerTextProps = TextProps
 
@@ -32,6 +33,10 @@ const styles = createStylesheet<TabsTriggerTextVariants>({
     size: {
       base: {},
       lg: {},
+    },
+    isActive: {
+      true: {},
+      false: {},
     },
   },
   compoundVariants: [
@@ -92,7 +97,7 @@ const styles = createStylesheet<TabsTriggerTextVariants>({
     {
       variants: { color: 'neutral', variant: 'panel', isActive: true },
       style: {
-        color: colors['art-management-red']['500'],
+        color: colors.neutral['500'],
       },
     },
   ],
@@ -106,12 +111,15 @@ const styles = createStylesheet<TabsTriggerTextVariants>({
 
 export const TriggerText = ({ style, ...props }: TabsTriggerTextProps) => {
   const { activeTab, size, variant, color } = useTabsContext()
+  const { value } = useTabsTriggerContext()
+
+  const isActive = value === activeTab
 
   const tabStyle = styles({
     variant,
     color,
     size,
-    isActive: true,
+    isActive,
   })
 
   return <Text style={[tabStyle, style]} {...props} />

@@ -49,82 +49,79 @@ export default function Button() {
   const [iconButton, setIconButton] = useState(false)
 
   return (
-    <ScrollView style={styles.pageContainer}>
+    <ScrollView
+      style={styles.pageContainer}
+      contentContainerStyle={{
+        alignItems: 'center',
+        paddingBottom: 24,
+      }}
+    >
+      <Markdown>{docs}</Markdown>
       <View
         style={{
-          alignItems: 'center',
-          padding: 12,
-          paddingBottom: 24,
-          gap: 12,
+          flex: 1,
+          flexWrap: 'wrap',
+          flexDirection: 'row',
+          ...styles.componentExampleContainer,
         }}
       >
-        <Markdown>{docs}</Markdown>
-        <View
-          style={{
-            flex: 1,
-            flexWrap: 'wrap',
-            flexDirection: 'row',
-            ...styles.componentExampleContainer,
-          }}
-        >
-          <RadioGroup
-            options={[
-              { label: 'Primary', value: 'primary' },
-              { label: 'Secondary', value: 'secondary' },
-              { label: 'Tertiary', value: 'tertiary' },
-              { label: 'Link', value: 'link' },
-            ]}
-            selectedValue={variant}
-            onValueChange={(value) => setVariant(value as Variant)}
-          />
-          <RadioGroup
-            options={[
-              { label: 'Small', value: 'sm' },
-              { label: 'Medium', value: 'md' },
-              { label: 'Large', value: 'lg' },
-            ]}
-            selectedValue={size}
-            onValueChange={(value) => setSize(value as Size)}
-          />
-          <RadioGroup
-            options={[
-              { label: 'Success', value: 'success' },
-              { label: 'Error', value: 'error' },
-              { label: 'Warning', value: 'warning' },
-              { label: 'Neutral', value: 'neutral' },
-              { label: 'SF Green', value: 'sf-green' },
-              { label: 'Succession Blue', value: 'succession-blue' },
-            ]}
-            selectedValue={color}
-            onValueChange={(value) => setColor(value as Color)}
-          />
-          <RadioGroup
-            options={[
-              { label: 'Enabled', value: 'enabled' },
-              { label: 'Disabled', value: 'disabled' },
-            ]}
-            selectedValue={disabled ? 'disabled' : 'enabled'}
-            onValueChange={(value) => setDisabled(value === 'disabled')}
-          />
-          <RadioGroup
-            options={[
-              { label: 'Button', value: 'button' },
-              { label: 'Icon Button', value: 'iconButton' },
-            ]}
-            selectedValue={iconButton ? 'iconButton' : 'button'}
-            onValueChange={(value) => setIconButton(value === 'iconButton')}
-          />
-        </View>
-        <DesignSystemButton.Root
-          variant={variant}
-          color={color}
-          size={size}
-          disabled={disabled}
-          iconButton={iconButton}
-        >
-          <DesignSystemButton.Text>Button 2</DesignSystemButton.Text>
-        </DesignSystemButton.Root>
+        <RadioGroup
+          options={[
+            { label: 'Primary', value: 'primary' },
+            { label: 'Secondary', value: 'secondary' },
+            { label: 'Tertiary', value: 'tertiary' },
+            { label: 'Link', value: 'link' },
+          ]}
+          selectedValue={variant}
+          onValueChange={(value) => setVariant(value as Variant)}
+        />
+        <RadioGroup
+          options={[
+            { label: 'Small', value: 'sm' },
+            { label: 'Medium', value: 'md' },
+            { label: 'Large', value: 'lg' },
+          ]}
+          selectedValue={size}
+          onValueChange={(value) => setSize(value as Size)}
+        />
+        <RadioGroup
+          options={[
+            { label: 'Success', value: 'success' },
+            { label: 'Error', value: 'error' },
+            { label: 'Warning', value: 'warning' },
+            { label: 'Neutral', value: 'neutral' },
+            { label: 'SF Green', value: 'sf-green' },
+            { label: 'Succession Blue', value: 'succession-blue' },
+          ]}
+          selectedValue={color}
+          onValueChange={(value) => setColor(value as Color)}
+        />
+        <RadioGroup
+          options={[
+            { label: 'Enabled', value: 'enabled' },
+            { label: 'Disabled', value: 'disabled' },
+          ]}
+          selectedValue={disabled ? 'disabled' : 'enabled'}
+          onValueChange={(value) => setDisabled(value === 'disabled')}
+        />
+        <RadioGroup
+          options={[
+            { label: 'Button', value: 'button' },
+            { label: 'Icon Button', value: 'iconButton' },
+          ]}
+          selectedValue={iconButton ? 'iconButton' : 'button'}
+          onValueChange={(value) => setIconButton(value === 'iconButton')}
+        />
       </View>
+      <DesignSystemButton.Root
+        variant={variant}
+        color={color}
+        size={size}
+        disabled={disabled}
+        iconButton={iconButton}
+      >
+        <DesignSystemButton.Text>Button 2</DesignSystemButton.Text>
+      </DesignSystemButton.Root>
     </ScrollView>
   )
 }
