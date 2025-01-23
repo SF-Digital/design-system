@@ -18,7 +18,7 @@ This story displays the \`Checkbox\` component, which is a React element built u
 
 ## Usage:
 
-\`import { Checkbox } from '@sf-digital-ui/react'\`
+\`import { Checkbox } from '@sf-digital-ui/react-native'\`
 
 ## API Reference:
 
