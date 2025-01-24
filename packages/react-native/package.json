@@ -10,10 +10,10 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch & chokidar 'dist/**/*' -c 'npm run publish'",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch & chokidar 'dist/**/*' -c 'npm run yalcPublish'",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
-    "publish": "yalc push --watch"
+    "yalcPublish": "yalc push --watch"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
