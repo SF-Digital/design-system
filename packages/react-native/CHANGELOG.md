@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.0.0
+
+### Major Changes
+
+- React native components, plus small path for React and Tokens packages
+
 ## 1.1.2
 
 ### Patch Changes
