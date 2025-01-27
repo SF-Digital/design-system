@@ -132,10 +132,17 @@ Props
         variant={variant}
         color={color}
         size={size}
-        style={{ alignItems: 'center', gap: 12 }}
+        style={{
+          alignItems: 'center',
+          gap: 12,
+        }}
         defaultValue={exampleTabs[0]}
       >
-        <DesignSystemTabs.List>
+        <DesignSystemTabs.List
+          style={{
+            flexWrap: 'wrap',
+          }}
+        >
           {exampleTabs.map((tab) => (
             <DesignSystemTabs.Trigger key={tab} value={tab}>
               <DesignSystemTabs.TriggerText>{tab}</DesignSystemTabs.TriggerText>
