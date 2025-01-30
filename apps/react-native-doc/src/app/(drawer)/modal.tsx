@@ -2,6 +2,7 @@ import { View } from 'react-native'
 import { Modal as DesignSystemModal } from '@sf-digital-ui/react-native'
 import { styles } from '../../../styles'
 import Markdown from '@ronradtke/react-native-markdown-display'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export default function Modal() {
   const docs = `# Modal Component
@@ -35,11 +36,11 @@ export default function Modal() {
   \b`
 
   return (
-    <View style={styles.pageContainer}>
+    <ScrollView style={styles.pageContainer}>
       <Markdown>{docs}</Markdown>
       <View style={styles.componentExampleContainer}>
         <DesignSystemModal.Root>
-          <DesignSystemModal.Trigger></DesignSystemModal.Trigger>
+          <DesignSystemModal.Trigger />
 
           <DesignSystemModal.Portal>
             <DesignSystemModal.Overlay />
@@ -48,11 +49,11 @@ export default function Modal() {
               <DesignSystemModal.Description>
                 This is a description of what the DesignSystemModal does.
               </DesignSystemModal.Description>
-              <DesignSystemModal.Close></DesignSystemModal.Close>
+              <DesignSystemModal.Close />
             </DesignSystemModal.Content>
           </DesignSystemModal.Portal>
         </DesignSystemModal.Root>
       </View>
-    </View>
+    </ScrollView>
   )
 }

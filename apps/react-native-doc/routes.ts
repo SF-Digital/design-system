@@ -36,6 +36,11 @@ export const routes = [
     title: 'Switch',
   },
   {
+    name: 'modal',
+    label: 'Modal',
+    title: 'Modal',
+  },
+  {
     name: 'dropdownmenu',
     label: 'DropdownMenu',
     title: 'DropdownMenu',
@@ -44,10 +49,5 @@ export const routes = [
     name: 'select',
     label: 'Select',
     title: 'Select',
-  },
-  {
-    name: 'modal',
-    label: 'Modal',
-    title: 'Modal',
   },
 ]
