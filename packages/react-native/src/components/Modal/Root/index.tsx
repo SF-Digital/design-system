@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { ModalContext } from '../Context'
-import { ModalProps } from '../Types'
 
-export const Root: React.FC<ModalProps> = ({ children }) => {
+export interface ModalRootProps {
+  children?: ReactNode
+}
+
+export const Root = ({ children }: ModalRootProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
   return (

@@ -1,9 +1,16 @@
-import React from 'react'
-import { Text, StyleSheet } from 'react-native'
-import { ModalProps } from '../Types'
+import React, { ReactNode } from 'react'
+import { Text, StyleSheet, TextProps } from 'react-native'
 
-export const Description: React.FC<ModalProps> = ({ children }) => {
-  return <Text style={styles.description}>{children}</Text>
+export interface ModalDescriptionProps extends TextProps {
+  children?: ReactNode
+}
+
+export const Description = ({ children, ...props }: ModalDescriptionProps) => {
+  return (
+    <Text style={[styles.description, props.style]} {...props}>
+      {children}
+    </Text>
+  )
 }
 
 const styles = StyleSheet.create({

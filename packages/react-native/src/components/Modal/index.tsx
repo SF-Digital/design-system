@@ -1,11 +1,11 @@
-import { Root } from './Root'
-import { Trigger } from './Trigger'
-import { Portal } from './Portal'
-import { Overlay } from './Overlay'
-import { Content } from './Content'
-import { Title } from './Title'
-import { Description } from './Description'
-import { Close } from './Close'
+import { Root, ModalRootProps } from './Root'
+import { Trigger, ModalTriggerProps } from './Trigger'
+import { Portal, ModalPortalProps } from './Portal'
+import { Overlay, ModalOverlayProps } from './Overlay'
+import { Content, ModalContentProps } from './Content'
+import { Title, ModalTitleProps } from './Title'
+import { Description, ModalDescriptionProps } from './Description'
+import { Close, ModalCloseProps } from './Close'
 
 export const Modal = {
   Root,
@@ -18,4 +18,13 @@ export const Modal = {
   Close,
 }
 
-export default Modal
+export type {
+  ModalRootProps,
+  ModalTriggerProps,
+  ModalPortalProps,
+  ModalOverlayProps,
+  ModalContentProps,
+  ModalTitleProps,
+  ModalDescriptionProps,
+  ModalCloseProps,
+}

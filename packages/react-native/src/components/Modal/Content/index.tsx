@@ -1,14 +1,22 @@
-import React from 'react'
-import { View, StyleSheet, Platform } from 'react-native'
-import { ModalProps, StyledProps } from '../Types'
+import React, { ReactNode } from 'react'
+import {
+  View,
+  StyleSheet,
+  Platform,
+  ViewProps,
+  ViewStyle,
+  StyleProp,
+} from 'react-native'
 
-export const Content: React.FC<ModalProps & StyledProps> = ({
-  children,
-  style,
-}) => {
+export interface ModalContentProps extends ViewProps {
+  children?: ReactNode
+  style?: StyleProp<ViewStyle>
+}
+
+export const Content = ({ children, ...props }: ModalContentProps) => {
   return (
-    <View style={[styles.centeredView]}>
-      <View style={[styles.content, style]}>{children}</View>
+    <View style={[styles.centeredView, props.style]} {...props}>
+      <View style={[styles.content, props.style]}>{children}</View>
     </View>
   )
 }
@@ -26,7 +34,7 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
       },
-    }) as StyledProps),
+    }) as ModalContentProps),
   },
   content: {
     backgroundColor: 'white',

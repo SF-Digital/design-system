@@ -1,14 +1,19 @@
-import React from 'react'
-import { Pressable, StyleSheet } from 'react-native'
+import React, { ReactNode } from 'react'
+import { Pressable, StyleSheet, ViewProps } from 'react-native'
 import { useModalContext } from '../Context'
 
-export const Overlay: React.FC = () => {
+export interface ModalOverlayProps extends ViewProps {
+  children?: ReactNode
+}
+
+export const Overlay = ({ ...props }: ModalOverlayProps) => {
   const { isVisible, setIsVisible } = useModalContext()
 
   return (
     <Pressable
-      style={styles.overlay}
+      style={[styles.overlay, props.style]}
       onPress={() => setIsVisible(!isVisible)}
+      {...props}
     />
   )
 }

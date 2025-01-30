@@ -1,5 +1,9 @@
 import { createContext, useContext } from 'react'
-import { ModalContextType } from '../Types'
+
+export interface ModalContextType {
+  isVisible: boolean
+  setIsVisible: (value: boolean) => void
+}
 
 export const ModalContext = createContext<ModalContextType | undefined>(
   undefined,

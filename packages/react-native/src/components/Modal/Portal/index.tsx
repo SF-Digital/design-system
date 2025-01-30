@@ -1,9 +1,12 @@
-import React from 'react'
-import { Modal as RNModal } from 'react-native'
+import React, { ReactNode } from 'react'
+import { Modal as RNModal, ViewProps } from 'react-native'
 import { useModalContext } from '../Context'
-import { ModalProps } from '../Types'
 
-export const Portal: React.FC<ModalProps> = ({ children }) => {
+export interface ModalPortalProps extends ViewProps {
+  children?: ReactNode
+}
+
+export const Portal = ({ children, ...props }: ModalPortalProps) => {
   const { isVisible, setIsVisible } = useModalContext()
 
   return (
@@ -12,6 +15,7 @@ export const Portal: React.FC<ModalProps> = ({ children }) => {
       transparent={true}
       visible={isVisible}
       onRequestClose={() => setIsVisible(false)}
+      {...props}
     >
       {children}
     </RNModal>

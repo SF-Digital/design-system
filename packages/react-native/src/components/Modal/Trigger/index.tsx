@@ -1,14 +1,21 @@
-import React from 'react'
-import { Pressable, Text, StyleSheet } from 'react-native'
+import React, { ReactNode } from 'react'
+import { Pressable, Text, StyleSheet, ViewProps } from 'react-native'
 import { useModalContext } from '../Context'
-import { ModalProps } from '../Types'
 import { colors, fonts } from '@sf-digital-ui/tokens'
 
-export const Trigger: React.FC<ModalProps> = ({ children }) => {
+export interface ModalTriggerProps extends ViewProps {
+  children?: ReactNode
+}
+
+export const Trigger = ({ children, ...props }: ModalTriggerProps) => {
   const { setIsVisible } = useModalContext()
 
   return (
-    <Pressable style={styles.button} onPress={() => setIsVisible(true)}>
+    <Pressable
+      style={[styles.button, props.style]}
+      onPress={() => setIsVisible(true)}
+      {...props}
+    >
       {children || <Text style={styles.buttonText}>Open Modal</Text>}
     </Pressable>
   )
