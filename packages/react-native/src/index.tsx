@@ -42,4 +42,14 @@ export {
   SelectItemProps,
   SelectItemTextProps,
 } from './components/Select'
-export { Modal, ModalRootProps, ModalTitleProps } from './components/Modal'
+export {
+  Modal,
+  ModalCloseProps,
+  ModalContentProps,
+  ModalDescriptionProps,
+  ModalOverlayProps,
+  ModalPortalProps,
+  ModalRootProps,
+  ModalTitleProps,
+  ModalTriggerProps,
+} from './components/Modal'

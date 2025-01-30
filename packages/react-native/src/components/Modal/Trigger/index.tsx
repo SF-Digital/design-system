@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { Pressable, Text, StyleSheet, ViewProps } from 'react-native'
-import { useModalContext } from '../Context'
+import { useModalContext } from '../Root'
 import { colors, fonts } from '@sf-digital-ui/tokens'
 
 export interface ModalTriggerProps extends ViewProps {

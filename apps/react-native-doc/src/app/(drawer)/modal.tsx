@@ -1,5 +1,5 @@
-import { View } from 'react-native'
-import { Modal as DesignSystemModal } from '@sf-digital-ui/react-native'
+import { Alert, Text, View } from 'react-native'
+import { Modal as DesignSystemModal, Button } from '@sf-digital-ui/react-native'
 import { styles } from '../../../styles'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -45,11 +45,49 @@ export default function Modal() {
           <DesignSystemModal.Portal>
             <DesignSystemModal.Overlay />
             <DesignSystemModal.Content>
+              <DesignSystemModal.Close>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    color: '#4A4A4A',
+                    fontWeight: '600',
+                    lineHeight: 24,
+                    alignSelf: 'flex-end',
+                  }}
+                >
+                  X
+                </Text>
+              </DesignSystemModal.Close>
               <DesignSystemModal.Title>Welcome</DesignSystemModal.Title>
               <DesignSystemModal.Description>
                 This is a description of what the DesignSystemModal does.
               </DesignSystemModal.Description>
-              <DesignSystemModal.Close />
+              <DesignSystemModal.Close>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    gap: 2,
+                  }}
+                >
+                  <Button.Root
+                    onPress={() =>
+                      Alert.alert('You have continued to some flow....')
+                    }
+                  >
+                    <Button.Text>Continue</Button.Text>
+                  </Button.Root>
+                  <Button.Root
+                    color="succession-blue"
+                    variant="secondary"
+                    onPress={() =>
+                      Alert.alert('You have aborted some flow....')
+                    }
+                  >
+                    <Button.Text>Cancel</Button.Text>
+                  </Button.Root>
+                </View>
+              </DesignSystemModal.Close>
             </DesignSystemModal.Content>
           </DesignSystemModal.Portal>
         </DesignSystemModal.Root>
