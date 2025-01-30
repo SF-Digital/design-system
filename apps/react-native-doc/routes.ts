@@ -45,4 +45,9 @@ export const routes = [
     label: 'Select',
     title: 'Select',
   },
+  {
+    name: 'modal',
+    label: 'Modal',
+    title: 'Modal',
+  },
 ]
