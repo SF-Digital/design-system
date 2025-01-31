@@ -41,13 +41,7 @@ export default function Modal() {
       <View style={styles.componentExampleContainer}>
         <DesignSystemModal.Root>
           <DesignSystemModal.Trigger>
-            <View
-            // style={{
-            //   flexDirection: 'row',
-            //   justifyContent: 'space-between',
-            //   gap: 2,
-            // }}
-            >
+            <View>
               <Button.Root color="sf-green" variant="primary">
                 <Button.Text>Open Modal</Button.Text>
               </Button.Root>
