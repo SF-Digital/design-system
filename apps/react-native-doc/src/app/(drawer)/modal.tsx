@@ -1,8 +1,9 @@
-import { Alert, Text, View } from 'react-native'
+import { Alert, View } from 'react-native'
 import { Modal as DesignSystemModal, Button } from '@sf-digital-ui/react-native'
 import { styles } from '../../../styles'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { ScrollView } from 'react-native-gesture-handler'
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 
 export default function Modal() {
   const docs = `# Modal Component
@@ -52,50 +53,48 @@ export default function Modal() {
             <DesignSystemModal.Overlay />
             <DesignSystemModal.Content>
               <DesignSystemModal.Close>
-                <Text
+                <MaterialCommunityIcons
+                  name="close"
+                  size={18}
+                  color="black"
                   style={{
-                    fontSize: 18,
-                    color: '#4A4A4A',
-                    fontWeight: '600',
-                    lineHeight: 24,
                     alignSelf: 'flex-end',
                   }}
-                >
-                  X
-                </Text>
+                />
               </DesignSystemModal.Close>
-              <DesignSystemModal.Title>Welcome</DesignSystemModal.Title>
-              <View style={{ gap: 16 }}>
-                <DesignSystemModal.Description>
-                  This is a description of what the DesignSystemModal does.
-                </DesignSystemModal.Description>
-              </View>
-              <DesignSystemModal.Close>
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    gap: 2,
-                  }}
-                >
-                  <Button.Root
-                    onPress={() =>
-                      Alert.alert('You have continued to some flow....')
-                    }
-                  >
-                    <Button.Text>Continue</Button.Text>
-                  </Button.Root>
-                  <Button.Root
-                    color="succession-blue"
-                    variant="secondary"
-                    onPress={() =>
-                      Alert.alert('You have aborted some flow....')
-                    }
-                  >
-                    <Button.Text>Cancel</Button.Text>
-                  </Button.Root>
+              <View style={{ gap: 18 }}>
+                <View style={{ gap: 14 }}>
+                  <DesignSystemModal.Title>Welcome</DesignSystemModal.Title>
+                  <DesignSystemModal.Description>
+                    This is a description of what the DesignSystemModal does.
+                  </DesignSystemModal.Description>
                 </View>
-              </DesignSystemModal.Close>
+                <DesignSystemModal.Close>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <Button.Root
+                      onPress={() =>
+                        Alert.alert('You have continued to some flow....')
+                      }
+                    >
+                      <Button.Text>Continue</Button.Text>
+                    </Button.Root>
+                    <Button.Root
+                      color="succession-blue"
+                      variant="secondary"
+                      onPress={() =>
+                        Alert.alert('You have aborted some flow....')
+                      }
+                    >
+                      <Button.Text>Cancel</Button.Text>
+                    </Button.Root>
+                  </View>
+                </DesignSystemModal.Close>
+              </View>
             </DesignSystemModal.Content>
           </DesignSystemModal.Portal>
         </DesignSystemModal.Root>
