@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react'
-import { Modal as RNModal, ViewProps } from 'react-native'
+import { ModalProps, Modal as RNModal } from 'react-native'
 import { useModalContext } from '../Root'
 
-export interface ModalPortalProps extends ViewProps {
+export interface ModalPortalProps extends ModalProps {
   children?: ReactNode
 }
 

@@ -26,15 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    ...(Platform.select({
-      web: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      },
-    }) as ModalContentProps),
   },
   content: {
     backgroundColor: 'white',

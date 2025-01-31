@@ -40,7 +40,19 @@ export default function Modal() {
       <Markdown>{docs}</Markdown>
       <View style={styles.componentExampleContainer}>
         <DesignSystemModal.Root>
-          <DesignSystemModal.Trigger />
+          <DesignSystemModal.Trigger>
+            <View
+            // style={{
+            //   flexDirection: 'row',
+            //   justifyContent: 'space-between',
+            //   gap: 2,
+            // }}
+            >
+              <Button.Root color="sf-green" variant="primary">
+                <Button.Text>Open Modal</Button.Text>
+              </Button.Root>
+            </View>
+          </DesignSystemModal.Trigger>
 
           <DesignSystemModal.Portal>
             <DesignSystemModal.Overlay />

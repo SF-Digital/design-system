@@ -1,9 +1,16 @@
 import React, { ReactNode } from 'react'
-import { Pressable, StyleSheet, ViewProps } from 'react-native'
+import {
+  Pressable,
+  PressableProps,
+  StyleProp,
+  StyleSheet,
+  ViewStyle,
+} from 'react-native'
 import { useModalContext } from '../Root'
 
-export interface ModalOverlayProps extends ViewProps {
+export interface ModalOverlayProps extends PressableProps {
   children?: ReactNode
+  style?: StyleProp<ViewStyle>
 }
 
 export const Overlay = ({ ...props }: ModalOverlayProps) => {
