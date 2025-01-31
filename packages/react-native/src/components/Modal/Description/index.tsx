@@ -16,6 +16,5 @@ export const Description = ({ children, ...props }: ModalDescriptionProps) => {
 const styles = StyleSheet.create({
   description: {
     fontSize: 16,
-    marginBottom: 16,
   },
 })

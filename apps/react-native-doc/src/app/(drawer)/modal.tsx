@@ -65,9 +65,11 @@ export default function Modal() {
                 </Text>
               </DesignSystemModal.Close>
               <DesignSystemModal.Title>Welcome</DesignSystemModal.Title>
-              <DesignSystemModal.Description>
-                This is a description of what the DesignSystemModal does.
-              </DesignSystemModal.Description>
+              <View style={{ gap: 16 }}>
+                <DesignSystemModal.Description>
+                  This is a description of what the DesignSystemModal does.
+                </DesignSystemModal.Description>
+              </View>
               <DesignSystemModal.Close>
                 <View
                   style={{
