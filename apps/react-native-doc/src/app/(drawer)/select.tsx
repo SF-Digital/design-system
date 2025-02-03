@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Select as RNSelect, Text } from '@sf-digital-ui/react-native'
+import { Select as DesignSystemSelect, Text } from '@sf-digital-ui/react-native'
 import Entypo from '@expo/vector-icons/Entypo'
 import { View } from 'react-native'
 import { colors } from '@sf-digital-ui/tokens'
@@ -55,27 +55,29 @@ This story displays the \`Select\` component, which is a React element built usi
           Team member
         </Text>
         <View>
-          <RNSelect.Root
+          <DesignSystemSelect.Root
             value={value}
             onValueChange={(newValue) => setValue(newValue)}
           >
-            <RNSelect.Trigger>
-              <RNSelect.Value placeholder="Select a number" />
+            <DesignSystemSelect.Trigger>
+              <DesignSystemSelect.Value placeholder="Select a number" />
               <Entypo
                 name="chevron-down"
                 size={24}
                 color={colors.neutral['900']}
               />
-            </RNSelect.Trigger>
+            </DesignSystemSelect.Trigger>
 
-            <RNSelect.Content>
-              <RNSelect.Viewport>
+            <DesignSystemSelect.Content>
+              <DesignSystemSelect.Viewport>
                 {teamMembers.map((option) => {
                   const isActive = value === option
 
                   return (
-                    <RNSelect.Item key={option} value={option}>
-                      <RNSelect.ItemText>{option}</RNSelect.ItemText>
+                    <DesignSystemSelect.Item key={option} value={option}>
+                      <DesignSystemSelect.ItemText>
+                        {option}
+                      </DesignSystemSelect.ItemText>
                       {isActive && (
                         <Entypo
                           name="check"
@@ -83,12 +85,12 @@ This story displays the \`Select\` component, which is a React element built usi
                           color={colors['primary-green']['500']}
                         />
                       )}
-                    </RNSelect.Item>
+                    </DesignSystemSelect.Item>
                   )
                 })}
-              </RNSelect.Viewport>
-            </RNSelect.Content>
-          </RNSelect.Root>
+              </DesignSystemSelect.Viewport>
+            </DesignSystemSelect.Content>
+          </DesignSystemSelect.Root>
         </View>
       </View>
     </View>

@@ -8,7 +8,7 @@ import RadioGroup from '@/components/RadioGroup'
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
 
-export default function CheckboxPage() {
+export default function Checkbox() {
   const [isChecked, setIsChecked] = useState(false)
   const [size, setSize] = useState<Size>('md')
   const [color, setColor] = useState<Color>('sf-green')
