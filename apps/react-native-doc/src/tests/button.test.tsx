@@ -61,7 +61,7 @@ describe('Button', () => {
         </Button.Root>,
       )
 
-      const button = getByTestId('button-root').parent
+      const button = getByTestId('button-root')
       expect(button.props.style).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
@@ -78,7 +78,7 @@ describe('Button', () => {
         </Button.Root>,
       )
 
-      const button = getByTestId('button-root').parent
+      const button = getByTestId('button-root')
       expect(button.props.style).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
@@ -137,7 +137,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId(`${color} Button`).parent
+        const button = getByTestId(`${color} Button`)
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -156,7 +156,7 @@ describe('Button', () => {
       </Button.Root>,
     )
 
-    const button = getByTestId('button-root').parent
+    const button = getByTestId('button-root')
     expect(button.props.style).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -176,7 +176,7 @@ describe('Button', () => {
       </Button.Root>,
     )
 
-    const button = getByTestId('button-root').parent
+    const button = getByTestId('button-root')
     fireEvent(button, 'pressIn')
 
     expect(button.props.style).toEqual(
@@ -198,7 +198,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -216,7 +216,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -234,7 +234,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -254,7 +254,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -271,7 +271,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
@@ -288,7 +288,7 @@ describe('Button', () => {
           </Button.Root>,
         )
 
-        const button = getByTestId('button-root').parent
+        const button = getByTestId('button-root')
         expect(button.props.style).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
