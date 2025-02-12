@@ -5,6 +5,8 @@ import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
+import { AntDesign } from '@expo/vector-icons'
+import { colors } from '@sf-digital-ui/tokens'
 
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
@@ -17,18 +19,24 @@ export default function TextInput() {
 This story displays the \`TextInput\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`TextInput{ComponentName}Props\`.
 
 ## Usage:
-\b
-\`import { TextInput } from '@sf-digital-ui/react'\`
-\b
-## API Reference:
-
-\b
-\`size: 'sm' | 'md' | 'lg'\` - The size of the input
-\b
-\`color: 'sf-green' | 'succession-blue'\` - The color of the input
-\b
-\`disabled: boolean\` - Whether the input is disabled
-\b
+  \b
+  \`import { TextInput } from '@sf-digital-ui/react-native'\`
+  \b
+  \b
+  \`TextInput.Root\` - The root element of the TextInput.
+  \b
+  \`TextInput.Control\` - The control element of the TextInput.
+  \b
+  ## API Reference:
+  \b
+  ### Root
+  \b
+  \`size: 'sm' | 'md' | 'lg'\` - The size of the input
+  \b
+  \`color: 'sf-green' | 'succession-blue'\` - The color of the input
+  \b
+  \`disabled: boolean\` - Whether the input is disabled
+  \b
 `
 
   return (
@@ -65,12 +73,23 @@ This story displays the \`TextInput\` component, which is a React element built 
                 marginRight: 16,
               }}
             >
-              <DesignSystemTextInput
+              <DesignSystemTextInput.Root
                 size={size}
                 color={color}
                 disabled={disabled}
-                placeholder="Placeholder..."
-              />
+              >
+                <AntDesign
+                  name="search1"
+                  size={16}
+                  color={colors.neutral['90']}
+                />
+                <DesignSystemTextInput.Control placeholder="Enter your text here" />
+                <AntDesign
+                  name="search1"
+                  size={16}
+                  color={colors.neutral['90']}
+                />
+              </DesignSystemTextInput.Root>
             </View>
             <View
               style={{

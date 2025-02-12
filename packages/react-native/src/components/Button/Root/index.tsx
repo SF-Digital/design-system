@@ -359,6 +359,7 @@ export const Root = ({
   size,
   iconButton,
   disabled,
+  style,
   ...props
 }: ButtonRootProps) => {
   const [pressed, setPressed] = useState(false)
@@ -378,7 +379,7 @@ export const Root = ({
       <Pressable
         onPressIn={() => setPressed(true)}
         onPressOut={() => setPressed(false)}
-        style={[...styles, typeof props.style === 'object' ? props.style : {}]}
+        style={[...styles, typeof style === 'object' ? style : {}]}
         {...props}
       />
     </ButtonContext.Provider>
