@@ -93,7 +93,14 @@ const radioItemStyles = createStylesheet<RadioGroupVariants>({
   },
 })
 
-export const Item = ({ value, color, size, ...props }: RadioGroupItemProps) => {
+export const Item = ({
+  style,
+  value,
+  color,
+  size,
+
+  ...props
+}: RadioGroupItemProps) => {
   const context = useContext(RadioGroupContext)
   if (!context) {
     throw new Error('RadioGroup.Item must be used within a RadioGroup.Root')
@@ -113,7 +120,6 @@ export const Item = ({ value, color, size, ...props }: RadioGroupItemProps) => {
     <Pressable
       onPress={() => !isDisabled && onChange(value)}
       disabled={isDisabled}
-      style={props.style}
       accessibilityRole="radio"
       accessibilityState={{
         checked: isSelected,
@@ -121,7 +127,7 @@ export const Item = ({ value, color, size, ...props }: RadioGroupItemProps) => {
       }}
       {...props}
     >
-      <View style={itemStyles} />
+      <View style={[itemStyles, typeof style === 'object' ? style : {}]} />
     </Pressable>
   )
 }

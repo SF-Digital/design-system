@@ -13,10 +13,10 @@ export interface ModalContentProps extends ViewProps {
   style?: StyleProp<ViewStyle>
 }
 
-export const Content = ({ children, ...props }: ModalContentProps) => {
+export const Content = ({ children, style, ...props }: ModalContentProps) => {
   return (
     <View style={styles.centeredView}>
-      <View style={[styles.content, props.style]} {...props}>
+      <View style={[styles.content, style]} {...props}>
         {children}
       </View>
     </View>

@@ -52,6 +52,7 @@ export type CheckboxRootProps = ComponentProps<typeof Checkbox> &
   CheckboxRootVariants
 
 export const Root = ({
+  style,
   size = 'md',
   color = 'sf-green',
   ...props
@@ -61,7 +62,7 @@ export const Root = ({
   )
 
   const isChecked = props.value !== undefined ? props.value : uncontrolledValue
-  const style = styles({ size, color, isChecked })
+  const stylesheet = styles({ size, color, isChecked })
 
   return (
     <Checkbox
@@ -76,7 +77,7 @@ export const Root = ({
           ? colors['primary-green']['500']
           : colors['succession-blue']['500']
       }
-      style={[...style, props.style]}
+      style={[...stylesheet, style]}
       {...props}
     />
   )

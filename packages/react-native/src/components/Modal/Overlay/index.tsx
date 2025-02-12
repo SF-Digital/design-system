@@ -13,12 +13,12 @@ export interface ModalOverlayProps extends PressableProps {
   style?: StyleProp<ViewStyle>
 }
 
-export const Overlay = ({ ...props }: ModalOverlayProps) => {
+export const Overlay = ({ style, ...props }: ModalOverlayProps) => {
   const { isVisible, setIsVisible } = useModalContext()
 
   return (
     <Pressable
-      style={[styles.overlay, props.style]}
+      style={[styles.overlay, style]}
       onPress={() => setIsVisible(!isVisible)}
       {...props}
     />

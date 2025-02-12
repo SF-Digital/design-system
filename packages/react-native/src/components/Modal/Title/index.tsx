@@ -5,9 +5,9 @@ export interface ModalTitleProps extends TextProps {
   children?: ReactNode
 }
 
-export const Title = ({ children, ...props }: ModalTitleProps) => {
+export const Title = ({ children, style, ...props }: ModalTitleProps) => {
   return (
-    <Text style={[styles.title, props.style]} {...props}>
+    <Text style={[styles.title, style]} {...props}>
       {children}
     </Text>
   )

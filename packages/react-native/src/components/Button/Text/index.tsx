@@ -273,14 +273,14 @@ const textStyles = createStylesheet<TextVariants>({
   },
 })
 
-export const Text = (props: TextProps) => {
+export const Text = ({ style, ...props }: TextProps) => {
   const { color, variant, size, disabled, pressed } = useButtonContext()
 
   return (
     <RNText
       style={[
         ...textStyles({ color, variant, size, disabled, pressed }),
-        typeof props.style === 'object' ? props.style : {},
+        typeof style === 'object' ? style : {},
       ]}
       accessibilityRole="text"
       {...props}

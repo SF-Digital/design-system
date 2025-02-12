@@ -96,6 +96,7 @@ const styles = createStylesheet<TextAreaVariants>({
 
 export const TextArea = ({
   disabled,
+  style,
   numberOfLines = 4,
   size,
   color,
@@ -124,7 +125,7 @@ export const TextArea = ({
           disabled,
           size,
         }),
-        props.style,
+        style,
       ]}
       onBlur={handleBlur}
       onFocus={handleFocus}
