@@ -5,6 +5,8 @@ import Markdown from '@ronradtke/react-native-markdown-display'
 import RadioGroup from '@/components/RadioGroup'
 import { useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
+import { AntDesign } from '@expo/vector-icons'
+import { colors } from '@sf-digital-ui/tokens'
 
 type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
@@ -18,7 +20,7 @@ This story displays the \`TextInput\` component, which is a React element built 
 
 ## Usage:
 \b
-\`import { TextInput } from '@sf-digital-ui/react'\`
+\`import { TextInput } from '@sf-digital-ui/react-native'\`
 \b
 ## API Reference:
 
@@ -65,12 +67,23 @@ This story displays the \`TextInput\` component, which is a React element built 
                 marginRight: 16,
               }}
             >
-              <DesignSystemTextInput
+              <DesignSystemTextInput.Root
                 size={size}
                 color={color}
                 disabled={disabled}
-                placeholder="Placeholder..."
-              />
+              >
+                <AntDesign
+                  name="search1"
+                  size={16}
+                  color={colors.neutral['90']}
+                />
+                <DesignSystemTextInput.Control placeholder="Enter your text here" />
+                <AntDesign
+                  name="search1"
+                  size={16}
+                  color={colors.neutral['90']}
+                />
+              </DesignSystemTextInput.Root>
             </View>
             <View
               style={{
