@@ -5,9 +5,13 @@ export interface ModalDescriptionProps extends TextProps {
   children?: ReactNode
 }
 
-export const Description = ({ children, ...props }: ModalDescriptionProps) => {
+export const Description = ({
+  children,
+  style,
+  ...props
+}: ModalDescriptionProps) => {
   return (
-    <Text style={[styles.description, props.style]} {...props}>
+    <Text style={[styles.description, style]} {...props}>
       {children}
     </Text>
   )

@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.1.0
+
+### Minor Changes
+
+- Added Modal, TextInput pattern composed, and merge styles fix
+
 ## 2.0.0
 
 ### Major Changes
