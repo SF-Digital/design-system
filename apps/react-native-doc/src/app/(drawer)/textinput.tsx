@@ -19,18 +19,24 @@ export default function TextInput() {
 This story displays the \`TextInput\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`TextInput{ComponentName}Props\`.
 
 ## Usage:
-\b
-\`import { TextInput } from '@sf-digital-ui/react-native'\`
-\b
-## API Reference:
-
-\b
-\`size: 'sm' | 'md' | 'lg'\` - The size of the input
-\b
-\`color: 'sf-green' | 'succession-blue'\` - The color of the input
-\b
-\`disabled: boolean\` - Whether the input is disabled
-\b
+  \b
+  \`import { TextInput } from '@sf-digital-ui/react-native'\`
+  \b
+  \b
+  \`TextInput.Root\` - The root element of the TextInput.
+  \b
+  \`TextInput.Control\` - The control element of the TextInput.
+  \b
+  ## API Reference:
+  \b
+  ### Root
+  \b
+  \`size: 'sm' | 'md' | 'lg'\` - The size of the input
+  \b
+  \`color: 'sf-green' | 'succession-blue'\` - The color of the input
+  \b
+  \`disabled: boolean\` - Whether the input is disabled
+  \b
 `
 
   return (
