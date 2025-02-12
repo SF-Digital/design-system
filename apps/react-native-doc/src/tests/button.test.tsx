@@ -3,34 +3,6 @@ import { fireEvent } from '@testing-library/react-native'
 import { render } from '@/utils/test-utils'
 import { Button } from '@sf-digital-ui/react-native'
 
-jest.mock('@sf-digital-ui/tokens', () => ({
-  colors: {
-    'primary-green': {
-      '500': '#006237',
-    },
-    'succession-blue': {
-      '500': '#84aabc',
-    },
-    neutral: {
-      '10': '#fbfbfb',
-      '20': '#f6f6f6',
-      '30': '#eeeeee',
-      '60': '#bdbdbd',
-      '80': '#a5a5a5',
-      '500': '#8b8b8b',
-    },
-    success: {
-      '500': '#12b76a',
-    },
-    warning: {
-      '500': '#f79009',
-    },
-    error: {
-      '500': '#f04438',
-    },
-  },
-}))
-
 describe('Button', () => {
   it('renders correctly', () => {
     const { getByTestId } = render(
