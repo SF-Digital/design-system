@@ -12,7 +12,11 @@ export {
   RadioGroupItemProps,
 } from './components/RadioGroup'
 export { Avatar, AvatarProps } from './components/Avatar'
-export { TextInput, TextInputProps } from './components/TextInput'
+export {
+  TextInput,
+  TextInputRootProps,
+  TextInputControlProps,
+} from './components/TextInput'
 export { Checkbox, CheckboxRootProps } from './components/Checkbox'
 export {
   Tabs,
