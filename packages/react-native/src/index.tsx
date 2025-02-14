@@ -1,4 +1,11 @@
 export {
+  PinInput,
+  PinInputRootProps,
+  PinInputFieldProps,
+  PinInputFieldsProps,
+  PinInputDividerProps,
+} from './components/PinInput'
+export {
   Button,
   ButtonRootProps,
   ButtonPrefixProps,

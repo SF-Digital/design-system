@@ -50,4 +50,9 @@ export const routes = [
     label: 'Select',
     title: 'Select',
   },
+  {
+    name: 'pininput',
+    label: 'PinInput',
+    title: 'PinInput',
+  },
 ]
