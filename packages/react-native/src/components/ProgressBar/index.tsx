@@ -1,6 +1,6 @@
 import { colors } from '@sf-digital-ui/tokens'
-import React, { useEffect, useLayoutEffect, useState, useRef } from 'react'
-import { View, Animated, StyleSheet, Text, Image } from 'react-native'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Animated, Image, StyleSheet, Text, View } from 'react-native'
 
 interface Stage {
   id: string | number
@@ -40,8 +40,13 @@ interface ProgressSegmentProps {
   progress: Animated.Value
 }
 
-const CheckIcon = () => <Image source={require('../../images/tick.png')} width={40} height={40} style={{zIndex:2}} />
-// <MaterialIcons name="check" size={18} color="white" />
+const CheckIcon = () =>
+  <Image 
+    source={{uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAALCAYAAACksgdhAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABvSURBVHgBtZBbDYAwDEWHAyRUChKQgBPmABxMAhImBQmTUEq4JAXC1n3sJM1ePVnbzlXAzLMsVCXwhW8mLBCiVQgQdgnSDz0uN5OgpISEgPMtnAx/ZUwqKam9d4X6Iz/JC5BI/WKbFMRRYv00/uIAjjWzjR8n4F4AAAAASUVORK5CYII='}}  
+    onError={(error) => console.log('Image load error:', error)}
+    resizeMode="contain" 
+    style={{width: 10, height: 10}} />
+
 
 const ProgressStage = ({ label, status }: ProgressStageProps) => {
   const isActive = status === StageStatus.Active

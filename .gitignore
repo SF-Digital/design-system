@@ -10,3 +10,4 @@ packages/react/.turbo
 packages/docs/.turbo
 packages/tokens/.turbo
 apps/react-native-doc/coverage
+packages/react-native/src/components/.DS_Store
