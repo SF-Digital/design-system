@@ -110,8 +110,8 @@ const styles = createStylesheet<TabsTriggerTextVariants>({
 })
 
 export const TriggerText = ({ style, ...props }: TabsTriggerTextProps) => {
-  const { activeTab, size, variant, color } = useTabsContext()
   const { value } = useTabsTriggerContext()
+  const { activeTab, size, variant, color } = useTabsContext()
 
   const isActive = value === activeTab
 
