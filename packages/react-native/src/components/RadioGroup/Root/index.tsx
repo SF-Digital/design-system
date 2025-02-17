@@ -15,6 +15,7 @@ export interface RadioGroupRootProps {
   orientation?: 'vertical' | 'horizontal'
   children: ReactNode
   style?: StyleProp<ViewStyle>
+  testID?: string
 }
 
 export const RadioGroupContext = createContext<RadioGroupContextValue>(null)
@@ -40,6 +41,7 @@ export const Root = ({
   orientation = 'vertical',
   children,
   style,
+  testID,
   ...props
 }: RadioGroupRootProps) => {
   const [uncontrolledValue, setUncontrolledValue] = useState<
@@ -62,6 +64,7 @@ export const Root = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <View
+        testID={testID}
         style={[
           styles.container,
           orientation === 'horizontal' ? styles.horizontal : styles.vertical,
