@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Platform, Pressable, TextInput, TextInputProps } from 'react-native'
+import { Pressable, TextInput, TextInputProps } from 'react-native'
 import { PinInputSizes, usePinInputContext } from '../Root'
 import { colors } from '@sf-digital-ui/tokens'
 import { createStylesheet } from '../../../utils/create-styles'
@@ -50,7 +50,7 @@ export const Field = ({
         maxLength={1}
         placeholder={placeholder}
         placeholderTextColor={colors.neutral['60']}
-        keyboardType={Platform.OS === 'ios' ? 'numeric' : 'default'}
+        keyboardType="numeric"
         value={pins[index]}
         onChangeText={(value) => {
           handlePinChange(value, index)
