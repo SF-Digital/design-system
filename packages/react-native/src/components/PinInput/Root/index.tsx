@@ -43,7 +43,12 @@ export const Root = ({
   const [focusedIndex, setFocusedIndex] = useState<number>(0)
 
   const handlePinChange = (value: string, index: number): void => {
+    if (value !== '' && !/^[0-9]$/.test(value)) {
+      return
+    }
+
     const newPins = [...pins]
+
     newPins[index] = value
     setPins(newPins)
 
