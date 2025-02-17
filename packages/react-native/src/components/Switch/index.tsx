@@ -17,14 +17,17 @@ type SwitchVariants = {
 }
 
 const stylesheet = createStylesheet<SwitchVariants>({
-  base: {},
+  base: {
+    maxWidth: 65,
+    maxHeight: 40,
+  },
   variants: {
     size: {
       sm: {
-        transform: [{ scale: 1 }],
+        transform: [{ scaleX: 1 }, { scaleY: 1 }],
       },
       md: {
-        transform: [{ scale: 1.33 }],
+        transform: [{ scaleY: 1.33 }, { scaleX: 1.33 }],
       },
     },
     color: {
