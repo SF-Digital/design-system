@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react-native'
 import { RadioGroup } from '@sf-digital-ui/react-native'
-import { borderWidth, colors } from '@sf-digital-ui/tokens'
+import { colors } from '@sf-digital-ui/tokens'
 
 describe('RadioGroup Component', () => {
   describe('Root Component', () => {

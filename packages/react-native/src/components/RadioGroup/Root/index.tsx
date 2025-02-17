@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react'
-import { View, StyleSheet, ViewStyle, StyleProp } from 'react-native'
+import { View, StyleSheet, ViewStyle, StyleProp, ViewProps } from 'react-native'
 
 type RadioGroupContextValue = {
   value: string | undefined
@@ -7,7 +7,7 @@ type RadioGroupContextValue = {
   disabled: boolean
 } | null
 
-export interface RadioGroupRootProps {
+export interface RadioGroupRootProps extends ViewProps {
   value?: string
   defaultValue?: string
   onValueChange?: (value: string) => void
@@ -15,7 +15,6 @@ export interface RadioGroupRootProps {
   orientation?: 'vertical' | 'horizontal'
   children: ReactNode
   style?: StyleProp<ViewStyle>
-  testID?: string
 }
 
 export const RadioGroupContext = createContext<RadioGroupContextValue>(null)
@@ -41,7 +40,6 @@ export const Root = ({
   orientation = 'vertical',
   children,
   style,
-  testID,
   ...props
 }: RadioGroupRootProps) => {
   const [uncontrolledValue, setUncontrolledValue] = useState<
@@ -64,7 +62,6 @@ export const Root = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <View
-        testID={testID}
         style={[
           styles.container,
           orientation === 'horizontal' ? styles.horizontal : styles.vertical,

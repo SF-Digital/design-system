@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
@@ -9,7 +10,8 @@
     "cbum": "rm -rf node_modules && rm package-lock.json && rm -rf packages/*/node_modules && npm install",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build && changeset publish --filter=!@sf-digital-ui/docs"
+    "release": "turbo run build && changeset publish --filter=!@sf-digital-ui/docs",
+    "test": "npm run test --workspace=apps/react-native-doc"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
