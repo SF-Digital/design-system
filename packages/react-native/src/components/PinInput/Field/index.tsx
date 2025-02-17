@@ -44,6 +44,7 @@ export const Field = ({
             filled: pins[index] !== '',
             size,
           }),
+          { height: 'auto' },
           style,
         ]}
         maxLength={1}
@@ -51,7 +52,9 @@ export const Field = ({
         placeholderTextColor={colors.neutral['60']}
         keyboardType="numeric"
         value={pins[index]}
-        onChangeText={(value) => handlePinChange(value, index)}
+        onChangeText={(value) => {
+          handlePinChange(value, index)
+        }}
         secureTextEntry={secure}
         onKeyPress={({ nativeEvent }) => {
           if (nativeEvent.key === 'Backspace' && index > 0) {

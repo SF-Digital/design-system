@@ -26,6 +26,11 @@ export const routes = [
   { name: 'card', label: 'Card', title: 'Card' },
   { name: 'textarea', label: 'TextArea', title: 'TextArea' },
   {
+    name: 'pininput',
+    label: 'PinInput',
+    title: 'PinInput',
+  },
+  {
     name: 'tabs',
     label: 'Tabs',
     title: 'Tabs',
@@ -49,10 +54,5 @@ export const routes = [
     name: 'select',
     label: 'Select',
     title: 'Select',
-  },
-  {
-    name: 'pininput',
-    label: 'PinInput',
-    title: 'PinInput',
   },
 ]

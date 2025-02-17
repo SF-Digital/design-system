@@ -100,4 +100,39 @@ describe('PinInput Component', () => {
       expect(getByTestId('field-0').props.editable).toBe(false)
     })
   })
+
+  it('only accepts numeric inputs and rejects non-numeric inputs', async () => {
+    const onComplete = jest.fn()
+    const { getByTestId } = render(
+      <PinInput.Root length={3} onComplete={onComplete}>
+        <PinInput.Fields>
+          <PinInput.Field testID="field-0" index={0} />
+          <PinInput.Field testID="field-1" index={1} />
+          <PinInput.Field testID="field-2" index={2} />
+        </PinInput.Fields>
+      </PinInput.Root>,
+    )
+
+    act(() => {
+      fireEvent.changeText(getByTestId('field-0'), 'a')
+    })
+    expect(getByTestId('field-0').props.value).toBe('')
+
+    act(() => {
+      fireEvent.changeText(getByTestId('field-0'), '@')
+    })
+    expect(getByTestId('field-0').props.value).toBe('')
+
+    act(() => {
+      fireEvent.changeText(getByTestId('field-0'), '1')
+    })
+    expect(getByTestId('field-0').props.value).toBe('1')
+
+    act(() => {
+      fireEvent.changeText(getByTestId('field-1'), 'abc')
+    })
+    expect(getByTestId('field-1').props.value).toBe('')
+
+    expect(onComplete).not.toHaveBeenCalled()
+  })
 })
