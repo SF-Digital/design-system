@@ -57,3 +57,4 @@ export {
   ModalTitleProps,
   ModalTriggerProps,
 } from './components/Modal'
+export { ProgressBar } from './components/ProgressBar'
