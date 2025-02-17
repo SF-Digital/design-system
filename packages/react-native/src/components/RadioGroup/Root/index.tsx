@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react'
-import { View, StyleSheet, ViewStyle, StyleProp } from 'react-native'
+import { View, StyleSheet, ViewStyle, StyleProp, ViewProps } from 'react-native'
 
 type RadioGroupContextValue = {
   value: string | undefined
@@ -7,7 +7,7 @@ type RadioGroupContextValue = {
   disabled: boolean
 } | null
 
-export interface RadioGroupRootProps {
+export interface RadioGroupRootProps extends ViewProps {
   value?: string
   defaultValue?: string
   onValueChange?: (value: string) => void

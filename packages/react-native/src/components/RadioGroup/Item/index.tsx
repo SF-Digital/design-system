@@ -98,7 +98,6 @@ export const Item = ({
   value,
   color,
   size,
-
   ...props
 }: RadioGroupItemProps) => {
   const context = useContext(RadioGroupContext)
