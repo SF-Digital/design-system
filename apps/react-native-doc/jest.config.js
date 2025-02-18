@@ -10,5 +10,7 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@design-system/(.*)$': '<rootDir>/../../packages/react-native/$1',
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testEnvironment: 'node',
   coveragePathIgnorePatterns: ['.yalc', 'test-utils'],
 }

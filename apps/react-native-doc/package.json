@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
+    "test:ci": "jest -- --ci --coverage --maxWorkers=2",
     "test:coverage": "jest --coverage",
     "yalc-add": "yalc add @sf-digital-ui/react-native",
     "yalc-link": "yalc link @sf-digital-ui/react-native"
