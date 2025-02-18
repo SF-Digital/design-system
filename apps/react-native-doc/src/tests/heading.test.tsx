@@ -5,7 +5,6 @@ import { TextStyle } from 'react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
 import { calculateLineHeight } from '../../../../packages/react-native/src/utils/calculate-line-height'
 
-// I had to add this to compensate for the 'px' that is sometimes sent through
 const toNumber = (fontSize: string | number): number => {
   if (typeof fontSize === 'string') {
     return parseFloat(fontSize.replace('px', ''))
@@ -17,7 +16,7 @@ type FontSizeKey = keyof typeof fontSizes
 
 // How <Heading> would render by default
 describe('Heading', () => {
-  test('renders with default props (h1)', () => {
+  it('renders with default props (h1)', () => {
     const { getByText, getByRole } = render(<Heading>Test Heading</Heading>)
 
     const headingElement = getByText('Test Heading')
@@ -48,7 +47,7 @@ describe('Heading', () => {
     'h6',
   ]
 
-  test.each(headingSizes)('renders with correct styles for size %s', (size) => {
+  it.each(headingSizes)('renders with correct styles for size %s', (size) => {
     const { getByText } = render(<Heading size={size}>Test Heading</Heading>)
 
     const headingElement = getByText('Test Heading')
@@ -68,7 +67,7 @@ describe('Heading', () => {
     )
   })
 
-  test('applies custom styles', () => {
+  it('applies custom styles', () => {
     const customStyle: TextStyle = { color: 'red', fontWeight: 'bold' }
     const { getByText } = render(
       <Heading style={customStyle}>Test Heading</Heading>,
@@ -92,7 +91,7 @@ describe('Heading', () => {
     )
   })
 
-  test('passes through additional props', () => {
+  it('passes through additional props', () => {
     const { getByText } = render(
       <Heading testID="test-heading" numberOfLines={2}>
         Test Heading
@@ -105,14 +104,14 @@ describe('Heading', () => {
     expect(headingElement.props.numberOfLines).toBe(2)
   })
 
-  test('sets appropriate accessibility role', () => {
+  it('sets appropriate accessibility role', () => {
     const { getByRole } = render(<Heading>Test Heading</Heading>)
 
     const headingElement = getByRole('header')
     expect(headingElement).toBeTruthy()
   })
 
-  test('calculateLineHeight handles string and number inputs', () => {
+  it('calculateLineHeight handles string and number inputs', () => {
     // Test with numeric values
     expect(calculateLineHeight(16)).toBe(Math.round(16 * 1.25))
     expect(calculateLineHeight(24)).toBe(Math.round(24 * 1.25))
