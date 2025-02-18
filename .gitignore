@@ -10,4 +10,3 @@ packages/react/.turbo
 packages/docs/.turbo
 packages/tokens/.turbo
 apps/react-native-doc/coverage
-apps/react-native-doc/junit.xml

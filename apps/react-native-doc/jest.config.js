@@ -11,4 +11,5 @@ module.exports = {
     '^@design-system/(.*)$': '<rootDir>/../../packages/react-native/$1',
   },
   coveragePathIgnorePatterns: ['.yalc', 'test-utils'],
+  testEnvironment: 'node',
 }

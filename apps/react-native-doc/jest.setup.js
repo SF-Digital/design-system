@@ -13,3 +13,16 @@ jest.mock('expo-asset', () => ({
     loadAsync: () => Promise.resolve(),
   },
 }))
+
+jest.mock('react-native', () => {
+  const RN = jest.requireActual('react-native')
+  RN.StyleSheet.create = function create(styles) {
+    return styles
+  }
+  return RN
+})
+
+global.__fbBatchedBridgeConfig = {
+  remoteModuleConfig: [],
+  localModulesConfig: [],
+}
