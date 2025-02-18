@@ -30,7 +30,7 @@ interface ProgressStageProps {
   status: StageStatus
 }
 
-interface ProgressBarProps {
+export type ProgressBarProps = {
   stages: Stage[]
   currentStage: number
 }
