@@ -1,6 +1,8 @@
 import '@testing-library/jest-native'
 
-// Mock expo modules
+global.window = {}
+global.window = global
+
 jest.mock('expo-font', () => ({
   useFonts: () => [true],
   loadAsync: () => Promise.resolve(),
