@@ -3,9 +3,9 @@ import { render } from '@/utils/test-utils'
 import { Text, TextProps } from '@sf-digital-ui/react-native'
 import { TextStyle } from 'react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
-import { calculateLineHeight } from '../../../../packages/react-native/src/utils/calculate-line-height'
-import { toNumber } from '@/utils/test-functions'
-import { FontSizeKey } from '@/utils/test-types'
+import { calculateLineHeight } from '@/utils/calculateLineHeight/calculateLineHeight'
+import { fontSizeToNumber } from '@/utils/toNumber/fontSizeToNumber'
+import { FontSizeKey } from '../../types/fontsizes'
 
 describe('Text', () => {
   it('renders with default props (md)', () => {
@@ -23,7 +23,7 @@ describe('Text', () => {
         expect.objectContaining({
           fontFamily: fonts['sf-digital'],
           fontSize: fontSizes['sf-md'],
-          lineHeight: calculateLineHeight(toNumber(fontSizes['sf-md'])),
+          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-md'])),
         }),
       ]),
     )
@@ -46,7 +46,9 @@ describe('Text', () => {
         expect.objectContaining({
           fontFamily: fonts['sf-digital'],
           fontSize: fontSizes[fontSizeKey],
-          lineHeight: calculateLineHeight(toNumber(fontSizes[fontSizeKey])),
+          lineHeight: calculateLineHeight(
+            fontSizeToNumber(fontSizes[fontSizeKey]),
+          ),
         }),
       ]),
     )
@@ -68,7 +70,7 @@ describe('Text', () => {
         expect.objectContaining({
           fontFamily: fonts['sf-digital'],
           fontSize: fontSizes['sf-md'],
-          lineHeight: calculateLineHeight(toNumber(fontSizes['sf-md'])),
+          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-md'])),
         }),
       ]),
     )
@@ -109,7 +111,7 @@ describe('Text', () => {
 
     // Test with string values (simulating how it's used in the component)
     const stringFontSize = '32px'
-    const numericFontSize = toNumber(stringFontSize)
+    const numericFontSize = fontSizeToNumber(stringFontSize)
     expect(calculateLineHeight(numericFontSize)).toBe(Math.round(32 * 1.25))
   })
 })

@@ -1,13 +1,6 @@
 import { render } from '@testing-library/react-native'
 import { NavigationContainer } from '@react-navigation/native'
 
-jest.mock(
-  '../../../../packages/react-native/src/utils/calculate-line-height',
-  () => ({
-    calculateLineHeight: (fontSize: number) => Math.round(fontSize * 1.25),
-  }),
-)
-
 jest.mock('@sf-digital-ui/tokens', () => ({
   fonts: {
     'sf-digital': 'Lato, sans-serif',
