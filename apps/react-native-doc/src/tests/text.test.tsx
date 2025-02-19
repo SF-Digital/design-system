@@ -1,49 +1,42 @@
 import React from 'react'
 import { render } from '@/utils/test-utils'
-import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
+import { Text, TextProps } from '@sf-digital-ui/react-native'
 import { TextStyle } from 'react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
 import { calculateLineHeight } from '@/utils/calculateLineHeight/calculateLineHeight'
 import { fontSizeToNumber } from '@/utils/toNumber/fontSizeToNumber'
 import { FontSizeKey } from '../../types/fontsizes'
 
-describe('Heading', () => {
-  it('renders with default props (h1)', () => {
-    const { getByText, getByRole } = render(<Heading>Test Heading</Heading>)
+describe('Text', () => {
+  it('renders with default props (md)', () => {
+    const { getByText, getByRole } = render(<Text>Test Text</Text>)
 
-    const headingElement = getByText('Test Heading')
-    const headerRole = getByRole('header')
+    const textElement = getByText('Test Text')
+    const textRole = getByRole('text')
 
-    expect(headingElement).toBeTruthy()
-    expect(headerRole).toBeTruthy()
+    expect(textElement).toBeTruthy()
+    expect(textRole).toBeTruthy()
 
-    const styles = headingElement.props.style
+    const styles = textElement.props.style
     expect(styles).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           fontFamily: fonts['sf-digital'],
-          fontSize: fontSizes['sf-h1'],
-          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-h1'])),
+          fontSize: fontSizes['sf-md'],
+          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-md'])),
         }),
       ]),
     )
   })
 
-  // All possible heading sizes we are accounting for
-  const headingSizes: HeadingProps['size'][] = [
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
-  ]
+  // All possible text sizes we are accounting for
+  const textSizes: TextProps['size'][] = ['xs', 'sm', 'md', 'lg']
 
-  it.each(headingSizes)('renders with correct styles for size %s', (size) => {
-    const { getByText } = render(<Heading size={size}>Test Heading</Heading>)
+  it.each(textSizes)('renders with correct styles for size %s', (size) => {
+    const { getByText } = render(<Text size={size}>Test Text</Text>)
 
-    const headingElement = getByText('Test Heading')
-    const styles = headingElement.props.style
+    const textElement = getByText('Test Text')
+    const styles = textElement.props.style
 
     // Type-safe way to construct the key
     const fontSizeKey = `sf-${size}` as FontSizeKey
@@ -63,12 +56,10 @@ describe('Heading', () => {
 
   it('applies custom styles', () => {
     const customStyle: TextStyle = { color: 'red', fontWeight: 'bold' }
-    const { getByText } = render(
-      <Heading style={customStyle}>Test Heading</Heading>,
-    )
+    const { getByText } = render(<Text style={customStyle}>Test Text</Text>)
 
-    const headingElement = getByText('Test Heading')
-    const styles = headingElement.props.style
+    const textElement = getByText('Test Text')
+    const styles = textElement.props.style
 
     // Check that custom styles are applied
     expect(styles).toEqual(expect.arrayContaining([customStyle]))
@@ -78,8 +69,8 @@ describe('Heading', () => {
       expect.arrayContaining([
         expect.objectContaining({
           fontFamily: fonts['sf-digital'],
-          fontSize: fontSizes['sf-h1'],
-          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-h1'])),
+          fontSize: fontSizes['sf-md'],
+          lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-md'])),
         }),
       ]),
     )
@@ -87,22 +78,30 @@ describe('Heading', () => {
 
   it('passes through additional props', () => {
     const { getByText } = render(
-      <Heading testID="test-heading" numberOfLines={2}>
-        Test Heading
-      </Heading>,
+      <Text testID="test-text" numberOfLines={2}>
+        Test Text
+      </Text>,
     )
 
-    const headingElement = getByText('Test Heading')
+    const textElement = getByText('Test Text')
 
-    expect(headingElement.props.testID).toBe('test-heading')
-    expect(headingElement.props.numberOfLines).toBe(2)
+    expect(textElement.props.testID).toBe('test-text')
+    expect(textElement.props.numberOfLines).toBe(2)
   })
 
   it('sets appropriate accessibility role', () => {
-    const { getByRole } = render(<Heading>Test Heading</Heading>)
+    const { getByRole } = render(<Text>Test Text</Text>)
 
-    const headingElement = getByRole('header')
-    expect(headingElement).toBeTruthy()
+    const textElement = getByRole('text')
+    expect(textElement).toBeTruthy()
+  })
+
+  it('handles multiline text content', () => {
+    const multilineText = 'First line\nSecond line\nThird line'
+    const { getByText } = render(<Text>{multilineText}</Text>)
+
+    const textElement = getByText(multilineText)
+    expect(textElement).toBeTruthy()
   })
 
   it('calculateLineHeight handles string and number inputs', () => {
