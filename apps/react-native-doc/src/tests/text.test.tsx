@@ -4,15 +4,8 @@ import { Text, TextProps } from '@sf-digital-ui/react-native'
 import { TextStyle } from 'react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
 import { calculateLineHeight } from '../../../../packages/react-native/src/utils/calculate-line-height'
-
-const toNumber = (fontSize: string | number): number => {
-  if (typeof fontSize === 'string') {
-    return parseFloat(fontSize.replace('px', ''))
-  }
-  return fontSize
-}
-
-type FontSizeKey = keyof typeof fontSizes
+import { toNumber } from '@/utils/test-functions'
+import { FontSizeKey } from '@/utils/test-types'
 
 describe('Text', () => {
   it('renders with default props (md)', () => {

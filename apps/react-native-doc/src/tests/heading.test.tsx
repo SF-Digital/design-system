@@ -4,17 +4,9 @@ import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
 import { TextStyle } from 'react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
 import { calculateLineHeight } from '../../../../packages/react-native/src/utils/calculate-line-height'
+import { toNumber } from '@/utils/test-functions'
+import { FontSizeKey } from '@/utils/test-types'
 
-const toNumber = (fontSize: string | number): number => {
-  if (typeof fontSize === 'string') {
-    return parseFloat(fontSize.replace('px', ''))
-  }
-  return fontSize
-}
-
-type FontSizeKey = keyof typeof fontSizes
-
-// How <Heading> would render by default
 describe('Heading', () => {
   it('renders with default props (h1)', () => {
     const { getByText, getByRole } = render(<Heading>Test Heading</Heading>)
