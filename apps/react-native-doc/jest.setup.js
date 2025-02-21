@@ -6,6 +6,7 @@ global.window = global
 jest.mock('expo-font', () => ({
   useFonts: () => [true],
   loadAsync: () => Promise.resolve(),
+  isLoaded: () => true,
 }))
 
 jest.mock('expo-asset', () => ({
