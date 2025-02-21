@@ -1,4 +1,3 @@
-// Content.tsx
 import React, { useContext } from 'react'
 import { View, ViewProps, Modal, StyleSheet } from 'react-native'
 import { DropdownMenuContext } from '../Root'
@@ -10,6 +9,7 @@ export interface DropdownMenuContentProps extends ViewProps {
 
 export const Content: React.FC<DropdownMenuContentProps> = ({
   style,
+  testID,
   children,
   ...props
 }) => {
@@ -17,6 +17,7 @@ export const Content: React.FC<DropdownMenuContentProps> = ({
 
   return (
     <Modal
+      testID={testID}
       visible={isOpen}
       transparent
       animationType="fade"
