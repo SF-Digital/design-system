@@ -1,4 +1,3 @@
-// Trigger.tsx
 import React, { useContext } from 'react'
 import { Pressable, PressableProps } from 'react-native'
 import { DropdownMenuContext } from '../Root'
