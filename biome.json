@@ -142,7 +142,7 @@
 				"useFilenamingConvention": {
 					"level": "error",
 					"options": {
-						"filenameCases": ["kebab-case"]
+						"filenameCases": ["kebab-case", "PascalCase"]
 					}
 				}
 			},
