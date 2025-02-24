@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import {
   GestureHandlerRootView,
@@ -15,7 +16,7 @@ import {
 
 interface TapableDrawerItemProps {
   label: string
-  onPress: () => void
+  onPress: VoidFunction
 }
 
 const TapableDrawerItem = ({ label, onPress }: TapableDrawerItemProps) => {
@@ -57,6 +58,9 @@ export default function Layout() {
           drawerActiveBackgroundColor: colors['primary-green']['400'],
           drawerActiveTintColor: 'white',
           drawerInactiveTintColor: 'white',
+          drawerContentStyle: {
+            backgroundColor: 'rgb(34, 36, 37)',
+          },
           headerStyle: {
             backgroundColor: colors['primary-green']['500'],
           },
