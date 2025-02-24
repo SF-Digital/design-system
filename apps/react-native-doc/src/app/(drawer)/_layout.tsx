@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
 import {
   GestureHandlerRootView,
   TapGestureHandler,
@@ -9,51 +9,35 @@ import {
 import { Drawer } from 'expo-router/drawer'
 import { colors } from '@sf-digital-ui/tokens'
 import { routes } from '../../../routes'
-import {
-  DrawerContentScrollView,
-  type DrawerContentComponentProps,
-} from '@react-navigation/drawer'
+import { useRouter, type Route } from 'expo-router'
 
 interface TapableDrawerItemProps {
   label: string
-  onPress: VoidFunction
+  routeName: Route
 }
 
-const TapableDrawerItem = ({ label, onPress }: TapableDrawerItemProps) => {
+const TapableDrawerItem = ({ label, routeName }: TapableDrawerItemProps) => {
+  const router = useRouter()
+
   const handleStateChange = ({
     nativeEvent,
   }: TapGestureHandlerStateChangeEvent) => {
     if (nativeEvent.state === State.END) {
-      onPress()
+      router.navigate(routeName)
     }
   }
 
   return (
     <TapGestureHandler onHandlerStateChange={handleStateChange}>
-      <View style={styles.itemContainer}>
-        <Text style={styles.itemText}>{label}</Text>
-      </View>
+      <Text style={styles.itemText}>{label}</Text>
     </TapGestureHandler>
   )
 }
-
-const CustomDrawerContent = (props: DrawerContentComponentProps) => (
-  <DrawerContentScrollView {...props} style={styles.drawerContent}>
-    {routes.map((route) => (
-      <TapableDrawerItem
-        key={route.name}
-        label={route.label}
-        onPress={() => props.navigation.navigate(route.name)}
-      />
-    ))}
-  </DrawerContentScrollView>
-)
 
 export default function Layout() {
   return (
     <GestureHandlerRootView style={styles.container}>
       <Drawer
-        drawerContent={CustomDrawerContent}
         screenOptions={{
           drawerActiveBackgroundColor: colors['primary-green']['400'],
           drawerActiveTintColor: 'white',
@@ -69,7 +53,23 @@ export default function Layout() {
             fontWeight: 'bold',
           },
         }}
-      />
+      >
+        {routes.map((route) => (
+          <Drawer.Screen
+            key={route.name}
+            name={route.name}
+            options={{
+              drawerLabel: () => (
+                <TapableDrawerItem
+                  label={route.label}
+                  routeName={route.name as Route}
+                />
+              ),
+              title: route.title,
+            }}
+          />
+        ))}
+      </Drawer>
     </GestureHandlerRootView>
   )
 }
@@ -78,13 +78,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  drawerContent: {
-    backgroundColor: 'rgb(34, 36, 37)',
-  },
-  itemContainer: {
-    padding: 16,
-  },
   itemText: {
     color: 'white',
+    fontSize: 16,
   },
 })
