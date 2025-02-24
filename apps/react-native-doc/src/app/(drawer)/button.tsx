@@ -113,15 +113,22 @@ export default function Button() {
           onValueChange={(value) => setIconButton(value === 'iconButton')}
         />
       </View>
-      <DesignSystemButton.Root
-        variant={variant}
-        color={color}
-        size={size}
-        disabled={disabled}
-        iconButton={iconButton}
+      <View
+        style={{
+          flex: 1,
+          paddingHorizontal: 8,
+        }}
       >
-        <DesignSystemButton.Text>Button</DesignSystemButton.Text>
-      </DesignSystemButton.Root>
+        <DesignSystemButton.Root
+          variant={variant}
+          color={color}
+          size={size}
+          disabled={disabled}
+          iconButton={iconButton}
+        >
+          <DesignSystemButton.Text>Button</DesignSystemButton.Text>
+        </DesignSystemButton.Root>
+      </View>
     </ScrollView>
   )
 }

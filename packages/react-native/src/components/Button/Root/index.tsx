@@ -53,6 +53,7 @@ export const useButtonContext = () => {
 
 const buttonStyles = createStylesheet<ButtonVariants>({
   base: {
+    flex: 1,
     alignItems: 'center',
     flexDirection: 'row',
     gap: 4,

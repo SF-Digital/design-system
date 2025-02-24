@@ -21,6 +21,8 @@ const textStyles = createStylesheet<TextVariants>({
   base: {
     fontFamily: fonts['sf-digital'],
     fontWeight: 600,
+    textAlign: 'center',
+    width: '100%',
   },
   variants: {
     size: {
