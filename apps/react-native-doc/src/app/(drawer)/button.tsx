@@ -115,7 +115,6 @@ export default function Button() {
 			</View>
 			<View
 				style={{
-					flex: 1,
 					paddingHorizontal: 8,
 				}}
 			>
