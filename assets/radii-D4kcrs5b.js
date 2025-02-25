@@ -1,0 +1,4 @@
+import{j as t}from"./index-BY56YOu8.js";import{useMDXComponents as i}from"./index-CHrGa5Tm.js";import{M as r,U as s}from"./index-C3DVJSXj.js";import{T as m}from"./TokensGrid-CzaxO8GK.js";import{r as p}from"./index-DifnnNrk.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CQwh6Daz.js";import"./index-_2TAQcTa.js";import"./iframe-CqrwSAY-.js";import"./index-CNxgJDzb.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";function e(n){const o={h1:"h1",p:"p",...i(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/Radii"}),`
+`,t.jsx(o.h1,{id:"radii",children:"Radii"}),`
+`,t.jsx(o.p,{children:"These are the font wights used in the design system."}),`
+`,t.jsx(s,{children:t.jsx(m,{tokens:p})})]})}function y(n={}){const{wrapper:o}={...i(),...n.components};return o?t.jsx(o,{...n,children:t.jsx(e,{...n})}):e(n)}export{y as default};

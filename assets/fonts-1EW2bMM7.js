@@ -1,0 +1,4 @@
+import{j as t}from"./index-BY56YOu8.js";import{useMDXComponents as s}from"./index-CHrGa5Tm.js";import{M as i,U as r}from"./index-C3DVJSXj.js";import{T as m}from"./TokensGrid-CzaxO8GK.js";import{b as p}from"./index-DifnnNrk.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CQwh6Daz.js";import"./index-_2TAQcTa.js";import"./iframe-CqrwSAY-.js";import"./index-CNxgJDzb.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";function o(n){const e={h1:"h1",p:"p",...s(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Tokens/Font Families"}),`
+`,t.jsx(e.h1,{id:"font-families",children:"Font Families"}),`
+`,t.jsx(e.p,{children:"These are the line heights used in the design system."}),`
+`,t.jsx(r,{children:t.jsx(m,{tokens:p})})]})}function k(n={}){const{wrapper:e}={...s(),...n.components};return e?t.jsx(e,{...n,children:t.jsx(o,{...n})}):o(n)}export{k as default};
