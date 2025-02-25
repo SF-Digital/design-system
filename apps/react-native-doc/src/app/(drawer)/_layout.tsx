@@ -1,11 +1,42 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import React from 'react'
+import { Text, StyleSheet } from 'react-native'
+import {
+  GestureHandlerRootView,
+  TapGestureHandler,
+  State,
+  type TapGestureHandlerStateChangeEvent,
+} from 'react-native-gesture-handler'
 import { Drawer } from 'expo-router/drawer'
 import { colors } from '@sf-digital-ui/tokens'
 import { routes } from '../../../routes'
+import { useRouter, type Route } from 'expo-router'
+
+interface TapableDrawerItemProps {
+  label: string
+  routeName: Route
+}
+
+const TapableDrawerItem = ({ label, routeName }: TapableDrawerItemProps) => {
+  const router = useRouter()
+
+  const handleStateChange = ({
+    nativeEvent,
+  }: TapGestureHandlerStateChangeEvent) => {
+    if (nativeEvent.state === State.END) {
+      router.navigate(routeName)
+    }
+  }
+
+  return (
+    <TapGestureHandler onHandlerStateChange={handleStateChange}>
+      <Text style={styles.itemText}>{label}</Text>
+    </TapGestureHandler>
+  )
+}
 
 export default function Layout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={styles.container}>
       <Drawer
         screenOptions={{
           drawerActiveBackgroundColor: colors['primary-green']['400'],
@@ -23,19 +54,32 @@ export default function Layout() {
           },
         }}
       >
-        {routes.map((route) => {
-          return (
-            <Drawer.Screen
-              key={route.name}
-              name={route.name}
-              options={{
-                drawerLabel: route.label,
-                title: route.title,
-              }}
-            />
-          )
-        })}
+        {routes.map((route) => (
+          <Drawer.Screen
+            key={route.name}
+            name={route.name}
+            options={{
+              drawerLabel: () => (
+                <TapableDrawerItem
+                  label={route.label}
+                  routeName={route.name as Route}
+                />
+              ),
+              title: route.title,
+            }}
+          />
+        ))}
       </Drawer>
     </GestureHandlerRootView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  itemText: {
+    color: 'white',
+    fontSize: 16,
+  },
+})
