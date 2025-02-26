@@ -1,41 +1,36 @@
 {
-  "name": "@sf-digital-ui/react-native",
-  "version": "2.1.0",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch & chokidar 'dist/**/*' -c 'npm run yalcPublish'",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build",
-    "yalcPublish": "yalc push --watch"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-native": ">=0.60.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
-    "@babel/preset-typescript": "^7.26.0",
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.16.0",
-    "@sf-digital-ui/eslint-config": "*",
-    "@sf-digital-ui/tokens": "*",
-    "@types/react": "^18.3.12",
-    "@types/react-native": "^0.72.0",
-    "chokidar-cli": "^3.0.0",
-    "react": "^18.3.1",
-    "react-native": "^0.76.1",
-    "typescript": "^5.6.3"
-  },
-  "dependencies": {
-    "expo-checkbox": "^4.0.1"
-  }
+	"name": "@sf-digital-ui/react-native",
+	"version": "2.1.2",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": ["dist"],
+	"license": "MIT",
+	"scripts": {
+		"build": "tsup src/index.tsx --format esm,cjs --dts",
+		"dev": "tsup src/index.tsx --format esm,cjs --dts --watch & chokidar 'dist/**/*' -c 'npm run yalcPublish'",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm run build",
+		"yalcPublish": "yalc push --watch"
+	},
+	"peerDependencies": {
+		"react": ">=16.8.0",
+		"react-native": ">=0.60.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.26.0",
+		"@babel/preset-env": "^7.26.0",
+		"@babel/preset-react": "^7.25.9",
+		"@babel/preset-typescript": "^7.26.0",
+		"@sf-digital-ui/tokens": "*",
+		"@types/react": "^18.3.12",
+		"@types/react-native": "^0.72.0",
+		"chokidar-cli": "^3.0.0",
+		"react": "^18.3.1",
+		"react-native": "^0.76.1",
+		"typescript": "^5.6.3"
+	},
+	"dependencies": {
+		"expo-checkbox": "^4.0.1"
+	}
 }

@@ -1,24 +1,20 @@
 {
-  "name": "@sf-digital-ui/tokens",
-  "version": "3.3.4",
-  "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "lint": "eslint src/**/*.ts* --fix"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.16.0",
-    "@sf-digital-ui/eslint-config": "*",
-    "@sf-digital-ui/ts-config": "*",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
-  }
+	"name": "@sf-digital-ui/tokens",
+	"version": "3.3.4",
+	"description": "",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts",
+		"dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@sf-digital-ui/ts-config": "*",
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3"
+	}
 }

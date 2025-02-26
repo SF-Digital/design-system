@@ -1,13 +1,30 @@
 import '@testing-library/jest-native'
 
-// Mock expo modules
+global.window = {}
+global.window = global
+
 jest.mock('expo-font', () => ({
-  useFonts: () => [true],
-  loadAsync: () => Promise.resolve(),
+	useFonts: () => [true],
+	loadAsync: () => Promise.resolve(),
+	isLoaded: () => true,
 }))
 
 jest.mock('expo-asset', () => ({
-  Asset: {
-    loadAsync: () => Promise.resolve(),
-  },
+	// biome-ignore lint/style/useNamingConvention: Expo has a predefined naming convention
+	Asset: {
+		loadAsync: () => Promise.resolve(),
+	},
 }))
+
+jest.mock('react-native', () => {
+	const rn = jest.requireActual('react-native')
+	rn.StyleSheet.create = function create(styles) {
+		return styles
+	}
+	return rn
+})
+
+global.__fbBatchedBridgeConfig = {
+	remoteModuleConfig: [],
+	localModulesConfig: [],
+}

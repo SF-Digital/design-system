@@ -1,15 +1,15 @@
+import RadioGroup from '@/components/RadioGroup'
 import Markdown from '@ronradtke/react-native-markdown-display'
 import {
-  Switch as DesignSystemSwitch,
-  SwitchProps,
+	Switch as DesignSystemSwitch,
+	type SwitchProps,
 } from '@sf-digital-ui/react-native'
-import { View } from 'react-native'
-import { styles } from '../../../styles'
 import { useState } from 'react'
-import RadioGroup from '@/components/RadioGroup'
+import { ScrollView, View } from 'react-native'
+import { styles } from '../../../styles'
 
 export default function Switch() {
-  const docs = `This story displays the \`Switch\` component, which is a React Native component. Types generated for each component are exported as \`SwitchProps\`.
+	const docs = `This story displays the \`Switch\` component, which is a React Native component. Types generated for each component are exported as \`SwitchProps\`.
 \b
 ## Usage:
 \b
@@ -32,59 +32,75 @@ Props
 \b
 `
 
-  const [color, setColor] = useState<SwitchProps['color']>('sf-green')
-  const [size, setSize] = useState<SwitchProps['size']>('md')
-  const [disabled, setDisabled] = useState(false)
+	const [color, setColor] = useState<SwitchProps['color']>('sf-green')
+	const [size, setSize] = useState<SwitchProps['size']>('md')
+	const [disabled, setDisabled] = useState(false)
 
-  return (
-    <View style={[styles.pageContainer, { paddingBottom: 48 }]}>
-      <Markdown>{docs}</Markdown>
-      <View
-        style={{
-          flex: 1,
-          flexWrap: 'wrap',
-          flexDirection: 'row',
-          ...styles.componentExampleContainer,
-        }}
-      >
-        <RadioGroup
-          selectedValue={size as string}
-          onValueChange={(value) => setSize(value as SwitchProps['size'])}
-          options={[
-            {
-              label: 'sm',
-              value: 'sm',
-            },
-            {
-              label: 'md',
-              value: 'md',
-            },
-          ]}
-        />
-        <RadioGroup
-          selectedValue={color as string}
-          onValueChange={(value) => setColor(value as SwitchProps['color'])}
-          options={[
-            {
-              label: 'sf-green',
-              value: 'sf-green',
-            },
-            {
-              label: 'succession-blue',
-              value: 'succession-blue',
-            },
-          ]}
-        />
-        <RadioGroup
-          selectedValue={disabled ? 'true' : 'false'}
-          onValueChange={(value) => setDisabled(value === 'true')}
-          options={[
-            { label: 'true', value: 'true' },
-            { label: 'false', value: 'false' },
-          ]}
-        />
-      </View>
-      <DesignSystemSwitch disabled={disabled} color={color} size={size} />
-    </View>
-  )
+	return (
+		<ScrollView
+			style={styles.pageContainer}
+			contentContainerStyle={{
+				alignItems: 'center',
+				paddingBottom: 24,
+				padding: 10,
+				gap: 12,
+			}}
+		>
+			<Markdown>{docs}</Markdown>
+			<View
+				style={{
+					gap: 12,
+					flex: 1,
+					alignItems: 'center',
+				}}
+			>
+				<View
+					style={{
+						flex: 1,
+						flexWrap: 'wrap',
+						flexDirection: 'row',
+						...styles.componentExampleContainer,
+					}}
+				>
+					<RadioGroup
+						selectedValue={size as string}
+						onValueChange={(value) => setSize(value as SwitchProps['size'])}
+						options={[
+							{
+								label: 'sm',
+								value: 'sm',
+							},
+							{
+								label: 'md',
+								value: 'md',
+							},
+						]}
+					/>
+					<RadioGroup
+						selectedValue={color as string}
+						onValueChange={(value) => setColor(value as SwitchProps['color'])}
+						options={[
+							{
+								label: 'sf-green',
+								value: 'sf-green',
+							},
+							{
+								label: 'succession-blue',
+								value: 'succession-blue',
+							},
+						]}
+					/>
+					<RadioGroup
+						selectedValue={disabled ? 'true' : 'false'}
+						onValueChange={(value) => setDisabled(value === 'true')}
+						options={[
+							{ label: 'true', value: 'true' },
+							{ label: 'false', value: 'false' },
+						]}
+					/>
+				</View>
+				<DesignSystemSwitch disabled={disabled} color={color} size={size} />
+			</View>
+		</ScrollView>
+	)
 }
