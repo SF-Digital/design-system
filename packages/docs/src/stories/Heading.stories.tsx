@@ -12,21 +12,21 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const HeadingStory: Meta<HeadingProps> = {
-  title: 'Typography/Heading',
-  component: Heading,
+	title: 'Typography/Heading',
+	component: Heading,
 
-  args: {
-    children: 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.',
-    size: 'h3',
-  },
-  argTypes: {
-    size: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-  },
+	args: {
+		children: 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.',
+		size: 'h3',
+	},
+	argTypes: {
+		size: {
+			options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+	},
 }
 
 export default HeadingStory

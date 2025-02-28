@@ -5,15 +5,15 @@ import { StyleSheet, View, ViewProps } from 'react-native'
 export type PinInputDividerProps = ViewProps
 
 export const Divider = ({ style, ...props }: PinInputDividerProps) => {
-  return <View style={[styles.divider, style]} {...props} />
+	return <View style={[styles.divider, style]} {...props} />
 }
 
 const styles = StyleSheet.create({
-  divider: {
-    width: 15,
-    height: 5,
-    backgroundColor: colors.neutral['40'],
-  },
+	divider: {
+		width: 15,
+		height: 5,
+		backgroundColor: colors.neutral['40'],
+	},
 })
 
 export default Divider

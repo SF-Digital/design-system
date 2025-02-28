@@ -4,81 +4,81 @@ import { createStylesheet } from '../../../utils/create-styles'
 import { colors } from '@sf-digital-ui/tokens'
 
 type CheckboxRootVariants = {
-  color?: 'sf-green' | 'succession-blue'
-  size?: 'sm' | 'md' | 'lg'
-  isChecked?: boolean
+	color?: 'sf-green' | 'succession-blue'
+	size?: 'sm' | 'md' | 'lg'
+	isChecked?: boolean
 }
 
 const styles = createStylesheet<CheckboxRootVariants>({
-  base: {
-    borderColor: colors.neutral['50'],
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 4,
-  },
-  variants: {
-    color: {
-      'sf-green': {},
-      'succession-blue': {},
-    },
-    size: {
-      sm: {
-        height: 20,
-        width: 20,
-      },
-      md: {
-        height: 24,
-        width: 24,
-      },
-      lg: {
-        height: 32,
-        width: 32,
-      },
-    },
-    isChecked: {
-      true: {
-        borderColor: 'transparent',
-      },
-      false: {},
-    },
-  },
-  defaultVariants: {
-    size: 'md',
-    color: 'sf-green',
-  },
+	base: {
+		borderColor: colors.neutral['50'],
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderRadius: 4,
+	},
+	variants: {
+		color: {
+			'sf-green': {},
+			'succession-blue': {},
+		},
+		size: {
+			sm: {
+				height: 20,
+				width: 20,
+			},
+			md: {
+				height: 24,
+				width: 24,
+			},
+			lg: {
+				height: 32,
+				width: 32,
+			},
+		},
+		isChecked: {
+			true: {
+				borderColor: 'transparent',
+			},
+			false: {},
+		},
+	},
+	defaultVariants: {
+		size: 'md',
+		color: 'sf-green',
+	},
 })
 
 export type CheckboxRootProps = ComponentProps<typeof Checkbox> &
-  CheckboxRootVariants
+	CheckboxRootVariants
 
 export const Root = ({
-  style,
-  size = 'md',
-  color = 'sf-green',
-  ...props
+	style,
+	size = 'md',
+	color = 'sf-green',
+	...props
 }: CheckboxRootProps) => {
-  const [uncontrolledValue, setUncontrolledValue] = useState<boolean>(
-    !!props.value,
-  )
+	const [uncontrolledValue, setUncontrolledValue] = useState<boolean>(
+		!!props.value,
+	)
 
-  const isChecked = props.value !== undefined ? props.value : uncontrolledValue
-  const stylesheet = styles({ size, color, isChecked })
+	const isChecked = props.value !== undefined ? props.value : uncontrolledValue
+	const stylesheet = styles({ size, color, isChecked })
 
-  return (
-    <Checkbox
-      value={isChecked}
-      onValueChange={(value) => {
-        if (props.value === undefined) {
-          setUncontrolledValue(value)
-        }
-      }}
-      color={
-        color === 'sf-green'
-          ? colors['primary-green']['500']
-          : colors['succession-blue']['500']
-      }
-      style={[...stylesheet, style]}
-      {...props}
-    />
-  )
+	return (
+		<Checkbox
+			value={isChecked}
+			onValueChange={(value) => {
+				if (props.value === undefined) {
+					setUncontrolledValue(value)
+				}
+			}}
+			color={
+				color === 'sf-green'
+					? colors['primary-green']['500']
+					: colors['succession-blue']['500']
+			}
+			style={[...stylesheet, style]}
+			{...props}
+		/>
+	)
 }

@@ -5,7 +5,7 @@ import { DropdownMenuContext } from '../Root'
 export type DropdownMenuTriggerProps = PressableProps
 
 export const Trigger: React.FC<DropdownMenuTriggerProps> = ({ ...props }) => {
-  const { isOpen, setIsOpen } = useContext(DropdownMenuContext)
+	const { isOpen, setIsOpen } = useContext(DropdownMenuContext)
 
-  return <Pressable onPress={() => setIsOpen(!isOpen)} {...props} />
+	return <Pressable onPress={() => setIsOpen(!isOpen)} {...props} />
 }

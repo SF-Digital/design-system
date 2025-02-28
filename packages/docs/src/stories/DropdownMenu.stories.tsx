@@ -78,37 +78,37 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const DropdownMenuStory: Meta<DropdownMenuRootProps> = {
-  title: 'Components/DropdownMenu',
-  component: DropdownMenu.Root,
+	title: 'Components/DropdownMenu',
+	component: DropdownMenu.Root,
 }
 
 export default DropdownMenuStory
 
 export const Default: StoryObj<DropdownMenuRootProps> = {
-  render: () => (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <MoreVertical size={20} />
-      </DropdownMenu.Trigger>
+	render: () => (
+		<DropdownMenu.Root>
+			<DropdownMenu.Trigger asChild>
+				<MoreVertical size={20} />
+			</DropdownMenu.Trigger>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content>
-          <DropdownMenu.Item>
-            <Edit size={16} />
-            Edit
-          </DropdownMenu.Item>
+			<DropdownMenu.Portal>
+				<DropdownMenu.Content>
+					<DropdownMenu.Item>
+						<Edit size={16} />
+						Edit
+					</DropdownMenu.Item>
 
-          <DropdownMenu.Item>
-            <Trash size={16} />
-            Delete
-          </DropdownMenu.Item>
-          <DropdownMenu.Divider />
-          <DropdownMenu.Item>
-            <Skull size={16} />
-            Click here to die!
-          </DropdownMenu.Item>
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
-  ),
+					<DropdownMenu.Item>
+						<Trash size={16} />
+						Delete
+					</DropdownMenu.Item>
+					<DropdownMenu.Divider />
+					<DropdownMenu.Item>
+						<Skull size={16} />
+						Click here to die!
+					</DropdownMenu.Item>
+				</DropdownMenu.Content>
+			</DropdownMenu.Portal>
+		</DropdownMenu.Root>
+	),
 }

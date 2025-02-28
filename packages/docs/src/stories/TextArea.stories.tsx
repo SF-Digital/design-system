@@ -29,35 +29,35 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 export default {
-  title: 'Form/TextArea',
-  component: TextArea.Root,
-  args: {
-    size: 'sm',
-    disabled: false,
-  },
-  argTypes: {
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    color: {
-      options: ['sf-green', 'succession-blue', 'error'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    disabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
+	title: 'Form/TextArea',
+	component: TextArea.Root,
+	args: {
+		size: 'sm',
+		disabled: false,
+	},
+	argTypes: {
+		size: {
+			options: ['sm', 'md', 'lg'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+		color: {
+			options: ['sf-green', 'succession-blue', 'error'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+		disabled: {
+			control: {
+				type: 'boolean',
+			},
+		},
+	},
 } as Meta<TextAreaRootProps>
 
 export const Default: StoryObj<TextAreaRootProps> = {
-  args: {
-    children: <TextArea.Control placeholder="Placeholder" />,
-  },
+	args: {
+		children: <TextArea.Control placeholder='Placeholder' />,
+	},
 }

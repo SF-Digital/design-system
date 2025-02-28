@@ -8,8 +8,8 @@ const TextInput = { Root, Control, Prefix, Suffix }
 export { TextInput }
 
 export type {
-  TextInputRootProps,
-  TextInputControlProps,
-  TextInputPrefixProps,
-  TextInputSuffixProps,
+	TextInputRootProps,
+	TextInputControlProps,
+	TextInputPrefixProps,
+	TextInputSuffixProps,
 }

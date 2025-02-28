@@ -11,11 +11,11 @@ const Popover = { Root, Trigger, Portal, Content, Anchor, Close, Arrow }
 export { Popover }
 
 export type {
-  PopoverRootProps,
-  PopoverTriggerProps,
-  PopoverPortalProps,
-  PopoverContentProps,
-  PopoverAnchorProps,
-  PopoverCloseProps,
-  PopoverArrowProps,
+	PopoverRootProps,
+	PopoverTriggerProps,
+	PopoverPortalProps,
+	PopoverContentProps,
+	PopoverAnchorProps,
+	PopoverCloseProps,
+	PopoverArrowProps,
 }

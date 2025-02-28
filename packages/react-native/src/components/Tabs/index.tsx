@@ -5,18 +5,18 @@ import { TriggerText, TabsTriggerTextProps } from './TriggerText'
 import { Content, TabsContentProps } from './Content'
 
 const Tabs = {
-  Root,
-  List,
-  Trigger,
-  TriggerText,
-  Content,
+	Root,
+	List,
+	Trigger,
+	TriggerText,
+	Content,
 }
 
 export { Tabs }
 export type {
-  TabsRootProps,
-  TabsListProps,
-  TabsTriggerProps,
-  TabsTriggerTextProps,
-  TabsContentProps,
+	TabsRootProps,
+	TabsListProps,
+	TabsTriggerProps,
+	TabsTriggerTextProps,
+	TabsContentProps,
 }

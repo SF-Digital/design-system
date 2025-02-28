@@ -4,26 +4,27 @@ global.window = {}
 global.window = global
 
 jest.mock('expo-font', () => ({
-  useFonts: () => [true],
-  loadAsync: () => Promise.resolve(),
-  isLoaded: () => true,
+	useFonts: () => [true],
+	loadAsync: () => Promise.resolve(),
+	isLoaded: () => true,
 }))
 
 jest.mock('expo-asset', () => ({
-  Asset: {
-    loadAsync: () => Promise.resolve(),
-  },
+	// biome-ignore lint/style/useNamingConvention: Expo has a defined naming convention
+	Asset: {
+		loadAsync: () => Promise.resolve(),
+	},
 }))
 
 jest.mock('react-native', () => {
-  const RN = jest.requireActual('react-native')
-  RN.StyleSheet.create = function create(styles) {
-    return styles
-  }
-  return RN
+	const rn = jest.requireActual('react-native')
+	rn.StyleSheet.create = function create(styles) {
+		return styles
+	}
+	return rn
 })
 
 global.__fbBatchedBridgeConfig = {
-  remoteModuleConfig: [],
-  localModulesConfig: [],
+	remoteModuleConfig: [],
+	localModulesConfig: [],
 }

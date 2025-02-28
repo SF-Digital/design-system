@@ -23,78 +23,78 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const CheckboxStory: Meta<typeof Checkbox.Root> = {
-  title: 'Form/Checkbox',
-  component: Checkbox.Root,
-  args: {
-    size: 'md',
-    checked: true,
-    color: 'sf-green',
-  },
-  argTypes: {
-    color: {
-      control: {
-        type: 'inline-radio',
-      },
-      options: ['sf-green', 'succession-blue'],
-    },
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: {
-        type: 'inline-radio',
-      },
-      checked: { control: { type: 'boolean' } },
-    },
-  },
+	title: 'Form/Checkbox',
+	component: Checkbox.Root,
+	args: {
+		size: 'md',
+		checked: true,
+		color: 'sf-green',
+	},
+	argTypes: {
+		color: {
+			control: {
+				type: 'inline-radio',
+			},
+			options: ['sf-green', 'succession-blue'],
+		},
+		size: {
+			options: ['sm', 'md', 'lg'],
+			control: {
+				type: 'inline-radio',
+			},
+			checked: { control: { type: 'boolean' } },
+		},
+	},
 }
 
 export default CheckboxStory
 
 export const Primary: StoryObj = {
-  args: {
-    children: (
-      <>
-        <Checkbox.Indicator>
-          <Checkbox.Check />
-        </Checkbox.Indicator>
-      </>
-    ),
-  },
+	args: {
+		children: (
+			<>
+				<Checkbox.Indicator>
+					<Checkbox.Check />
+				</Checkbox.Indicator>
+			</>
+		),
+	},
 }
 
 export const SuccessionBlue: StoryObj = {
-  args: {
-    children: (
-      <>
-        <Checkbox.Root size="md" color="succession-blue">
-          <Checkbox.Indicator>
-            <Checkbox.Check />
-          </Checkbox.Indicator>
-        </Checkbox.Root>
-      </>
-    ),
-  },
+	args: {
+		children: (
+			<>
+				<Checkbox.Root size='md' color='succession-blue'>
+					<Checkbox.Indicator>
+						<Checkbox.Check />
+					</Checkbox.Indicator>
+				</Checkbox.Root>
+			</>
+		),
+	},
 }
 
 export const WithLabel: StoryObj<typeof Checkbox.Root> = {
-  render: (args) => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: '10px',
-      }}
-    >
-      <Checkbox.Root size={args.size} checked={args.checked}>
-        <Checkbox.Indicator>
-          <Checkbox.Check />
-        </Checkbox.Indicator>
-      </Checkbox.Root>
-      <p
-        className={`text-primary-green-500 text-sf-${args.size ?? 'sm'} font-auto`}
-      >
-        Checkbox Label
-      </p>
-    </div>
-  ),
+	render: (args) => (
+		<div
+			style={{
+				display: 'flex',
+				flexDirection: 'row',
+				alignItems: 'center',
+				gap: '10px',
+			}}
+		>
+			<Checkbox.Root size={args.size} checked={args.checked}>
+				<Checkbox.Indicator>
+					<Checkbox.Check />
+				</Checkbox.Indicator>
+			</Checkbox.Root>
+			<p
+				className={`text-primary-green-500 text-sf-${args.size ?? 'sm'} font-auto`}
+			>
+				Checkbox Label
+			</p>
+		</div>
+	),
 }

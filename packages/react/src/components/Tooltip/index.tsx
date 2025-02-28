@@ -8,10 +8,10 @@ import { Arrow, TooltipArrowProps } from './Arrow'
 export const Tooltip = { Provider, Root, Trigger, Portal, Content, Arrow }
 
 export type {
-  TooltipProviderProps,
-  TooltipRootProps,
-  TooltipTriggerProps,
-  TooltipPortalProps,
-  TooltipContentProps,
-  TooltipArrowProps,
+	TooltipProviderProps,
+	TooltipRootProps,
+	TooltipTriggerProps,
+	TooltipPortalProps,
+	TooltipContentProps,
+	TooltipArrowProps,
 }

@@ -2,50 +2,50 @@ import React, { createContext, useContext, useState } from 'react'
 import { ViewProps } from 'react-native'
 
 type DropdownMenuContextType = {
-  isOpen: boolean
-  setIsOpen: (value: boolean) => void
+	isOpen: boolean
+	setIsOpen: (value: boolean) => void
 }
 
 export const DropdownMenuContext = createContext<DropdownMenuContextType>({
-  isOpen: false,
-  setIsOpen: () => {},
+	isOpen: false,
+	setIsOpen: () => {},
 })
 
 export const useDropdownMenuContext = () => {
-  const context = useContext(DropdownMenuContext)
-  if (!context) {
-    throw new Error(
-      'Dropdown components must be used within a Dropdown provider',
-    )
-  }
-  return context
+	const context = useContext(DropdownMenuContext)
+	if (!context) {
+		throw new Error(
+			'Dropdown components must be used within a Dropdown provider',
+		)
+	}
+	return context
 }
 
 export interface DropdownMenuRootProps extends ViewProps {
-  open?: boolean
-  onOpenChange?: (open: boolean) => void
+	open?: boolean
+	onOpenChange?: (open: boolean) => void
 }
 
 export const Root: React.FC<DropdownMenuRootProps> = ({
-  children,
-  open,
-  onOpenChange,
+	children,
+	open,
+	onOpenChange,
 }) => {
-  const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false)
 
-  const handleOpenChange = (value: boolean) => {
-    setIsOpen(value)
-    onOpenChange?.(value)
-  }
+	const handleOpenChange = (value: boolean) => {
+		setIsOpen(value)
+		onOpenChange?.(value)
+	}
 
-  return (
-    <DropdownMenuContext.Provider
-      value={{
-        isOpen: open ?? isOpen,
-        setIsOpen: handleOpenChange,
-      }}
-    >
-      {children}
-    </DropdownMenuContext.Provider>
-  )
+	return (
+		<DropdownMenuContext.Provider
+			value={{
+				isOpen: open ?? isOpen,
+				setIsOpen: handleOpenChange,
+			}}
+		>
+			{children}
+		</DropdownMenuContext.Provider>
+	)
 }
