@@ -9,7 +9,8 @@
 		"version-packages": "changeset version",
 		"release": "turbo run build && changeset publish --filter=!@sf-digital-ui/docs",
 		"lint": "npx @biomejs/biome check ./app ./src",
-		"format": "npx @biomejs/biome format --write ."
+		"format": "npx @biomejs/biome format --write .",
+		"check:staged": "npx @biomejs/biome check --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true --colors=off --staged"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
