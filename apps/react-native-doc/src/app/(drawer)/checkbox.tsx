@@ -9,11 +9,11 @@ type Size = 'sm' | 'md' | 'lg'
 type Color = 'sf-green' | 'succession-blue'
 
 export default function Checkbox() {
-  const [isChecked, setIsChecked] = useState(false)
-  const [size, setSize] = useState<Size>('md')
-  const [color, setColor] = useState<Color>('sf-green')
+	const [isChecked, setIsChecked] = useState(false)
+	const [size, setSize] = useState<Size>('md')
+	const [color, setColor] = useState<Color>('sf-green')
 
-  const docs = `
+	const docs = `
 This story displays the \`Checkbox\` component, which is a React element built using Pattern Composition
 
 ## Usage:
@@ -35,52 +35,52 @@ This story displays the \`Checkbox\` component, which is a React element built u
 \b
 `
 
-  return (
-    <View style={styles.pageContainer}>
-      <Markdown>{docs}</Markdown>
-      <View
-        style={{
-          flexDirection: 'row',
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: 'white',
-          borderRadius: 10,
-          padding: 16,
-          width: '100%',
-        }}
-      >
-        <View
-          style={{
-            flexDirection: 'column',
-            flex: 1,
-          }}
-        >
-          <RadioGroup
-            options={[
-              { label: 'sm', value: 'sm' },
-              { label: 'md', value: 'md' },
-              { label: 'lg', value: 'lg' },
-            ]}
-            selectedValue={size}
-            onValueChange={(value) => setSize(value as Size)}
-          />
-          <RadioGroup
-            options={[
-              { label: 'sf-green', value: 'sf-green' },
-              { label: 'succession-blue', value: 'succession-blue' },
-            ]}
-            selectedValue={color}
-            onValueChange={(value) => setColor(value as Color)}
-          />
-        </View>
-        <DesignSystemCheckbox
-          color={color}
-          size={size}
-          value={isChecked}
-          onValueChange={setIsChecked}
-        />
-      </View>
-    </View>
-  )
+	return (
+		<View style={styles.pageContainer}>
+			<Markdown>{docs}</Markdown>
+			<View
+				style={{
+					flexDirection: 'row',
+					flex: 1,
+					alignItems: 'center',
+					justifyContent: 'space-between',
+					backgroundColor: 'white',
+					borderRadius: 10,
+					padding: 16,
+					width: '100%',
+				}}
+			>
+				<View
+					style={{
+						flexDirection: 'column',
+						flex: 1,
+					}}
+				>
+					<RadioGroup
+						options={[
+							{ label: 'sm', value: 'sm' },
+							{ label: 'md', value: 'md' },
+							{ label: 'lg', value: 'lg' },
+						]}
+						selectedValue={size}
+						onValueChange={(value) => setSize(value as Size)}
+					/>
+					<RadioGroup
+						options={[
+							{ label: 'sf-green', value: 'sf-green' },
+							{ label: 'succession-blue', value: 'succession-blue' },
+						]}
+						selectedValue={color}
+						onValueChange={(value) => setColor(value as Color)}
+					/>
+				</View>
+				<DesignSystemCheckbox
+					color={color}
+					size={size}
+					value={isChecked}
+					onValueChange={setIsChecked}
+				/>
+			</View>
+		</View>
+	)
 }

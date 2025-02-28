@@ -4,5 +4,5 @@ import { ComponentProps } from 'react'
 export type CheckProps = ComponentProps<typeof CheckIcon>
 
 export const Check = (props: CheckProps) => {
-  return <CheckIcon {...props} color="white" />
+	return <CheckIcon {...props} color='white' />
 }

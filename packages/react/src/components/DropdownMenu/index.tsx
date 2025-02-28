@@ -10,9 +10,9 @@ const DropdownMenu = { Root, Trigger, Portal, Content, Item, Divider }
 export { DropdownMenu }
 
 export type {
-  DropdownMenuRootProps,
-  DropdownMenuTriggerProps,
-  DropdownMenuPortalProps,
-  DropdownMenuContentProps,
-  DropdownMenuItemProps,
+	DropdownMenuRootProps,
+	DropdownMenuTriggerProps,
+	DropdownMenuPortalProps,
+	DropdownMenuContentProps,
+	DropdownMenuItemProps,
 }

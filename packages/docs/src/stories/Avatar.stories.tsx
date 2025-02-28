@@ -25,28 +25,28 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const AvatarStory: Meta<AvatarRootProps> = {
-  title: 'Components/Avatar',
-  component: Avatar.Root,
-  args: {
-    size: 'md',
-  },
-  argTypes: {
-    size: {
-      control: {
-        type: 'inline-radio',
-      },
-      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
-    },
-  },
+	title: 'Components/Avatar',
+	component: Avatar.Root,
+	args: {
+		size: 'md',
+	},
+	argTypes: {
+		size: {
+			control: {
+				type: 'inline-radio',
+			},
+			options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+		},
+	},
 }
 
 export default AvatarStory
 
 export const Default: StoryObj<AvatarRootProps> = {
-  render: (args) => (
-    <Avatar.Root size={args.size}>
-      <Avatar.Image src="https://avatars.githubusercontent.com/u/51454097?v=4" />
-      <Avatar.Fallback className="flex h-full w-full items-center justify-center bg-primary-green-500" />
-    </Avatar.Root>
-  ),
+	render: (args) => (
+		<Avatar.Root size={args.size}>
+			<Avatar.Image src='https://avatars.githubusercontent.com/u/51454097?v=4' />
+			<Avatar.Fallback className='flex h-full w-full items-center justify-center bg-primary-green-500' />
+		</Avatar.Root>
+	),
 }

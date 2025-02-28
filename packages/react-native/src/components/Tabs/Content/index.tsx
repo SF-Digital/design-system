@@ -3,14 +3,14 @@ import { View, ViewProps } from 'react-native'
 import { useTabsContext } from '../Root'
 
 export interface TabsContentProps extends ViewProps {
-  value: string
+	value: string
 }
 
 export const Content = ({ value, ...props }: TabsContentProps) => {
-  const { activeTab } = useTabsContext()
-  const isActive = activeTab === value
+	const { activeTab } = useTabsContext()
+	const isActive = activeTab === value
 
-  if (!isActive) return null
+	if (!isActive) return null
 
-  return <View {...props} />
+	return <View {...props} />
 }

@@ -1,7 +1,7 @@
 import {
-  Tabs as DesignSystemTabs,
-  TabsRootProps,
-  Text,
+	Tabs as DesignSystemTabs,
+	TabsRootProps,
+	Text,
 } from '@sf-digital-ui/react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { styles } from '../../../styles'
@@ -11,9 +11,9 @@ import RadioGroup from '@/components/RadioGroup'
 import { useState } from 'react'
 
 export default function Tabs() {
-  const exampleTabs = ['Home', 'Profile', 'Settings', 'Help', 'About']
+	const exampleTabs = ['Home', 'Profile', 'Settings', 'Help', 'About']
 
-  const docs = `This story displays the \`Tabs\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`Tabs{ComponentName}Props\`.
+	const docs = `This story displays the \`Tabs\` component, which is a React element built using Pattern Composition. Types generated for each component are exported as \`Tabs{ComponentName}Props\`.
 \b
 ## Usage:
 \b
@@ -52,109 +52,109 @@ Props
 \`value: string\` - The unique value that associates the contnet with the trigger
 \b
 `
-  const [variant, setVariant] = useState<TabsRootProps['variant']>('solid')
-  const [color, setColor] = useState<TabsRootProps['color']>('sf-green')
-  const [size, setSize] = useState<TabsRootProps['size']>('base')
+	const [variant, setVariant] = useState<TabsRootProps['variant']>('solid')
+	const [color, setColor] = useState<TabsRootProps['color']>('sf-green')
+	const [size, setSize] = useState<TabsRootProps['size']>('base')
 
-  return (
-    <ScrollView
-      style={{ flex: 1 }}
-      contentContainerStyle={{ paddingBottom: 24, padding: 10, gap: 12 }}
-    >
-      <Markdown>{docs}</Markdown>
-      <View
-        style={{
-          flex: 1,
-          flexWrap: 'wrap',
-          flexDirection: 'row',
-          ...styles.componentExampleContainer,
-        }}
-      >
-        <RadioGroup
-          selectedValue={variant as string}
-          onValueChange={(value) =>
-            setVariant(value as TabsRootProps['variant'])
-          }
-          options={[
-            {
-              label: 'solid',
-              value: 'solid',
-            },
-            {
-              label: 'underline',
-              value: 'underline',
-            },
-            {
-              label: 'underline-filled',
-              value: 'underline-filled',
-            },
-            {
-              label: 'panel',
-              value: 'panel',
-            },
-          ]}
-        />
-        <RadioGroup
-          selectedValue={size as string}
-          onValueChange={(value) => setSize(value as TabsRootProps['size'])}
-          options={[
-            {
-              label: 'base',
-              value: 'base',
-            },
-            {
-              label: 'lg',
-              value: 'lg',
-            },
-          ]}
-        />
-        <RadioGroup
-          selectedValue={color as string}
-          onValueChange={(value) => setColor(value as TabsRootProps['color'])}
-          options={[
-            {
-              label: 'sf-green',
-              value: 'sf-green',
-            },
-            {
-              label: 'succession-blue',
-              value: 'succession-blue',
-            },
-            {
-              label: 'neutral',
-              value: 'neutral',
-            },
-          ]}
-        />
-      </View>
+	return (
+		<ScrollView
+			style={{ flex: 1 }}
+			contentContainerStyle={{ paddingBottom: 24, padding: 10, gap: 12 }}
+		>
+			<Markdown>{docs}</Markdown>
+			<View
+				style={{
+					flex: 1,
+					flexWrap: 'wrap',
+					flexDirection: 'row',
+					...styles.componentExampleContainer,
+				}}
+			>
+				<RadioGroup
+					selectedValue={variant as string}
+					onValueChange={(value) =>
+						setVariant(value as TabsRootProps['variant'])
+					}
+					options={[
+						{
+							label: 'solid',
+							value: 'solid',
+						},
+						{
+							label: 'underline',
+							value: 'underline',
+						},
+						{
+							label: 'underline-filled',
+							value: 'underline-filled',
+						},
+						{
+							label: 'panel',
+							value: 'panel',
+						},
+					]}
+				/>
+				<RadioGroup
+					selectedValue={size as string}
+					onValueChange={(value) => setSize(value as TabsRootProps['size'])}
+					options={[
+						{
+							label: 'base',
+							value: 'base',
+						},
+						{
+							label: 'lg',
+							value: 'lg',
+						},
+					]}
+				/>
+				<RadioGroup
+					selectedValue={color as string}
+					onValueChange={(value) => setColor(value as TabsRootProps['color'])}
+					options={[
+						{
+							label: 'sf-green',
+							value: 'sf-green',
+						},
+						{
+							label: 'succession-blue',
+							value: 'succession-blue',
+						},
+						{
+							label: 'neutral',
+							value: 'neutral',
+						},
+					]}
+				/>
+			</View>
 
-      <DesignSystemTabs.Root
-        variant={variant}
-        color={color}
-        size={size}
-        style={{
-          alignItems: 'center',
-          gap: 12,
-        }}
-        defaultValue={exampleTabs[0]}
-      >
-        <DesignSystemTabs.List
-          style={{
-            flexWrap: 'wrap',
-          }}
-        >
-          {exampleTabs.map((tab) => (
-            <DesignSystemTabs.Trigger key={tab} value={tab}>
-              <DesignSystemTabs.TriggerText>{tab}</DesignSystemTabs.TriggerText>
-            </DesignSystemTabs.Trigger>
-          ))}
-        </DesignSystemTabs.List>
-        {exampleTabs.map((tab) => (
-          <DesignSystemTabs.Content key={tab} value={tab}>
-            <Text>Content for {tab} Tab</Text>
-          </DesignSystemTabs.Content>
-        ))}
-      </DesignSystemTabs.Root>
-    </ScrollView>
-  )
+			<DesignSystemTabs.Root
+				variant={variant}
+				color={color}
+				size={size}
+				style={{
+					alignItems: 'center',
+					gap: 12,
+				}}
+				defaultValue={exampleTabs[0]}
+			>
+				<DesignSystemTabs.List
+					style={{
+						flexWrap: 'wrap',
+					}}
+				>
+					{exampleTabs.map((tab) => (
+						<DesignSystemTabs.Trigger key={tab} value={tab}>
+							<DesignSystemTabs.TriggerText>{tab}</DesignSystemTabs.TriggerText>
+						</DesignSystemTabs.Trigger>
+					))}
+				</DesignSystemTabs.List>
+				{exampleTabs.map((tab) => (
+					<DesignSystemTabs.Content key={tab} value={tab}>
+						<Text>Content for {tab} Tab</Text>
+					</DesignSystemTabs.Content>
+				))}
+			</DesignSystemTabs.Root>
+		</ScrollView>
+	)
 }

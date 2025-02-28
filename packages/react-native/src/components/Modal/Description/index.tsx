@@ -2,23 +2,23 @@ import React, { ReactNode } from 'react'
 import { Text, StyleSheet, TextProps } from 'react-native'
 
 export interface ModalDescriptionProps extends TextProps {
-  children?: ReactNode
+	children?: ReactNode
 }
 
 export const Description = ({
-  children,
-  style,
-  ...props
+	children,
+	style,
+	...props
 }: ModalDescriptionProps) => {
-  return (
-    <Text style={[styles.description, style]} {...props}>
-      {children}
-    </Text>
-  )
+	return (
+		<Text style={[styles.description, style]} {...props}>
+			{children}
+		</Text>
+	)
 }
 
 const styles = StyleSheet.create({
-  description: {
-    fontSize: 16,
-  },
+	description: {
+		fontSize: 16,
+	},
 })
