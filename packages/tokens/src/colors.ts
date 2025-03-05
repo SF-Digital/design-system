@@ -5,9 +5,9 @@ import { protectionFamilyWealthPalette } from './colors/protectionFamilyWealth'
 import { managementOfFamilyAssetsPalette } from './colors/managementOfFamilyAssets'
 
 export const colors = {
-  ...primaryPalette,
-  ...secondaryPalette,
-  ...tertiaryPalette,
-  ...protectionFamilyWealthPalette,
-  ...managementOfFamilyAssetsPalette,
+	...primaryPalette,
+	...secondaryPalette,
+	...tertiaryPalette,
+	...protectionFamilyWealthPalette,
+	...managementOfFamilyAssetsPalette,
 }

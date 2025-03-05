@@ -59,68 +59,79 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const TabsStory: Meta<TabsRootProps & TabsTriggerProps> = {
-  title: 'Components/Tabs',
-  component: Tabs.Root,
-  args: {
-    size: 'base',
-    variant: 'solid',
-  },
-  argTypes: {
-    size: {
-      control: {
-        type: 'inline-radio',
-      },
-      options: ['base', 'lg'],
-    },
-    variant: {
-      control: {
-        type: 'inline-radio',
-      },
-      options: ['solid', 'underline', 'panel', 'underline-filled'],
-    },
-    color: {
-      control: {
-        type: 'inline-radio',
-      },
-      options: ['sf-green', 'succession-blue', 'neutral'],
-    },
-  },
+	title: 'Components/Tabs',
+	component: Tabs.Root,
+	args: {
+		size: 'base',
+		variant: 'solid',
+	},
+	argTypes: {
+		size: {
+			control: {
+				type: 'inline-radio',
+			},
+			options: ['base', 'lg'],
+		},
+		variant: {
+			control: {
+				type: 'inline-radio',
+			},
+			options: ['solid', 'underline', 'panel', 'underline-filled'],
+		},
+		color: {
+			control: {
+				type: 'inline-radio',
+			},
+			options: ['sf-green', 'succession-blue', 'neutral'],
+		},
+	},
 }
 
 export default TabsStory
 
 export const Default: StoryObj<TabsRootProps & TabsTriggerProps> = {
-  args: {},
-  render: (args) => (
-    <Tabs.Root hasBackground={args.variant==='panel'} className='flex flex-row items-start' defaultValue="one" orientation="horizontal">
-      <Tabs.List
-        className={args.variant === 'solid' ? 'gap-2 flex-row flex' : args.variant=== 'panel' ? 'flex flex-row gap-1' : ''}
-      >
-        <Tabs.Trigger
-          size={args.size}
-          variant={args.variant}
-          color={args.color}
-          value="one"
-        >
-          One
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          size={args.size}
-          variant={args.variant}
-          color={args.color}
-          value="two"
-        >
-          Two
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          size={args.size}
-          variant={args.variant}
-          color={args.color}
-          value="three"
-        >
-          Three
-        </Tabs.Trigger>
-      </Tabs.List>
-    </Tabs.Root>
-  ),
+	args: {},
+	render: (args) => (
+		<Tabs.Root
+			hasBackground={args.variant === 'panel'}
+			className='flex flex-row items-start'
+			defaultValue='one'
+			orientation='horizontal'
+		>
+			<Tabs.List
+				className={
+					args.variant === 'solid'
+						? 'gap-2 flex-row flex'
+						: args.variant === 'panel'
+							? 'flex flex-row gap-1'
+							: ''
+				}
+			>
+				<Tabs.Trigger
+					size={args.size}
+					variant={args.variant}
+					color={args.color}
+					value='one'
+				>
+					One
+				</Tabs.Trigger>
+				<Tabs.Trigger
+					size={args.size}
+					variant={args.variant}
+					color={args.color}
+					value='two'
+				>
+					Two
+				</Tabs.Trigger>
+				<Tabs.Trigger
+					size={args.size}
+					variant={args.variant}
+					color={args.color}
+					value='three'
+				>
+					Three
+				</Tabs.Trigger>
+			</Tabs.List>
+		</Tabs.Root>
+	),
 }

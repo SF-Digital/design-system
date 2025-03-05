@@ -10,11 +10,11 @@ const Select = { Root, Trigger, Value, Content, Viewport, Item, ItemText }
 
 export { Select }
 export type {
-  SelectRootProps,
-  SelectTriggerProps,
-  SelectValueProps,
-  SelectContentProps,
-  SelectViewportProps,
-  SelectItemProps,
-  SelectItemTextProps,
+	SelectRootProps,
+	SelectTriggerProps,
+	SelectValueProps,
+	SelectContentProps,
+	SelectViewportProps,
+	SelectItemProps,
+	SelectItemTextProps,
 }

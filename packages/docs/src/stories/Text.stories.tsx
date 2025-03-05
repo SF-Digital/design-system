@@ -11,21 +11,21 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const TextStory: Meta<TextProps> = {
-  title: 'Typography/Text',
-  component: Text,
+	title: 'Typography/Text',
+	component: Text,
 
-  args: {
-    size: 'base',
-    children: 'The quick brown fox jumps over the lazy dog.',
-  },
-  argTypes: {
-    size: {
-      options: ['xs', 'sm', 'base', 'lg'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-  },
+	args: {
+		size: 'base',
+		children: 'The quick brown fox jumps over the lazy dog.',
+	},
+	argTypes: {
+		size: {
+			options: ['xs', 'sm', 'base', 'lg'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+	},
 }
 
 export default TextStory

@@ -8,23 +8,23 @@ import { Description, ModalDescriptionProps } from './Description'
 import { Close, ModalCloseProps } from './Close'
 
 export const Modal = {
-  Root,
-  Trigger,
-  Portal,
-  Overlay,
-  Content,
-  Title,
-  Description,
-  Close,
+	Root,
+	Trigger,
+	Portal,
+	Overlay,
+	Content,
+	Title,
+	Description,
+	Close,
 }
 
 export type {
-  ModalRootProps,
-  ModalTriggerProps,
-  ModalPortalProps,
-  ModalOverlayProps,
-  ModalContentProps,
-  ModalTitleProps,
-  ModalDescriptionProps,
-  ModalCloseProps,
+	ModalRootProps,
+	ModalTriggerProps,
+	ModalPortalProps,
+	ModalOverlayProps,
+	ModalContentProps,
+	ModalTitleProps,
+	ModalDescriptionProps,
+	ModalCloseProps,
 }
