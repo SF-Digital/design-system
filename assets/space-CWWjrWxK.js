@@ -1,0 +1,4 @@
+import{j as e}from"./index-WQZq-jBe.js";import{useMDXComponents as o}from"./index-CMNp7ghJ.js";import{ae as r,af as i}from"./index-7_69C2zW.js";import{T as m}from"./TokensGrid--9ef4nzK.js";import{s as p}from"./index-Cr6Q3bK1.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CjktTq3Q.js";import"./index-CYQpqK1Q.js";import"./iframe-CeRPl8-T.js";import"../sb-preview/runtime.js";import"./index-ByRBhzfU.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";function n(t){const s={h1:"h1",p:"p",...o(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{title:"Tokens/Spaces"}),`
+`,e.jsx(s.h1,{id:"space",children:"Space"}),`
+`,e.jsx(s.p,{children:"These are the spaces used in the design system."}),`
+`,e.jsx(i,{children:e.jsx(m,{tokens:p,hasRemValue:!0})})]})}function D(t={}){const{wrapper:s}={...o(),...t.components};return s?e.jsx(s,{...t,children:e.jsx(n,{...t})}):n(t)}export{D as default};
