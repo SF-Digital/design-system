@@ -1,58 +1,20 @@
-export {
-	PinInput,
-	PinInputRootProps,
-	PinInputFieldProps,
-	PinInputFieldsProps,
-	PinInputDividerProps,
-} from './components/PinInput'
-export {
-	Button,
-	ButtonRootProps,
-	ButtonPrefixProps,
-	ButtonSuffixProps,
-} from './components/Button'
-export { Text, TextProps } from './components/Text'
-export { Heading, HeadingProps } from './components/Heading'
-export {
-	RadioGroup,
-	RadioGroupRootProps,
-	RadioGroupItemProps,
-} from './components/RadioGroup'
 export { Avatar, AvatarProps } from './components/Avatar'
 export {
-	TextInput,
-	TextInputRootProps,
-	TextInputControlProps,
-} from './components/TextInput'
+	Button,
+	ButtonPrefixProps,
+	ButtonRootProps,
+	ButtonSuffixProps,
+} from './components/Button'
+export { Card, CardProps } from './components/Card'
 export { Checkbox, CheckboxRootProps } from './components/Checkbox'
 export {
-	Tabs,
-	TabsRootProps,
-	TabsListProps,
-	TabsTriggerProps,
-	TabsTriggerTextProps,
-	TabsContentProps,
-} from './components/Tabs'
-export { Card, CardProps } from './components/Card'
-export { TextArea, TextAreaProps } from './components/TextArea'
-export { Switch, SwitchProps } from './components/Switch'
-export {
 	DropdownMenu,
-	DropdownMenuRootProps,
-	DropdownMenuTriggerProps,
 	DropdownMenuContentProps,
 	DropdownMenuItemProps,
+	DropdownMenuRootProps,
+	DropdownMenuTriggerProps,
 } from './components/DropdownMenu'
-export {
-	Select,
-	SelectRootProps,
-	SelectTriggerProps,
-	SelectValueProps,
-	SelectContentProps,
-	SelectViewportProps,
-	SelectItemProps,
-	SelectItemTextProps,
-} from './components/Select'
+export { Heading, HeadingProps } from './components/Heading'
 export {
 	Modal,
 	ModalCloseProps,
@@ -64,3 +26,42 @@ export {
 	ModalTitleProps,
 	ModalTriggerProps,
 } from './components/Modal'
+export {
+	PinInput,
+	PinInputDividerProps,
+	PinInputFieldProps,
+	PinInputFieldsProps,
+	PinInputRootProps,
+} from './components/PinInput'
+export { ProgressBar, ProgressBarProps } from './components/ProgressBar'
+export {
+	RadioGroup,
+	RadioGroupItemProps,
+	RadioGroupRootProps,
+} from './components/RadioGroup'
+export {
+	Select,
+	SelectContentProps,
+	SelectItemProps,
+	SelectItemTextProps,
+	SelectRootProps,
+	SelectTriggerProps,
+	SelectValueProps,
+	SelectViewportProps,
+} from './components/Select'
+export { Switch, SwitchProps } from './components/Switch'
+export {
+	Tabs,
+	TabsContentProps,
+	TabsListProps,
+	TabsRootProps,
+	TabsTriggerProps,
+	TabsTriggerTextProps,
+} from './components/Tabs'
+export { Text, TextProps } from './components/Text'
+export { TextArea, TextAreaProps } from './components/TextArea'
+export {
+	TextInput,
+	TextInputControlProps,
+	TextInputRootProps,
+} from './components/TextInput'

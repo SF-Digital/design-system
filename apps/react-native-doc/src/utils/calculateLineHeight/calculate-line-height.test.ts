@@ -1,4 +1,4 @@
-import { calculateLineHeight } from './calculateLineHeight'
+import { calculateLineHeight } from './calculate-line-height'
 
 describe('Calculate Line Height', () => {
 	it('should return the correct line height for a given font size', () => {

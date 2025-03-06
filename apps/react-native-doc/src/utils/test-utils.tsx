@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react-native'
 import { NavigationContainer } from '@react-navigation/native'
+import { render } from '@testing-library/react-native'
 
 jest.mock('@sf-digital-ui/tokens', () => ({
 	fonts: {
@@ -48,13 +48,16 @@ jest.mock('@sf-digital-ui/tokens', () => ({
 
 // Mock StatusBar since it's a native module
 jest.mock('expo-status-bar', () => ({
+	// biome-ignore lint/style/useNamingConvention: expo has a set naming convention
 	StatusBar: jest.fn().mockImplementation(() => null),
 }))
 
 // Mock the Stack navigator
 jest.mock('@react-navigation/native-stack', () => ({
 	createNativeStackNavigator: jest.fn().mockReturnValue({
+		// biome-ignore lint/style/useNamingConvention: expo has a set naming convention
 		Navigator: jest.fn().mockImplementation(({ children }) => children),
+		// biome-ignore lint/style/useNamingConvention: expo has a set naming convention
 		Screen: jest.fn().mockImplementation(() => null),
 	}),
 }))

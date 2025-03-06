@@ -1,8 +1,8 @@
-import React from 'react'
+import { fireEvent, render, screen } from '@/utils/test-utils'
 import { Entypo } from '@expo/vector-icons'
 import { Select } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
-import { render, screen, fireEvent } from '@/utils/test-utils'
+import React from 'react'
 
 const mockTeamMembers = ['John', 'Jane', 'Bob']
 
@@ -91,9 +91,9 @@ describe('Select Component', () => {
 			const trigger = screen.getByRole('button')
 			fireEvent.press(trigger)
 
-			mockTeamMembers.forEach((member) => {
+			for (const member of mockTeamMembers) {
 				expect(screen.getByText(member)).toBeTruthy()
-			})
+			}
 		})
 
 		it('selects an option when pressed', () => {
@@ -163,7 +163,9 @@ describe('Select Component', () => {
 			expect(() => {
 				render(
 					<Select.Trigger>
+						            
 						<Select.Value placeholder='Select a team member' />
+						          
 					</Select.Trigger>,
 				)
 			}).toThrow('Select components must be used within a Select provider')
@@ -180,14 +182,14 @@ describe('Select Component', () => {
 			fireEvent.press(trigger)
 
 			const options = screen.getAllByRole('menuitem')
-			options.forEach((option) => {
+			for (const option of options) {
 				const isSelected = option.props.testID === 'item-John'
 				expect(option.props.accessibilityState).toEqual(
 					expect.objectContaining({
 						selected: isSelected,
 					}),
 				)
-			})
+			}
 		})
 
 		it('handles modal close on back press', () => {

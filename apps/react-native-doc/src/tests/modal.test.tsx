@@ -1,7 +1,7 @@
-import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react-native'
-import { Text } from 'react-native'
 import { Modal } from '@sf-digital-ui/react-native'
+import { fireEvent, render, screen } from '@testing-library/react-native'
+import type React from 'react'
+import { Text } from 'react-native'
 
 const ModalWrapper = ({
 	children,

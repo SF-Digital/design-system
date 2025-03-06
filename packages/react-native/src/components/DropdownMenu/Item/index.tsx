@@ -1,12 +1,12 @@
+import { colors } from '@sf-digital-ui/tokens'
 import React from 'react'
 import {
-	StyleSheet,
 	Pressable,
-	PressableProps,
-	GestureResponderEvent,
+	StyleSheet,
+	type GestureResponderEvent,
+	type PressableProps,
 } from 'react-native'
 import { useDropdownMenuContext } from '../Root'
-import { colors } from '@sf-digital-ui/tokens'
 
 export type DropdownMenuItemProps = PressableProps
 

@@ -1,11 +1,10 @@
-import React from 'react'
+import { calculateLineHeight } from '@/utils/calculateLineHeight/calculate-line-height'
 import { render } from '@/utils/test-utils'
-import { Heading, HeadingProps } from '@sf-digital-ui/react-native'
-import { TextStyle } from 'react-native'
+import { fontSizeToNumber } from '@/utils/toNumber/font-size-to-number'
+import { Heading, type HeadingProps } from '@sf-digital-ui/react-native'
 import { fonts, fontSizes } from '@sf-digital-ui/tokens'
-import { calculateLineHeight } from '@/utils/calculateLineHeight/calculateLineHeight'
-import { fontSizeToNumber } from '@/utils/toNumber/fontSizeToNumber'
-import { FontSizeKey } from '../../types/fontsizes'
+import type { TextStyle } from 'react-native'
+import type { FontSizeKey } from '../../types/fontsizes'
 
 describe('Heading', () => {
 	it('renders with default props (h1)', () => {

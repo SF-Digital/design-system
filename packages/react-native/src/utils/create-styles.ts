@@ -76,6 +76,7 @@ function createFlattenedStyles<V extends VariantDefinitions>(
 		(acc, [variantKey, variantValues]) => {
 			if (!variantValues) return acc
 
+			// biome-ignore lint/complexity/noForEach: <explanation>
 			Object.entries(variantValues).forEach(([value, style]) => {
 				acc[`${variantKey}_${value}`] = style as StyleObject
 			})
@@ -112,6 +113,7 @@ function applyVariantStyles<V extends VariantDefinitions>(
 	currentVariants: Partial<V>,
 	styles: Record<string, StyleObject>,
 ): void {
+	// biome-ignore lint/complexity/noForEach: <explanation>
 	Object.entries(currentVariants).forEach(([key, value]) => {
 		if (value === undefined) return
 
@@ -132,6 +134,7 @@ function applyCompoundVariants<V extends VariantDefinitions>(
 	currentVariants: Partial<V>,
 	compoundVariants: Array<CompoundVariant<V>>,
 ): void {
+	// biome-ignore lint/complexity/noForEach: <explanation>
 	compoundVariants.forEach(({ variants: conditions, style }) => {
 		const matches = Object.entries(conditions).every(
 			([key, value]) => currentVariants[key as keyof V] === value,

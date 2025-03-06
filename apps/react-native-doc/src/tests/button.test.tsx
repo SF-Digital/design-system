@@ -1,7 +1,6 @@
-import React from 'react'
-import { fireEvent } from '@testing-library/react-native'
-import { render } from '@/utils/test-utils'
+import { fireEvent, render } from '@/utils/test-utils'
 import { Button } from '@sf-digital-ui/react-native'
+import React from 'react'
 
 describe('Button', () => {
 	it('renders correctly', () => {
@@ -97,7 +96,7 @@ describe('Button', () => {
 			{ color: 'error', bgColor: '#f04438' },
 		] as const
 
-		colorTests.forEach(({ color, bgColor }) => {
+		for (const { color, bgColor } of colorTests) {
 			it(`renders ${color} primary button with correct background`, () => {
 				const { getByTestId } = render(
 					<Button.Root
@@ -118,7 +117,7 @@ describe('Button', () => {
 					]),
 				)
 			})
-		})
+		}
 	})
 
 	it('renders disabled state correctly', () => {

@@ -10,7 +10,7 @@ jest.mock('expo-font', () => ({
 }))
 
 jest.mock('expo-asset', () => ({
-	// biome-ignore lint/style/useNamingConvention: Expo has a defined naming convention
+	// biome-ignore lint/style/useNamingConvention: Expo has a predefined naming convention
 	Asset: {
 		loadAsync: () => Promise.resolve(),
 	},

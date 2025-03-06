@@ -1,7 +1,6 @@
-import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react-native'
 import { TextArea } from '@sf-digital-ui/react-native'
 import { colors, fonts } from '@sf-digital-ui/tokens'
+import { fireEvent, render, screen } from '@testing-library/react-native'
 
 describe('TextArea Component', () => {
 	const defaultProps = {

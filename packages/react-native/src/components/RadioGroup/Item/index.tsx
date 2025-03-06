@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { View, PressableProps, Pressable } from 'react-native'
-import { RadioGroupContext } from '../Root'
-import { createStylesheet } from '../../../utils/create-styles'
 import { colors } from '@sf-digital-ui/tokens'
+import React, { useContext } from 'react'
+import { Pressable, View, type PressableProps } from 'react-native'
+import { createStylesheet } from '../../../utils/create-styles'
+import { RadioGroupContext } from '../Root'
 
 export type RadioGroupVariants = {
 	size?: 'sm' | 'md' | 'lg'

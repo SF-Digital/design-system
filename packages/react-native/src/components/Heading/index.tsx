@@ -1,4 +1,5 @@
 import { fonts } from '@sf-digital-ui/tokens'
+import React from 'react'
 import {
 	StyleSheet,
 	Text,

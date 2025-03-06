@@ -1,6 +1,5 @@
-import React from 'react'
-import { render, fireEvent, act, waitFor } from '@testing-library/react-native'
 import { PinInput } from '@sf-digital-ui/react-native'
+import { act, fireEvent, render, waitFor } from '@testing-library/react-native'
 
 describe('PinInput Component', () => {
 	describe('Rendering', () => {

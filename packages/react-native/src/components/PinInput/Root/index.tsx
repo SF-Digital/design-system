@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { StyleSheet, View, ViewProps } from 'react-native'
+import { StyleSheet, View, type ViewProps } from 'react-native'
 
 export interface PinInputSizes {
 	size: 'sm' | 'md' | 'lg'

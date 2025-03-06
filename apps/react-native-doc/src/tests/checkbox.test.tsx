@@ -1,7 +1,6 @@
-import React from 'react'
-import { render, fireEvent } from '@testing-library/react-native'
 import { Checkbox } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
+import { fireEvent, render } from '@testing-library/react-native'
 
 describe('Checkbox', () => {
 	it('renders with default props', () => {

@@ -1,7 +1,7 @@
-import { Root, PinInputRootProps } from './Root'
-import { Field, PinInputFieldProps } from './Field'
-import { Fields, PinInputFieldsProps } from './Fields'
-import { PinInputDividerProps, Divider } from './Divider'
+import { Divider, type PinInputDividerProps } from './Divider'
+import { Field, type PinInputFieldProps } from './Field'
+import { Fields, type PinInputFieldsProps } from './Fields'
+import { Root, type PinInputRootProps } from './Root'
 
 const PinInput = {
 	Root,
@@ -13,8 +13,8 @@ const PinInput = {
 export { PinInput }
 
 export type {
-	PinInputRootProps,
+	PinInputDividerProps,
 	PinInputFieldProps,
 	PinInputFieldsProps,
-	PinInputDividerProps,
+	PinInputRootProps,
 }

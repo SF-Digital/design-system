@@ -13,7 +13,10 @@
 			"ios",
 			"android",
 			".vscode",
-			"packages/docs/storybook-static"
+			"packages/docs/storybook-static",
+			"packages/react/dist",
+			"packages/tokens/dist",
+			"packages/docs/.storybook"
 		]
 	},
 	"formatter": {
@@ -47,9 +50,11 @@
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
-				"useKeyWithClickEvents": "off"
+				"useKeyWithClickEvents": "off",
+				"useButtonType": "off"
 			},
 			"style": {
+				"useImportType": "off",
 				"noYodaExpression": "error",
 				"noVar": "error",
 				"useNamingConvention": {
@@ -157,10 +162,7 @@
 				"useArrowFunction": "error"
 			},
 			"correctness": {
-				"noUnusedImports": {
-					"level": "warn",
-					"fix": "none"
-				},
+				"noUnusedImports": "off",
 				"noUnusedVariables": {
 					"level": "warn",
 					"fix": "none"

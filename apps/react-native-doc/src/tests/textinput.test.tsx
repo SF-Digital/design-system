@@ -1,8 +1,8 @@
-import React from 'react'
-import { fireEvent } from '@testing-library/react-native'
 import { render } from '@/utils/test-utils'
 import { TextInput } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
+import { fireEvent } from '@testing-library/react-native'
+import React from 'react'
 import { View } from 'react-native'
 
 describe('TextInput', () => {
@@ -103,6 +103,7 @@ describe('TextInput', () => {
 			},
 		] as const
 
+		// biome-ignore lint/complexity/noForEach: <explanation>
 		colorTests.forEach(({ color, borderColor }) => {
 			it(`renders ${color} input with correct border color`, () => {
 				const { getByTestId } = render(

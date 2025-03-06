@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { View, ViewProps, Modal, StyleSheet } from 'react-native'
-import { DropdownMenuContext } from '../Root'
 import { colors } from '@sf-digital-ui/tokens'
+import React, { useContext } from 'react'
+import { Modal, StyleSheet, View, type ViewProps } from 'react-native'
+import { DropdownMenuContext } from '../Root'
 
 export interface DropdownMenuContentProps extends ViewProps {
 	align?: 'start' | 'center' | 'end'

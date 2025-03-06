@@ -1,4 +1,5 @@
 import { colors, fonts } from '@sf-digital-ui/tokens'
+import React from 'react'
 import { Text as RNText, type TextProps } from 'react-native'
 import { createStylesheet } from '../../../utils/create-styles'
 import {

@@ -1,13 +1,13 @@
-import { ScrollView } from 'react-native-gesture-handler'
-import { styles } from '../../../styles'
-import { KeyboardAvoidingView, Platform, View } from 'react-native'
+import RadioGroup from '@/components/RadioGroup'
+import Markdown from '@ronradtke/react-native-markdown-display'
 import {
 	PinInput as DesignSystemPinInput,
-	PinInputRootProps,
+	type PinInputRootProps,
 } from '@sf-digital-ui/react-native'
-import Markdown from '@ronradtke/react-native-markdown-display'
 import { useState } from 'react'
-import RadioGroup from '@/components/RadioGroup'
+import { KeyboardAvoidingView, Platform, View } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import { styles } from '../../../styles'
 
 type Size = PinInputRootProps['size']
 

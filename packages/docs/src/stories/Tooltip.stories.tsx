@@ -1,11 +1,11 @@
 import {
-	TooltipProviderProps,
-	Tooltip,
 	Text,
+	Tooltip,
 	TooltipContentProps,
+	TooltipProviderProps,
 } from '@sf-digital-ui/react'
-import { HelpCircle } from 'lucide-react'
 import { Meta, StoryObj } from '@storybook/react'
+import { HelpCircle } from 'lucide-react'
 
 import '@sf-digital-ui/react/dist/output.css'
 
@@ -139,6 +139,7 @@ export const Large: StoryObj<TooltipProviderProps & TooltipContentProps> = {
 	),
 
 	decorators: [
+		// biome-ignore lint/style/useNamingConvention: <explanation>
 		(Story) => (
 			<div
 				style={{
@@ -175,6 +176,7 @@ export const Small: StoryObj<TooltipProviderProps & TooltipContentProps> = {
 		</Tooltip.Provider>
 	),
 	decorators: [
+		// biome-ignore lint/style/useNamingConvention: <explanation>
 		(Story) => (
 			<div
 				style={{

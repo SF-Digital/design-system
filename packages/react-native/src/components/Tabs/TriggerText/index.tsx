@@ -1,8 +1,8 @@
-import React from 'react'
-import { Text, TextProps } from 'react-native'
-import { useTabsContext } from '../Root'
-import { createStylesheet } from '../../../utils/create-styles'
 import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
+import { Text, type TextProps } from 'react-native'
+import { createStylesheet } from '../../../utils/create-styles'
+import { useTabsContext } from '../Root'
 import { useTabsTriggerContext } from '../Trigger'
 
 export type TabsTriggerTextProps = TextProps

@@ -1,14 +1,13 @@
-import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react-native'
-import { DropdownMenu } from '@sf-digital-ui/react-native'
-import { Text } from 'react-native'
 import {
 	Entypo,
-	SimpleLineIcons,
-	FontAwesome,
 	Feather,
+	FontAwesome,
+	SimpleLineIcons,
 } from '@expo/vector-icons'
+import { DropdownMenu } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
+import { fireEvent, render, screen } from '@testing-library/react-native'
+import { Text } from 'react-native'
 
 const mockOnPress = jest.fn()
 

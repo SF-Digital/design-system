@@ -43,37 +43,34 @@ export const ColorsGrid = () => {
 					)
 				})}
 			</select>
-			<>
-				{Object.entries(displayPalette ?? 'primary-green').map(
-					([key, color]) => {
-						const contrast = getContrast(color, '#fff') < 3.5 ? '#000' : '#fff'
 
-						return (
-							<div
-								key={key}
-								style={{
-									backgroundColor: color,
-									padding: '2rem',
-								}}
-							>
-								<div
-									style={{
-										display: 'flex',
-										flexDirection: 'row',
-										alignItems: 'center',
-										justifyContent: 'space-between',
-										fontFamily: 'monospace',
-										color: contrast,
-									}}
-								>
-									<strong>{key}</strong>
-									<span>{color}</span>
-								</div>
-							</div>
-						)
-					},
-				)}
-			</>
+			{Object.entries(displayPalette ?? 'primary-green').map(([key, color]) => {
+				const contrast = getContrast(color, '#fff') < 3.5 ? '#000' : '#fff'
+
+				return (
+					<div
+						key={key}
+						style={{
+							backgroundColor: color,
+							padding: '2rem',
+						}}
+					>
+						<div
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+								alignItems: 'center',
+								justifyContent: 'space-between',
+								fontFamily: 'monospace',
+								color: contrast,
+							}}
+						>
+							<strong>{key}</strong>
+							<span>{color}</span>
+						</div>
+					</div>
+				)
+			})}
 		</div>
 	)
 }

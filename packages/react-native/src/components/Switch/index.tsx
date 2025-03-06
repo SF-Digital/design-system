@@ -1,7 +1,10 @@
-import React, { useState, useCallback } from 'react'
-import { SwitchProps as RNSwitchProps, Switch as RNSwitch } from 'react-native'
-import { createStylesheet } from '../../utils/create-styles'
 import { colors } from '@sf-digital-ui/tokens'
+import React, { useCallback, useState } from 'react'
+import {
+	type SwitchProps as RNSwitchProps,
+	Switch as RNSwitch,
+} from 'react-native'
+import { createStylesheet } from '../../utils/create-styles'
 
 export interface SwitchProps extends RNSwitchProps {
 	size?: 'sm' | 'md'

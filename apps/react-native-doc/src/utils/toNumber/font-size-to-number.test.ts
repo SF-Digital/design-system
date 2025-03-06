@@ -1,4 +1,4 @@
-import { fontSizeToNumber } from './fontSizeToNumber'
+import { fontSizeToNumber } from './font-size-to-number'
 
 describe('Font Size To Number', () => {
 	it('should return the number when input is a number', () => {

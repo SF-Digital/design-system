@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
-import { Pressable, TextInput, TextInputProps } from 'react-native'
-import { PinInputSizes, usePinInputContext } from '../Root'
 import { colors } from '@sf-digital-ui/tokens'
+import React, { useEffect, useRef } from 'react'
+import { Pressable, TextInput, type TextInputProps } from 'react-native'
 import { createStylesheet } from '../../../utils/create-styles'
+import { type PinInputSizes, usePinInputContext } from '../Root'
 
 export interface PinInputFieldProps extends TextInputProps {
 	index: number
