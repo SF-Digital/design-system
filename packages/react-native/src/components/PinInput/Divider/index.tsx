@@ -1,4 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
 import { StyleSheet, View, type ViewProps } from 'react-native'
 
 export type PinInputDividerProps = ViewProps

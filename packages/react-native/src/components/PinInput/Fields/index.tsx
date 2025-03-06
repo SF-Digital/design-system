@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyleSheet, View, type ViewProps } from 'react-native'
 import { Field } from '../Field'
 import { usePinInputContext } from '../Root'

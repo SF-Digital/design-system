@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import { StyleSheet, View, type ViewProps } from 'react-native'
 
 export interface PinInputSizes {

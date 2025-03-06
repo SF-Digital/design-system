@@ -28,6 +28,7 @@ enum Directions {
 interface ProgressStageProps {
 	label: string
 	status: StageStatus
+	testID: string
 }
 
 export type ProgressBarProps = {
@@ -38,6 +39,7 @@ export type ProgressBarProps = {
 interface ProgressSegmentProps {
 	status: Status
 	progress: Animated.Value
+	testID: string
 }
 
 const CheckIcon = () => (
@@ -51,22 +53,26 @@ const CheckIcon = () => (
 	/>
 )
 
-const ProgressStage = ({ label, status }: ProgressStageProps) => {
+const ProgressStage = ({ label, status, testID }: ProgressStageProps) => {
 	const isActive = status === StageStatus.ACTIVE
 
 	const activeCircleStyles =
 		(isActive || status === StageStatus.COMPLETED) && styles.activeCircle
 
 	const innerCircleVisible = isActive || status === StageStatus.TODO
+
 	const activeInnerCircleStyles = isActive && styles.activeInnerCircle
 
 	const completedCheckVisible = status === StageStatus.COMPLETED
 
 	return (
 		<View style={styles.stageContainer}>
-			<View style={[styles.circle, activeCircleStyles]}>
+			<View testID={testID} style={[styles.circle, activeCircleStyles]}>
 				{innerCircleVisible && (
-					<View style={[styles.innerCircle, activeInnerCircleStyles]} />
+					<View
+						testID={`inner-circle-${testID}`}
+						style={[styles.innerCircle, activeInnerCircleStyles]}
+					/>
 				)}
 				{completedCheckVisible && <CheckIcon />}
 			</View>
@@ -75,7 +81,11 @@ const ProgressStage = ({ label, status }: ProgressStageProps) => {
 	)
 }
 
-const ProgressSegment = ({ status, progress }: ProgressSegmentProps) => {
+const ProgressSegment = ({
+	status,
+	progress,
+	testID,
+}: ProgressSegmentProps) => {
 	const getWidthForStatus = () => {
 		switch (status) {
 			case Status.TODO:
@@ -101,6 +111,7 @@ const ProgressSegment = ({ status, progress }: ProgressSegmentProps) => {
 		<View style={styles.segmentContainer}>
 			<View style={styles.segmentBackground} />
 			<Animated.View
+				testID={testID}
 				style={[
 					styles.segmentProgress,
 					{
@@ -218,10 +229,15 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
 					return (
 						<React.Fragment key={stage.id}>
 							<View style={styles.stageWrapper}>
-								<ProgressStage label={stage.label} status={stageStatus} />
+								<ProgressStage
+									testID={`progress-stage-${index}`}
+									label={stage.label}
+									status={stageStatus}
+								/>
 							</View>
 							{showProgressSegment && (
 								<ProgressSegment
+									testID={`progress-segment-${index}`}
 									status={getSegmentStatus(index)}
 									progress={progressAnim}
 								/>

@@ -1,4 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
 import { Text, type TextProps } from 'react-native'
 import { createStylesheet } from '../../../utils/create-styles'
 import { useTabsContext } from '../Root'

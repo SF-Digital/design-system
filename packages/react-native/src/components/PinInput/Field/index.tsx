@@ -1,5 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Pressable, TextInput, type TextInputProps } from 'react-native'
 import { createStylesheet } from '../../../utils/create-styles'
 import { type PinInputSizes, usePinInputContext } from '../Root'

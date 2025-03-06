@@ -1,21 +1,15 @@
-import { act, render } from '@/utils/test-utils'
+import { act, render, waitFor } from '@/utils/test-utils'
 import { ProgressBar } from '@sf-digital-ui/react-native'
 import { Animated } from 'react-native'
 
-// // Mock the CheckIcon component since it uses an image
-// jest.mock('./CheckIcon', () => ({
-//   CheckIcon: () => null,
-// }))
-
 describe('ProgressBar', () => {
 	const mockStages = [
-		{ id: 1, label: 'Stage 1' },
-		{ id: 2, label: 'Stage 2' },
-		{ id: 3, label: 'Stage 3' },
+		{ id: '1', label: 'Stage 1' },
+		{ id: '2', label: 'Stage 2' },
+		{ id: '3', label: 'Stage 3' },
 	]
 
 	beforeEach(() => {
-		// Reset animation timing implementation
 		jest.useFakeTimers()
 	})
 
@@ -34,12 +28,12 @@ describe('ProgressBar', () => {
 	})
 
 	it('renders correct number of segments', () => {
-		const { queryAllByTestId } = render(
+		const { getAllByTestId } = render(
 			<ProgressBar stages={mockStages} currentStage={0} />,
 		)
 
-		// There should be one less segment than stages
-		const segments = queryAllByTestId('progress-segment')
+		const segments = getAllByTestId('progress-segment', { exact: false })
+
 		expect(segments.length).toBe(mockStages.length - 1)
 	})
 
@@ -49,35 +43,51 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={2} />,
 			)
 
-			const firstStage = getByTestId('stage-0')
-			const secondStage = getByTestId('stage-1')
+			const firstStage = getByTestId('progress-stage-0')
+			const secondStage = getByTestId('progress-stage-1')
+			const thirdStage = getByTestId('progress-stage-2')
 
-			expect(firstStage.props.style).toContainEqual(
-				expect.objectContaining({
-					backgroundColor: expect.stringContaining('primary-green'),
-				}),
+			expect(firstStage.props.style).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						backgroundColor: '#006237',
+					}),
+				]),
 			)
-			expect(secondStage.props.style).toContainEqual(
-				expect.objectContaining({
-					backgroundColor: expect.stringContaining('primary-green'),
-				}),
+			expect(secondStage.props.style).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						backgroundColor: '#006237',
+					}),
+				]),
+			)
+
+			expect(thirdStage.props.style).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						backgroundColor: '#f6f6f6',
+					}),
+				]),
 			)
 		})
 
-		it('marks current stage as active', () => {
+		it('marks current stage as active', async () => {
 			const { getByTestId } = render(
-				<ProgressBar stages={mockStages} currentStage={1} />,
+				<ProgressBar stages={mockStages} currentStage={0} />,
 			)
 
-			const activeStage = getByTestId('stage-1')
-			const innerCircle = getByTestId('inner-circle-1')
+			const innerCircle = getByTestId('inner-circle-progress-stage-0')
 
-			expect(activeStage.props.style).toContainEqual(
-				expect.objectContaining({
-					backgroundColor: expect.stringContaining('primary-green'),
-				}),
-			)
-			expect(innerCircle).toBeTruthy()
+			await waitFor(() => {
+				expect(innerCircle.props.style).toEqual(
+					expect.arrayContaining([
+						expect.objectContaining({
+							backgroundColor: '#FFFFFF',
+						}),
+					]),
+				)
+				expect(innerCircle).toBeTruthy()
+			})
 		})
 
 		it('marks future stages as todo', () => {
@@ -85,11 +95,13 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={0} />,
 			)
 
-			const futureStage = getByTestId('stage-2')
-			expect(futureStage.props.style).toContainEqual(
-				expect.objectContaining({
-					backgroundColor: expect.stringContaining('neutral'),
-				}),
+			const futureStage = getByTestId('progress-stage-2')
+			expect(futureStage.props.style).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						backgroundColor: '#f6f6f6',
+					}),
+				]),
 			)
 		})
 	})
@@ -100,26 +112,16 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={0} />,
 			)
 
-			// Move to next stage
 			rerender(<ProgressBar stages={mockStages} currentStage={1} />)
 
-			// Fast-forward animation
-			await act(async () => {
-				jest.advanceTimersByTime(300) // Animation duration
+			const activeSegment = getByTestId('progress-segment-0')
+			await waitFor(() => {
+				expect(activeSegment.props.style).toEqual(
+					expect.objectContaining({
+						width: '100%',
+					}),
+				)
 			})
-
-			// Wait for animation completion and circle update
-			await act(async () => {
-				jest.advanceTimersByTime(50) // Circle animation timeout
-			})
-
-			// Verify the animation completed
-			const activeSegment = getByTestId('segment-0')
-			expect(activeSegment.props.style).toContainEqual(
-				expect.objectContaining({
-					width: '100%',
-				}),
-			)
 		})
 
 		it('animates progress when moving backward', async () => {
@@ -127,24 +129,16 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={2} />,
 			)
 
-			// Move backward
 			rerender(<ProgressBar stages={mockStages} currentStage={1} />)
 
-			// Fast-forward animation
-			await act(async () => {
-				jest.advanceTimersByTime(300)
+			const activeSegment = getByTestId('progress-segment-1')
+			await waitFor(() => {
+				expect(activeSegment.props.style).toEqual(
+					expect.objectContaining({
+						width: '0%',
+					}),
+				)
 			})
-
-			await act(async () => {
-				jest.advanceTimersByTime(50)
-			})
-
-			const activeSegment = getByTestId('segment-1')
-			expect(activeSegment.props.style).toContainEqual(
-				expect.objectContaining({
-					width: '0%',
-				}),
-			)
 		})
 
 		it('cancels previous animation when stage changes during animation', async () => {
@@ -160,10 +154,9 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={0} />,
 			)
 
-			// Change stage before animation completes
 			rerender(<ProgressBar stages={mockStages} currentStage={1} />)
 			await act(async () => {
-				jest.advanceTimersByTime(100) // Part way through animation
+				jest.advanceTimersByTime(100)
 			})
 
 			rerender(<ProgressBar stages={mockStages} currentStage={2} />)
@@ -188,7 +181,7 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={[]} currentStage={0} />,
 			)
 
-			const stages = queryAllByTestId(/^stage-/)
+			const stages = queryAllByTestId('progress-stage', { exact: false })
 			expect(stages.length).toBe(0)
 		})
 
@@ -197,13 +190,14 @@ describe('ProgressBar', () => {
 				<ProgressBar stages={mockStages} currentStage={99} />,
 			)
 
-			// All stages should be completed
-			const stages = getAllByTestId(/^stage-/)
+			const stages = getAllByTestId('progress-stage', { exact: false })
 			for (const stage of stages) {
-				expect(stage.props.style).toContainEqual(
-					expect.objectContaining({
-						backgroundColor: expect.stringContaining('primary-green'),
-					}),
+				expect(stage.props.style).toEqual(
+					expect.arrayContaining([
+						expect.objectContaining({
+							backgroundColor: '#006237',
+						}),
+					]),
 				)
 			}
 		})

@@ -1,5 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
-import { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import {
 	type SwitchProps as RNSwitchProps,
 	Switch as RNSwitch,
