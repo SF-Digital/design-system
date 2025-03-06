@@ -1,5 +1,5 @@
+import { act, render } from '@/utils/test-utils'
 import { ProgressBar } from '@sf-digital-ui/react-native'
-import { act, render } from '@testing-library/react-native'
 import { Animated } from 'react-native'
 
 // // Mock the CheckIcon component since it uses an image

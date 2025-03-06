@@ -1,6 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
-import type React from 'react'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { Modal, StyleSheet, View, type ViewProps } from 'react-native'
 import { DropdownMenuContext } from '../Root'
 

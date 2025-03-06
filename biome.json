@@ -43,6 +43,7 @@
 				"useKeyWithClickEvents": "off"
 			},
 			"style": {
+				"useImportType": "off",
 				"noYodaExpression": "error",
 				"noVar": "error",
 				"useNamingConvention": {
@@ -150,10 +151,7 @@
 				"useArrowFunction": "error"
 			},
 			"correctness": {
-				"noUnusedImports": {
-					"level": "warn",
-					"fix": "none"
-				},
+				"noUnusedImports": "off",
 				"noUnusedVariables": {
 					"level": "warn",
 					"fix": "none"

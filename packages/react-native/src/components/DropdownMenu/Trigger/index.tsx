@@ -1,5 +1,4 @@
-import type React from 'react'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { Pressable, type PressableProps } from 'react-native'
 import { DropdownMenuContext } from '../Root'
 

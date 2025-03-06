@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@/utils/test-utils'
 import { Entypo } from '@expo/vector-icons'
 import { Select } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
 
 const mockTeamMembers = ['John', 'Jane', 'Bob']
 
@@ -29,6 +30,7 @@ const SelectWrapper = ({
 							value={member}
 						>
 							<Select.ItemText>{member}</Select.ItemText>
+
 							{isActive && (
 								<Entypo
 									name='check'
@@ -84,9 +86,16 @@ describe('Select Component', () => {
 			expect(screen.getByTestId('modal')).toBeTruthy()
 		})
 
-		for (const member of mockTeamMembers) {
-			expect(screen.getByText(member)).toBeTruthy()
-		}
+		it('displays all options when opened', () => {
+			render(<SelectWrapper />)
+
+			const trigger = screen.getByRole('button')
+			fireEvent.press(trigger)
+
+			for (const member of mockTeamMembers) {
+				expect(screen.getByText(member)).toBeTruthy()
+			}
+		})
 
 		it('selects an option when pressed', () => {
 			const onValueChange = jest.fn()
@@ -155,7 +164,9 @@ describe('Select Component', () => {
 			expect(() => {
 				render(
 					<Select.Trigger>
+						            
 						<Select.Value placeholder='Select a team member' />
+						          
 					</Select.Trigger>,
 				)
 			}).toThrow('Select components must be used within a Select provider')

@@ -1,10 +1,10 @@
-import { Root, ButtonRootProps } from './Root'
-import { Prefix, ButtonPrefixProps } from './Prefix'
-import { Suffix, ButtonSuffixProps } from './Suffix'
+import { Prefix, type ButtonPrefixProps } from './Prefix'
+import { Root, type ButtonRootProps } from './Root'
+import { Suffix, type ButtonSuffixProps } from './Suffix'
 import { Text } from './Text'
 
 const Button = { Root, Prefix, Suffix, Text }
 
 export { Button }
 
-export type { ButtonRootProps, ButtonPrefixProps, ButtonSuffixProps }
+export type { ButtonPrefixProps, ButtonRootProps, ButtonSuffixProps }
