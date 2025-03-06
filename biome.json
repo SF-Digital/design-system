@@ -7,7 +7,17 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["node_modules", ".expo", "ios", "android", ".vscode"]
+		"ignore": [
+			"node_modules",
+			".expo",
+			"ios",
+			"android",
+			".vscode",
+			"packages/docs/storybook-static",
+			"packages/react/dist",
+			"packages/tokens/dist",
+			"packages/docs/.storybook"
+		]
 	},
 	"formatter": {
 		"enabled": true,
@@ -40,7 +50,8 @@
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
-				"useKeyWithClickEvents": "off"
+				"useKeyWithClickEvents": "off",
+				"useButtonType": "off"
 			},
 			"style": {
 				"useImportType": "off",
@@ -86,7 +97,7 @@
 									"kind": "functionParameter",
 									"scope": "any"
 								},
-								"formats": ["camelCase"]
+								"match": "(_|_[a-z][a-zA-Z0-9]*|[a-z][a-zA-Z0-9]*)"
 							},
 							{
 								"selector": {

@@ -30,7 +30,6 @@ const SelectWrapper = ({
 							value={member}
 						>
 							<Select.ItemText>{member}</Select.ItemText>
-
 							{isActive && (
 								<Entypo
 									name='check'

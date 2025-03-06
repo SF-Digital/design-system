@@ -11,7 +11,6 @@ export const Fields = ({ style, children, ...props }: PinInputFieldsProps) => {
 	if (!children) {
 		return (
 			<View style={[styles.fieldsContainer, style]}>
-				{/* biome-ignore lint/style/useNamingConvention: <explanation> */}
 				{Array.from({ length }, (_, index) => (
 					<Field key={index} index={index} />
 				))}

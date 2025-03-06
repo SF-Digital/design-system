@@ -34,79 +34,79 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const TextInputStory: Meta<TextInputRootProps> = {
-  title: 'Form/TextInput',
-  component: TextInput.Root,
-  args: {
-    size: 'sm',
-    disabled: false,
-  },
-  argTypes: {
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    color: {
-      options: ['sf-green', 'succession-blue'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    disabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
+	title: 'Form/TextInput',
+	component: TextInput.Root,
+	args: {
+		size: 'sm',
+		disabled: false,
+	},
+	argTypes: {
+		size: {
+			options: ['sm', 'md', 'lg'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+		color: {
+			options: ['sf-green', 'succession-blue'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
+		disabled: {
+			control: {
+				type: 'boolean',
+			},
+		},
+	},
 }
 
 export default TextInputStory
 
 export const Default: StoryObj<TextInputRootProps> = {
-  args: {
-    children: <TextInput.Control placeholder="Placeholder" />,
-  },
+	args: {
+		children: <TextInput.Control placeholder='Placeholder' />,
+	},
 }
 
 export const WithPrefix: StoryObj<TextInputRootProps> = {
-  args: {
-    children: (
-      <>
-        <TextInput.Prefix>
-          <CircleUserRound />
-        </TextInput.Prefix>
-        <TextInput.Control placeholder="Placeholder" />
-      </>
-    ),
-  },
+	args: {
+		children: (
+			<>
+				<TextInput.Prefix>
+					<CircleUserRound />
+				</TextInput.Prefix>
+				<TextInput.Control placeholder='Placeholder' />
+			</>
+		),
+	},
 }
 
 export const WithSuffix: StoryObj<TextInputRootProps> = {
-  args: {
-    children: (
-      <>
-        <TextInput.Control placeholder="Placeholder" />
-        <TextInput.Suffix>
-          <ChevronDown />
-        </TextInput.Suffix>
-      </>
-    ),
-  },
+	args: {
+		children: (
+			<>
+				<TextInput.Control placeholder='Placeholder' />
+				<TextInput.Suffix>
+					<ChevronDown />
+				</TextInput.Suffix>
+			</>
+		),
+	},
 }
 
 export const WithPrefixAndSuffix: StoryObj<TextInputRootProps> = {
-  args: {
-    children: (
-      <>
-        <TextInput.Prefix>
-          <CircleUserRound />
-        </TextInput.Prefix>
-        <TextInput.Control placeholder="Placeholder" />
-        <TextInput.Suffix>
-          <ChevronDown />
-        </TextInput.Suffix>
-      </>
-    ),
-  },
+	args: {
+		children: (
+			<>
+				<TextInput.Prefix>
+					<CircleUserRound />
+				</TextInput.Prefix>
+				<TextInput.Control placeholder='Placeholder' />
+				<TextInput.Suffix>
+					<ChevronDown />
+				</TextInput.Suffix>
+			</>
+		),
+	},
 }

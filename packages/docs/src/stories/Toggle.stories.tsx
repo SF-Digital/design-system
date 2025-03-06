@@ -1,7 +1,7 @@
 import {
-  Toggle,
-  ToggleControlProps,
-  ToggleRootProps,
+	Toggle,
+	ToggleControlProps,
+	ToggleRootProps,
 } from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react'
 import '@sf-digital-ui/react/dist/output.css'
@@ -54,35 +54,35 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const ToggleStory: Meta<ToggleRootProps> = {
-  title: 'Components/Toggle',
-  component: Toggle.Root,
-  args: {
-    size: 'md',
-    color: 'sf-green',
-  },
+	title: 'Components/Toggle',
+	component: Toggle.Root,
+	args: {
+		size: 'md',
+		color: 'sf-green',
+	},
 
-  argTypes: {
-    size: {
-      options: ['sm', 'md'],
-      control: { type: 'inline-radio' },
-    },
-    color: {
-      options: ['sf-green', 'succession-blue'],
-      control: { type: 'inline-radio' },
-    },
-  },
+	argTypes: {
+		size: {
+			options: ['sm', 'md'],
+			control: { type: 'inline-radio' },
+		},
+		color: {
+			options: ['sf-green', 'succession-blue'],
+			control: { type: 'inline-radio' },
+		},
+	},
 }
 
 export default ToggleStory
 
 export const Default: StoryObj<ToggleRootProps & ToggleControlProps> = {
-  args: {
-    size: 'md',
-    color: 'sf-green',
-  },
-  render: (args) => (
-    <Toggle.Root size={args.size} color={args.color}>
-      <Toggle.Control size={args.size} />
-    </Toggle.Root>
-  ),
+	args: {
+		size: 'md',
+		color: 'sf-green',
+	},
+	render: (args) => (
+		<Toggle.Root size={args.size} color={args.color}>
+			<Toggle.Control size={args.size} />
+		</Toggle.Root>
+	),
 }

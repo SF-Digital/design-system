@@ -1,7 +1,7 @@
 import {
-  Select,
-  SelectRootProps,
-  SelectTriggerProps,
+	Select,
+	SelectRootProps,
+	SelectTriggerProps,
 } from '@sf-digital-ui/react'
 import { Meta, StoryObj } from '@storybook/react'
 import { ChevronDown, User } from 'lucide-react'
@@ -112,118 +112,118 @@ import '@sf-digital-ui/react/dist/output.css'
  */
 
 const SelectStory: Meta<SelectRootProps & SelectTriggerProps> = {
-  title: 'Form/Select',
-  component: Select.Root,
-  args: {
-    color: 'sf-green',
-  },
-  argTypes: {
-    color: {
-      options: ['sf-green', 'succession-blue'],
-      control: { type: 'inline-radio' },
-    },
-  },
+	title: 'Form/Select',
+	component: Select.Root,
+	args: {
+		color: 'sf-green',
+	},
+	argTypes: {
+		color: {
+			options: ['sf-green', 'succession-blue'],
+			control: { type: 'inline-radio' },
+		},
+	},
 }
 
 export default SelectStory
 
 const exampleSelection = [
-  'Option 1',
-  'Option 2',
-  'Option 3',
-  'Option 4',
-  'Option 5',
+	'Option 1',
+	'Option 2',
+	'Option 3',
+	'Option 4',
+	'Option 5',
 ]
 
 const longExampleSelection = [
-  'Option 1',
-  'Option 2',
-  'Option 3',
-  'Option 4',
-  'Option 5',
-  'Option 6',
-  'Option 7',
-  'Option 8',
-  'Option 9',
-  'Option 10',
-  'Option 11',
-  'Option 12',
-  'Option 13',
-  'Option 14',
-  'Option 15',
-  'Option 16',
-  'Option 17',
-  'Option 18',
-  'Option 19',
-  'Option 20',
-  'Option 21',
-  'Option 22',
-  'Option 23',
-  'Option 24',
-  'Option 25',
-  'Option 26',
-  'Option 27',
-  'Option 28',
-  'Option 29',
-  'Option 30',
+	'Option 1',
+	'Option 2',
+	'Option 3',
+	'Option 4',
+	'Option 5',
+	'Option 6',
+	'Option 7',
+	'Option 8',
+	'Option 9',
+	'Option 10',
+	'Option 11',
+	'Option 12',
+	'Option 13',
+	'Option 14',
+	'Option 15',
+	'Option 16',
+	'Option 17',
+	'Option 18',
+	'Option 19',
+	'Option 20',
+	'Option 21',
+	'Option 22',
+	'Option 23',
+	'Option 24',
+	'Option 25',
+	'Option 26',
+	'Option 27',
+	'Option 28',
+	'Option 29',
+	'Option 30',
 ]
 
 export const Default: StoryObj<SelectRootProps & SelectTriggerProps> = {
-  render: (args) => (
-    <Select.Root {...args}>
-      <Select.Trigger className="max-w-80 w-full" color={args.color}>
-        <div className="flex flex-row items-center gap-2">
-          <Select.Value placeholder="Select team member" />
-        </div>
-        <Select.Icon>
-          <ChevronDown size={20} />
-        </Select.Icon>
-      </Select.Trigger>
+	render: (args) => (
+		<Select.Root {...args}>
+			<Select.Trigger className='max-w-80 w-full' color={args.color}>
+				<div className='flex flex-row items-center gap-2'>
+					<Select.Value placeholder='Select team member' />
+				</div>
+				<Select.Icon>
+					<ChevronDown size={20} />
+				</Select.Icon>
+			</Select.Trigger>
 
-      <Select.Portal>
-        <Select.Content position="popper" className="overflow-hidden">
-          <Select.Viewport>
-            {exampleSelection.map((item, index) => (
-              <Select.Item key={index} value={index.toString()}>
-                <div className="flex items-center flex-row gap-2">
-                  <User size={20} />
-                  <Select.ItemText>{item}</Select.ItemText>
-                </div>
-              </Select.Item>
-            ))}
-          </Select.Viewport>
-        </Select.Content>
-      </Select.Portal>
-    </Select.Root>
-  ),
+			<Select.Portal>
+				<Select.Content position='popper' className='overflow-hidden'>
+					<Select.Viewport>
+						{exampleSelection.map((item, index) => (
+							<Select.Item key={index} value={index.toString()}>
+								<div className='flex items-center flex-row gap-2'>
+									<User size={20} />
+									<Select.ItemText>{item}</Select.ItemText>
+								</div>
+							</Select.Item>
+						))}
+					</Select.Viewport>
+				</Select.Content>
+			</Select.Portal>
+		</Select.Root>
+	),
 }
 
 export const Scrollable: StoryObj<SelectRootProps> = {
-  render: (args) => (
-    <Select.Root {...args}>
-      <Select.Trigger className="max-w-80 w-full">
-        <div className="flex flex-row items-center gap-2">
-          <Select.Value placeholder="Select team member" />
-        </div>
-        <Select.Icon>
-          <ChevronDown size={20} />
-        </Select.Icon>
-      </Select.Trigger>
+	render: (args) => (
+		<Select.Root {...args}>
+			<Select.Trigger className='max-w-80 w-full'>
+				<div className='flex flex-row items-center gap-2'>
+					<Select.Value placeholder='Select team member' />
+				</div>
+				<Select.Icon>
+					<ChevronDown size={20} />
+				</Select.Icon>
+			</Select.Trigger>
 
-      <Select.Portal>
-        <Select.Content position="popper" className=" overflow-hidden">
-          <Select.Viewport className="max-h-[inherit] overflow-y-auto">
-            {longExampleSelection.map((item, index) => (
-              <Select.Item key={index} value={index.toString()}>
-                <div className="flex items-center flex-row gap-2">
-                  <User size={20} />
-                  <Select.ItemText>{item}</Select.ItemText>
-                </div>
-              </Select.Item>
-            ))}
-          </Select.Viewport>
-        </Select.Content>
-      </Select.Portal>
-    </Select.Root>
-  ),
+			<Select.Portal>
+				<Select.Content position='popper' className=' overflow-hidden'>
+					<Select.Viewport className='max-h-[inherit] overflow-y-auto'>
+						{longExampleSelection.map((item, index) => (
+							<Select.Item key={index} value={index.toString()}>
+								<div className='flex items-center flex-row gap-2'>
+									<User size={20} />
+									<Select.ItemText>{item}</Select.ItemText>
+								</div>
+							</Select.Item>
+						))}
+					</Select.Viewport>
+				</Select.Content>
+			</Select.Portal>
+		</Select.Root>
+	),
 }

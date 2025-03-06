@@ -3,17 +3,17 @@ import { Box, BoxProps, Text } from '@sf-digital-ui/react'
 import '@sf-digital-ui/react/dist/output.css'
 
 const BoxStory: Meta<BoxProps> = {
-  title: 'Surfaces/Box',
-  component: Box,
+	title: 'Surfaces/Box',
+	component: Box,
 
-  args: {
-    children: (
-      <>
-        <Text>Testing element</Text>
-      </>
-    ),
-  },
-  argTypes: {},
+	args: {
+		children: (
+			<>
+				<Text>Testing element</Text>
+			</>
+		),
+	},
+	argTypes: {},
 }
 
 export default BoxStory
