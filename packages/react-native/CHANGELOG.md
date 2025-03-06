@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.0
+
+### Minor Changes
+
+- Progress bar
+
 ## 2.1.2
 
 ### Patch Changes
