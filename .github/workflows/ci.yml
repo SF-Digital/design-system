@@ -29,12 +29,12 @@ jobs:
 
       - name: Build React Native Design System
         run: npm run build
-        working-directory: ./packages/react-native  # Updated path
+        working-directory: ./packages/react-native
 
       - name: Install and Link Library with Yalc
         run: |
           npm install -g yalc
-          cd packages/react-native  # Updated path
+          cd packages/react-native
           yalc publish
           cd ../../apps/react-native-doc
           yalc add @sf-digital-ui/react-native
