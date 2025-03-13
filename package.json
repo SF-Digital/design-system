@@ -3,6 +3,7 @@
 	"workspaces": ["packages/*"],
 	"scripts": {
 		"dev": "turbo run dev --parallel",
+		"test:all": "turbo run test:ci",
 		"build": "turbo run build",
 		"cbum": "rm -rf node_modules && rm package-lock.json && rm -rf packages/*/node_modules && npm install",
 		"changeset": "changeset",
