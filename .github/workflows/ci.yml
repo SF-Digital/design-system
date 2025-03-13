@@ -1,0 +1,46 @@
+name: CI - React Native Docs Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies (Monorepo)
+        run: npm install
+
+      - name: Build React Native Design System
+        run: npm run build
+        working-directory: ./packages/react-native
+
+      - name: Install and Link Library with Yalc
+        run: |
+          npm install -g yalc
+          cd packages/react-native
+          yalc publish
+          cd ../../apps/react-native-doc
+          yalc add @sf-digital-ui/react-native
+          yalc link @sf-digital-ui/react-native
+          npm install
+
+      - name: Run Tests
+        run: npm run test:ci
+        working-directory: ./apps/react-native-doc
