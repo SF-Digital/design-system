@@ -29,6 +29,7 @@ jobs:
 
       - name: Build Design System Library
         run: npm run build
+        working-directory: ./packages/design-system  # Corrected path
 
       - name: Install and Link Library with Yalc
         run: |
