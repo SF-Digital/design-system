@@ -1,14 +1,7 @@
-import React, {
-	createContext,
-	ReactNode,
-	useContext,
-	useEffect,
-	useState,
-} from 'react'
+import React, { createContext, ReactNode, useContext, useState } from 'react'
 
 export interface ModalRootProps {
 	children?: ReactNode
-	// For controlled mode
 	open?: boolean
 	onOpenChange?: (open: boolean) => void
 }
@@ -35,12 +28,6 @@ export const Root = ({ children, open, onOpenChange }: ModalRootProps) => {
 
 	const isControlled = open !== undefined
 	const isVisible = isControlled ? open : internalIsVisible
-
-	useEffect(() => {
-		if (isControlled && open !== internalIsVisible) {
-			setInternalIsVisible(open)
-		}
-	}, [isControlled, open, internalIsVisible])
 
 	const setIsVisible = (value: boolean) => {
 		if (onOpenChange) {
