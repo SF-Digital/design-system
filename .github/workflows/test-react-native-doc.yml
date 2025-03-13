@@ -10,24 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: 📦 Checkout project repo
         uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          fetch-depth: 0
 
-      - name: Install root dependencies
-        run: npm install
+      - name: 📦 Setup Node + PNPM + install deps
+        uses: ./.github/actions/setup-node-pnpm-install
 
-      - name: Build components at root
-        run: npm run build
+      - name: 🛠️ Build components at root
+        run: pnpm run build
 
-      - name: Install dependencies in react-native-doc
-        run: npm install
-        working-directory: ./apps/react-native-doc
-
-      - name: Run tests in react-native-doc
-        run: npm run test:ci
-        working-directory: ./apps/react-native-doc
+      - name: 🏃‍♂️ Run tests in react-native-doc
+        run: pnpm --filter "react-native-doc" run test:ci
