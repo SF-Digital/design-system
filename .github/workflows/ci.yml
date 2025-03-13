@@ -26,17 +26,18 @@ jobs:
 
       - name: Install Dependencies (Monorepo)
         run: npm install
+        working-directory: ./
 
       - name: Build Design System Library
         run: npm run build
-        working-directory: ./design-system
+        working-directory: ./packages/design-system  # Adjusted path
 
       - name: Install and Link Library with Yalc
         run: |
           npm install -g yalc
-          cd design-system
+          cd packages/design-system
           yalc publish
-          cd ../apps/react-native-doc
+          cd ../../apps/react-native-doc
           yalc add @sf-digital-ui/react-native
           yalc link @sf-digital-ui/react-native
           npm install
