@@ -27,11 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # - name: Run Tests
-      #   run: cd ./apps/react-native-doc && npm ci && npm run test:ci
-      #   env:
-      #     NODE_ENV: test
-
       - name: Publish to NPM
         id: changesets
         uses: changesets/action@v1
