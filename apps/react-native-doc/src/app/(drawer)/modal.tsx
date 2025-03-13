@@ -1,18 +1,22 @@
-import { Alert, View } from 'react-native'
-import { Modal as DesignSystemModal, Button } from '@sf-digital-ui/react-native'
-import { styles } from '../../../styles'
-import Markdown from '@ronradtke/react-native-markdown-display'
-import { ScrollView } from 'react-native-gesture-handler'
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
+import Markdown from '@ronradtke/react-native-markdown-display'
+import { Button, Modal as DesignSystemModal } from '@sf-digital-ui/react-native'
+import React, { useState } from 'react'
+import { Alert, View } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import { styles } from '../../../styles'
 
 export default function Modal() {
+	const [isControlledModalOpen, setIsControlledModalOpen] = useState(false)
+
 	const docs = `# Modal Component
   ## Usage:
-  \b
   \b
   \`\`\`import { Modal } from '@sf-digital-ui/react-native'\`\`\`
   \b
   \`Modal.Root\` - Container component that provides context for all other Modal components.
+  \b
+  \`Modal.Root\` now supports controlled mode with \`open\` and \`onOpenChange\` props.
   \b
   \`Modal.Trigger\` - Button that opens the modal.
   \b
@@ -29,6 +33,12 @@ export default function Modal() {
   \`Modal.Close\` - Button that closes the modal.
   \b
   # Props
+  ## Root Props
+  \b
+  \`open?: boolean\` - Optional prop to control modal visibility externally (controlled mode)
+  \b
+  \`onOpenChange?: (open: boolean) => void\` - Optional callback when modal open state changes
+  \b
   ## Shared Props
   \b
   \`children?: ReactNode\` - Content to be rendered within the component
@@ -39,11 +49,13 @@ export default function Modal() {
 	return (
 		<ScrollView style={styles.pageContainer}>
 			<Markdown>{docs}</Markdown>
+
 			<View style={styles.componentExampleContainer}>
+				<Markdown>### Uncontrolled Modal (Internal State)</Markdown>
 				<DesignSystemModal.Root>
 					<DesignSystemModal.Trigger>
 						<Button.Root color='sf-green' variant='primary'>
-							<Button.Text>Open Modal</Button.Text>
+							<Button.Text>Open Uncontrolled Modal</Button.Text>
 						</Button.Root>
 					</DesignSystemModal.Trigger>
 
@@ -62,9 +74,13 @@ export default function Modal() {
 							</DesignSystemModal.Close>
 							<View style={{ gap: 18 }}>
 								<View style={{ gap: 14 }}>
-									<DesignSystemModal.Title>Welcome</DesignSystemModal.Title>
+									<DesignSystemModal.Title>
+										Uncontrolled Modal
+									</DesignSystemModal.Title>
 									<DesignSystemModal.Description>
-										This is a description of what the DesignSystemModal does.
+										This modal manages its own state internally. The Modal.
+										Trigger and Modal. Close components will automatically
+										handle opening and closing.
 									</DesignSystemModal.Description>
 								</View>
 								<DesignSystemModal.Close>
@@ -81,17 +97,79 @@ export default function Modal() {
 										>
 											<Button.Text>Continue</Button.Text>
 										</Button.Root>
-										<Button.Root
-											color='succession-blue'
-											variant='secondary'
-											onPress={() =>
-												Alert.alert('You have aborted some flow....')
-											}
-										>
+										<Button.Root color='succession-blue' variant='secondary'>
 											<Button.Text>Cancel</Button.Text>
 										</Button.Root>
 									</View>
 								</DesignSystemModal.Close>
+							</View>
+						</DesignSystemModal.Content>
+					</DesignSystemModal.Portal>
+				</DesignSystemModal.Root>
+			</View>
+
+			<View style={styles.componentExampleContainer}>
+				<Markdown>### Controlled Modal (External State)</Markdown>
+
+				<Button.Root
+					color='succession-blue'
+					variant='primary'
+					onPress={() => setIsControlledModalOpen(true)}
+				>
+					<Button.Text>Open Controlled Modal</Button.Text>
+				</Button.Root>
+
+				<DesignSystemModal.Root
+					open={isControlledModalOpen}
+					onOpenChange={setIsControlledModalOpen}
+				>
+					<DesignSystemModal.Portal>
+						<DesignSystemModal.Overlay />
+						<DesignSystemModal.Content>
+							<DesignSystemModal.Close>
+								<MaterialCommunityIcons
+									name='close'
+									size={18}
+									color='black'
+									style={{
+										alignSelf: 'flex-end',
+									}}
+								/>
+							</DesignSystemModal.Close>
+							<View style={{ gap: 18 }}>
+								<View style={{ gap: 14 }}>
+									<DesignSystemModal.Title>
+										Controlled Modal
+									</DesignSystemModal.Title>
+									<DesignSystemModal.Description>
+										This modal's state is controlled externally using the 'open'
+										and 'onOpenChange' props. You can programmatically open and
+										close this modal.
+									</DesignSystemModal.Description>
+								</View>
+								<View
+									style={{
+										flexDirection: 'row',
+										justifyContent: 'space-between',
+									}}
+								>
+									<Button.Root
+										onPress={() => {
+											Alert.alert('Action performed!')
+											// Programmatically close the modal
+											setIsControlledModalOpen(false)
+										}}
+									>
+										<Button.Text>Perform Action</Button.Text>
+									</Button.Root>
+									<Button.Root
+										color='succession-blue'
+										variant='secondary'
+										onPress={() => setIsControlledModalOpen(false)}
+									>
+										<Button.Text>Cancel</Button.Text>
+									</Button.Root>
+								</View>
 							</View>
 						</DesignSystemModal.Content>
 					</DesignSystemModal.Portal>
