@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.1
+
+### Patch Changes
+
+- modal has controlled state
+
 ## 2.2.0
 
 ### Minor Changes
