@@ -1,9 +1,9 @@
-import { View } from 'react-native'
+import Markdown from '@ronradtke/react-native-markdown-display'
 import {
 	Text as DesignSystemText,
 	TextProps,
 } from '@sf-digital-ui/react-native'
-import Markdown from '@ronradtke/react-native-markdown-display'
+import { View } from 'react-native'
 import { styles } from '../../../styles'
 
 export default function Text() {

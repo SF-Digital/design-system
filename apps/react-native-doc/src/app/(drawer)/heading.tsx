@@ -1,11 +1,11 @@
-import { View } from 'react-native'
+import Markdown from '@ronradtke/react-native-markdown-display'
 import {
 	Heading as DesignSystemHeading,
 	HeadingProps,
 } from '@sf-digital-ui/react-native'
-import Markdown from '@ronradtke/react-native-markdown-display'
-import { styles } from '../../../styles'
+import { View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { styles } from '../../../styles'
 
 export default function Heading() {
 	const headingSizes: HeadingProps['size'][] = [

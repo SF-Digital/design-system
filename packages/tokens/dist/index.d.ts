@@ -524,6 +524,13 @@ declare const fonts: {
     code: string;
     'sf-digital': string;
 };
+declare const mobileFonts: {
+    'thin-100': string;
+    'light-300': string;
+    'regular-400': string;
+    'bold-700': string;
+    'black-900': string;
+};
 
 declare const fontSizes: {
     'sf-xs': string;
@@ -573,4 +580,4 @@ declare const blur: {
     xl: string;
 };
 
-export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, radii, space };
+export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, mobileFonts, radii, space };
