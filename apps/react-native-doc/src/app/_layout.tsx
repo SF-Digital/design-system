@@ -18,7 +18,6 @@ export default function Layout() {
 		'bold-700': Lato_700Bold,
 		'black-900': Lato_900Black,
 	}
-
 	const [loaded] = useFonts(tokens)
 
 	if (!loaded) {

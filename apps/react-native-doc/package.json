@@ -21,7 +21,7 @@
 		"@react-navigation/native": "^7.0.14",
 		"@ronradtke/react-native-markdown-display": "^8.0.0",
 		"@sf-digital-ui/react-native": "file:.yalc/@sf-digital-ui/react-native",
-		"@sf-digital-ui/tokens": "^3.3.3",
+		"@sf-digital-ui/tokens": "^3.3.4",
 		"expo": "~52.0.35",
 		"expo-font": "~13.0.2",
 		"expo-linking": "~7.0.5",

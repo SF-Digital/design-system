@@ -11,7 +11,10 @@ export default function Text() {
 	const textDescription = `This story displays the \`Text\` component, a text tag using the \`Perpetua\` font.
   ## API Reference:
   \b
-  \`size: 'lg' | 'md' | 'sm' | 'xs'\` - The size of the text.`
+  \`size: 'lg' | 'md' | 'sm' | 'xs'\` - The size of the text.
+  \b
+  \`fontWeight: 'thin' | 'light' | 'regular' | 'bold' | 'black'\` - The weight of the text.
+  `
 
 	return (
 		<View style={styles.pageContainer}>
