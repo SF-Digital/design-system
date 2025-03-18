@@ -20,7 +20,9 @@ export default function Heading() {
   ## API Reference:
   \b
   \`size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'\` - The size of the heading.
-  \b`
+  \b
+  \`fontWeight: 'thin' | 'light' | 'regular' | 'bold' | 'black'\` - The weight of the text.
+  `
 
 	return (
 		<ScrollView style={styles.pageContainer}>
