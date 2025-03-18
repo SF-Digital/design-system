@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.2
+
+### Patch Changes
+
+- New fonts
+
 ## 2.2.1
 
 ### Patch Changes
