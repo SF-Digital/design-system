@@ -1,11 +1,11 @@
-import { View } from 'react-native'
+import Markdown from '@ronradtke/react-native-markdown-display'
 import {
 	Heading as DesignSystemHeading,
 	HeadingProps,
 } from '@sf-digital-ui/react-native'
-import Markdown from '@ronradtke/react-native-markdown-display'
-import { styles } from '../../../styles'
+import { View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { styles } from '../../../styles'
 
 export default function Heading() {
 	const headingSizes: HeadingProps['size'][] = [
@@ -20,7 +20,9 @@ export default function Heading() {
   ## API Reference:
   \b
   \`size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'\` - The size of the heading.
-  \b`
+  \b
+  \`fontWeight: 'thin' | 'light' | 'regular' | 'bold' | 'black'\` - The weight of the text.
+  `
 
 	return (
 		<ScrollView style={styles.pageContainer}>

@@ -1,4 +1,4 @@
-import { fonts } from '@sf-digital-ui/tokens'
+import { mobileFonts } from '@sf-digital-ui/tokens'
 import React from 'react'
 import {
 	StyleSheet,
@@ -12,12 +12,13 @@ import { calculateLineHeight } from '../../utils/calculate-line-height'
 
 export interface HeadingProps extends TextProps {
 	size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+	fontWeight?: 'thin' | 'light' | 'regular' | 'bold' | 'black'
 	style?: StyleProp<TextStyle>
 }
 
 const headingSizes = StyleSheet.create({
 	base: {
-		fontFamily: fonts['sf-digital'],
+		fontFamily: mobileFonts['regular-400'],
 	},
 	h1: {
 		fontSize: fontSizesInPx['sf-h1'],
@@ -45,10 +46,34 @@ const headingSizes = StyleSheet.create({
 	},
 })
 
-export const Heading = ({ size = 'h1', style, ...props }: HeadingProps) => {
+const fontWeights = StyleSheet.create({
+	thin: {
+		fontFamily: mobileFonts['thin-100'],
+	},
+	light: {
+		fontFamily: mobileFonts['light-300'],
+	},
+	regular: {
+		fontFamily: mobileFonts['regular-400'],
+	},
+	bold: {
+		fontFamily: mobileFonts['bold-700'],
+	},
+	black: {
+		fontFamily: mobileFonts['black-900'],
+	},
+})
+
+export const Heading = ({
+	size = 'h1',
+	fontWeight,
+	style,
+	...props
+}: HeadingProps) => {
 	const sizeStyle = {
-		...headingSizes[size],
 		...headingSizes.base,
+		...headingSizes[size],
+		...fontWeights[fontWeight || 'regular'],
 	}
 
 	return (

@@ -2,7 +2,7 @@ import { calculateLineHeight } from '@/utils/calculateLineHeight/calculate-line-
 import { render } from '@/utils/test-utils'
 import { fontSizeToNumber } from '@/utils/toNumber/font-size-to-number'
 import { Heading, type HeadingProps } from '@sf-digital-ui/react-native'
-import { fonts, fontSizes } from '@sf-digital-ui/tokens'
+import { fontSizes } from '@sf-digital-ui/tokens'
 import type { TextStyle } from 'react-native'
 import type { FontSizeKey } from '../../types/fontsizes'
 
@@ -20,7 +20,7 @@ describe('Heading', () => {
 		expect(styles).toEqual(
 			expect.arrayContaining([
 				expect.objectContaining({
-					fontFamily: fonts['sf-digital'],
+					fontFamily: 'regular-400',
 					fontSize: fontSizes['sf-h1'],
 					lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-h1'])),
 				}),
@@ -50,7 +50,7 @@ describe('Heading', () => {
 		expect(styles).toEqual(
 			expect.arrayContaining([
 				expect.objectContaining({
-					fontFamily: fonts['sf-digital'],
+					fontFamily: 'regular-400',
 					fontSize: fontSizes[fontSizeKey],
 					lineHeight: calculateLineHeight(
 						fontSizeToNumber(fontSizes[fontSizeKey]),
@@ -76,7 +76,7 @@ describe('Heading', () => {
 		expect(styles).toEqual(
 			expect.arrayContaining([
 				expect.objectContaining({
-					fontFamily: fonts['sf-digital'],
+					fontFamily: 'regular-400',
 					fontSize: fontSizes['sf-h1'],
 					lineHeight: calculateLineHeight(fontSizeToNumber(fontSizes['sf-h1'])),
 				}),

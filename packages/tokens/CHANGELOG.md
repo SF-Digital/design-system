@@ -1,5 +1,17 @@
 # @sf-digital-ui/tokens
 
+## 3.3.6
+
+### Patch Changes
+
+- Fix font export
+
+## 3.3.5
+
+### Patch Changes
+
+- New fonts
+
 ## 3.3.4
 
 ### Patch Changes

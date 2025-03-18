@@ -490,6 +490,15 @@ declare const colors: {
     };
 };
 
+declare const radii: {
+    px: string;
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    full: string;
+};
+
 declare const space: {
     1: string;
     2: string;
@@ -510,19 +519,26 @@ declare const space: {
     64: string;
 };
 
-declare const radii: {
-    px: string;
-    xs: string;
+declare const blur: {
     sm: string;
     md: string;
     lg: string;
-    full: string;
+    xl: string;
 };
 
-declare const fonts: {
-    default: string;
-    code: string;
-    'sf-digital': string;
+declare const borderWidth: {
+    6: string;
+    10: string;
+};
+
+declare const dropShadow: {
+    xs: string;
+    sm: string[];
+    md: string[];
+    lg: string[];
+    xl: string[];
+    '2xl': string;
+    '3xl': string;
 };
 
 declare const fontSizes: {
@@ -544,6 +560,12 @@ declare const fontWeights: {
     bold: string;
 };
 
+declare const fonts: {
+    default: string;
+    code: string;
+    'sf-digital': string;
+};
+
 declare const lineHeights: {
     shorter: string;
     short: string;
@@ -551,26 +573,12 @@ declare const lineHeights: {
     tall: string;
 };
 
-declare const borderWidth: {
-    6: string;
-    10: string;
+declare const mobileFonts: {
+    'thin-100': string;
+    'light-300': string;
+    'regular-400': string;
+    'bold-700': string;
+    'black-900': string;
 };
 
-declare const dropShadow: {
-    xs: string;
-    sm: string[];
-    md: string[];
-    lg: string[];
-    xl: string[];
-    '2xl': string;
-    '3xl': string;
-};
-
-declare const blur: {
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-};
-
-export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, radii, space };
+export { blur, borderWidth, colors, dropShadow, fontSizes, fontWeights, fonts, lineHeights, mobileFonts, radii, space };
