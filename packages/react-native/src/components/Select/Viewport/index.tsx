@@ -1,11 +1,14 @@
+import { colors } from '@sf-digital-ui/tokens'
 import React from 'react'
 import {
+	Pressable,
 	ScrollView,
 	StyleSheet,
 	useWindowDimensions,
 	View,
 	ViewProps,
 } from 'react-native'
+import { useSelectContext } from '../Root'
 
 export type SelectViewportProps = ViewProps
 
@@ -22,6 +25,15 @@ const viewportStyles = StyleSheet.create({
 	scrollContainer: {
 		maxHeight: '80%',
 	},
+	topBar: {
+		width: 60,
+		height: 4,
+		backgroundColor: colors.neutral['50'],
+		borderRadius: 2,
+		alignSelf: 'center',
+		marginBottom: 16,
+		marginTop: -32,
+	},
 })
 
 export const Viewport = ({
@@ -30,6 +42,7 @@ export const Viewport = ({
 	...props
 }: SelectViewportProps) => {
 	const { height } = useWindowDimensions()
+	const { onOpenChange } = useSelectContext()
 
 	return (
 		<View
@@ -42,6 +55,11 @@ export const Viewport = ({
 			]}
 			{...props}
 		>
+			<Pressable
+				style={viewportStyles.topBar}
+				onPress={() => onOpenChange(false)}
+			/>
+
 			<ScrollView contentContainerStyle={viewportStyles.scrollContainer}>
 				{children}
 			</ScrollView>
