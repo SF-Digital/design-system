@@ -13,6 +13,14 @@ const viewportStyles = StyleSheet.create({
 	content: {
 		paddingHorizontal: 8,
 		paddingVertical: 48,
+		backgroundColor: 'white',
+		borderTopLeftRadius: 16,
+		borderTopRightRadius: 16,
+		flexDirection: 'column',
+		justifyContent: 'center',
+	},
+	scrollContainer: {
+		maxHeight: '80%',
 	},
 })
 
@@ -29,14 +37,14 @@ export const Viewport = ({
 				viewportStyles.content,
 				{
 					maxHeight: height,
-					flexDirection: 'column',
-					justifyContent: 'center',
 				},
 				style,
 			]}
 			{...props}
 		>
-			<ScrollView bounces={false}>{children}</ScrollView>
+			<ScrollView contentContainerStyle={viewportStyles.scrollContainer}>
+				{children}
+			</ScrollView>
 		</View>
 	)
 }
