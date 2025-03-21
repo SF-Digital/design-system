@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.4
+
+### Patch Changes
+
+- select content height
+
 ## 2.2.3
 
 ### Patch Changes
