@@ -23,7 +23,9 @@ export const Content = (props: SelectContentProps) => {
 			onRequestClose={() => onOpenChange(false)}
 			{...props}
 		>
-			<View style={modalStyles.overlay}>{props.children}</View>
+			<View style={modalStyles.overlay} onTouchEnd={() => onOpenChange(false)}>
+				{props.children}
+			</View>
 		</Modal>
 	)
 }
