@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.5
+
+### Patch Changes
+
+- Refactor uncontrolled Modal State
+
 ## 2.2.4
 
 ### Patch Changes
