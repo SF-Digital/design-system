@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
 import {
-	View,
-	StyleSheet,
 	Platform,
+	StyleProp,
+	StyleSheet,
+	View,
 	ViewProps,
 	ViewStyle,
-	StyleProp,
 } from 'react-native'
 
 export interface ModalContentProps extends ViewProps {
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
+		padding: 16,
 	},
 	content: {
 		backgroundColor: 'white',

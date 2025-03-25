@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
 	pageContainer: {
 		flex: 1,
 		gap: 10,
-		padding: 10,
+		padding: 16,
 	},
 	componentExampleContainer: {
 		backgroundColor: 'white',
