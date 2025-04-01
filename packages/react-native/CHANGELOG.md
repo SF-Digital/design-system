@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.7
+
+### Patch Changes
+
+- modal css adjustments
+
 ## 2.2.6
 
 ### Patch Changes
