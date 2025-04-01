@@ -1,7 +1,7 @@
 import { Modal } from '@sf-digital-ui/react-native'
 import { fireEvent, render, screen } from '@testing-library/react-native'
-import type React from 'react'
-import { Text } from 'react-native'
+import { useState } from 'react'
+import { Pressable, Text } from 'react-native'
 
 const ModalWrapper = ({
 	children,
@@ -252,5 +252,162 @@ describe('Modal Component', () => {
 
 			expect(close.props.pointerEvents).toBe('box-none')
 		})
+	})
+})
+
+const ControlledModalWrapper = ({
+	initialOpen = false,
+	onOpenChangeMock = jest.fn(),
+}) => {
+	const [isOpen, setIsOpen] = useState(initialOpen)
+
+	const handleOpenChange = (open: boolean) => {
+		setIsOpen(open)
+		onOpenChangeMock(open)
+	}
+
+	return (
+		<>
+			<Pressable
+				testID='external-trigger'
+				onPress={() => handleOpenChange(true)}
+			>
+				<Text>External Open</Text>
+			</Pressable>
+
+			<Pressable
+				testID='external-close'
+				onPress={() => handleOpenChange(false)}
+			>
+				<Text>External Close</Text>
+			</Pressable>
+
+			<Modal.Root open={isOpen} onOpenChange={handleOpenChange}>
+				<Modal.Trigger testID='modal-trigger'>
+					<Text>Open Modal</Text>
+				</Modal.Trigger>
+
+				<Modal.Portal>
+					<Modal.Overlay testID='modal-overlay'>
+						<Modal.Content testID='modal-content'>
+							<Modal.Title testID='modal-title'>Controlled Modal</Modal.Title>
+							<Modal.Description testID='modal-description'>
+								This modal is in controlled mode
+							</Modal.Description>
+							<Modal.Close testID='modal-close'>
+								<Text>Close Modal</Text>
+							</Modal.Close>
+						</Modal.Content>
+					</Modal.Overlay>
+				</Modal.Portal>
+			</Modal.Root>
+		</>
+	)
+}
+
+describe('Controlled Modal', () => {
+	beforeEach(() => {
+		jest.clearAllMocks()
+	})
+
+	it('should respect initial open prop', () => {
+		render(<ControlledModalWrapper initialOpen={true} />)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+	})
+
+	it('should call onOpenChange when opened via Modal.Trigger', () => {
+		const onOpenChangeMock = jest.fn()
+		render(<ControlledModalWrapper onOpenChangeMock={onOpenChangeMock} />)
+
+		expect(screen.queryByTestId('modal-content')).toBeNull()
+
+		const trigger = screen.getByTestId('modal-trigger')
+		fireEvent.press(trigger)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+		expect(onOpenChangeMock).toHaveBeenCalledWith(true)
+	})
+
+	it('should call onOpenChange when closed via Modal.Close', () => {
+		const onOpenChangeMock = jest.fn()
+		render(
+			<ControlledModalWrapper
+				initialOpen={true}
+				onOpenChangeMock={onOpenChangeMock}
+			/>,
+		)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+
+		const closeButton = screen.getByTestId('modal-close')
+		fireEvent(closeButton, 'onTouchEnd', { stopPropagation: jest.fn() })
+
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false)
+	})
+
+	it('should allow opening the modal from external controls', () => {
+		const onOpenChangeMock = jest.fn()
+		render(<ControlledModalWrapper onOpenChangeMock={onOpenChangeMock} />)
+
+		expect(screen.queryByTestId('modal-content')).toBeNull()
+
+		const externalTrigger = screen.getByTestId('external-trigger')
+		fireEvent.press(externalTrigger)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+		expect(onOpenChangeMock).toHaveBeenCalledWith(true)
+	})
+
+	it('should allow closing the modal from external controls', () => {
+		const onOpenChangeMock = jest.fn()
+		render(
+			<ControlledModalWrapper
+				initialOpen={true}
+				onOpenChangeMock={onOpenChangeMock}
+			/>,
+		)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+
+		const externalClose = screen.getByTestId('external-close')
+		fireEvent.press(externalClose)
+
+		expect(screen.queryByTestId('modal-content')).toBeNull()
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false)
+	})
+
+	it('should close when clicking on the overlay', () => {
+		const onOpenChangeMock = jest.fn()
+		render(
+			<ControlledModalWrapper
+				initialOpen={true}
+				onOpenChangeMock={onOpenChangeMock}
+			/>,
+		)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+
+		const overlay = screen.getByTestId('modal-overlay')
+		fireEvent.press(overlay)
+
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false)
+	})
+
+	it('should handle the back button press correctly', () => {
+		const onOpenChangeMock = jest.fn()
+		render(
+			<ControlledModalWrapper
+				initialOpen={true}
+				onOpenChangeMock={onOpenChangeMock}
+			/>,
+		)
+
+		expect(screen.getByTestId('modal-content')).toBeTruthy()
+
+		const modal = screen.getByTestId('modal-overlay').parent
+		fireEvent(modal, 'onRequestClose')
+
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false)
 	})
 })

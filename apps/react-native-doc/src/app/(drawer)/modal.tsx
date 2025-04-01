@@ -119,7 +119,10 @@ export default function Modal() {
 					<Button.Text>Open Controlled Modal</Button.Text>
 				</Button.Root>
 
-				<DesignSystemModal.Root initialState={isControlledModalOpen}>
+				<DesignSystemModal.Root
+					open={isControlledModalOpen}
+					onOpenChange={setIsControlledModalOpen}
+				>
 					<DesignSystemModal.Portal>
 						<DesignSystemModal.Overlay />
 						<DesignSystemModal.Content>
