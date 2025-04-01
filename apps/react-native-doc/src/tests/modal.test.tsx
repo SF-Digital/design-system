@@ -145,7 +145,7 @@ describe('Modal Component', () => {
 
 			expect(overlay.props.style).toContainEqual(
 				expect.objectContaining({
-					position: 'absolute',
+					flex: 1,
 					backgroundColor: 'rgba(0, 0, 0, 0.5)',
 				}),
 			)

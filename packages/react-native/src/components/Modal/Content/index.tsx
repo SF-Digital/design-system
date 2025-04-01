@@ -15,25 +15,18 @@ export interface ModalContentProps extends ViewProps {
 
 export const Content = ({ children, style, ...props }: ModalContentProps) => {
 	return (
-		<View style={styles.centeredView}>
-			<View style={[styles.content, style]} {...props}>
-				{children}
-			</View>
+		<View style={[styles.content, style]} {...props}>
+			{children}
 		</View>
 	)
 }
 
 const styles = StyleSheet.create({
-	centeredView: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 16,
-	},
 	content: {
 		backgroundColor: 'white',
 		borderRadius: 8,
 		padding: 20,
+		gap: 4,
 		...Platform.select({
 			ios: {
 				shadowColor: '#000',
