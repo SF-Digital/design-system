@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.2.6
+
+### Patch Changes
+
+- revert modal usage
+
 ## 2.2.5
 
 ### Patch Changes
