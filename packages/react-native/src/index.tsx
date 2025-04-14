@@ -16,6 +16,15 @@ export {
 } from './components/DropdownMenu'
 export { Heading, HeadingProps } from './components/Heading'
 export {
+	Modal,
+	ModalBodyProps,
+	ModalDescriptionProps,
+	ModalFooterProps,
+	ModalHeaderProps,
+	ModalRootProps,
+	ModalTitleProps,
+} from './components/Modal'
+export {
 	PinInput,
 	PinInputDividerProps,
 	PinInputFieldProps,
