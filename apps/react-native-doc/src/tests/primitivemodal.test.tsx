@@ -1,4 +1,4 @@
-import { Modal } from '@sf-digital-ui/react-native'
+import { PrimitiveModal } from '@sf-digital-ui/react-native'
 import { fireEvent, render, screen } from '@testing-library/react-native'
 import { useState } from 'react'
 import { Pressable, Text } from 'react-native'
@@ -11,29 +11,31 @@ const ModalWrapper = ({
 	children?: React.ReactNode
 }) => {
 	return (
-		<Modal.Root>
-			<Modal.Trigger testID='modal-trigger'>
+		<PrimitiveModal.Root>
+			<PrimitiveModal.Trigger testID='modal-trigger'>
 				<Text>Open Modal</Text>
-			</Modal.Trigger>
-			<Modal.Portal>
-				<Modal.Overlay testID='modal-overlay'>
-					<Modal.Content testID='modal-content'>
-						<Modal.Title testID='modal-title'>Modal Title</Modal.Title>
-						<Modal.Description testID='modal-description'>
+			</PrimitiveModal.Trigger>
+			<PrimitiveModal.Portal>
+				<PrimitiveModal.Overlay testID='modal-overlay'>
+					<PrimitiveModal.Content testID='modal-content'>
+						<PrimitiveModal.Title testID='modal-title'>
+							Modal Title
+						</PrimitiveModal.Title>
+						<PrimitiveModal.Description testID='modal-description'>
 							Modal Description
-						</Modal.Description>
+						</PrimitiveModal.Description>
 						{children}
-						<Modal.Close testID='modal-close'>
+						<PrimitiveModal.Close testID='modal-close'>
 							<Text>Close Modal</Text>
-						</Modal.Close>
-					</Modal.Content>
-				</Modal.Overlay>
-			</Modal.Portal>
-		</Modal.Root>
+						</PrimitiveModal.Close>
+					</PrimitiveModal.Content>
+				</PrimitiveModal.Overlay>
+			</PrimitiveModal.Portal>
+		</PrimitiveModal.Root>
 	)
 }
 
-describe('Modal Component', () => {
+describe('PrimitiveModal Component', () => {
 	beforeEach(() => {
 		jest.clearAllMocks()
 	})
@@ -72,11 +74,13 @@ describe('Modal Component', () => {
 		it('throws error when components are used outside provider', () => {
 			expect(() => {
 				render(
-					<Modal.Trigger>
+					<PrimitiveModal.Trigger>
 						<Text>Test</Text>
-					</Modal.Trigger>,
+					</PrimitiveModal.Trigger>,
 				)
-			}).toThrow('Modal components must be used within a Modal.Root')
+			}).toThrow(
+				'PrimitiveModal components must be used within a PrimitiveModal.Root',
+			)
 		})
 
 		it('does not throw when components are used within provider', () => {
@@ -282,30 +286,32 @@ const ControlledModalWrapper = ({
 				<Text>External Close</Text>
 			</Pressable>
 
-			<Modal.Root open={isOpen} onOpenChange={handleOpenChange}>
-				<Modal.Trigger testID='modal-trigger'>
+			<PrimitiveModal.Root open={isOpen} onOpenChange={handleOpenChange}>
+				<PrimitiveModal.Trigger testID='modal-trigger'>
 					<Text>Open Modal</Text>
-				</Modal.Trigger>
+				</PrimitiveModal.Trigger>
 
-				<Modal.Portal>
-					<Modal.Overlay testID='modal-overlay'>
-						<Modal.Content testID='modal-content'>
-							<Modal.Title testID='modal-title'>Controlled Modal</Modal.Title>
-							<Modal.Description testID='modal-description'>
+				<PrimitiveModal.Portal>
+					<PrimitiveModal.Overlay testID='modal-overlay'>
+						<PrimitiveModal.Content testID='modal-content'>
+							<PrimitiveModal.Title testID='modal-title'>
+								Controlled Modal
+							</PrimitiveModal.Title>
+							<PrimitiveModal.Description testID='modal-description'>
 								This modal is in controlled mode
-							</Modal.Description>
-							<Modal.Close testID='modal-close'>
+							</PrimitiveModal.Description>
+							<PrimitiveModal.Close testID='modal-close'>
 								<Text>Close Modal</Text>
-							</Modal.Close>
-						</Modal.Content>
-					</Modal.Overlay>
-				</Modal.Portal>
-			</Modal.Root>
+							</PrimitiveModal.Close>
+						</PrimitiveModal.Content>
+					</PrimitiveModal.Overlay>
+				</PrimitiveModal.Portal>
+			</PrimitiveModal.Root>
 		</>
 	)
 }
 
-describe('Controlled Modal', () => {
+describe('Controlled PrimitiveModal', () => {
 	beforeEach(() => {
 		jest.clearAllMocks()
 	})

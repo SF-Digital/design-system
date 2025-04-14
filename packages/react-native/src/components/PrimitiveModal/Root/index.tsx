@@ -1,29 +1,35 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react'
 
-export interface ModalRootProps {
+export interface PrimitiveModalRootProps {
 	children?: ReactNode
 	open?: boolean
 	onOpenChange?: (open: boolean) => void
 }
 
-export interface ModalContextType {
+export interface PrimitiveModalContextType {
 	isVisible: boolean
 	setIsVisible: (value: boolean) => void
 }
 
-export const ModalContext = createContext<ModalContextType | undefined>(
-	undefined,
-)
+export const PrimitiveModalContext = createContext<
+	PrimitiveModalContextType | undefined
+>(undefined)
 
-export const useModalContext = () => {
-	const context = useContext(ModalContext)
+export const usePrimitiveModalContext = () => {
+	const context = useContext(PrimitiveModalContext)
 	if (!context) {
-		throw new Error('Modal components must be used within a Modal.Root')
+		throw new Error(
+			'PrimitiveModal components must be used within a PrimitiveModal.Root',
+		)
 	}
 	return context
 }
 
-export const Root = ({ children, open, onOpenChange }: ModalRootProps) => {
+export const Root = ({
+	children,
+	open,
+	onOpenChange,
+}: PrimitiveModalRootProps) => {
 	const [internalIsVisible, setInternalIsVisible] = useState(false)
 
 	const isControlled = open !== undefined
@@ -40,8 +46,8 @@ export const Root = ({ children, open, onOpenChange }: ModalRootProps) => {
 	}
 
 	return (
-		<ModalContext.Provider value={{ isVisible, setIsVisible }}>
+		<PrimitiveModalContext.Provider value={{ isVisible, setIsVisible }}>
 			{children}
-		</ModalContext.Provider>
+		</PrimitiveModalContext.Provider>
 	)
 }

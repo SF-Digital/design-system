@@ -1,6 +1,6 @@
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 import Markdown from '@ronradtke/react-native-markdown-display'
-import { Button, Modal as DesignSystemModal } from '@sf-digital-ui/react-native'
+import { Button, PrimitiveModal } from '@sf-digital-ui/react-native'
 import React, { useState } from 'react'
 import { Alert, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -52,17 +52,17 @@ export default function Modal() {
 
 			<View style={styles.componentExampleContainer}>
 				<Markdown>### Uncontrolled Modal (Internal State)</Markdown>
-				<DesignSystemModal.Root>
-					<DesignSystemModal.Trigger>
+				<PrimitiveModal.Root>
+					<PrimitiveModal.Trigger>
 						<Button.Root color='sf-green' variant='primary'>
 							<Button.Text>Open Uncontrolled Modal</Button.Text>
 						</Button.Root>
-					</DesignSystemModal.Trigger>
+					</PrimitiveModal.Trigger>
 
-					<DesignSystemModal.Portal>
-						<DesignSystemModal.Overlay>
-							<DesignSystemModal.Content style={{ gap: 18 }}>
-								<DesignSystemModal.Close>
+					<PrimitiveModal.Portal>
+						<PrimitiveModal.Overlay>
+							<PrimitiveModal.Content style={{ gap: 18 }}>
+								<PrimitiveModal.Close>
 									<MaterialCommunityIcons
 										name='close'
 										size={18}
@@ -71,16 +71,14 @@ export default function Modal() {
 											alignSelf: 'flex-end',
 										}}
 									/>
-								</DesignSystemModal.Close>
-								<DesignSystemModal.Title>
-									Uncontrolled Modal
-								</DesignSystemModal.Title>
-								<DesignSystemModal.Description>
+								</PrimitiveModal.Close>
+								<PrimitiveModal.Title>Uncontrolled Modal</PrimitiveModal.Title>
+								<PrimitiveModal.Description>
 									This modal manages its own state internally. The Modal.
 									Trigger and Modal. Close components will automatically handle
 									opening and closing.
-								</DesignSystemModal.Description>
-								<DesignSystemModal.Close style={{ gap: 14 }}>
+								</PrimitiveModal.Description>
+								<PrimitiveModal.Close style={{ gap: 14 }}>
 									<Button.Root
 										onPress={() =>
 											Alert.alert('You have continued to some flow....')
@@ -91,11 +89,11 @@ export default function Modal() {
 									<Button.Root color='succession-blue' variant='secondary'>
 										<Button.Text>Cancel</Button.Text>
 									</Button.Root>
-								</DesignSystemModal.Close>
-							</DesignSystemModal.Content>
-						</DesignSystemModal.Overlay>
-					</DesignSystemModal.Portal>
-				</DesignSystemModal.Root>
+								</PrimitiveModal.Close>
+							</PrimitiveModal.Content>
+						</PrimitiveModal.Overlay>
+					</PrimitiveModal.Portal>
+				</PrimitiveModal.Root>
 			</View>
 
 			<View style={styles.componentExampleContainer}>
@@ -109,14 +107,14 @@ export default function Modal() {
 					<Button.Text>Open Controlled Modal</Button.Text>
 				</Button.Root>
 
-				<DesignSystemModal.Root
+				<PrimitiveModal.Root
 					open={isControlledModalOpen}
 					onOpenChange={setIsControlledModalOpen}
 				>
-					<DesignSystemModal.Portal>
-						<DesignSystemModal.Overlay>
-							<DesignSystemModal.Content style={{ gap: 18 }}>
-								<DesignSystemModal.Close>
+					<PrimitiveModal.Portal>
+						<PrimitiveModal.Overlay>
+							<PrimitiveModal.Content style={{ gap: 18 }}>
+								<PrimitiveModal.Close>
 									<MaterialCommunityIcons
 										name='close'
 										size={18}
@@ -125,16 +123,14 @@ export default function Modal() {
 											alignSelf: 'flex-end',
 										}}
 									/>
-								</DesignSystemModal.Close>
+								</PrimitiveModal.Close>
 
-								<DesignSystemModal.Title>
-									Controlled Modal
-								</DesignSystemModal.Title>
-								<DesignSystemModal.Description>
+								<PrimitiveModal.Title>Controlled Modal</PrimitiveModal.Title>
+								<PrimitiveModal.Description>
 									This modal's state is controlled externally using the 'open'
 									and 'onOpenChange' props. You can programmatically open and
 									close this modal.
-								</DesignSystemModal.Description>
+								</PrimitiveModal.Description>
 
 								<Button.Root
 									onPress={() => {
@@ -152,10 +148,10 @@ export default function Modal() {
 								>
 									<Button.Text>Cancel</Button.Text>
 								</Button.Root>
-							</DesignSystemModal.Content>
-						</DesignSystemModal.Overlay>
-					</DesignSystemModal.Portal>
-				</DesignSystemModal.Root>
+							</PrimitiveModal.Content>
+						</PrimitiveModal.Overlay>
+					</PrimitiveModal.Portal>
+				</PrimitiveModal.Root>
 			</View>
 		</ScrollView>
 	)

@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
 import { Pressable, PressableProps } from 'react-native'
-import { useModalContext } from '../Root'
+import { usePrimitiveModalContext } from '../Root'
 
-export interface ModalTriggerProps extends PressableProps {
+export interface PrimitiveModalTriggerProps extends PressableProps {
 	children?: ReactNode
 }
 
-export const Trigger = ({ children, ...props }: ModalTriggerProps) => {
-	const { setIsVisible } = useModalContext()
+export const Trigger = ({ children, ...props }: PrimitiveModalTriggerProps) => {
+	const { setIsVisible } = usePrimitiveModalContext()
 
 	return (
 		<Pressable

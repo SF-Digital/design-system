@@ -41,9 +41,9 @@ export const routes = [
 		title: 'Switch',
 	},
 	{
-		name: 'modal',
-		label: 'Modal',
-		title: 'Modal',
+		name: 'primitivemodal',
+		label: 'PrimitiveModal',
+		title: 'PrimitiveModal',
 	},
 	{
 		name: 'dropdownmenu',

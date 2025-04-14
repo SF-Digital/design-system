@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
-import { Text, StyleSheet, TextProps } from 'react-native'
+import { StyleSheet, Text, TextProps } from 'react-native'
 
-export interface ModalDescriptionProps extends TextProps {
+export interface PrimitiveModalDescriptionProps extends TextProps {
 	children?: ReactNode
 }
 
@@ -9,7 +9,7 @@ export const Description = ({
 	children,
 	style,
 	...props
-}: ModalDescriptionProps) => {
+}: PrimitiveModalDescriptionProps) => {
 	return (
 		<Text style={[styles.description, style]} {...props}>
 			{children}

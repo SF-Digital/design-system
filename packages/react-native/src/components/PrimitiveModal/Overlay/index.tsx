@@ -6,15 +6,15 @@ import {
 	StyleSheet,
 	ViewStyle,
 } from 'react-native'
-import { useModalContext } from '../Root'
+import { usePrimitiveModalContext } from '../Root'
 
-export interface ModalOverlayProps extends PressableProps {
+export interface PrimitiveModalOverlayProps extends PressableProps {
 	children?: ReactNode
 	style?: StyleProp<ViewStyle>
 }
 
-export const Overlay = ({ style, ...props }: ModalOverlayProps) => {
-	const { isVisible, setIsVisible } = useModalContext()
+export const Overlay = ({ style, ...props }: PrimitiveModalOverlayProps) => {
+	const { isVisible, setIsVisible } = usePrimitiveModalContext()
 
 	return (
 		<Pressable

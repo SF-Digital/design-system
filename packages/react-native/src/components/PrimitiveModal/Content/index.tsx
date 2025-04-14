@@ -8,12 +8,16 @@ import {
 	ViewStyle,
 } from 'react-native'
 
-export interface ModalContentProps extends ViewProps {
+export interface PrimitiveModalContentProps extends ViewProps {
 	children?: ReactNode
 	style?: StyleProp<ViewStyle>
 }
 
-export const Content = ({ children, style, ...props }: ModalContentProps) => {
+export const Content = ({
+	children,
+	style,
+	...props
+}: PrimitiveModalContentProps) => {
 	return (
 		<View style={[styles.content, style]} {...props}>
 			{children}

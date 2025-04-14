@@ -16,23 +16,23 @@ export {
 } from './components/DropdownMenu'
 export { Heading, HeadingProps } from './components/Heading'
 export {
-	Modal,
-	ModalCloseProps,
-	ModalContentProps,
-	ModalDescriptionProps,
-	ModalOverlayProps,
-	ModalPortalProps,
-	ModalRootProps,
-	ModalTitleProps,
-	ModalTriggerProps,
-} from './components/Modal'
-export {
 	PinInput,
 	PinInputDividerProps,
 	PinInputFieldProps,
 	PinInputFieldsProps,
 	PinInputRootProps,
 } from './components/PinInput'
+export {
+	PrimitiveModal,
+	PrimitiveModalCloseProps,
+	PrimitiveModalContentProps,
+	PrimitiveModalDescriptionProps,
+	PrimitiveModalOverlayProps,
+	PrimitiveModalPortalProps,
+	PrimitiveModalRootProps,
+	PrimitiveModalTitleProps,
+	PrimitiveModalTriggerProps,
+} from './components/PrimitiveModal'
 export { ProgressBar, ProgressBarProps } from './components/ProgressBar'
 export {
 	RadioGroup,
