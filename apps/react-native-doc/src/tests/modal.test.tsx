@@ -1,7 +1,3 @@
-// Add React global to fix "React is not defined" error in library code
-import * as React from 'react'
-global.React = React
-
 import { Modal } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
 import { fireEvent, render, screen } from '@testing-library/react-native'

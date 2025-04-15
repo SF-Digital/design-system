@@ -1,6 +1,7 @@
 import { colors } from '@sf-digital-ui/tokens'
 import { useRouter, type Route } from 'expo-router'
 import { Drawer } from 'expo-router/drawer'
+import React from 'react'
 import { StyleSheet, Text } from 'react-native'
 import {
 	GestureHandlerRootView,

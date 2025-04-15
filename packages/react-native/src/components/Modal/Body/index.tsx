@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyleSheet, View, type ViewProps } from 'react-native'
 
 export interface ModalBodyProps extends ViewProps {}

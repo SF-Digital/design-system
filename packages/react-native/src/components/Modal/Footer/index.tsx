@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyleSheet, type ViewProps } from 'react-native'
 import { PrimitiveModal } from '../../PrimitiveModal'
 

@@ -1,4 +1,5 @@
 import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
 import type { TextProps } from 'react-native'
 import { PrimitiveModal } from '../../PrimitiveModal'
 

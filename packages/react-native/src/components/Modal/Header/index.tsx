@@ -1,6 +1,7 @@
 import { colors } from '@sf-digital-ui/tokens'
 import { X } from 'lucide-react-native'
 import type { ReactNode } from 'react'
+import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import type { ViewProps } from 'react-native-svg/lib/typescript/fabric/utils'
 import { CircleBackground } from '../../CircleBackground'
