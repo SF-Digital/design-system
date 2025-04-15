@@ -114,7 +114,9 @@ const ControlledModalWrapper = ({
 }) => {
 	const [isOpen, setIsOpen] = useState(initialOpen)
 
-	const handleOpenChange = (open) => {
+	const handleOpenChange = (
+		open: boolean | ((prevState: boolean) => boolean),
+	) => {
 		setIsOpen(open)
 		onOpenChangeMock(open)
 	}
