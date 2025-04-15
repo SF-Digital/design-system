@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.3.0
+
+### Minor Changes
+
+- primitive modal and new modal
+
 ## 2.2.7
 
 ### Patch Changes
