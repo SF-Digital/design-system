@@ -12,7 +12,7 @@ export const Root = ({ open, onOpenChange, children }: ModalRootProps) => {
 	return (
 		<PrimitiveModal.Root open={open} onOpenChange={onOpenChange}>
 			<PrimitiveModal.Portal>
-				<PrimitiveModal.Overlay>
+				<PrimitiveModal.Overlay style={styles.overlay}>
 					<PrimitiveModal.Content style={styles.content}>
 						{children}
 					</PrimitiveModal.Content>
@@ -24,4 +24,11 @@ export const Root = ({ open, onOpenChange, children }: ModalRootProps) => {
 
 const styles = StyleSheet.create({
 	content: { overflow: 'hidden', padding: 12 },
+	overlay: {
+		flex: 1,
+		backgroundColor: 'rgba(0, 0, 0, 0.5)',
+		paddingHorizontal: 16,
+		paddingBottom: 64,
+		justifyContent: 'flex-end',
+	},
 })

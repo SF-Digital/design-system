@@ -1,14 +1,13 @@
 import Markdown from '@ronradtke/react-native-markdown-display'
 import { Button, Modal as DesignSystemModal } from '@sf-digital-ui/react-native'
 import { colors } from '@sf-digital-ui/tokens'
-import { AlertCircle, Info } from 'lucide-react-native'
+import { AlertCircle } from 'lucide-react-native'
 import React, { useState } from 'react'
-import { Alert, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { styles } from '../../../styles'
 
 export default function Modal() {
-	const [modalVisible, setModalVisible] = useState(false)
 	const [modalWithIconVisible, setModalWithIconVisible] = useState(false)
 
 	const docs = `# Modal Component
@@ -42,58 +41,6 @@ The \`Modal.Header\` component requires both \`icon\` and \`circularBackgroundCo
 	return (
 		<ScrollView style={styles.pageContainer}>
 			<Markdown>{docs}</Markdown>
-
-			<View style={styles.componentExampleContainer}>
-				<Markdown>### Basic Modal Example</Markdown>
-
-				<Button.Root
-					color='sf-green'
-					variant='primary'
-					onPress={() => setModalVisible(true)}
-				>
-					<Button.Text>Open Modal</Button.Text>
-				</Button.Root>
-
-				<DesignSystemModal.Root
-					open={modalVisible}
-					onOpenChange={setModalVisible}
-				>
-					<DesignSystemModal.Header
-						icon={<Info size={24} color='white' />}
-						circularBackgroundColor={colors['primary-green'][500]}
-					>
-						<DesignSystemModal.Title>Basic Modal</DesignSystemModal.Title>
-					</DesignSystemModal.Header>
-
-					<DesignSystemModal.Body>
-						<DesignSystemModal.Description>
-							This is a basic modal that demonstrates the Modal component from
-							the design system. It uses the controlled mode with open and
-							onOpenChange props.
-						</DesignSystemModal.Description>
-					</DesignSystemModal.Body>
-
-					<DesignSystemModal.Footer>
-						<View style={exampleStyles.buttonContainer}>
-							<Button.Root
-								onPress={() => {
-									Alert.alert('Action performed!')
-									setModalVisible(false)
-								}}
-							>
-								<Button.Text>Confirm</Button.Text>
-							</Button.Root>
-							<Button.Root
-								color='succession-blue'
-								variant='secondary'
-								onPress={() => setModalVisible(false)}
-							>
-								<Button.Text>Cancel</Button.Text>
-							</Button.Root>
-						</View>
-					</DesignSystemModal.Footer>
-				</DesignSystemModal.Root>
-			</View>
 
 			<View style={styles.componentExampleContainer}>
 				<Markdown>### Modal with Alert Icon</Markdown>
@@ -139,8 +86,8 @@ The \`Modal.Header\` component requires both \`icon\` and \`circularBackgroundCo
 					<Text style={exampleStyles.codeText}>
 						{`import { Modal, Button } from '@sf-digital-ui/react-native';
 import { useState } from 'react';
-import { Alert, View } from 'react-native';
-import { Info } from 'lucide-react-native';
+import { View } from 'react-native';
+import { AlertCircle } from 'lucide-react-native';
 import { colors } from '@sf-digital-ui/tokens';
 
 const MyComponent = () => {
@@ -154,8 +101,8 @@ const MyComponent = () => {
 
       <Modal.Root open={isOpen} onOpenChange={setIsOpen}>
         <Modal.Header 
-          icon={<Info size={24} color="white" />}
-          circularBackgroundColor={colors.sfGreen[500]}
+          icon={<AlertCircle size={24} color="white" />}
+          circularBackgroundColor={colors.error[500]}
         >
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
@@ -169,18 +116,8 @@ const MyComponent = () => {
         </Modal.Body>
         
         <Modal.Footer>
-          <Button.Root onPress={() => {
-            Alert.alert('Action performed!');
-            setIsOpen(false);
-          }}>
-            <Button.Text>Confirm</Button.Text>
-          </Button.Root>
-          
-          <Button.Root 
-            variant="secondary"
-            onPress={() => setIsOpen(false)}
-          >
-            <Button.Text>Cancel</Button.Text>
+          <Button.Root onPress={() => setIsOpen(false)}>
+            <Button.Text>Close</Button.Text>
           </Button.Root>
         </Modal.Footer>
       </Modal.Root>
