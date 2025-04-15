@@ -46,6 +46,11 @@ export const routes = [
 		title: 'PrimitiveModal',
 	},
 	{
+		name: 'modal',
+		label: 'Modal',
+		title: 'Modal',
+	},
+	{
 		name: 'dropdownmenu',
 		label: 'DropdownMenu',
 		title: 'DropdownMenu',
