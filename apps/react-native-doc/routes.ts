@@ -41,6 +41,11 @@ export const routes = [
 		title: 'Switch',
 	},
 	{
+		name: 'primitivemodal',
+		label: 'PrimitiveModal',
+		title: 'PrimitiveModal',
+	},
+	{
 		name: 'modal',
 		label: 'Modal',
 		title: 'Modal',

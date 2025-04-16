@@ -1,21 +1,19 @@
-import React, { ReactNode } from 'react'
-import { Text, TextProps, StyleSheet } from 'react-native'
+import { colors } from '@sf-digital-ui/tokens'
+import React from 'react'
+import type { TextProps } from 'react-native'
+import { PrimitiveModal } from '../../PrimitiveModal'
 
-export interface ModalTitleProps extends TextProps {
-	children?: ReactNode
-}
+export interface ModalTitleProps extends TextProps {}
 
-export const Title = ({ children, style, ...props }: ModalTitleProps) => {
+export const Title = ({
+	children,
+	style = {
+		color: colors.neutral['700'],
+	},
+}: ModalTitleProps) => {
 	return (
-		<Text style={[styles.title, style]} {...props}>
+		<PrimitiveModal.Title testID='modal-title' style={style}>
 			{children}
-		</Text>
+		</PrimitiveModal.Title>
 	)
 }
-
-const styles = StyleSheet.create({
-	title: {
-		fontSize: 20,
-		fontWeight: 'bold',
-	},
-})

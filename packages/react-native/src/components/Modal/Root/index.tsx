@@ -1,47 +1,34 @@
-import React, { createContext, ReactNode, useContext, useState } from 'react'
+import type { PropsWithChildren } from 'react'
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { PrimitiveModal } from '../../PrimitiveModal'
 
-export interface ModalRootProps {
-	children?: ReactNode
+export interface ModalRootProps extends PropsWithChildren {
 	open?: boolean
-	onOpenChange?: (open: boolean) => void
+	onOpenChange?: (state: boolean) => void
 }
 
-export interface ModalContextType {
-	isVisible: boolean
-	setIsVisible: (value: boolean) => void
-}
-
-export const ModalContext = createContext<ModalContextType | undefined>(
-	undefined,
-)
-
-export const useModalContext = () => {
-	const context = useContext(ModalContext)
-	if (!context) {
-		throw new Error('Modal components must be used within a Modal.Root')
-	}
-	return context
-}
-
-export const Root = ({ children, open, onOpenChange }: ModalRootProps) => {
-	const [internalIsVisible, setInternalIsVisible] = useState(false)
-
-	const isControlled = open !== undefined
-	const isVisible = isControlled ? open : internalIsVisible
-
-	const setIsVisible = (value: boolean) => {
-		if (onOpenChange) {
-			onOpenChange(value)
-		}
-
-		if (!isControlled) {
-			setInternalIsVisible(value)
-		}
-	}
-
+export const Root = ({ open, onOpenChange, children }: ModalRootProps) => {
 	return (
-		<ModalContext.Provider value={{ isVisible, setIsVisible }}>
-			{children}
-		</ModalContext.Provider>
+		<PrimitiveModal.Root open={open} onOpenChange={onOpenChange}>
+			<PrimitiveModal.Portal>
+				<PrimitiveModal.Overlay style={styles.overlay}>
+					<PrimitiveModal.Content style={styles.content}>
+						{children}
+					</PrimitiveModal.Content>
+				</PrimitiveModal.Overlay>
+			</PrimitiveModal.Portal>
+		</PrimitiveModal.Root>
 	)
 }
+
+const styles = StyleSheet.create({
+	content: { overflow: 'hidden', padding: 12 },
+	overlay: {
+		flex: 1,
+		backgroundColor: 'rgba(0, 0, 0, 0.5)',
+		paddingHorizontal: 16,
+		paddingBottom: 64,
+		justifyContent: 'flex-end',
+	},
+})

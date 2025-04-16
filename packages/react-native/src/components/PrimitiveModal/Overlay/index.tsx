@@ -6,15 +6,15 @@ import {
 	StyleSheet,
 	ViewStyle,
 } from 'react-native'
-import { useModalContext } from '../Root'
+import { usePrimitiveModalContext } from '../Root'
 
-export interface ModalOverlayProps extends PressableProps {
+export interface PrimitiveModalOverlayProps extends PressableProps {
 	children?: ReactNode
 	style?: StyleProp<ViewStyle>
 }
 
-export const Overlay = ({ style, ...props }: ModalOverlayProps) => {
-	const { isVisible, setIsVisible } = useModalContext()
+export const Overlay = ({ style, ...props }: PrimitiveModalOverlayProps) => {
+	const { isVisible, setIsVisible } = usePrimitiveModalContext()
 
 	return (
 		<Pressable
@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
 	overlay: {
 		flex: 1,
 		backgroundColor: 'rgba(0, 0, 0, 0.5)',
-		paddingHorizontal: 16,
-		paddingBottom: 64,
-		justifyContent: 'flex-end',
+		padding: 16,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 })

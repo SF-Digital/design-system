@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
 import { ModalProps, Modal as RNModal } from 'react-native'
-import { useModalContext } from '../Root'
+import { usePrimitiveModalContext } from '../Root'
 
-export interface ModalPortalProps extends ModalProps {
+export interface PrimitiveModalPortalProps extends ModalProps {
 	children?: ReactNode
 }
 
-export const Portal = ({ children, ...props }: ModalPortalProps) => {
-	const { isVisible, setIsVisible } = useModalContext()
+export const Portal = ({ children, ...props }: PrimitiveModalPortalProps) => {
+	const { isVisible, setIsVisible } = usePrimitiveModalContext()
 
 	return (
 		<RNModal
