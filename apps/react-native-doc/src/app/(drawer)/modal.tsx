@@ -183,13 +183,13 @@ const exampleStyles = StyleSheet.create({
 		textAlign: 'center',
 	},
 	codeBlock: {
-		backgroundColor: '#1e1e1e',
+		backgroundColor: colors['primary-grey'][500],
 		padding: 16,
 		borderRadius: 8,
 		marginVertical: 12,
 	},
 	codeText: {
-		color: '#e6e6e6',
+		color: colors['primary-black'][50],
 		fontFamily: 'monospace',
 		fontSize: 12,
 	},
