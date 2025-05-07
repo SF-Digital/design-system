@@ -99,6 +99,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'sm',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 8,
+			},
+		},
+		{
+			variants: {
+				size: 'sm',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 8,
+			},
+		},
+		{
+			variants: {
+				size: 'sm',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 24,
@@ -109,6 +132,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'md',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'md',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'md',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 24,
@@ -119,6 +165,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'lg',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 32,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'lg',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 32,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'lg',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 32,
@@ -150,6 +219,15 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			},
 			style: {
 				padding: 12,
+			},
+		},
+		{
+			variants: {
+				variant: 'link',
+			},
+			style: {
+				padding: 0,
+				backgroundColor: 'transparent',
 			},
 		},
 		{
