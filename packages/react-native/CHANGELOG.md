@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.3.2
+
+### Patch Changes
+
+- fix the link variant width issue
+
 ## 2.3.1
 
 ### Patch Changes
