@@ -54,7 +54,7 @@ export const useButtonContext = () => {
 const buttonStyles = createStylesheet<ButtonVariants>({
 	base: {
 		alignItems: 'center',
-		flexDirection: 'row',
+
 		gap: 4,
 		borderRadius: 6,
 	},
@@ -65,12 +65,17 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			lg: {},
 		},
 		variant: {
-			primary: {},
+			primary: {
+				flexDirection: 'row',
+			},
 			secondary: {
+				flexDirection: 'row',
 				backgroundColor: 'white',
 				borderWidth: 1,
 			},
-			tertiary: {},
+			tertiary: {
+				flexDirection: 'row',
+			},
 			link: {},
 		},
 		color: {
@@ -219,15 +224,6 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			},
 			style: {
 				padding: 12,
-			},
-		},
-		{
-			variants: {
-				variant: 'link',
-			},
-			style: {
-				padding: 0,
-				backgroundColor: 'transparent',
 			},
 		},
 		{
