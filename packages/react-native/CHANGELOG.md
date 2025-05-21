@@ -1,5 +1,17 @@
 # @sf-digital-ui/react-native
 
+## 2.3.2
+
+### Patch Changes
+
+- fix the link variant width issue
+
+## 2.3.1
+
+### Patch Changes
+
+- Design System Button Link variant has its own styling now, removing padding as per the fireball reported
+
 ## 2.3.0
 
 ### Minor Changes

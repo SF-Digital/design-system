@@ -54,7 +54,7 @@ export const useButtonContext = () => {
 const buttonStyles = createStylesheet<ButtonVariants>({
 	base: {
 		alignItems: 'center',
-		flexDirection: 'row',
+
 		gap: 4,
 		borderRadius: 6,
 	},
@@ -65,12 +65,17 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			lg: {},
 		},
 		variant: {
-			primary: {},
+			primary: {
+				flexDirection: 'row',
+			},
 			secondary: {
+				flexDirection: 'row',
 				backgroundColor: 'white',
 				borderWidth: 1,
 			},
-			tertiary: {},
+			tertiary: {
+				flexDirection: 'row',
+			},
 			link: {},
 		},
 		color: {
@@ -99,6 +104,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'sm',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 8,
+			},
+		},
+		{
+			variants: {
+				size: 'sm',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 8,
+			},
+		},
+		{
+			variants: {
+				size: 'sm',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 24,
@@ -109,6 +137,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'md',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'md',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 24,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'md',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 24,
@@ -119,6 +170,29 @@ const buttonStyles = createStylesheet<ButtonVariants>({
 			variants: {
 				size: 'lg',
 				iconButton: false,
+				variant: 'primary',
+			},
+			style: {
+				paddingHorizontal: 32,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'lg',
+				iconButton: false,
+				variant: 'secondary',
+			},
+			style: {
+				paddingHorizontal: 32,
+				paddingVertical: 10,
+			},
+		},
+		{
+			variants: {
+				size: 'lg',
+				iconButton: false,
+				variant: 'tertiary',
 			},
 			style: {
 				paddingHorizontal: 32,
