@@ -123,10 +123,7 @@ const ProgressSegment = ({
 	)
 }
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({
-	stages,
-	currentStage,
-}) => {
+export const ProgressBar = ({ stages, currentStage }: ProgressBarProps) => {
 	const progressAnim = useRef(new Animated.Value(0)).current
 	const [isReadyToAnimate, setIsReadyToAnimate] = useState(false)
 	const [activeSegmentComplete, setActiveSegmentComplete] = useState(false)
