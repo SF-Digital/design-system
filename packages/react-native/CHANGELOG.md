@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.4.0
+
+### Minor Changes
+
+- update documents and package to react 19
+
 ## 2.3.2
 
 ### Patch Changes

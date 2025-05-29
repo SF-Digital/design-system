@@ -7,12 +7,12 @@ export interface DropdownMenuContentProps extends ViewProps {
 	align?: 'start' | 'center' | 'end'
 }
 
-export const Content: React.FC<DropdownMenuContentProps> = ({
+export const Content = ({
 	style,
 	testID,
 	children,
 	...props
-}) => {
+}: DropdownMenuContentProps) => {
 	const { isOpen, setIsOpen } = useContext(DropdownMenuContext)
 
 	return (

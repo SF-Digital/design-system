@@ -26,11 +26,11 @@ export interface DropdownMenuRootProps extends ViewProps {
 	onOpenChange?: (open: boolean) => void
 }
 
-export const Root: React.FC<DropdownMenuRootProps> = ({
+export const Root = ({
 	children,
 	open,
 	onOpenChange,
-}) => {
+}: DropdownMenuRootProps) => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const handleOpenChange = (value: boolean) => {

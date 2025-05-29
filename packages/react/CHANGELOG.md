@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.11.0
+
+### Minor Changes
+
+- update documents and package to react 19
+
 ## 4.10.5
 
 ### Patch Changes

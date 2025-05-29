@@ -10,12 +10,12 @@ import { useDropdownMenuContext } from '../Root'
 
 export type DropdownMenuItemProps = PressableProps
 
-export const Item: React.FC<DropdownMenuItemProps> = ({
+export const Item = ({
 	style,
 	children,
 	onPress,
 	...props
-}) => {
+}: DropdownMenuItemProps) => {
 	const { setIsOpen } = useDropdownMenuContext()
 
 	const handlePress = (e: GestureResponderEvent) => {
