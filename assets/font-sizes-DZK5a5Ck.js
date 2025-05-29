@@ -1,0 +1,4 @@
+import{j as t}from"./index-ixxFTlCi.js";import{useMDXComponents as s}from"./index-DTEctbIH.js";import{ae as r,af as i}from"./index-BZw8du-k.js";import{T as m}from"./TokensGrid-BbdCdeZV.js";import{f as p}from"./index-CkF7DeWO.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-DSHYqwJA.js";import"./index-DqtkcwbH.js";import"./iframe-CcRFnOmA.js";import"../sb-preview/runtime.js";import"./index-BqWcYKrM.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";function o(e){const n={h1:"h1",p:"p",...s(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/Font Sizes"}),`
+`,t.jsx(n.h1,{id:"font-sizes",children:"Font Sizes"}),`
+`,t.jsx(n.p,{children:"These are the font sizes used in the design system."}),`
+`,t.jsx(i,{children:t.jsx(m,{tokens:p,hasRemValue:!0})})]})}function C(e={}){const{wrapper:n}={...s(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o(e)}export{C as default};
