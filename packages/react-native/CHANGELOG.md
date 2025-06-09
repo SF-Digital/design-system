@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.4.1
+
+### Patch Changes
+
+- react version downgrade 19.1.0 -> 19.0.0
+
 ## 2.4.0
 
 ### Minor Changes
