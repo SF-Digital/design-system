@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, ModalProps, StyleSheet, View } from 'react-native'
+import { Modal, ModalProps, Pressable, StyleSheet } from 'react-native'
 import { useSelectContext } from '../Root'
 
 export type SelectContentProps = ModalProps
@@ -23,7 +23,14 @@ export const Content = (props: SelectContentProps) => {
 			onRequestClose={() => onOpenChange(false)}
 			{...props}
 		>
-			<View style={modalStyles.overlay}>{props.children}</View>
+			<Pressable
+				style={modalStyles.overlay}
+				onPress={() => onOpenChange(false)}
+			>
+				<Pressable onPress={(e) => e.stopPropagation()}>
+					{props.children}
+				</Pressable>
+			</Pressable>
 		</Modal>
 	)
 }

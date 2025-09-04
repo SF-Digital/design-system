@@ -4,7 +4,6 @@ import {
 	Pressable,
 	ScrollView,
 	StyleSheet,
-	useWindowDimensions,
 	View,
 	ViewProps,
 } from 'react-native'
@@ -20,10 +19,12 @@ const viewportStyles = StyleSheet.create({
 		borderTopLeftRadius: 16,
 		borderTopRightRadius: 16,
 		flexDirection: 'column',
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
+		maxHeight: '70%',
+		marginTop: 'auto',
 	},
 	scrollContainer: {
-		maxHeight: '80%',
+		flexGrow: 1,
 	},
 	topBar: {
 		width: 60,
@@ -41,20 +42,10 @@ export const Viewport = ({
 	children,
 	...props
 }: SelectViewportProps) => {
-	const { height } = useWindowDimensions()
 	const { onOpenChange } = useSelectContext()
 
 	return (
-		<View
-			style={[
-				viewportStyles.content,
-				{
-					maxHeight: height,
-				},
-				style,
-			]}
-			{...props}
-		>
+		<View style={[viewportStyles.content, style]} {...props}>
 			<Pressable
 				style={viewportStyles.topBar}
 				onPress={() => onOpenChange(false)}
