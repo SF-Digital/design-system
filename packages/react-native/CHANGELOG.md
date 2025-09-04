@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.4.2
+
+### Patch Changes
+
+- fix select component to scroll, max height 75%
+
 ## 2.4.1
 
 ### Patch Changes

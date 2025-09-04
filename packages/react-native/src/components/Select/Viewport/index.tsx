@@ -14,17 +14,14 @@ export type SelectViewportProps = ViewProps
 const viewportStyles = StyleSheet.create({
 	content: {
 		paddingHorizontal: 8,
-		paddingVertical: 48,
+		paddingTop: 16,
+		paddingBottom: 48,
 		backgroundColor: 'white',
 		borderTopLeftRadius: 16,
 		borderTopRightRadius: 16,
 		flexDirection: 'column',
 		justifyContent: 'flex-start',
-		maxHeight: '70%',
 		marginTop: 'auto',
-	},
-	scrollContainer: {
-		flexGrow: 1,
 	},
 	topBar: {
 		width: 60,
@@ -33,7 +30,6 @@ const viewportStyles = StyleSheet.create({
 		borderRadius: 2,
 		alignSelf: 'center',
 		marginBottom: 16,
-		marginTop: -32,
 	},
 })
 
@@ -51,9 +47,7 @@ export const Viewport = ({
 				onPress={() => onOpenChange(false)}
 			/>
 
-			<ScrollView contentContainerStyle={viewportStyles.scrollContainer}>
-				{children}
-			</ScrollView>
+			<ScrollView showsVerticalScrollIndicator={false}>{children}</ScrollView>
 		</View>
 	)
 }
