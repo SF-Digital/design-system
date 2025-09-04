@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Select as DesignSystemSelect, Text } from '@sf-digital-ui/react-native'
 import Entypo from '@expo/vector-icons/Entypo'
-import { View } from 'react-native'
-import { colors } from '@sf-digital-ui/tokens'
 import Markdown from '@ronradtke/react-native-markdown-display'
+import { Select as DesignSystemSelect, Text } from '@sf-digital-ui/react-native'
+import { colors } from '@sf-digital-ui/tokens'
+import React, { useState } from 'react'
+import { View } from 'react-native'
 
 export default function Select() {
 	const docs = `
@@ -40,6 +40,25 @@ This story displays the \`Select\` component, which is a React element built usi
 		'Ezra Bridger-Jarrus',
 		'Sabine Djarin',
 		'Obi-Wan Thrawn',
+		'Mace Windu',
+		'Yoda Kenobi',
+		'Luke Skywalker',
+		'Leia Organa',
+		'Han Solo',
+		'Chewbacca Wookiee',
+		'Lando Calrissian',
+		'C-3PO Droid',
+		'R2-D2 Astromech',
+		'Boba Fett',
+		'Jango Fett',
+		'Qui-Gon Jinn',
+		'Darth Maul',
+		'Count Dooku',
+		'General Grievous',
+		'Padmé Amidala',
+		'Anakin Skywalker',
+		'Shmi Skywalker',
+		'Captain Rex',
 	]
 
 	return (
