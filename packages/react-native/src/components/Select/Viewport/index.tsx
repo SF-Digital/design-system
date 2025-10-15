@@ -36,6 +36,7 @@ const viewportStyles = StyleSheet.create({
 export const Viewport = ({
 	style,
 	children,
+	testID,
 	...props
 }: SelectViewportProps) => {
 	const { onOpenChange } = useSelectContext()
@@ -47,7 +48,11 @@ export const Viewport = ({
 				onPress={() => onOpenChange(false)}
 			/>
 
-			<ScrollView collapsable={false} showsVerticalScrollIndicator={false}>
+			<ScrollView
+				testID={testID}
+				collapsable={false}
+				showsVerticalScrollIndicator={false}
+			>
 				{children}
 			</ScrollView>
 		</View>
