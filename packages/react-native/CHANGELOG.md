@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.4.3
+
+### Patch Changes
+
+- Add prop to make sure scrollview is included in react native hierarchy
+
 ## 2.4.2
 
 ### Patch Changes
