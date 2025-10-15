@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.4.4
+
+### Patch Changes
+
+- send testid to scrollview in select viewport
+
 ## 2.4.3
 
 ### Patch Changes
