@@ -47,7 +47,9 @@ export const Viewport = ({
 				onPress={() => onOpenChange(false)}
 			/>
 
-			<ScrollView showsVerticalScrollIndicator={false}>{children}</ScrollView>
+			<ScrollView collapsable={false} showsVerticalScrollIndicator={false}>
+				{children}
+			</ScrollView>
 		</View>
 	)
 }
