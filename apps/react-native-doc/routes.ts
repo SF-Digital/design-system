@@ -65,4 +65,9 @@ export const routes = [
 		label: 'ProgressBar',
 		title: 'ProgressBar',
 	},
+	{
+		name: 'chips',
+		label: 'Chips',
+		title: 'Chips',
+	},
 ]

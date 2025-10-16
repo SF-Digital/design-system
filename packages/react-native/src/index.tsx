@@ -7,6 +7,7 @@ export {
 } from './components/Button'
 export { Card, CardProps } from './components/Card'
 export { Checkbox, CheckboxRootProps } from './components/Checkbox'
+export { Chips, ChipsItemProps, ChipsRootProps } from './components/Chips'
 export {
 	DropdownMenu,
 	DropdownMenuContentProps,
