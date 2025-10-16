@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.5.0
+
+### Minor Changes
+
+- Chip component
+
 ## 2.4.4
 
 ### Patch Changes
