@@ -1147,10 +1147,7 @@ var Divider = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
     "div",
     {
-      className: (0, import_tailwind_merge10.twMerge)(
-        props.className,
-        "flex h-px flex-row bg-neutral-40"
-      )
+      className: (0, import_tailwind_merge10.twMerge)(props.className, "flex h-px flex-row bg-neutral-40")
     }
   );
 };
