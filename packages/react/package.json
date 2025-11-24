@@ -1,14 +1,14 @@
 {
 	"name": "@sf-digital-ui/react",
-	"version": "4.11.0",
+	"version": "4.12.0",
 	"description": "",
 	"main": "./dist/index.js",
 	"style": "./dist/output.css",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "npx tailwindcss -i ./src/index.css -o ./dist/output.css && tsup src/index.tsx --format esm, cjs --dts --external react",
-		"dev": "concurrently --kill-others \"npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch \" \"tsup src/index.tsx --format esm, cjs --dts --external react --watch\""
+		"build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+		"dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
 	},
 	"keywords": [],
 	"author": "",
@@ -16,9 +16,9 @@
 	"devDependencies": {
 		"@sf-digital-ui/tokens": "*",
 		"@sf-digital-ui/ts-config": "*",
-		"autoprefixer": "^10.4.20",
+		"@tailwindcss/postcss": "^4.1.17",
 		"postcss": "^8.4.49",
-		"tailwindcss": "^3.4.16",
+		"tailwindcss": "^4.1.17",
 		"tsup": "^8.3.5",
 		"typescript": "^5.7.2"
 	},
@@ -39,7 +39,7 @@
 		"concurrently": "^9.1.0",
 		"lucide-react": "^0.468.0",
 		"phosphor-react": "^1.4.1",
-		"prettier-plugin-tailwindcss": "^0.6.9",
+		"prettier-plugin-tailwindcss": "^0.7.1",
 		"react": "^19.1.0",
 		"tailwind-merge": "^2.5.5",
 		"tailwind-variants": "^0.3.0"

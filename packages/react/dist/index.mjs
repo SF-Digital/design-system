@@ -402,7 +402,7 @@ var Control = (props) => {
       disabled,
       className: twJoin(
         props.className,
-        "w-full border-transparent text-black outline-none placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
+        "w-full border-transparent text-black outline-hidden placeholder:font-sf-digital disabled:bg-neutral-40 disabled:text-neutral-50"
       )
     })
   );
@@ -671,7 +671,7 @@ import { tv as tv9 } from "tailwind-variants";
 import { jsx as jsx20 } from "react/jsx-runtime";
 var toggle = tv9({
   base: [
-    'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40'
+    'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-disabled:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40'
   ],
   variants: {
     size: {
@@ -695,7 +695,7 @@ import { tv as tv10 } from "tailwind-variants";
 import * as Switch2 from "@radix-ui/react-switch";
 import { jsx as jsx21 } from "react/jsx-runtime";
 var toggle2 = tv10({
-  base: ["rounded-lg bg-white drop-shadow-sm data-[disabled]:bg-neutral-20"],
+  base: ["rounded-lg bg-white drop-shadow-sm data-disabled:bg-neutral-20"],
   variants: {
     size: {
       sm: "h-4 w-4",
@@ -864,7 +864,7 @@ import { tv as tv13 } from "tailwind-variants";
 import { jsx as jsx32 } from "react/jsx-runtime";
 var trigger = tv13({
   base: [
-    "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-none data-[placeholder]:font-sf-digital data-[placeholder]:font-thin data-[placeholder]:text-neutral-500"
+    "flex flex-row items-center justify-between gap-2 rounded-md border border-neutral-50 bg-white px-3.5 py-2.5 text-sf-md leading-none text-neutral-900 focus:outline-hidden data-placeholder:font-sf-digital data-placeholder:font-thin data-placeholder:text-neutral-500"
   ],
   variants: {
     color: {
@@ -910,7 +910,7 @@ var Content6 = (props) => /* @__PURE__ */ jsxs(
   Select6.Content,
   __spreadProps(__spreadValues({}, props), {
     className: twJoin4(
-      "flex max-h-[var(--radix-select-content-available-height)] w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
+      "flex max-h-(--radix-select-content-available-height) w-(--radix-select-trigger-width) flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg",
       props == null ? void 0 : props.className
     ),
     sideOffset: 8,
@@ -932,7 +932,7 @@ var Item3 = (props) => /* @__PURE__ */ jsxs2(
   Select7.Item,
   __spreadProps(__spreadValues({}, props), {
     className: twJoin5(
-      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-10 hover:outline-none focus:outline-none data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-none',
+      'flex flex-row justify-between px-3.5 py-2.5 text-neutral-900 hover:cursor-pointer hover:bg-neutral-10 hover:outline-hidden focus:outline-hidden data-[state="checked"]:bg-neutral-20 data-[state="checked"]:outline-hidden',
       props.className
     ),
     children: [
@@ -1070,7 +1070,7 @@ var Item5 = (props) => {
     __spreadProps(__spreadValues({}, props), {
       className: twMerge3(
         props.className,
-        "flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-none hover:cursor-pointer hover:bg-neutral-20"
+        "flex flex-row items-center gap-3 py-2 pl-4 pr-12 outline-hidden hover:cursor-pointer hover:bg-neutral-20"
       )
     })
   );
@@ -1101,7 +1101,7 @@ var Divider = (props) => {
     {
       className: twMerge5(
         props.className,
-        "flex h-[1px] flex-row bg-neutral-40"
+        "flex h-px flex-row bg-neutral-40"
       )
     }
   );
@@ -1169,7 +1169,7 @@ import { jsx as jsx56 } from "react/jsx-runtime";
 var input2 = tv14(
   {
     base: [
-      "w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80",
+      "w-lg font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80",
       "border"
     ],
     variants: {
@@ -1240,7 +1240,7 @@ var Control3 = (_a) => {
       disabled,
       className: twJoin6(
         props.className,
-        "placeholder:font-sf-heading h-full w-full resize-none border-transparent text-black outline-none disabled:bg-neutral-10 disabled:text-neutral-300",
+        "placeholder:font-sf-heading h-full w-full resize-none border-transparent text-black outline-hidden disabled:bg-neutral-10 disabled:text-neutral-300",
         sizeClasses[size]
       )
     })

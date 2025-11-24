@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.12.0
+
+### Minor Changes
+
+- Upgrading Tailwindcss to v4
+
 ## 4.11.0
 
 ### Minor Changes
