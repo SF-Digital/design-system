@@ -19,7 +19,7 @@ export const Control = ({ ...props }: TextAreaControlProps) => {
 			disabled={disabled}
 			className={twJoin(
 				props.className,
-				'placeholder:font-sf-heading h-full w-full resize-none border-transparent text-black outline-none disabled:bg-neutral-10 disabled:text-neutral-300',
+				'placeholder:font-sf-heading h-full w-full resize-none border-transparent text-black outline-hidden disabled:bg-neutral-10 disabled:text-neutral-300',
 				sizeClasses[size],
 			)}
 		/>

@@ -8,7 +8,7 @@ export const Content = (props: SelectContentProps) => (
 	<Select.Content
 		{...props}
 		className={twJoin(
-			'flex max-h-[var(--radix-select-content-available-height)] w-[--radix-select-trigger-width] flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg',
+			'flex max-h-(--radix-select-content-available-height) w-(--radix-select-trigger-width) flex-row rounded-md border border-neutral-40 bg-white drop-shadow-lg',
 			props?.className,
 		)}
 		sideOffset={8}

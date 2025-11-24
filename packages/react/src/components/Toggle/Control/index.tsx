@@ -2,7 +2,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 import * as Switch from '@radix-ui/react-switch'
 
 const toggle = tv({
-	base: ['rounded-lg bg-white drop-shadow-sm data-[disabled]:bg-neutral-20'],
+	base: ['rounded-lg bg-white drop-shadow-sm data-disabled:bg-neutral-20'],
 	variants: {
 		size: {
 			sm: 'h-4 w-4',

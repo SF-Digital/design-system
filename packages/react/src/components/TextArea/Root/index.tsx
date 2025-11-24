@@ -4,7 +4,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 const input = tv(
 	{
 		base: [
-			'w-128 font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80',
+			'w-lg font-sf-heading flex h-32 flex-row items-center justify-between rounded-md border border-neutral-50 bg-white px-4 py-2.5 text-neutral-80',
 			'border',
 		],
 

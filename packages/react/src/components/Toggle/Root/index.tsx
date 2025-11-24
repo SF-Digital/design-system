@@ -3,7 +3,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 
 const toggle = tv({
 	base: [
-		'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-[disabled]:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40',
+		'flex flex-row items-center rounded-lg p-0.5 data-[state="checked"]:justify-end data-disabled:bg-neutral-40 data-[state="unchecked"]:bg-neutral-40',
 	],
 
 	variants: {
