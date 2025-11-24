@@ -1099,10 +1099,7 @@ var Divider = (props) => {
   return /* @__PURE__ */ jsx48(
     "div",
     {
-      className: twMerge5(
-        props.className,
-        "flex h-px flex-row bg-neutral-40"
-      )
+      className: twMerge5(props.className, "flex h-px flex-row bg-neutral-40")
     }
   );
 };
