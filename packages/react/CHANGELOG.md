@@ -1,5 +1,11 @@
 # @sf-digital-ui/react
 
+## 4.12.1
+
+### Patch Changes
+
+- Fix the scripts for build
+
 ## 4.12.0
 
 ### Minor Changes
