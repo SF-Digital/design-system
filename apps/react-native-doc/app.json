@@ -1,7 +1,7 @@
 {
 	"expo": {
 		"name": "react-native-doc",
-		"slug": "react-native-doc",
+		"slug": "sf-reactnative-design-system-",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
@@ -13,7 +13,11 @@
 			"backgroundColor": "#ffffff"
 		},
 		"ios": {
-			"supportsTablet": true
+			"supportsTablet": true,
+			"bundleIdentifier": "com.stonehagefleming.sfreactnativedesignsystem",
+			"infoPlist": {
+				"ITSAppUsesNonExemptEncryption": false
+			}
 		},
 		"android": {
 			"adaptiveIcon": {
@@ -29,6 +33,13 @@
 		"plugins": ["expo-router"],
 		"experiments": {
 			"typedRoutes": true
-		}
+		},
+		"extra": {
+			"router": {},
+			"eas": {
+				"projectId": "09b2dee2-5e97-4ff5-b842-64364fd9f711"
+			}
+		},
+		"owner": "stonehage-fleming"
 	}
 }
