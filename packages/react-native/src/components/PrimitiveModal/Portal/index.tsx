@@ -11,6 +11,7 @@ export const Portal = ({ children, ...props }: PrimitiveModalPortalProps) => {
 
 	return (
 		<RNModal
+			collapsable={false}
 			animationType='none'
 			transparent={true}
 			visible={isVisible}

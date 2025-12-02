@@ -13,7 +13,7 @@ export const Root = ({ open, onOpenChange, children }: ModalRootProps) => {
 		<PrimitiveModal.Root open={open} onOpenChange={onOpenChange}>
 			<PrimitiveModal.Portal>
 				<PrimitiveModal.Overlay style={styles.overlay}>
-					<PrimitiveModal.Content style={styles.content}>
+					<PrimitiveModal.Content style={styles.content} collapsable={false}>
 						{children}
 					</PrimitiveModal.Content>
 				</PrimitiveModal.Overlay>
