@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.5.1
+
+### Patch Changes
+
+- add collapsable prop to Modal.Content
+
 ## 2.5.0
 
 ### Minor Changes
