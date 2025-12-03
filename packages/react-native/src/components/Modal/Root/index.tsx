@@ -13,7 +13,11 @@ export const Root = ({ open, onOpenChange, children }: ModalRootProps) => {
 		<PrimitiveModal.Root open={open} onOpenChange={onOpenChange}>
 			<PrimitiveModal.Portal>
 				<PrimitiveModal.Overlay style={styles.overlay}>
-					<PrimitiveModal.Content style={styles.content} collapsable={false}>
+					<PrimitiveModal.Content
+						style={styles.content}
+						collapsable={false}
+						testID='modal-content'
+					>
 						{children}
 					</PrimitiveModal.Content>
 				</PrimitiveModal.Overlay>

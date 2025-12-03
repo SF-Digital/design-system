@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.5.2
+
+### Patch Changes
+
+- give modal content a test id
+
 ## 2.5.1
 
 ### Patch Changes
