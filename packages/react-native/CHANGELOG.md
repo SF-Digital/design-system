@@ -1,5 +1,11 @@
 # @sf-digital-ui/react-native
 
+## 2.6.0
+
+### Minor Changes
+
+- tooltip component added
+
 ## 2.5.2
 
 ### Patch Changes

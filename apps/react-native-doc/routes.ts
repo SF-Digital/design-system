@@ -70,4 +70,9 @@ export const routes = [
 		label: 'Chips',
 		title: 'Chips',
 	},
+	{
+		name: 'tooltip',
+		label: 'Tooltip',
+		title: 'Tooltip',
+	},
 ]

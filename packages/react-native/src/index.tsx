@@ -75,3 +75,11 @@ export {
 	TextInputControlProps,
 	TextInputRootProps,
 } from './components/TextInput'
+export {
+	Tooltip,
+	TooltipArrowProps,
+	TooltipContentProps,
+	TooltipRootProps,
+	TooltipTextProps,
+	TooltipTriggerProps,
+} from './components/Tooltip'
