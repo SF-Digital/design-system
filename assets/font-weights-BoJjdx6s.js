@@ -1,0 +1,4 @@
+import{j as t}from"./index-BhYKX6Xw.js";import{useMDXComponents as s}from"./index-DvV7oH2q.js";import{M as r,U as i}from"./index-D__lL1ij.js";import{T as m}from"./TokensGrid-Bd2feTMq.js";import{a as p}from"./index-CkF7DeWO.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CTFRWjhe.js";import"./index-BoO70ywZ.js";import"./iframe-B6vK463J.js";import"./index-SdUsQoFV.js";import"./index-DgH-xKnr.js";import"./index-DrFu-skq.js";function o(n){const e={h1:"h1",p:"p",...s(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/Font Weights"}),`
+`,t.jsx(e.h1,{id:"font-weights",children:"Font Weights"}),`
+`,t.jsx(e.p,{children:"These are the font wights used in the design system."}),`
+`,t.jsx(i,{children:t.jsx(m,{tokens:p})})]})}function k(n={}){const{wrapper:e}={...s(),...n.components};return e?t.jsx(e,{...n,children:t.jsx(o,{...n})}):o(n)}export{k as default};

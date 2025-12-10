@@ -1,0 +1,4 @@
+import{j as t}from"./index-BhYKX6Xw.js";import{useMDXComponents as o}from"./index-DvV7oH2q.js";import{M as s,U as r}from"./index-D__lL1ij.js";import{T as m}from"./TokensGrid-Bd2feTMq.js";import{l as h}from"./index-CkF7DeWO.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CTFRWjhe.js";import"./index-BoO70ywZ.js";import"./iframe-B6vK463J.js";import"./index-SdUsQoFV.js";import"./index-DgH-xKnr.js";import"./index-DrFu-skq.js";function i(e){const n={h1:"h1",p:"p",...o(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{title:"Tokens/Line Heights"}),`
+`,t.jsx(n.h1,{id:"line-height",children:"Line Height"}),`
+`,t.jsx(n.p,{children:"These are the line heights used in the design system."}),`
+`,t.jsx(r,{children:t.jsx(m,{tokens:h})})]})}function k(e={}){const{wrapper:n}={...o(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(i,{...e})}):i(e)}export{k as default};
